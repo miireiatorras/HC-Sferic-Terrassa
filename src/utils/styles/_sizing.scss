@@ -1,0 +1,13 @@
+@use 'sass:math';
+/**
+ * @file This file contains sass tools to control sizes in a uniform manner
+ * @version 1.1.0
+ */
+
+@function fractionSize($numRef) {
+    @return #{math.div($numRef, 16)}em;
+}
+
+@function size($numRef) {
+    @return round(up, fractionSize($numRef), 1px);
+}

@@ -1,0 +1,117 @@
+//Grayscale:
+$blanc: #ffffff;
+
+$color-light-gray-light: #eff1f3;
+$color-light-gray-medium: #e7e9ed;
+$color-light-gray-dark: #ced2da;
+
+$color-medium-gray-light: #626f88;
+$color-medium-gray-medium: #58647a;
+$color-medium-gray-dark: #4e596d;
+
+$color-dark-gray-light: #4a5366;
+$color-dark-gray-medium: #3b4352;
+$color-dark-gray-dark: #2c323d;
+
+$negre: #000000;
+
+//Opacity grayscale:
+$color-translucent-white: #ffffff88;
+$color-translucent-black: #00000044;
+$color-translucent-gray-darker: #222730cc;
+$color-translucent-gray-darker-50: #22273080;
+$color-translucent-medium-gray-light-10: #626f881a;
+
+//Color palette
+$verd-logo: #037e3f;
+$verd-fosc: #002623;
+$verd-clar: #82ba93;
+$verd-estandard: #006933;
+
+:root {
+    //Color palette
+    --color-verd-logo: #{$verd-logo};
+    --color-verd-fosc: #{$verd-fosc};
+    --color-verd-clar: #{$verd-clar};
+    --color-verd-estandard: #{$verd-estandard};
+
+    --negre: #{$negre};
+    --color-black-opacity: #{$color-translucent-gray-darker};
+    --color-black-opacity-50: #{$color-translucent-gray-darker-50};
+    --blanc: #{$blanc};
+
+    //TODO: Use the right semantics for the following color.
+    --color-foundation-normal: #{$color-medium-gray-light};
+    --color-fundation-normal-opacity-10: #{$color-translucent-medium-gray-light-10};
+    --color-fundation-medium-gray-dark: #{$color-medium-gray-dark};
+    //Alerts:
+    --color-success-light: #c2e9cd;
+    --color-success-dark: #0aa535;
+    --color-success-darker: #067424;
+    --color-warning-light: hsla(32, 81%, 80%);
+    --color-warning-dark: #c77515;
+    --color-warning-darker: #76460e;
+    --color-error-light: #f7aaaa;
+    --color-error-dark: #e54848;
+    --color-error-darker: #9f1111;
+    --color-info-light: #bfe0e8;
+    --color-info-dark: #0084a1;
+    --color-info-darker: #015e73;
+    //Controlled foundation usages
+    --color-text-light: #{$color-medium-gray-light};
+    --color-text-medium: #{$color-dark-gray-light};
+    --color-text-dark: #{$negre};
+    --color-input-borders-and-fillings: #{$color-light-gray-dark};
+    --color-darker-borders-and-fillings: #{$color-medium-gray-light};
+    --color-background-light: #{$color-light-gray-light};
+    --color-background-medium: #{$color-light-gray-medium};
+    --color-background-dark: #dee3e8;
+    --color-interaction: #{$color-medium-gray-light};
+    --color-interaction-hover: #{$negre};
+    --color-disabled: #{$color-light-gray-dark};
+}
+
+// $color-choices: (
+//     'red-light': $color-red-light,
+//     'red': $color-red,
+//     'red-dark': $color-red-dark,
+//     'orange-light': $color-orange-light,
+//     'orange': $color-orange,
+//     'orange-dark': $color-orange-dark,
+//     'yellow-light': $color-yellow-light,
+//     'yellow': $color-yellow,
+//     'yellow-dark': $color-yellow-dark,
+//     'lime-light': $color-lime-light,
+//     'lime': $color-lime,
+//     'lime-dark': $color-lime-dark,
+//     'green-light': $color-green-light,
+//     'green': $color-green,
+//     'green-dark': $color-green-dark,
+//     'sky-light': $color-sky-light,
+//     'sky': $color-sky,
+//     'sky-dark': $color-sky-dark,
+//     'blue-light': $color-blue-light,
+//     'blue': $color-blue,
+//     'blue-dark': $color-blue-dark,
+//     'pink-light': $color-pink-light,
+//     'pink': $color-pink,
+//     'pink-dark': $color-pink-dark,
+//     'violet-light': $color-violet-light,
+//     'violet': $color-violet,
+//     'violet-dark': $color-violet-dark,
+//     'lemon-tart': $color-lemon-tart,
+// );
+
+$grayscale: (
+    'color-light-gray-light': $color-light-gray-light,
+    'color-light-gray-medium': $color-light-gray-medium,
+    'color-light-gray-dark': $color-light-gray-dark,
+    'color-medium-gray-light': $color-medium-gray-light,
+    'color-medium-gray-medium': $color-medium-gray-medium,
+    'color-medium-gray-dark': $color-medium-gray-dark,
+    'color-dark-gray-light': $color-dark-gray-light,
+    'color-dark-gray-medium': $color-dark-gray-medium,
+    'color-dark-gray-dark': $color-dark-gray-dark,
+);
+
+$message-variants: 'error', 'warning', 'info', 'success';

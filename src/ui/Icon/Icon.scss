@@ -1,0 +1,23 @@
+@use '@/utils/styles';
+@use 'sass:map';
+
+$icon-size: (
+    xs: 8,
+    sm: 12,
+    md: 16,
+    ml: 20,
+    lg: 24,
+    xl: 32,
+);
+
+.Icon {
+    height: styles.size(map.get($icon-size, 'md'));
+    width: styles.size(map.get($icon-size, 'md'));
+
+    @each $size, $value in $icon-size {
+        &--#{$size} {
+            height: styles.size($value);
+            width: styles.size($value);
+        }
+    }
+}

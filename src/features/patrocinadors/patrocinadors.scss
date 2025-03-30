@@ -1,0 +1,36 @@
+@use '@/utils/styles';
+.logos-sponsors {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+    margin: 2.5rem;
+    gap: 10px;
+
+    img {
+        width: 30%;
+
+        &:hover {
+            transform: scale(1.1);
+            transition: transform 0.2s ease-in-out;
+        }
+    }
+
+    .storepack-logo,
+    .caldereria-logo,
+    .rmdislovall-logo {
+        width: 25%;
+    }
+}
+
+a {
+    color: styles.$negre;
+}
+
+.contacte-main {
+    margin: 2.5rem;
+}
+
+html {
+    scroll-behavior: smooth;
+}

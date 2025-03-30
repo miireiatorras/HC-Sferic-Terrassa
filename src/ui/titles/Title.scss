@@ -1,0 +1,21 @@
+@use "../../styles/colors.scss";
+
+.title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; // Alinea a la izquierda
+  margin: 1.5rem;
+  position: relative;
+}
+
+.verd {
+  background-color: colors.$verd-clar;
+  border-radius: 10px;
+  height: 5px;
+  width: 100px; // Ajusta el ancho según lo que necesites
+}
+
+.title {
+  color: colors.$negre;
+  font-weight: bold;
+}

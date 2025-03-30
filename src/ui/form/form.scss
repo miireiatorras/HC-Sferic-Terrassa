@@ -1,0 +1,76 @@
+@use "../../styles/colors.scss";
+
+.form {
+  position: relative;
+  background-image: url("../../../public/fondo.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 1rem 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #f0f0f0ad;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__container {
+    position: relative;
+    padding: 1.5rem;
+    background-color: colors.$blanc;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    max-width: 500px;
+    margin: auto;
+
+    h2 {
+      font-size: 1rem;
+      color: colors.$negre;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-content: center;
+    flex-wrap: wrap;
+    margin: auto;
+
+    &-group {
+      display: flex;
+      gap: 10px;
+
+      input {
+        flex: 1;
+      }
+    }
+
+    &-field {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__input,
+  &__textarea {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  &__button {
+    background-color: #5a8c64;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bolder;
+    cursor: pointer;
+  }
+}

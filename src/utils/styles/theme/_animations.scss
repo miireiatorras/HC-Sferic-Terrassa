@@ -1,0 +1,90 @@
+@use '@/utils/styles/theme/variables' as variables;
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes appear-late {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.2;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes disappear {
+    0% {
+        opacity: 1;
+        top: 0;
+    }
+    90% {
+        opacity: 0;
+        top: 0;
+    }
+    100% {
+        opacity: 0;
+        top: -100rem;
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes character-appear {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+        font-size: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+        font-size: 1em;
+    }
+}
+
+@keyframes appear-expand {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+        transform: scale(1, 0);
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1, 1);
+    }
+}
+
+@mixin animate-appear {
+    animation: appear variables.$animate-slow;
+}
+
+@mixin animate-appear-fast {
+    animation: appear variables.$animate-fast;
+}
+
+@mixin animate-appear-late {
+    animation: appear-late variables.$animate-slow;
+}
+
+@mixin spin-forever {
+    display: inline-block;
+    transform-origin: 50% 50%;
+    animation: spin infinite linear variables.$animate-slow;
+}
