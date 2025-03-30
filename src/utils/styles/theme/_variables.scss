@@ -1,6 +1,6 @@
 // Corners (For border radius)
 $corner-xs: 0.25rem;
-$corner-sm: 0.5rem;
+$corner-sm: 0.75rem;
 $corner-md: 1rem;
 $corner-lg: 2rem;
 $corner-xl: 2.5rem;
@@ -25,38 +25,38 @@ $z-layout: 750;
 $z-modal: 1300;
 
 $marker-calendar-classes: (
-  summer: (
-    border: 2px solid var(--color-calendar-summer),
-    background: var(--color-calendar-summer),
-  ),
-  winter: (
-    border: 2px solid var(--color-calendar-winter),
-    background: var(--color-calendar-winter),
-  ),
-  weekend-a: (
-    border: 2px solid var(--color-calendar-weekend-a),
-    background: white,
-  ),
-  weekend-b: (
-    border: 2px solid var(--color-calendar-weekend-b),
-    background: white,
-  ),
-  closing: (
-    border: 2px dotted var(--color-disabled),
-    background: white,
-  ),
+    summer: (
+        border: 2px solid var(--color-calendar-summer),
+        background: var(--color-calendar-summer),
+    ),
+    winter: (
+        border: 2px solid var(--color-calendar-winter),
+        background: var(--color-calendar-winter),
+    ),
+    weekend-a: (
+        border: 2px solid var(--color-calendar-weekend-a),
+        background: white,
+    ),
+    weekend-b: (
+        border: 2px solid var(--color-calendar-weekend-b),
+        background: white,
+    ),
+    closing: (
+        border: 2px dotted var(--color-disabled),
+        background: white,
+    ),
 );
 
 $working-modifications-classes: (
-  training: (
-    background-color: var(--color-yellow),
-    fill: var(--color-yellow-dark),
-  ),
-  leave: (
-    background-color: var(--color-input-borders-and-fillings),
-    fill: var(--color-foundation-normal),
-  ),
-  extended-leave: (
-    background-color: var(--color-black-opacity-50),
-  ),
+    training: (
+        background-color: var(--color-yellow),
+        fill: var(--color-yellow-dark),
+    ),
+    leave: (
+        background-color: var(--color-input-borders-and-fillings),
+        fill: var(--color-foundation-normal),
+    ),
+    extended-leave: (
+        background-color: var(--color-black-opacity-50),
+    ),
 );

@@ -70,7 +70,7 @@ export const Test = () => {
     return (
         <>
             {/* cas 2 */}
-            <Button onClick={() => {}} icon={'school'}>
+            <Button onClick={() => {}} icon={'email'}>
                 hola
             </Button>
         </>

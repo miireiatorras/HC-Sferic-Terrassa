@@ -1,37 +1,49 @@
-@use "../../styles/colors.scss";
-@use "../../styles/variables.scss";
+@use '@/utils/styles';
 
 .footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 20px 0;
-  background-color: colors.$verd-logo;
-  color: colors.$negre;
-  border-radius: variables.$border-estandard;
-  p,
-  h2,
-  a,
-  small {
-    text-decoration: none;
-    color: colors.$blanc;
-  }
-}
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+    background-color: styles.$verd-logo;
+    color: styles.$negre;
+    border-radius: styles.$corner-sm;
 
-.ajuntament {
-  width: 10%;
-  margin-left: 1rem;
-}
+    &__contacte {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
-.contacte {
-  display: flex;
-  align-items: center;
-  align-content: flex-end;
-  flex-direction: column;
-}
-.copyright {
-  display: flex;
-  align-items: center;
-  text-align: center;
+    &__email,
+    &__telefon,
+    &__instagram,
+    &__ubicacio {
+        display: flex;
+        align-items: center;
+        margin: 10px 0;
+
+        a,
+        p {
+            text-decoration: none;
+            color: styles.$blanc;
+        }
+
+        i {
+            margin-right: 8px;
+        }
+    }
+
+    &__ajuntament {
+        width: 10%;
+        margin-left: 1rem;
+    }
+
+    &__copyright {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
 }

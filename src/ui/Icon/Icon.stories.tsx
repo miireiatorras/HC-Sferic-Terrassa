@@ -16,7 +16,7 @@ type Story = StoryObj<typeof Icon>;
 
 export const Playground: Story = {
     args: {
-        icon: 'school',
+        icon: 'email',
         size: 'md',
     },
     argTypes: {
@@ -32,7 +32,7 @@ export const Sizes = () => (
     <div>
         {sizes.map((size) => (
             <div key={size} style={{ margin: '10px', display: 'inline-block' }}>
-                <Icon icon="school" size={size} />
+                <Icon icon="email" size={size} />
                 <p>{size}</p>
             </div>
         ))}

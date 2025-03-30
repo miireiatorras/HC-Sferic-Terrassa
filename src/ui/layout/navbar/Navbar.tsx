@@ -6,6 +6,8 @@ import {
 } from '@/utils';
 import { Link } from 'react-router-dom';
 
+import './Navbar.scss';
+
 export type NavbarProps = BaseComponentProps;
 
 const block = registerBlockName('Navbar');

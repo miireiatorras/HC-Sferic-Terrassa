@@ -7,6 +7,7 @@ import * as iconNames from '@/config/icons/constants';
 import iconSet from '@/config/icons/selection.json';
 import IcomoonReact from 'icomoon-react';
 
+import './icon.scss';
 export type IconNames = (typeof iconNames)[keyof typeof iconNames];
 
 export type IconProps = BaseComponentProps & {

@@ -5,6 +5,7 @@ import {
 } from '@/utils';
 import Patrocinadors from '@/features/patrocinadors/Patrocinadors';
 import { Title } from '@/ui/titles/title';
+import Footer from '@/features/footer/Footer';
 // import { Form } from 'react-router-dom';
 
 export type HomeProps = BaseComponentProps & {
@@ -20,6 +21,7 @@ export const Home = ({ children, ...props }: HomeProps) => {
             <Title>TROBAN'S A INSTAGRAM!</Title>
             {/* <Form /> */}
             <Patrocinadors />
+            <Footer />
             {children}
         </main>
     );
