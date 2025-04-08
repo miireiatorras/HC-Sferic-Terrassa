@@ -80,6 +80,14 @@ export const Navbar = (props: NavbarProps) => {
                     </Link>
                 </li>
                 <li className={toBEM({ block, element: 'menu-item' })}>
+                    {/* <Button>
+                        <Link
+                            to="/inscripcions"
+                            className={toBEM({ block, element: 'menu-link' })}
+                        >
+                            Inscriu-te
+                        </Link>
+                    </Button> */}
                     <Link
                         to="/inscripcions"
                         className={toBEM({ block, element: 'menu-link' })}
@@ -91,3 +99,4 @@ export const Navbar = (props: NavbarProps) => {
         </nav>
     );
 };
+export default Navbar;

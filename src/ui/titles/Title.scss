@@ -1,21 +1,15 @@
-@use "../../styles/colors.scss";
+@use '@/utils/styles';
 
-.title-container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; // Alinea a la izquierda
-  margin: 1.5rem;
-  position: relative;
-}
+.Title {
+    &__bar {
+        background-color: styles.$verd-estandard;
+        border-radius: 10px;
+        height: 7px;
+        width: 8rem;
+    }
 
-.verd {
-  background-color: colors.$verd-clar;
-  border-radius: 10px;
-  height: 5px;
-  width: 100px; // Ajusta el ancho según lo que necesites
-}
-
-.title {
-  color: colors.$negre;
-  font-weight: bold;
+    &__title {
+        color: styles.$negre;
+        font-weight: bold;
+    }
 }

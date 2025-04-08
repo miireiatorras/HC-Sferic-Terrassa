@@ -6,6 +6,7 @@ import {
 } from '@/utils';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import './Title.scss';
 
 export type TitleProps = BaseComponentProps & {
     children?: React.ReactNode;

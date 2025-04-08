@@ -4,7 +4,7 @@ import {
     getBaseComponentProps,
 } from '@/utils';
 import Patrocinadors from '@/features/patrocinadors/Patrocinadors';
-import { Title } from '@/ui/titles/title';
+import { Title } from '@/ui/titles/Title';
 import Footer from '@/features/footer/Footer';
 // import { Form } from 'react-router-dom';
 
@@ -16,9 +16,9 @@ const block = registerBlockName('Home');
 export const Home = ({ children, ...props }: HomeProps) => {
     return (
         <main {...getBaseComponentProps({ ...props, block })}>
-            <Title>HORARI ENTRENAMENTS</Title>
+            <Title>Calendari</Title>
             <p>Consulta l’horari dels entrenaments d’avui.</p>
-            <Title>TROBAN'S A INSTAGRAM!</Title>
+            <Title>Troba'ns a Instagram!</Title>
             {/* <Form /> */}
             <Patrocinadors />
             <Footer />

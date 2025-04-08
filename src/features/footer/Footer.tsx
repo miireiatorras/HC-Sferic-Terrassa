@@ -45,9 +45,16 @@ export const Footer = (props: FooterProps) => {
                     </p>
                 </div>
             </div>
-
+            <img
+                src="/logo-sferic-footer.png"
+                alt="logo"
+                className={toBEM({ block, element: 'foto-footer' })}
+            />
             <div className={toBEM({ block, element: 'copyright' })}>
-                <small>© 2024 Sferic Hoquei patins Terrassa</small>
+                <small>
+                    © 2025 Sferic Hoquei patins Terrassa. Dissenyat per Mireia
+                    Torras
+                </small>
                 <img
                     src="/logo-ajuntament.png"
                     alt="logo"
