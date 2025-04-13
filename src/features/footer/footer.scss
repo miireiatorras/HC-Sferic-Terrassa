@@ -1,53 +1,104 @@
 @use '@/utils/styles';
 
 .footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px 0;
     background-color: styles.$verd-logo;
-    color: styles.$negre;
-    border-radius: styles.$corner-sm;
+    color: styles.$blanc;
+    border-radius: styles.$corner-sm styles.$corner-sm 0 0;
+    padding: 1.5rem;
 
-    &__contacte {
+    a {
+        color: styles.$blanc;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__section {
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    &__col {
+        flex: 1;
+
+        h4 {
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+
+        p {
+            margin: 0.3rem 0;
+            font-size: 15px;
+        }
+    }
+
+    &__col-img {
+        text-align: center;
+        margin: auto;
+        flex: 1;
+    }
+
+    &__logo {
+        width: 40%;
+    }
+
+    &__logo-sferic {
+        width: 90%;
     }
 
     &__email,
     &__telefon,
-    &__instagram,
-    &__ubicacio {
+    &__ubicacio,
+    &__instagram {
         display: flex;
-        align-items: center;
-        margin: 10px 0;
+        align-items: flex-start;
+        gap: 0.5rem;
+        margin: 0.5rem 0;
 
-        a,
-        p {
-            text-decoration: none;
-            color: styles.$blanc;
+        svg {
+            flex-shrink: 0;
         }
 
-        i {
-            margin-right: 8px;
+        p,
+        a {
+            line-height: 1.4;
         }
     }
 
-    &__ajuntament {
-        width: 10%;
-        margin-left: 1rem;
-    }
+    &__menu {
+        list-style: none;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(100px, 1fr));
+        gap: 0.5rem;
 
-    &__foto-footer {
-        width: 20%;
+        li {
+            font-size: 0.9rem;
+        }
     }
 
     &__copyright {
+        border-top: 1px solid styles.$blanc;
+        padding-top: 1rem;
         display: flex;
-        align-items: center;
-        justify-content: center;
+        gap: 1rem;
         text-align: center;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        font-size: 0.8rem;
+
+        small {
+            margin-bottom: 0.5rem;
+        }
+
+        img {
+            height: 28px;
+        }
     }
 }

@@ -1,1 +1,31 @@
-@use "@/utils/styles";
+@use '@/utils/styles';
+
+.Button {
+    font-size: 1rem;
+    padding: 0.5rem 1.25rem;
+    border-radius: styles.$corner-sm;
+    border: 2px solid transparent;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s ease, color 0.2s ease;
+
+    &--primary {
+        background-color: styles.$verd-logo;
+        color: styles.$blanc;
+
+        &:hover {
+            background-color: styles.$verd-fosc;
+        }
+    }
+
+    &--secondary {
+        background-color: transparent;
+        color: styles.$blanc;
+        border: 2px solid styles.$blanc;
+
+        &:hover {
+            background-color: styles.$verd-logo;
+            color: styles.$blanc;
+        }
+    }
+}

@@ -14,7 +14,7 @@ export type ButtonProps<ExternalIconProps extends object> =
         children?: React.ReactNode;
         variant?:
             | 'primary'
-            | 'success'
+            | 'secondary'
             | 'error'
             | 'warning'
             | 'info'

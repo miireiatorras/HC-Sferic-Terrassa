@@ -26,6 +26,7 @@ export const Icon = ({ size, icon, ...props }: IconProps) => {
             })}
             iconSet={iconSet}
             icon={icon}
+            style={{ fill: 'currentColor' }}
         ></IcomoonReact>
     );
 };

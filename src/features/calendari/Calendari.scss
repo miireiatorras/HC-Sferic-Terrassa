@@ -1,0 +1,16 @@
+@use '@/utils/styles';
+
+.Calendari {
+    &__section {
+        background-color: styles.$verd-logo;
+        padding: 2rem 0;
+        color: styles.$blanc;
+    }
+
+    &__buttons-container {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-bottom: 2rem;
+    }
+}

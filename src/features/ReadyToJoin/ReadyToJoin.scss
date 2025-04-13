@@ -1,0 +1,119 @@
+@use '@/utils/styles';
+
+.ReadyToJoin {
+    @include styles.title-spacing;
+    margin-top: 5rem;
+    background-color: styles.$blanc;
+    position: relative; /* Necesario para posicionar el fondo detrás de la imagen */
+
+    &__div {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+    }
+    svg {
+        color: styles.$verd-logo;
+    }
+    &__container {
+        display: flex;
+        gap: 3rem;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        position: relative; /* Para que los elementos hijos se posicionen respecto a esto */
+    }
+
+    &__bg {
+        background-color: styles.$verd-logo;
+        position: absolute; /* Posiciona el fondo detrás de la imagen */
+        top: 50%; /* Centra el fondo en el contenedor */
+        left: 50%;
+        max-width: 350px;
+
+        width: 100%; /* Toma el mismo tamaño que la imagen */
+        height: 100%; /* Toma el mismo tamaño que la imagen */
+        transform: translate(-50%, -50%) rotate(-5deg); /* Centra y rota el fondo */
+        z-index: -1; /* Asegura que el fondo esté detrás de la imagen */
+    }
+
+    &__image img {
+        max-width: 350px;
+        width: 100%;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+        &:hover {
+            transform: rotate(3deg) scale(1.05);
+            transition: transform 0.3s ease-in-out;
+        }
+    }
+
+    &__content {
+        max-width: 600px;
+    }
+
+    &__title {
+        font-size: 1.8rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        color: styles.$negre;
+    }
+
+    &__description {
+        font-size: 1rem;
+        color: styles.$negre;
+        margin-bottom: 2rem;
+    }
+
+    &__stats {
+        display: flex;
+        gap: 2rem;
+        margin-bottom: 2rem;
+
+        @media (max-width: 500px) {
+            flex-direction: column;
+            gap: 1rem;
+        }
+    }
+
+    &__stat {
+        text-align: center;
+
+        &__number {
+            display: block;
+        }
+    }
+    &__span-text {
+        font-size: 14px;
+    }
+    &__number {
+        font-weight: bold;
+        font-size: 1.5rem;
+        color: styles.$verd-logo;
+    }
+
+    &__actions {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    &__cta {
+        background-color: styles.$verd-logo;
+        color: styles.$blanc;
+        padding: 0.8rem 1.5rem;
+        border: none;
+        border-radius: styles.$corner-md;
+        font-weight: 600;
+        cursor: pointer;
+    }
+
+    &__secondary {
+        background: transparent;
+        border: 2px solid styles.$verd-logo;
+        color: styles.$verd-logo;
+        padding: 0.8rem 1.5rem;
+        border-radius: styles.$corner-md;
+        font-weight: 600;
+        cursor: pointer;
+    }
+}

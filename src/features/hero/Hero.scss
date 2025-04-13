@@ -1,0 +1,41 @@
+@use '@/utils/styles';
+.Hero {
+    position: relative;
+    background-image: url(/landing-page.jpeg);
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    height: 85vh;
+    display: flex;
+    align-content: stretch;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+    &__content {
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        align-content: flex-start;
+        justify-content: center;
+        margin-left: 33px;
+    }
+
+    &__gradient {
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.4), transparent);
+        width: 100%;
+        position: absolute;
+        height: 100%;
+    }
+
+    &__title {
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+    }
+
+    &__buttons {
+        display: flex;
+        gap: 1rem;
+    }
+}

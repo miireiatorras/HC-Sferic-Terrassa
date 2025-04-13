@@ -1,15 +1,13 @@
 @use '@/utils/styles';
 
 .Title {
-    &__bar {
-        background-color: styles.$verd-estandard;
-        border-radius: 10px;
-        height: 7px;
-        width: 8rem;
-    }
+    @include styles.title-spacing;
 
     &__title {
         color: styles.$negre;
-        font-weight: bold;
+        font-size: 1.75rem;
+        margin-bottom: 2rem;
+        border-left: 5px solid styles.$verd-logo;
+        padding-left: 0.75rem;
     }
 }

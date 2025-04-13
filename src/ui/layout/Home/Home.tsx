@@ -6,23 +6,24 @@ import {
 import Patrocinadors from '@/features/patrocinadors/Patrocinadors';
 import { Title } from '@/ui/titles/Title';
 import Footer from '@/features/footer/Footer';
+import { Hero } from '@/features/hero/Hero';
+import Discover from '@/features/hero/Discover/Discover';
+import { ReadyToJoin } from '@/features/ReadyToJoin/ReadyToJoin';
+import { Caldendari } from '@/features/calendari/Calendari';
 // import { Form } from 'react-router-dom';
 
-export type HomeProps = BaseComponentProps & {
-    children?: React.ReactNode;
-};
+export type HomeProps = BaseComponentProps & {};
 
 const block = registerBlockName('Home');
-export const Home = ({ children, ...props }: HomeProps) => {
+export const Home = ({ ...props }: HomeProps) => {
     return (
         <main {...getBaseComponentProps({ ...props, block })}>
-            <Title>Calendari</Title>
-            <p>Consulta l’horari dels entrenaments d’avui.</p>
-            <Title>Troba'ns a Instagram!</Title>
-            {/* <Form /> */}
+            <Hero />
+            <Discover />
+            <ReadyToJoin />
+            <Caldendari />
             <Patrocinadors />
             <Footer />
-            {children}
         </main>
     );
 };

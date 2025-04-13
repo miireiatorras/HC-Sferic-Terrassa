@@ -57,3 +57,13 @@
     width: 100vw;
     min-height: 100vh;
 }
+
+// Spacing for titles
+@mixin title-spacing() {
+    margin: 2rem;
+}
+
+// Spacing for the content
+@mixin content-spacing() {
+    margin: 2rem;
+}
