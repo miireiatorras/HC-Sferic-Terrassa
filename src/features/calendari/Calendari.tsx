@@ -7,21 +7,23 @@ import {
     getBaseComponentProps,
 } from '@/utils';
 
+import './Calendari.scss';
+
 export type CaldendariProps = BaseComponentProps & {
     children?: React.ReactNode;
 };
 
-const block = registerBlockName('Caldendari');
+const block = registerBlockName('Calendari');
 export const Caldendari = ({ ...props }: CaldendariProps) => {
     return (
         <div {...getBaseComponentProps({ ...props, block })}>
+            <Title variant="light">Calendari partits</Title>
             <section
                 className={toBEM({
                     block,
                     element: 'section',
                 })}
             >
-                <Title>Calendari partits</Title>
                 <p>
                     La pàgina web oficial de la Federació de Hoquei Patins
                     disposa de tots els horaris dels partits de la temporada.
@@ -41,7 +43,7 @@ export const Caldendari = ({ ...props }: CaldendariProps) => {
                     >
                         Accedeix al calendari
                     </Button>
-                    <Button variant="primary" onClick={() => {}}>
+                    <Button variant="secondary" onClick={() => {}}>
                         Consulta horari entrenaments
                     </Button>
                 </div>

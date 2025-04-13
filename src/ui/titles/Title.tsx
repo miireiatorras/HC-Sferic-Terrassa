@@ -10,18 +10,30 @@ import './Title.scss';
 
 export type TitleProps = BaseComponentProps & {
     children?: React.ReactNode;
+    variant?: 'default' | 'light';
 };
 
 const block = registerBlockName('Title');
 
-export const Title = ({ children, ...props }: TitleProps) => {
+export const Title = ({
+    children,
+    variant = 'default',
+    ...props
+}: TitleProps) => {
     const { ref, inView } = useInView({
         triggerOnce: true,
         threshold: 0.2,
     });
 
     return (
-        <div {...getBaseComponentProps({ ...props, block })} ref={ref}>
+        <div
+            {...getBaseComponentProps({
+                ...props,
+                block,
+                modifiers: [variant],
+            })}
+            ref={ref}
+        >
             <motion.div
                 className={toBEM({ block, element: 'bar' })}
                 initial={{ x: '-100%', opacity: 0 }}

@@ -1,10 +1,13 @@
 @use '@/utils/styles';
 
 .Calendari {
+    background-color: styles.$verd-logo;
+
     &__section {
-        background-color: styles.$verd-logo;
+        @include styles.content-spacing;
         padding: 2rem 0;
         color: styles.$blanc;
+        text-align: center;
     }
 
     &__buttons-container {
