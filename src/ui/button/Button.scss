@@ -10,8 +10,8 @@
     transition: background-color 0.2s ease, color 0.2s ease;
 
     &--primary {
-        background-color: styles.$verd-logo;
-        color: styles.$blanc;
+        background-color: styles.$blanc;
+        color: styles.$negre;
 
         &:hover {
             background-color: styles.$verd-fosc;

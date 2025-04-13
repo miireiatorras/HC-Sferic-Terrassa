@@ -7,6 +7,7 @@ import {
 import { Link } from 'react-router-dom';
 
 import './Navbar.scss';
+import { Button } from '@/ui/button/Button';
 
 export type NavbarProps = BaseComponentProps;
 
@@ -88,20 +89,14 @@ export const Navbar = (props: NavbarProps) => {
                     </Link>
                 </li>
                 <li className={toBEM({ block, element: 'menu-item' })}>
-                    {/* <Button>
-                        <Link
-                            to="/inscripcions"
-                            className={toBEM({ block, element: 'menu-link' })}
-                        >
-                            Inscriu-te
-                        </Link>
-                    </Button> */}
-                    <Link
+                    <Button
+                        as={Link}
                         to="/inscripcions"
-                        className={toBEM({ block, element: 'menu-link' })}
+                        variant="primary"
+                        className={toBEM({ block, element: 'menu-button' })}
                     >
-                        Inscripcions
-                    </Link>
+                        Inscriu-te
+                    </Button>
                 </li>
             </ul>
         </nav>

@@ -14,5 +14,13 @@ type Story = StoryObj<typeof Title>;
 export const Playground: Story = {
     args: {
         children: 'Calendari',
+        variant: 'default',
     },
 };
+
+export const Variant = () => (
+    <div className="sferic-title-variant">
+        <Title variant="default">Calendari</Title>
+        <Title variant="light">Calendari</Title>
+    </div>
+);

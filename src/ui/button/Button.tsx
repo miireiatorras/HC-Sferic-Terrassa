@@ -9,6 +9,7 @@ import './Button.scss';
 import { Icon as BaseIcon, IconNames } from '@/ui/Icon/Icon';
 
 export type ButtonIconInternalProps = { icon: IconNames; className?: string };
+
 export type ButtonProps<ExternalIconProps extends object> =
     BaseComponentProps & {
         children?: React.ReactNode;
@@ -23,35 +24,41 @@ export type ButtonProps<ExternalIconProps extends object> =
         loading?: boolean;
         Icon?: Compose<ButtonIconInternalProps, ExternalIconProps>;
         icon?: IconNames;
-        onClick: () => void;
+        onClick?: () => void;
+        as?: React.ElementType;
+        to?: string;
     };
 
 const block = registerBlockName('Button');
+
 export const Button = <ExternalIconProps extends object>({
     className,
     children,
     variant = 'primary',
     icon,
     Icon = { component: BaseIcon, externalProps: {} as ExternalIconProps },
+    as: Component = 'button',
+    to,
+    onClick,
     ...props
 }: ButtonProps<ExternalIconProps>) => {
+    const isLink = Component !== 'button';
+
     return (
-        <button
+        <Component
             {...getBaseComponentProps({
                 ...props,
                 block,
                 modifiers: [variant, ...(icon ? ['with-icon'] : [])],
                 className,
             })}
-            type="button"
+            {...(isLink ? { to } : {})}
+            {...(!isLink ? { type: 'button', onClick } : { onClick })}
         >
             <>
                 {icon && (
                     <div
-                        className={toBEM({
-                            block,
-                            element: 'icon-container',
-                        })}
+                        className={toBEM({ block, element: 'icon-container' })}
                     >
                         <Icon.component
                             icon={icon}
@@ -62,17 +69,6 @@ export const Button = <ExternalIconProps extends object>({
                 )}
                 {children}
             </>
-        </button>
-    );
-};
-
-export const Test = () => {
-    return (
-        <>
-            {/* cas 2 */}
-            <Button onClick={() => {}} icon={'email'}>
-                hola
-            </Button>
-        </>
+        </Component>
     );
 };
