@@ -3,47 +3,53 @@
 .ReadyToJoin {
     @include styles.title-spacing;
     margin-top: 5rem;
-    background-color: styles.$blanc;
-    position: relative; /* Necesario para posicionar el fondo detrás de la imagen */
+    margin-bottom: 5rem;
+    background-color: transparent;
+    overflow: visible;
 
-    &__div {
-        display: flex;
-        gap: 1rem;
-        justify-content: center;
-    }
     svg {
         color: styles.$verd-logo;
     }
     &__container {
+        position: relative;
+        overflow: visible;
         display: flex;
         gap: 3rem;
         align-items: center;
         justify-content: center;
         flex-wrap: wrap;
-        position: relative; /* Para que los elementos hijos se posicionen respecto a esto */
     }
 
-    &__bg {
-        background-color: styles.$verd-logo;
-        position: absolute; /* Posiciona el fondo detrás de la imagen */
-        top: 50%; /* Centra el fondo en el contenedor */
-        left: 50%;
-        max-width: 350px;
+    &__image {
+        position: relative;
+        z-index: 1;
+        width: fit-content;
 
-        width: 100%; /* Toma el mismo tamaño que la imagen */
-        height: 100%; /* Toma el mismo tamaño que la imagen */
-        transform: translate(-50%, -50%) rotate(-5deg); /* Centra y rota el fondo */
-        z-index: -1; /* Asegura que el fondo esté detrás de la imagen */
-    }
+        &::before {
+            content: '';
+            position: absolute;
+            right: 10px;
+            width: 100%;
+            height: 100%;
+            background-color: styles.$verd-logo;
+            transform: rotate(-5deg);
+            z-index: 0;
+        }
 
-    &__image img {
-        max-width: 350px;
-        width: 100%;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        img {
+            display: block;
+            max-width: 350px;
+            width: 100%;
+            z-index: 10000;
+            position: relative;
+            transform: rotate(5deg);
 
-        &:hover {
-            transform: rotate(3deg) scale(1.05);
-            transition: transform 0.3s ease-in-out;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+            &:hover {
+                transform: rotate(3deg) scale(1.05);
+                transition: transform 0.3s ease-in-out;
+            }
         }
     }
 
@@ -77,18 +83,16 @@
 
     &__stat {
         text-align: center;
+    }
 
-        &__number {
-            display: block;
-        }
-    }
-    &__span-text {
-        font-size: 14px;
-    }
     &__number {
         font-weight: bold;
         font-size: 1.5rem;
         color: styles.$verd-logo;
+    }
+
+    &__span-text {
+        font-size: 14px;
     }
 
     &__actions {

@@ -7,6 +7,7 @@ import {
 // import Footer from './features/footer/Footer';
 import { Home } from './ui/layout/Home/Home';
 import { Navbar } from './ui/layout/navbar/Navbar';
+import { ElClub } from './pages/el-club/El-Club';
 
 export type AppProps = BaseComponentProps & {
     children?: React.ReactNode;
@@ -21,6 +22,7 @@ export const App = ({ children, ...props }: AppProps) => {
                 <Navbar />
                 <Routes>
                     <Route path="/" element={<Home />} />
+                    <Route path="/el-club" element={<ElClub />} />
                     {/* <Route path="/results" element={<ResultsPage />} />
           <Route path="/details/:id" element={<DetailsPage />} />
           <Route path="/emotions" element={<EmotionsPage />} /> */}
