@@ -1,0 +1,50 @@
+@use '@/utils/styles';
+
+.OrganisationTabs {
+    background: #f9fafb;
+    border-radius: styles.$corner-sm;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+
+    &__tablist {
+        display: flex;
+        border-bottom: 1px solid #e5e5e5;
+        background: #f9fafb;
+    }
+
+    &__panel {
+        padding: 1.5rem;
+    }
+
+    &__panelHeader {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+
+    &__panelTitle {
+        background: rgba(0, 72, 35, 0.1);
+        color: styles.$verd-logo;
+        padding: 0.25rem 1rem;
+        border-radius: styles.$corner-sm;
+        font-weight: 600;
+        font-size: 1rem;
+    }
+
+    &__memberCount {
+        font-size: 0.875rem;
+        color: styles.$negre;
+    }
+
+    &__cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 1rem;
+    }
+
+    &__empty {
+        color: styles.$negre;
+        font-size: 0.875rem;
+    }
+}

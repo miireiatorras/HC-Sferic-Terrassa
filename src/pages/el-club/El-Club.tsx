@@ -7,6 +7,8 @@ import {
 import { Card } from '@/ui/card/Card';
 import { Banner } from '@/ui/banner/Banner';
 import './el-club.scss';
+import Title from '@/ui/titles/Title';
+import { OrganisationTabs } from '@/features/organisation-tabs/OrganisationTabs';
 
 export type ElClubProps = BaseComponentProps;
 
@@ -16,7 +18,7 @@ export const ElClub = ({ ...props }: ElClubProps) => {
     return (
         <>
             <Banner variant="el-club" />
-
+            <Title>Missió i valors</Title>
             <section {...getBaseComponentProps({ ...props, block })}>
                 <div className={toBEM({ block, element: 'grid' })}>
                     <Card number="01" title="Qui som?">
@@ -65,6 +67,9 @@ export const ElClub = ({ ...props }: ElClubProps) => {
                         resistència física.
                     </Card>
                 </div>
+                <Title>La nostra història i origens</Title>
+                <Title>Organització del club</Title>
+                <OrganisationTabs />
             </section>
         </>
     );

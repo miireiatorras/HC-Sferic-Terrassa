@@ -1,0 +1,33 @@
+@use '@/utils/styles';
+
+.MemberCard {
+    background: styles.$blanc;
+    border-radius: styles.$corner-sm;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 10%;
+
+    &__avatar {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        background: styles.$verd-logo;
+        color: styles.$blanc;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+        font-size: 1rem;
+    }
+
+    &__name {
+        font-size: 0.875rem;
+        font-weight: 600;
+        color: styles.$negre;
+        text-align: center;
+    }
+}

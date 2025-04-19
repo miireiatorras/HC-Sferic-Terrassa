@@ -66,10 +66,10 @@ export const Navbar = (props: NavbarProps) => {
                 </li>
                 <li className={toBEM({ block, element: 'menu-item' })}>
                     <Link
-                        to="/horari-entrenaments"
+                        to="/horari"
                         className={toBEM({ block, element: 'menu-link' })}
                     >
-                        Horari Entrenaments
+                        Horari
                     </Link>
                 </li>
                 <li className={toBEM({ block, element: 'menu-item' })}>

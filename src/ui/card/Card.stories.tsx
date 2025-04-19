@@ -5,6 +5,7 @@ import './Card.scss';
 const meta: Meta<typeof Card> = {
     title: 'Sferic/Card',
     component: Card,
+    tags: ['autodocs'],
 };
 export default meta;
 

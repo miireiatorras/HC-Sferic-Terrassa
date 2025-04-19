@@ -1,16 +1,19 @@
+import { Banner } from '@/ui/banner/Banner';
+import Title from '@/ui/titles/Title';
 import {
     registerBlockName,
     BaseComponentProps,
     getBaseComponentProps,
 } from '@/utils';
 
-export type InscripcionsProps = BaseComponentProps & {
-    children?: React.ReactNode;
-};
+export type InscripcionsProps = BaseComponentProps & {};
 
 const block = registerBlockName('Inscripcions');
-export const Inscripcions = ({ children, ...props }: InscripcionsProps) => {
+export const Inscripcions = ({ ...props }: InscripcionsProps) => {
     return (
-        <div {...getBaseComponentProps({ ...props, block })}>{children}</div>
+        <div {...getBaseComponentProps({ ...props, block })}>
+            <Banner variant="inscriu-te" />
+            <Title>Apunta't i gaudeix del nostre club</Title>
+        </div>
     );
 };

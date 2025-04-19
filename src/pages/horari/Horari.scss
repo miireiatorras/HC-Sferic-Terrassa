@@ -1,0 +1,47 @@
+@use '@/utils/styles';
+
+.Horari {
+    &__controls {
+        @include styles.content-spacing;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    &__filter {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        select {
+            padding: 0.4rem 0.6rem;
+            border: 1px solid #ccc;
+            border-radius: styles.$corner-sm;
+            font-size: 0.9rem;
+        }
+    }
+
+    &__actions {
+        display: flex;
+        gap: 1rem;
+
+        .Horari__btn {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: transparent;
+            border: none;
+            color: styles.$negre;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 0.9rem;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}

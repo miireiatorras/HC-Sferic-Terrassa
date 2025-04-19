@@ -6,6 +6,7 @@ import './Banner.scss';
 const meta: Meta<typeof Banner> = {
     title: 'Sferic/Banner',
     component: Banner,
+    tags: ['autodocs'],
 };
 
 export default meta;

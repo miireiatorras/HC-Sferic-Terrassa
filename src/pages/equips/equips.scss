@@ -1,0 +1,9 @@
+@use '@/utils/styles';
+.Equips {
+    &__grid {
+        @include styles.content-spacing;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 1rem;
+    }
+}

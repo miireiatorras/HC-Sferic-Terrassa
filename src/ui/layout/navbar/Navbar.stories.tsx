@@ -5,6 +5,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 const meta: Meta<typeof Navbar> = {
     title: 'Sferic/Navbar',
     component: Navbar,
+    tags: ['autodocs'],
     decorators: [
         (Story) => (
             <MemoryRouter>

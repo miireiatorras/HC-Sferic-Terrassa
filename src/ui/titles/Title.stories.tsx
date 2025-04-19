@@ -5,6 +5,7 @@ import './Title.scss';
 const meta: Meta<typeof Title> = {
     title: 'Sferic/Title',
     component: Title,
+    tags: ['autodocs'],
 };
 
 export default meta;

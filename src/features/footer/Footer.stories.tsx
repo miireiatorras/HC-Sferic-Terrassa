@@ -4,6 +4,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 const meta: Meta<typeof Footer> = {
     title: 'Sferic/Footer',
     component: Footer,
+    tags: ['autodocs'],
 };
 
 export default meta;

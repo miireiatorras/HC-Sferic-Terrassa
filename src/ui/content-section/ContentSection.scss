@@ -1,0 +1,124 @@
+@use '@/utils/styles';
+
+.ContentSection {
+    @include styles.content-spacing;
+    background: styles.$blanc;
+    border-radius: styles.$corner-sm;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 1.5rem; // separació entre seccions
+
+    &__container {
+        display: flex;
+        flex-direction: row;
+        align-items: center; // centrem verticalment per fer-ho menys alt
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    &--image-left {
+        .ContentSection__container {
+            flex-direction: row-reverse;
+        }
+    }
+
+    &__content {
+        flex: 1 1 45%;
+        padding: 1rem; // padding molt ajustat
+    }
+
+    &__title {
+        font-size: 1.5rem; // més petit
+        font-weight: 600;
+        margin-bottom: 0.5rem; // menys separació
+        color: styles.$negre;
+    }
+
+    &__description {
+        font-size: 0.9rem;
+        line-height: 1.4;
+        color: styles.$negre;
+        margin-bottom: 0.75rem;
+
+        > * + * {
+            margin-top: 0.5rem;
+        }
+    }
+
+    &__stats {
+        display: flex;
+        gap: 1rem; // menys gap
+        margin-bottom: 0.75rem;
+        flex-wrap: wrap;
+    }
+
+    &__stat {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    &__statIcon {
+        color: styles.$verd-logo;
+        font-size: 1.25rem; // ajusta l'icona una mica més petita
+    }
+
+    &__statText {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__statValue {
+        font-weight: 600;
+        font-size: 0.85rem;
+        color: styles.$verd-logo;
+    }
+
+    &__statLabel {
+        font-size: 0.75rem;
+        color: styles.$negre;
+    }
+
+    &__link {
+        display: inline-block;
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: styles.$verd-logo;
+        padding: 0.25rem 0;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__image {
+        flex: 1 1 45%;
+        max-height: 180px; // fixa alçada màxima
+        overflow: hidden;
+        border-radius: 0 styles.$corner-sm styles.$corner-sm 0;
+
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    @media (max-width: 768px) {
+        &__container {
+            flex-direction: column-reverse;
+            text-align: center;
+        }
+        &__content {
+            flex: 1 1 100%;
+            padding: 1rem 0.75rem;
+        }
+        &__image {
+            flex: 1 1 100%;
+            max-height: 150px;
+            margin-bottom: 1rem;
+            border-radius: styles.$corner-sm;
+        }
+    }
+}
