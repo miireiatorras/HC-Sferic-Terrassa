@@ -1,3 +1,4 @@
+import React from 'react';
 import {
     toBEM,
     registerBlockName,
@@ -12,7 +13,9 @@ export type ButtonIconInternalProps = { icon: IconNames; className?: string };
 
 export type ButtonProps<ExternalIconProps extends object> =
     BaseComponentProps & {
+        /** Optional content inside the button. */
         children?: React.ReactNode;
+        /** Visual variant of the button. */
         variant?:
             | 'primary'
             | 'secondary'
@@ -21,16 +24,26 @@ export type ButtonProps<ExternalIconProps extends object> =
             | 'info'
             | 'empty'
             | 'text';
+        /** Whether the button is in a loading state. */
         loading?: boolean;
+        /** Icon component and its external props. */
         Icon?: Compose<ButtonIconInternalProps, ExternalIconProps>;
+        /** Name of the icon to show. */
         icon?: IconNames;
+        /** Click handler function. */
         onClick?: () => void;
+        /** Component type, defaults to 'button'. */
         as?: React.ElementType;
+        /** Link destination if rendered as a link. */
         to?: string;
     };
 
 const block = registerBlockName('Button');
 
+/**
+ * `Button` is a versatile UI component that supports multiple variants,
+ * optional icons, and link or button rendering.
+ */
 export const Button = <ExternalIconProps extends object>({
     className,
     children,

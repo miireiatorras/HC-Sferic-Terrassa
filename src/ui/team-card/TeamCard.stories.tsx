@@ -5,6 +5,7 @@ import './TeamCard.scss';
 const meta: Meta<typeof TeamCard> = {
     title: 'Sferic/TeamCard',
     component: TeamCard,
+    tags: ['autodocs'],
 };
 export default meta;
 type Story = StoryObj<typeof TeamCard>;

@@ -13,8 +13,8 @@ const block = registerBlockName('Seccions');
 export const Seccions = ({ ...props }: SeccionsProps) => {
     const schoolStats: Stat[] = [
         { icon: 'trophy', value: '3‑6', label: 'Anys d’edat' },
-        { icon: 'trophy', label: 'Categoria Escola' },
-        { icon: 'trophy', label: 'Equips mixtos' },
+        { icon: 'hockey-stick', label: 'Categoria Escola' },
+        { icons: ['female', 'male'], label: 'Equips mixtos' },
     ];
 
     return (
@@ -45,7 +45,7 @@ export const Seccions = ({ ...props }: SeccionsProps) => {
                 linkText="Consultar equips"
                 linkHref="/equips"
                 imageSrc="/banners/presentacio-nen.jpg"
-                imagePosition="right" // o "left"
+                imagePosition="right"
             />
         </div>
     );

@@ -5,6 +5,7 @@ import './Accordion.scss';
 const meta: Meta<typeof Accordion> = {
     title: 'Sferic/Accordion',
     component: Accordion,
+    tags: ['autodocs'],
 };
 export default meta;
 type Story = StoryObj<typeof Accordion>;

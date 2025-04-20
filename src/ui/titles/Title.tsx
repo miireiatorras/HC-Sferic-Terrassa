@@ -8,13 +8,22 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import './Title.scss';
 
+/**
+ * Props for the `Title` component.
+ */
 export type TitleProps = BaseComponentProps & {
+    /** Optional content to display as the title. */
     children?: React.ReactNode;
+    /** Visual variant of the title. */
     variant?: 'default' | 'light';
 };
 
 const block = registerBlockName('Title');
 
+/**
+ * `Title` is a UI component that renders a heading with an animated bar.
+ * The component slides into view when it enters the viewport.
+ */
 export const Title = ({
     children,
     variant = 'default',
@@ -52,4 +61,5 @@ export const Title = ({
         </div>
     );
 };
+
 export default Title;

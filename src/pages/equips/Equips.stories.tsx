@@ -5,6 +5,8 @@ import { Accordion } from '@/ui/accordion/Accordion';
 
 const meta: Meta = {
     title: 'Sferic/Equips',
+    component: TeamCard,
+    tags: ['autodocs'],
 };
 export default meta;
 type Story = StoryObj;
@@ -33,7 +35,7 @@ const sampleTeams = [
     },
 ];
 
-export const Default: Story = {
+export const Playground: Story = {
     render: () => (
         <div className="Equips">
             <Accordion title="Iniciació">

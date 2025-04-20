@@ -9,12 +9,18 @@ import { Icon } from '@/ui/Icon/Icon';
 import './Accordion.scss';
 
 export type AccordionProps = BaseComponentProps & {
+    /** Title of the accordion section. */
     title: string;
+    /** Content to be shown when expanded. */
     children: React.ReactNode;
 };
 
 const block = registerBlockName('Accordion');
 
+/**
+ * `Accordion` is a UI component that shows and hides content
+ * by expanding or collapsing a section.
+ */
 export const Accordion = ({ title, children, ...props }: AccordionProps) => {
     const [open, setOpen] = useState(false);
     return (
@@ -35,7 +41,7 @@ export const Accordion = ({ title, children, ...props }: AccordionProps) => {
                 </span>
                 <Icon
                     className={toBEM({ block, element: 'icon' })}
-                    icon={open ? 'trophy' : 'trophy'}
+                    icon={open ? 'chevron-up' : 'chevron-up'}
                     size="lg"
                 />
             </button>

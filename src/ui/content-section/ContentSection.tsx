@@ -6,29 +6,50 @@ import {
     getBaseComponentProps,
 } from '@/utils';
 import { Icon, IconNames } from '@/ui/Icon/Icon';
-
 import './ContentSection.scss';
 
+/**
+ * Represents a single stat item with optional icons, value and label.
+ */
 export type Stat = {
-    icon: IconNames;
+    /** Array of icons to display. */
+    icons?: IconNames[];
+    /** Single icon to display. */
+    icon?: IconNames;
+    /** Value of the stat. */
     value?: string | React.ReactNode;
+    /** Label describing the stat. */
     label: string;
 };
 
+/**
+ * Props for the `ContentSection` component.
+ */
 export type ContentSectionProps = BaseComponentProps & {
+    /** Title of the section. */
     title: string;
+    /** Optional description text or element. */
     description?: React.ReactNode;
+    /** Optional array of stat blocks. */
     stats?: Stat[];
+    /** Text to display in the link. */
     linkText?: string;
+    /** URL of the link. */
     linkHref?: string;
+    /** Image source URL. */
     imageSrc: string;
+    /** Alternative text for the image. */
     imageAlt?: string;
-    /** 'right' (default) o 'left' */
+    /** Position of the image relative to the content. */
     imagePosition?: 'left' | 'right';
 };
 
 const block = registerBlockName('ContentSection');
 
+/**
+ * `ContentSection` is a layout component that displays a title,
+ * description, optional statistics, a link, and an image.
+ */
 export const ContentSection = ({
     title,
     description,
@@ -40,17 +61,16 @@ export const ContentSection = ({
     imagePosition = 'right',
     ...props
 }: ContentSectionProps) => {
-    // BEM modifier per canviar l'ordre de flex
     const modifiers = imagePosition === 'left' ? ['image-left'] : [];
 
     return (
         <section {...getBaseComponentProps({ ...props, block, modifiers })}>
             <div className={toBEM({ block, element: 'container' })}>
-                {/* TEXT */}
                 <div className={toBEM({ block, element: 'content' })}>
                     <h2 className={toBEM({ block, element: 'title' })}>
                         {title}
                     </h2>
+
                     {description && (
                         <div
                             className={toBEM({ block, element: 'description' })}
@@ -69,14 +89,31 @@ export const ContentSection = ({
                                         element: 'stat',
                                     })}
                                 >
-                                    <Icon
-                                        icon={s.icon}
-                                        size="lg"
-                                        className={toBEM({
-                                            block,
-                                            element: 'statIcon',
-                                        })}
-                                    />
+                                    {(s.icon || s.icons) && (
+                                        <div
+                                            className={toBEM({
+                                                block,
+                                                element: 'statIcon',
+                                            })}
+                                            style={{
+                                                display: 'flex',
+                                                gap: '0.5rem',
+                                            }}
+                                        >
+                                            {s.icon && (
+                                                <Icon icon={s.icon} size="lg" />
+                                            )}
+                                            {s.icons &&
+                                                s.icons.map((icon, index) => (
+                                                    <Icon
+                                                        key={index}
+                                                        icon={icon}
+                                                        size="lg"
+                                                    />
+                                                ))}
+                                        </div>
+                                    )}
+
                                     <div
                                         className={toBEM({
                                             block,

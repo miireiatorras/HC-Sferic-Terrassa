@@ -114,10 +114,9 @@ export const Horari = ({ ...props }: HorariProps) => {
         <div {...getBaseComponentProps({ ...props, block })}>
             <Banner variant="horari" />
             <Title>Entrena amb nosaltres! </Title>
-            {/* Controls: filtre + imprimir + pdf */}
             <div className={toBEM({ block, element: 'controls' })}>
                 <div className={toBEM({ block, element: 'filter' })}>
-                    <Icon icon="trophy" size="md" />
+                    <Icon icon="filter" size="md" />
                     <select
                         value={filter}
                         onChange={(e) =>
@@ -140,14 +139,14 @@ export const Horari = ({ ...props }: HorariProps) => {
                         onClick={() => window.print()}
                         className={toBEM({ block, element: 'btn' })}
                     >
-                        <Icon icon="trophy" size="md" /> Imprimir
+                        <Icon icon="printer" size="md" /> Imprimir
                     </button>
                     <button
                         type="button"
                         onClick={() => window.print()}
                         className={toBEM({ block, element: 'btn' })}
                     >
-                        <Icon icon="trophy" size="md" /> PDF
+                        <Icon icon="download" size="md" /> PDF
                     </button>
                 </div>
             </div>

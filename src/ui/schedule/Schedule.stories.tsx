@@ -5,6 +5,7 @@ import './Schedule.scss';
 const meta: Meta<typeof Schedule> = {
     title: 'Sferic/Schedule',
     component: Schedule,
+    tags: ['autodocs'],
 };
 
 export default meta;

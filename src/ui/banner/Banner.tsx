@@ -16,6 +16,7 @@ export type BannerVariant =
     | 'horari';
 
 export type BannerProps = BaseComponentProps & {
+    /** Visual variant to display specific content. */
     variant: BannerVariant;
 };
 
@@ -69,6 +70,10 @@ const BANNERS: Record<
     },
 };
 
+/**
+ * `Banner` is a visual component used to display a large image
+ * with a title and subtitle depending on the selected variant.
+ */
 export const Banner = ({ variant, ...props }: BannerProps) => {
     const { title, subtitle, image } = BANNERS[variant];
 

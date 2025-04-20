@@ -1,6 +1,7 @@
 @use '@/utils/styles';
 
 .ScheduleLegend {
+    @include styles.content-spacing;
     display: flex;
     gap: 2rem;
     margin-top: 1rem;

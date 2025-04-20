@@ -6,6 +6,7 @@ import './ContentSection.scss';
 const meta: Meta<typeof ContentSection> = {
     title: 'Sferic/ContentSection',
     component: ContentSection,
+    tags: ['autodocs'],
 };
 export default meta;
 type Story = StoryObj<typeof ContentSection>;

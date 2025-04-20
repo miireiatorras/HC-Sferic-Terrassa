@@ -5,6 +5,7 @@ import './Tab.scss';
 const meta: Meta<typeof Tab> = {
     title: 'Sferic/Tab',
     component: Tab,
+    tags: ['autodocs'],
 };
 export default meta;
 type Story = StoryObj<typeof Tab>;

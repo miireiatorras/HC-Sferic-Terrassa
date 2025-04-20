@@ -7,12 +7,18 @@ import {
 import './MemberCard.scss';
 
 export type MemberCardProps = BaseComponentProps & {
+    /** Initials of the member to show in the avatar. */
     initials: string;
+    /** Full name of the member. */
     name: string;
 };
 
 const block = registerBlockName('MemberCard');
 
+/**
+ * `MemberCard` is a UI component that displays a user avatar with initials
+ * and the member's full name.
+ */
 export const MemberCard = ({ initials, name, ...props }: MemberCardProps) => {
     return (
         <div {...getBaseComponentProps({ ...props, block })}>

@@ -10,6 +10,7 @@
         position: relative;
         width: 100%;
         padding-top: 66.66%; /* relació 3:2 */
+        cursor: zoom-in;
     }
 
     &__image {
@@ -29,10 +30,17 @@
         transition: opacity 0.3s ease;
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: flex-start;
-        padding: 1rem;
+        padding: 1.5rem;
         color: styles.$blanc;
+        text-align: left;
+    }
+
+    &__overlayInner {
+        max-width: 400px;
+        width: 100%;
+        margin: 0 auto;
     }
 
     &:hover .TeamCard__overlay {
@@ -42,16 +50,21 @@
     &__overlayTitle {
         font-size: 1.2rem;
         font-weight: 600;
-        margin-bottom: 0.75rem;
+        margin-bottom: 1rem;
         width: 100%;
-        text-align: center;
+        text-align: left;
     }
 
     &__overlayList {
+        columns: 2;
+        column-gap: 1.5rem;
+        break-inside: avoid;
         list-style: none;
         padding: 0;
         margin: 0;
         width: 100%;
+        max-width: 400px;
+        text-align: left;
     }
 
     &__overlayItem {
@@ -59,9 +72,11 @@
         padding-left: 1.5rem;
         margin-bottom: 0.5rem;
         font-size: 0.9rem;
+
         &:last-child {
             margin-bottom: 0;
         }
+
         &::before {
             content: '';
             position: absolute;
@@ -73,5 +88,26 @@
             background: styles.$verd-logo;
             border-radius: 50%;
         }
+    }
+}
+
+// 🔍 MODAL AMB IMATGE EN ZOOM
+
+.ImageModal {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    cursor: zoom-out;
+
+    &__img {
+        max-width: 90vw;
+        max-height: 90vh;
+        border-radius: styles.$corner-sm;
+        box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+        object-fit: contain;
     }
 }
