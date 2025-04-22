@@ -6,6 +6,7 @@ import {
     getBaseComponentProps,
 } from '@/utils';
 import { ContentSection, Stat } from '@/ui/content-section/ContentSection';
+import Footer from '@/features/footer/Footer';
 
 export type SeccionsProps = BaseComponentProps & {};
 
@@ -47,6 +48,7 @@ export const Seccions = ({ ...props }: SeccionsProps) => {
                 imageSrc="/banners/presentacio-nen.jpg"
                 imagePosition="right"
             />
+            <Footer />
         </div>
     );
 };

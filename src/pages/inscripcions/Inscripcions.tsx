@@ -1,3 +1,4 @@
+import Footer from '@/features/footer/Footer';
 import { Banner } from '@/ui/banner/Banner';
 import Title from '@/ui/titles/Title';
 import {
@@ -14,6 +15,7 @@ export const Inscripcions = ({ ...props }: InscripcionsProps) => {
         <div {...getBaseComponentProps({ ...props, block })}>
             <Banner variant="inscriu-te" />
             <Title>Apunta't i gaudeix del nostre club</Title>
+            <Footer />
         </div>
     );
 };

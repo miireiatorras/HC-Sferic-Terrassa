@@ -1,3 +1,4 @@
+import Footer from '@/features/footer/Footer';
 import { Banner } from '@/ui/banner/Banner';
 import Title from '@/ui/titles/Title';
 import {
@@ -14,6 +15,7 @@ export const Botiga = ({ ...props }: BotigaProps) => {
         <div {...getBaseComponentProps({ ...props, block })}>
             <Banner variant="botiga" />
             <Title>Compra aquí el nostre material!</Title>
+            <Footer />
         </div>
     );
 };

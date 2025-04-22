@@ -1,0 +1,37 @@
+@use '@/utils/styles';
+
+.ImageScrollGallery {
+    @include styles.content-spacing;
+    position: relative;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 1rem;
+
+    &__container {
+        display: flex;
+        gap: 1rem;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        padding: 1rem 0;
+    }
+
+    &__image {
+        object-fit: cover;
+        scroll-snap-align: start;
+        border-radius: 8px;
+    }
+
+    &__arrow {
+        position: absolute;
+        right: 0.5rem;
+        top: 50%;
+        transform: translateY(-50%);
+        pointer-events: none;
+        opacity: 0.7;
+    }
+
+    &__arrow {
+        transform: translateY(-50%) rotate(90deg);
+        color: styles.$blanc;
+    }
+}

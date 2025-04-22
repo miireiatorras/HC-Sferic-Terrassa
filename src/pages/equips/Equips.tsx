@@ -8,6 +8,7 @@ import './Equips.scss';
 import { Banner } from '@/ui/banner/Banner';
 import { Accordion } from '@/ui/accordion/Accordion';
 import { TeamCard } from '@/ui/team-card/TeamCard';
+import Footer from '@/features/footer/Footer';
 
 const initiacioTeams = [
     {
@@ -212,6 +213,7 @@ export const Equips = ({ ...props }: EquipsProps) => {
                     </div>
                 </Accordion>
             </div>
+            <Footer />
         </div>
     );
 };

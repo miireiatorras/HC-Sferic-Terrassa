@@ -7,6 +7,7 @@ import {
 import './Contacte.scss';
 import Title from '@/ui/titles/Title';
 import { Banner } from '@/ui/banner/Banner';
+import Footer from '@/features/footer/Footer';
 
 export type ContacteProps = BaseComponentProps & {};
 
@@ -18,6 +19,7 @@ export const Contacte = ({ ...props }: ContacteProps) => {
             <Title>On ens trobem?</Title>
             <Title variant="light">Parlem?</Title>
             <Title>Et llegim</Title>
+            <Footer />
         </div>
     );
 };
