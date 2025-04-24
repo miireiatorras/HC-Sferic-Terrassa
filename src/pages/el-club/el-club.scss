@@ -1,12 +1,12 @@
 @use '@/utils/styles';
 
 .ElClub {
-    @include styles.content-spacing;
-
     //padding: 4rem 2rem;
     background-color: styles.$blanc;
 
     &__timeline {
+        @include styles.content-spacing;
+
         background-color: #f9fafb;
         display: flex;
         flex-direction: column;
@@ -35,7 +35,11 @@
         background-color: styles.$verd-logo;
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        justify-content: space-evenly;
         align-items: center;
+    }
+
+    &__p {
+        @include styles.content-spacing;
     }
 }

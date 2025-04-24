@@ -1,0 +1,13 @@
+@use '@/utils/styles';
+
+.Contacte {
+    &__section {
+        background-color: styles.$verd-logo;
+    }
+    &__info-grid {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+}

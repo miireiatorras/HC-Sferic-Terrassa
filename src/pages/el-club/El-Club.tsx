@@ -100,7 +100,13 @@ export const ElClub = ({ ...props }: ElClubProps) => {
                                 <strong>molt vinculats</strong> al barri de Ca
                                 n’Aurell de Terrassa i en concret a l’activitat
                                 de la seva <strong>parròquia</strong>, la
-                                Sagrada Família... <strong>SFERIC</strong>.
+                                Sagrada Família. Així doncs, encara es conserva
+                                el nom de l’indret on es va crear:{' '}
+                                <strong>
+                                    Societat Familiar Esportiva Recreativa i
+                                    Cultural (SFERIC)
+                                </strong>
+                                .
                             </>
                         }
                     />
@@ -112,9 +118,13 @@ export const ElClub = ({ ...props }: ElClubProps) => {
                                 realitza una tasca{' '}
                                 <strong>
                                     educativa, social, cultural i esportiva
-                                </strong>
-                                ... evolucionen{' '}
-                                <strong>molt positivament</strong>.
+                                </strong>{' '}
+                                d’important rellevància, esdevenint com a
+                                element clau en la cohesió del barri de Ca
+                                n’Aurell i, per tant, de Terrassa. El club i les
+                                seves seccions evolucionen molt{' '}
+                                <strong>positivament</strong>, així com també ho
+                                fa el barri i la ciutat.
                             </>
                         }
                     />
@@ -124,14 +134,22 @@ export const ElClub = ({ ...props }: ElClubProps) => {
                             <>
                                 La secció de Bàsquet manté la{' '}
                                 <strong>ubicació original</strong>, mentre que
-                                l’Hoquei Patins... amb el suport de{' '}
-                                <strong>l’Ajuntament de Terrassa</strong>.
+                                l’Hoquei Patins, amb el suport de{' '}
+                                <strong>l’Ajuntament de Terrassa</strong>, es
+                                desplaça al Poliesportiu Municipal de La
+                                Maurina, al carrer Sardenya, 34, de Terrassa.
                             </>
                         }
                     />
                 </div>
+
                 <Title>Organització del club</Title>
-                <p>
+                <p
+                    className={toBEM({
+                        block,
+                        element: 'p',
+                    })}
+                >
                     Som una Entitat Sense Ànim de Lucre.Per tant, no busquem un
                     benefici econòmic sinó que perseguim una finalitat social,
                     altruista, esportiva i comunitària. A nivell ecònomic, ens
@@ -142,6 +160,7 @@ export const ElClub = ({ ...props }: ElClubProps) => {
                     Pel que fa a l’estructura de Club, es configura de la
                     següent manera:
                 </p>
+
                 <OrganisationTabs />
             </section>
             <Footer />

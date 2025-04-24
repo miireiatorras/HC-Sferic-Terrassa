@@ -1,6 +1,7 @@
 @use '@/utils/styles';
 
 .Card {
+    @include styles.content-spacing;
     position: relative;
     padding: 2rem;
     background-color: styles.$blanc;

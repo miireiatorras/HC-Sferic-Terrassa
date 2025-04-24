@@ -1,0 +1,53 @@
+@use '@/utils/styles';
+.LocationMap {
+    &__container {
+        @include styles.content-spacing;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    &__info {
+        display: flex;
+        align-items: center;
+    }
+    &__icon-wrapper {
+        background-color: styles.$verd-estandard;
+        border-radius: 50%;
+        padding: 0.75rem;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 2rem;
+    }
+
+    &__icon {
+        width: 24px;
+        height: 24px;
+        color: styles.$blanc;
+    }
+
+    &__details {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title {
+        margin: auto;
+
+        font-weight: 600;
+    }
+
+    &__address {
+        margin: auto;
+    }
+
+    &__map {
+        width: 60%;
+        height: 200px;
+        border-radius: 0.5rem;
+        overflow: hidden;
+    }
+}

@@ -1,6 +1,7 @@
 @use '@/utils/styles';
 
 .OrganisationTabs {
+    @include styles.content-spacing;
     background: #f9fafb;
     border-radius: styles.$corner-sm;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
