@@ -1,7 +1,7 @@
 @use '@/utils/styles';
 
 .Contacte {
-    &__section {
+    &__parlem-section {
         background-color: styles.$verd-logo;
     }
     &__info-grid {
@@ -9,5 +9,27 @@
         flex-direction: row;
         justify-content: space-evenly;
         align-items: center;
+    }
+
+    &__et-llegim-section {
+        position: relative;
+        overflow: hidden;
+
+        &::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: url('/public/landing-page.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.5;
+            z-index: 0;
+        }
+
+        > * {
+            position: relative;
+            z-index: 1;
+        }
     }
 }

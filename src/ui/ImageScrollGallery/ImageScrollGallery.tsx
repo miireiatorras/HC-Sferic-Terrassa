@@ -1,20 +1,30 @@
+// src/ui/info-card/ImageScrollGalery.tsx
 import {
     toBEM,
     registerBlockName,
     BaseComponentProps,
     getBaseComponentProps,
 } from '@/utils';
-
 import './ImageScrollGalery.scss';
 import { Icon } from '../Icon/Icon';
 
 export type Props = BaseComponentProps & {
+    /** Array of image URLs to be displayed in the gallery. */
     images: string[];
 };
 
 const block = registerBlockName('ImageScrollGallery');
 
-export const ImageScrollGallery = ({ images, ...props }: Props) => {
+export type ImageScrollGalleryProps = Props;
+
+/**
+ * ImageScrollGallery renders a horizontal, scrollable list of images
+ * with an arrow icon indicating scroll direction.
+ */
+export const ImageScrollGallery = ({
+    images,
+    ...props
+}: ImageScrollGalleryProps): JSX.Element => {
     return (
         <div {...getBaseComponentProps({ ...props, block })}>
             <div className={toBEM({ block, element: 'container' })}>

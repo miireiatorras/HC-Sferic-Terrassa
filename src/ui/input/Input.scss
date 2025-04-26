@@ -1,0 +1,35 @@
+@use '@/utils/styles';
+
+.Input {
+    display: flex;
+    flex-direction: column;
+
+    &--full {
+        grid-column: 1 / -1;
+    }
+
+    &__label {
+        font-size: 0.875rem;
+        margin-bottom: 0.5rem;
+        color: gray;
+    }
+
+    &__control {
+        padding: 0.75rem 1rem;
+        font-size: 1rem;
+        color: styles.$negre;
+        background-color: styles.$blanc;
+        border: 1px solid gray;
+        border-radius: 0.375rem;
+
+        &::placeholder {
+            color: gray;
+        }
+
+        &:focus {
+            outline: none;
+            border-color: styles.$verd-estandard;
+            box-shadow: 0 0 0 3px rgba(styles.$verd-estandard, 0.2);
+        }
+    }
+}
