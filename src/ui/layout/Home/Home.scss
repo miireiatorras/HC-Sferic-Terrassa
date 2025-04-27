@@ -1,6 +1,15 @@
-@use '../../../styles/colors.scss';
+@use '@/utils/styles';
+.Home {
+    main p {
+        color: styles.$negre;
+        display: inline;
+    }
 
-main p {
-    color: colors.$negre;
-    display: inline;
+    &__div {
+        background: linear-gradient(
+            to bottom,
+            rgba(97, 152, 114, 0) 25%,
+            #619872 290%
+        );
+    }
 }

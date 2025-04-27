@@ -21,6 +21,7 @@ export const I_CHECK_CIRCLE = 'check-circle';
 export const I_FILTER = 'filter';
 export const I_PRINTER = 'printer';
 export const I_STAR = 'star';
+export const I_STAR_FULL = 'star-full';
 export const I_ARROW_DOWN = 'arrow-down';
 export const I_CHEVRON_UP = 'chevron-up';
 export const I_PEOPLE_OUTLINE = 'people_outline';

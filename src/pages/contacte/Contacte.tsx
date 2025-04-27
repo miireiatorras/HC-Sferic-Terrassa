@@ -36,7 +36,7 @@ export const Contacte = ({ ...props }: ContacteProps) => {
                 >
                     <InfoCard
                         icon="email"
-                        text={<>info,sfericok@gmail.com</>}
+                        text={<>info.sfericok@gmail.com</>}
                     />
                     <InfoCard
                         icon="call"

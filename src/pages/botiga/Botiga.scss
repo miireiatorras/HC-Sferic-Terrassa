@@ -1,0 +1,13 @@
+@use '@/utils/styles';
+
+.Botiga {
+    &__main-content {
+        @include styles.content-spacing;
+    }
+
+    &__products {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}

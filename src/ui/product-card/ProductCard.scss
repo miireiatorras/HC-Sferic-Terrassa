@@ -1,0 +1,48 @@
+@use '@/utils/styles';
+
+.ProductCard {
+    max-width: 200px;
+    border: 1px solid gray;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    background-color: styles.$blanc;
+    transition: box-shadow 0.2s;
+
+    &--clickable {
+        cursor: pointer;
+
+        &:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+    }
+
+    &__image {
+        width: 100%;
+        height: auto;
+    }
+
+    &__info {
+        padding: 1rem;
+    }
+
+    &__title {
+        margin: 0;
+        font-size: 1rem;
+        font-weight: 600;
+        color: styles.$negre;
+        line-height: 1.2;
+    }
+
+    &__price {
+        margin-top: 0.5rem;
+        font-size: 1rem;
+        font-weight: 700;
+        color: styles.$negre;
+    }
+
+    &__subtitle {
+        margin-top: 0.25rem;
+        font-size: 0.875rem;
+        color: gray;
+    }
+}

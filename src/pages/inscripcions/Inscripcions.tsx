@@ -1,5 +1,7 @@
 import Footer from '@/features/footer/Footer';
+import { Alert } from '@/ui/alert/Alert';
 import { Banner } from '@/ui/banner/Banner';
+import { PromoSection } from '@/ui/PromoSection/PromoSection';
 import Title from '@/ui/titles/Title';
 import {
     registerBlockName,
@@ -15,6 +17,19 @@ export const Inscripcions = ({ ...props }: InscripcionsProps) => {
         <div {...getBaseComponentProps({ ...props, block })}>
             <Banner variant="inscriu-te" />
             <Title>Apunta't i gaudeix del nostre club</Title>
+            <Alert icon="launch" variant="open-in-new-tab">
+                Les inscripcions es gestionen a través de la plataforma PlayOff.
+                Clicant el botó, s’accedeix al formulari que s’ha de realitzar
+                per apuntar-te al club i gaudir de tots els seus adavantages.{' '}
+            </Alert>
+            <PromoSection
+                imageSrc="/public/inscripcions-full.png"
+                imageAlt="Season 2024-2025 Flyer"
+                heading="Ja estan OBERTES les inscripcions de la TEMPORADA 2025-2026 🎉!"
+                children="No et quedis fora! Uneix-te a la família Sferic Hoquei Patins Terrassa i viu la passió de l’hoquei en un ambient únic amb els millors entrenadors i companys 💪"
+                buttonText="Apunta't ara!"
+                buttonHref="https://sfericok.cat/inscripcions"
+            />
             <Footer />
         </div>
     );
