@@ -80,7 +80,7 @@ export const Botiga = ({ ...props }: BotigaProps) => {
                     })}
                 >
                     <ProductCard
-                        imageSrc="/public/camiseta-jugador-1a-equipacion-hc-sferic-veteranos.jpg"
+                        imageSrc="/camiseta-jugador-1a-equipacion-hc-sferic-veteranos.jpg"
                         imageAlt="Sample product"
                         title="Faldilla SFERIC"
                         price="32€"
@@ -88,7 +88,7 @@ export const Botiga = ({ ...props }: BotigaProps) => {
                         href="https://example.com/product/123"
                     />
                     <ProductCard
-                        imageSrc="/public/camiseta-jugador-1a-equipacion-hc-sferic-veteranos.jpg"
+                        imageSrc="/camiseta-jugador-1a-equipacion-hc-sferic-veteranos.jpg"
                         imageAlt="Sample product"
                         title="Faldilla SFERIC"
                         price="32€"
@@ -96,7 +96,7 @@ export const Botiga = ({ ...props }: BotigaProps) => {
                         href="https://example.com/product/123"
                     />
                     <ProductCard
-                        imageSrc="/public/camiseta-jugador-1a-equipacion-hc-sferic-veteranos.jpg"
+                        imageSrc="/camiseta-jugador-1a-equipacion-hc-sferic-veteranos.jpg"
                         imageAlt="Sample product"
                         title="Faldilla SFERIC"
                         price="32€"
@@ -104,7 +104,7 @@ export const Botiga = ({ ...props }: BotigaProps) => {
                         href="https://example.com/product/123"
                     />
                     <ProductCard
-                        imageSrc="/public/camiseta-jugador-1a-equipacion-hc-sferic-veteranos.jpg"
+                        imageSrc="/camiseta-jugador-1a-equipacion-hc-sferic-veteranos.jpg"
                         imageAlt="Sample product"
                         title="Faldilla SFERIC"
                         price="32€"

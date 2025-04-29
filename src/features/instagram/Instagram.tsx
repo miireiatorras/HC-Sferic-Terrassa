@@ -1,5 +1,4 @@
 import {
-    toBEM,
     registerBlockName,
     BaseComponentProps,
     getBaseComponentProps,

@@ -45,7 +45,7 @@ export const Inscripcions = ({ ...props }: InscripcionsProps) => {
                 per apuntar-te al club i gaudir de tots els seus adavantages.
             </Alert>
             <PromoSection
-                imageSrc="/public/inscripcions-full.png"
+                imageSrc="/inscripcions-full.png"
                 imageAlt="Season 2024-2025 Flyer"
                 heading="Ja estan OBERTES les inscripcions de la TEMPORADA 2025-2026 🎉!"
                 children="No et quedis fora! Uneix-te a la família Sferic Hoquei Patins Terrassa i viu la passió de l’hoquei en un ambient únic amb els millors entrenadors i companys 💪"

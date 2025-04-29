@@ -1,34 +1,33 @@
 {
-  "compilerOptions": {
-    "target": "es2021" /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */,
-    "module": "ESNext" /* Specify what module code is generated. */,
-    "declaration": true,
-    "sourceMap": true,
-    "useDefineForClassFields": true /* Emit ECMAScript-standard-compliant class fields. */,
-    "skipLibCheck": true /* Skip type checking all .d.ts files. */,
+    "compilerOptions": {
+        "target": "es2021" /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */,
+        "module": "ESNext" /* Specify what module code is generated. */,
+        "declaration": true,
+        "sourceMap": true,
+        "useDefineForClassFields": true /* Emit ECMAScript-standard-compliant class fields. */,
+        "skipLibCheck": true /* Skip type checking all .d.ts files. */,
 
-    "moduleResolution": "node",
+        "moduleResolution": "node",
 
-    "allowImportingTsExtensions": true,
-    "isolatedModules": true /* Ensure that each file can be safely transpiled without relying on other imports. */,
-    "noEmit": true /* Disable emitting files from a compilation. */,
-    "jsx": "react-jsx",
-    "resolveJsonModule": true,
-    "esModuleInterop": true /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables 'allowSyntheticDefaultImports' for type compatibility. */,
-    "forceConsistentCasingInFileNames": true /* Ensure that casing is correct in imports. */,
+        "allowImportingTsExtensions": true,
+        "isolatedModules": true /* Ensure that each file can be safely transpiled without relying on other imports. */,
+        "noEmit": true /* Disable emitting files from a compilation. */,
+        "jsx": "react-jsx",
+        "resolveJsonModule": true,
+        "esModuleInterop": true /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables 'allowSyntheticDefaultImports' for type compatibility. */,
+        "forceConsistentCasingInFileNames": true /* Ensure that casing is correct in imports. */,
 
-    /* Linting */
-    "strict": true /* Enable all strict type-checking options. */,
-    "noUnusedLocals": true /* Enable error reporting when local variables aren't read. */,
-    "noUnusedParameters": true /* Raise an error when a function parameter isn't read. */,
-    "noFallthroughCasesInSwitch": true /* Enable error reporting for fallthrough cases in switch statements. */,
-    "noUncheckedSideEffectImports": true /* Check side effect imports. */,
+        /* Linting */
+        "strict": true /* Enable all strict type-checking options. */,
+        "noUnusedLocals": true /* Enable error reporting when local variables aren't read. */,
+        "noUnusedParameters": true /* Raise an error when a function parameter isn't read. */,
+        "noFallthroughCasesInSwitch": true /* Enable error reporting for fallthrough cases in switch statements. */,
 
-    /* Absolute imports*/
-    "baseUrl": "./src",
-    "paths": {
-      "@/*": ["*"]
-    }
-  },
-  "include": ["src", "typescript-complements"]
+        /* Absolute imports*/
+        "baseUrl": "./src",
+        "paths": {
+            "@/*": ["*"]
+        }
+    },
+    "include": ["src", "typescript-complements"]
 }
