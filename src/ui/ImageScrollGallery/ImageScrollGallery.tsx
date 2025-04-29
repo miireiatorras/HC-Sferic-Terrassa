@@ -6,6 +6,7 @@ import {
 } from '@/utils';
 import './ImageScrollGalery.scss';
 import { Icon } from '../Icon/Icon';
+import { JSX } from 'react';
 
 export type Props = BaseComponentProps & {
     /** Array of image URLs to be displayed in the gallery. */

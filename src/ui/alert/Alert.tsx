@@ -6,6 +6,7 @@ import {
 } from '@/utils';
 import { Icon, IconNames } from '../Icon/Icon';
 import './Alert.scss';
+import { JSX } from 'react';
 
 const block = registerBlockName('Alert');
 

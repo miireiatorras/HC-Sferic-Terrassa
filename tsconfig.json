@@ -13,9 +13,10 @@
         "allowImportingTsExtensions": true,
         "isolatedModules": true,
         "noEmit": true,
-
+        "types": ["vite/client", "react", "react-dom"],
+        "typeRoots": ["node_modules/@types"],
         "jsx": "react-jsx",
-        "jsxImportSource": "react", // <— para que TS conozca el namespace JSX
+        "jsxImportSource": "react",
         "resolveJsonModule": true,
         "esModuleInterop": true,
         "forceConsistentCasingInFileNames": true,
@@ -32,5 +33,5 @@
         }
     },
     "include": ["src", "typescript-complements"],
-    "exclude": ["node_modules", "dist"] // <— carpetas que no deben ser tipadas
+    "exclude": ["node_modules", "dist"]
 }

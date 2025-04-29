@@ -6,6 +6,7 @@ import {
 } from '@/utils';
 import './ContactForm.scss';
 import { Input } from '../../ui/input/Input';
+import { JSX } from 'react';
 
 const block = registerBlockName('ContactForm');
 

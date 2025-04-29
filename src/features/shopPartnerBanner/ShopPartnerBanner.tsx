@@ -6,6 +6,7 @@ import {
 } from '@/utils';
 import './ShopPartnerBanner.scss';
 import { Icon } from '@/ui/Icon/Icon';
+import { JSX } from 'react';
 
 const block = registerBlockName('ShopPartnerBanner');
 

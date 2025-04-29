@@ -5,6 +5,7 @@ import {
     getBaseComponentProps,
 } from '@/utils';
 import './Input.scss';
+import { JSX } from 'react';
 
 const block = registerBlockName('Input');
 

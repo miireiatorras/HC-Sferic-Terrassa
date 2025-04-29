@@ -6,6 +6,7 @@ import {
 } from '@/utils';
 import './InfoCard.scss';
 import { Icon, IconNames } from '../Icon/Icon';
+import { JSX } from 'react';
 
 const block = registerBlockName('InfoCard');
 
