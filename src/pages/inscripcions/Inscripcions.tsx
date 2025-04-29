@@ -10,7 +10,7 @@ import {
     toBEM,
 } from '@/utils';
 
-import './Inscripcions.scss';
+import './inscripcions.scss';
 export type InscripcionsProps = BaseComponentProps & {};
 
 const block = registerBlockName('Inscripcions');
