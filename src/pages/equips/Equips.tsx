@@ -7,9 +7,9 @@ import {
 
 import './Equips.scss';
 import { Banner } from '@/ui/banner/Banner';
-import { Accordion } from '@/ui/accordion/Accordion';
 import { TeamCard } from '@/ui/team-card/TeamCard';
 import Footer from '@/features/footer/Footer';
+import { DefaultAccordion } from '@/ui/defaultAccordion/DefaultAccordion';
 
 const initiacioTeams = [
     {
@@ -183,7 +183,7 @@ export const Equips = ({ ...props }: EquipsProps) => {
                 })}
             />{' '}
             <div className="Equips">
-                <Accordion title="Iniciació">
+                <DefaultAccordion title="Iniciació">
                     <div className="Equips__grid">
                         {initiacioTeams.map((t, i) => (
                             <TeamCard
@@ -194,8 +194,8 @@ export const Equips = ({ ...props }: EquipsProps) => {
                             />
                         ))}
                     </div>
-                </Accordion>
-                <Accordion title="Hoquei formatiu">
+                </DefaultAccordion>
+                <DefaultAccordion title="Hoquei formatiu">
                     <div className="Equips__grid">
                         {formatiuTeams.map((t, i) => (
                             <TeamCard
@@ -206,8 +206,8 @@ export const Equips = ({ ...props }: EquipsProps) => {
                             />
                         ))}
                     </div>
-                </Accordion>
-                <Accordion title="Sèniors">
+                </DefaultAccordion>
+                <DefaultAccordion title="Sèniors">
                     <div className="Equips__grid">
                         {seniorTeams.map((t, i) => (
                             <TeamCard
@@ -218,7 +218,7 @@ export const Equips = ({ ...props }: EquipsProps) => {
                             />
                         ))}
                     </div>
-                </Accordion>
+                </DefaultAccordion>
             </div>
             <Footer
                 className={toBEM({

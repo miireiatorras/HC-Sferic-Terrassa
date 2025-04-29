@@ -1,6 +1,6 @@
 @use '@/utils/styles';
 
-.Accordion {
+.DefaultAccordion {
     @include styles.content-spacing;
     margin-bottom: 1.5rem;
     border-radius: styles.$corner-sm;
@@ -27,17 +27,17 @@
     }
 
     &--open {
-        .Accordion__header {
+        .DefaultAccordion__header {
             background: styles.$verd-logo;
             color: styles.$blanc;
         }
 
-        .Accordion__icon {
+        .DefaultAccordion__icon {
             transform: rotate(180deg);
             color: styles.$blanc;
         }
 
-        .Accordion__content {
+        .DefaultAccordion__content {
             max-height: 1000px;
             opacity: 1;
             transition: max-height 0.5s ease, opacity 0.4s ease;

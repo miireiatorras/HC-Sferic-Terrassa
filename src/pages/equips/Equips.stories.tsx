@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import './Equips.scss';
 import { TeamCard } from '@/ui/team-card/TeamCard';
-import { Accordion } from '@/ui/accordion/Accordion';
+import { DefaultAccordion } from '@/ui/defaultAccordion/DefaultAccordion';
 
 const meta: Meta = {
     title: 'Sferic/Equips',
@@ -38,7 +38,7 @@ const sampleTeams = [
 export const Playground: Story = {
     render: () => (
         <div className="Equips">
-            <Accordion title="Iniciació">
+            <DefaultAccordion title="Iniciació">
                 <div className="Equips__grid">
                     {sampleTeams.map((t, i) => (
                         <TeamCard
@@ -49,8 +49,8 @@ export const Playground: Story = {
                         />
                     ))}
                 </div>
-            </Accordion>
-            <Accordion title="Formatiu">
+            </DefaultAccordion>
+            <DefaultAccordion title="Formatiu">
                 <div className="Equips__grid">
                     {sampleTeams.map((t, i) => (
                         <TeamCard
@@ -61,8 +61,8 @@ export const Playground: Story = {
                         />
                     ))}
                 </div>
-            </Accordion>
-            <Accordion title="Sènior">
+            </DefaultAccordion>
+            <DefaultAccordion title="Sènior">
                 <div className="Equips__grid">
                     {sampleTeams.map((t, i) => (
                         <TeamCard
@@ -73,7 +73,7 @@ export const Playground: Story = {
                         />
                     ))}
                 </div>
-            </Accordion>
+            </DefaultAccordion>
         </div>
     ),
 };

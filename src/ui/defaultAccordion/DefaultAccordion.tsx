@@ -6,22 +6,26 @@ import {
     getBaseComponentProps,
 } from '@/utils';
 import { Icon } from '@/ui/Icon/Icon';
-import './Accordion.scss';
+import './DefaultAccordion.scss';
 
-export type AccordionProps = BaseComponentProps & {
-    /** Title of the accordion section. */
+export type DefaultAccordionProps = BaseComponentProps & {
+    /** Title of the DefaultAccordion section. */
     title: string;
     /** Content to be shown when expanded. */
     children: React.ReactNode;
 };
 
-const block = registerBlockName('Accordion');
+const block = registerBlockName('DefaultAccordion');
 
 /**
- * `Accordion` is a UI component that shows and hides content
+ * `DefaultAccordion` is a UI component that shows and hides content
  * by expanding or collapsing a section.
  */
-export const Accordion = ({ title, children, ...props }: AccordionProps) => {
+export const DefaultAccordion = ({
+    title,
+    children,
+    ...props
+}: DefaultAccordionProps) => {
     const [open, setOpen] = useState(false);
     return (
         <div
