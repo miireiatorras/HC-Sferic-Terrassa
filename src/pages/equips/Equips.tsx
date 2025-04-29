@@ -5,7 +5,7 @@ import {
     toBEM,
 } from '@/utils';
 
-import './Equips.scss';
+import './equips.scss';
 import { Banner } from '@/ui/banner/Banner';
 import { TeamCard } from '@/ui/team-card/TeamCard';
 import Footer from '@/features/footer/Footer';
