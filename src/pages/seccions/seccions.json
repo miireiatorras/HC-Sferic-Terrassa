@@ -17,7 +17,7 @@
         },
         {
             "title": "Hoquei formatiu",
-            "description": "Aprenen a patinar i a utilitzar l’estic i la bola mentre desenvolupen les habilitats bàsiques de l’hoquei patins.\n\nMitjançant el joc dirigit, adquireixen hàbits i coneixements essencials per a la pràctica de l’hoquei patins.",
+            "description": "Pels que saben patinar o han fet Escola d’hoquei patins. Treballen la millora de les habilitats amb estic i bola i s’inicien en la pràctica de partits.  Aprenen la tècnica i la tàctica, i practiquen per a la millora de l’habilitat del patinatge i de la forma física. És on fem crèixer el planter del SFERIC i l’afició al Hoquei Patins.",
             "stats": [
                 { "icon": "trophy", "value": "3-6", "label": "Anys d’edat" },
                 { "icon": "hockey-stick", "label": "Categoria Escola" },
@@ -30,7 +30,7 @@
         },
         {
             "title": "Hoquei competició",
-            "description": "Aprenen a patinar i a utilitzar l’estic i la bola mentre desenvolupen les habilitats bàsiques de l’hoquei patins.\n\nMitjançant el joc dirigit, adquireixen hàbits i coneixements essencials per a la pràctica de l’hoquei patins.",
+            "description": "Pràctica esportiva d’Hoquei Patins de competició en les diferents categories de  la Federació Catalana de Patinatge, amb entrenaments adaptats a cada nivell, fomentant l’esperit de superació i el treball en equip.",
             "stats": [
                 { "icon": "trophy", "value": "3-6", "label": "Anys d’edat" },
                 { "icon": "hockey-stick", "label": "Categoria Escola" },
