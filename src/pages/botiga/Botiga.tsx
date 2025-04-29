@@ -11,6 +11,7 @@ import {
 } from '@/utils';
 import { Alert } from '@/ui/alert/Alert';
 import { ProductCard } from '@/ui/product-card/ProductCard';
+import { Button } from '@/ui/button/Button';
 
 export type BotigaProps = BaseComponentProps & {};
 
@@ -112,8 +113,28 @@ export const Botiga = ({ ...props }: BotigaProps) => {
                     />
                 </div>
             </div>
-
-            <Footer />
+            <Button
+                className={toBEM({
+                    block,
+                    element: 'Button',
+                })}
+            >
+                Accedeix a la nostra botiga online
+            </Button>
+            <Button
+                className={toBEM({
+                    block,
+                    element: 'Button',
+                })}
+            >
+                Accedeix a la botiga Hockey Team™
+            </Button>
+            <Footer
+                className={toBEM({
+                    block,
+                    element: 'Footer',
+                })}
+            />
         </div>
     );
 };

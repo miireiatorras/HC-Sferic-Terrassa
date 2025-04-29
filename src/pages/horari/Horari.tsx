@@ -153,7 +153,12 @@ export const Horari = ({ ...props }: HorariProps) => {
             </div>
             <Schedule days={days} events={filteredEvents} />
             <ScheduleLegend />
-            <Footer />
+            <Footer
+                className={toBEM({
+                    block,
+                    element: 'Footer',
+                })}
+            />
         </div>
     );
 };

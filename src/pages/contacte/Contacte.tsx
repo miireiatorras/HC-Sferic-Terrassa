@@ -54,7 +54,12 @@ export const Contacte = ({ ...props }: ContacteProps) => {
                 <Title>Et llegim</Title>
                 <ContactForm title="Tens algun dubte? Omple el formulari i et respondrem" />
             </section>
-            <Footer />
+            <Footer
+                className={toBEM({
+                    block,
+                    element: 'Footer',
+                })}
+            />
         </div>
     );
 };

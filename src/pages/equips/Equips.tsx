@@ -2,6 +2,7 @@ import {
     registerBlockName,
     BaseComponentProps,
     getBaseComponentProps,
+    toBEM,
 } from '@/utils';
 
 import './Equips.scss';
@@ -174,7 +175,13 @@ const block = registerBlockName('Equips');
 export const Equips = ({ ...props }: EquipsProps) => {
     return (
         <div {...getBaseComponentProps({ ...props, block })}>
-            <Banner variant="equips" />
+            <Banner
+                variant="equips"
+                className={toBEM({
+                    block,
+                    element: 'Banner',
+                })}
+            />{' '}
             <div className="Equips">
                 <Accordion title="Iniciació">
                     <div className="Equips__grid">
@@ -213,7 +220,12 @@ export const Equips = ({ ...props }: EquipsProps) => {
                     </div>
                 </Accordion>
             </div>
-            <Footer />
+            <Footer
+                className={toBEM({
+                    block,
+                    element: 'Footer',
+                })}
+            />
         </div>
     );
 };

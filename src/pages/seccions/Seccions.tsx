@@ -23,9 +23,14 @@ export const Seccions = ({ ...props }: SeccionsProps) => {
 
     return (
         <div {...getBaseComponentProps({ ...props, block })}>
-            <Banner variant="seccions" />
+            <Banner
+                variant="seccions"
+                className={toBEM({
+                    block,
+                    element: 'Banner',
+                })}
+            />{' '}
             <Title>Consulta les diferents seccions d'hoquei que tenim</Title>
-
             <ContentSection
                 title="Escola hoquei patins"
                 description={
@@ -73,7 +78,7 @@ export const Seccions = ({ ...props }: SeccionsProps) => {
                 stats={schoolStats}
                 linkText="Consultar equips"
                 linkHref="/equips"
-                imageSrc="/DSC_7353.jpg"
+                imageSrc="/DSC_7420.jpg"
                 imagePosition="left"
             />
             <ContentSection
@@ -98,7 +103,7 @@ export const Seccions = ({ ...props }: SeccionsProps) => {
                 stats={schoolStats}
                 linkText="Consultar equips"
                 linkHref="/equips"
-                imageSrc="/DSC_7420.jpg"
+                imageSrc="/DSC_7353.jpg"
                 imagePosition="right"
             />
             <div
@@ -120,11 +125,40 @@ export const Seccions = ({ ...props }: SeccionsProps) => {
                         block,
                         element: 'p',
                     })}
-                ></p>
-                <Button>Unir-se al club</Button>
-                <Button>Descobrir més</Button>
+                >
+                    Tant si tot just comences com si vols competir al més alt
+                    nivell, tenim un programa perfecte per a tu.
+                </p>
+                <div
+                    className={toBEM({
+                        block,
+                        element: 'buttons-container',
+                    })}
+                >
+                    <Button
+                        className={toBEM({
+                            block,
+                            element: 'Button',
+                        })}
+                    >
+                        Uneix-te al club
+                    </Button>
+                    <Button
+                        className={toBEM({
+                            block,
+                            element: 'Button',
+                        })}
+                    >
+                        Consulta horari d’entrenaments{' '}
+                    </Button>
+                </div>
             </div>
-            <Footer />
+            <Footer
+                className={toBEM({
+                    block,
+                    element: 'Footer',
+                })}
+            />
         </div>
     );
 };

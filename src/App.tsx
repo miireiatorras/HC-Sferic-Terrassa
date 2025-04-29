@@ -40,7 +40,12 @@ export const App = ({ children, ...props }: AppProps) => {
           <Route path="/details/:id" element={<DetailsPage />} />
           <Route path="/emotions" element={<EmotionsPage />} /> */}
                 </Routes>
-                {/* <Footer /> */}
+                {/* <Footer
+                className={toBEM({
+                    block,
+                    element: 'Footer',
+                })}
+            /> */}
                 {children}
             </div>
         </Router>

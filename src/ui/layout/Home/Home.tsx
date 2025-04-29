@@ -37,7 +37,12 @@ export const Home = ({ ...props }: HomeProps) => {
             >
                 <Patrocinadors />
             </div>
-            <Footer />
+            <Footer
+                className={toBEM({
+                    block,
+                    element: 'Footer',
+                })}
+            />
         </main>
     );
 };

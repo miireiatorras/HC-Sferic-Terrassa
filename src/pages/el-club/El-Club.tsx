@@ -163,7 +163,12 @@ export const ElClub = ({ ...props }: ElClubProps) => {
 
                 <OrganisationTabs />
             </section>
-            <Footer />
+            <Footer
+                className={toBEM({
+                    block,
+                    element: 'Footer',
+                })}
+            />
         </>
     );
 };
