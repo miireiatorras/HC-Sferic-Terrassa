@@ -10,21 +10,9 @@ const meta: Meta<typeof Accordion> = {
 export default meta;
 type Story = StoryObj<typeof Accordion>;
 
-export const Closed: Story = {
+export const Playground: Story = {
     args: {
-        title: 'Iniciació',
-        children: <p>Contingut ocult quan està tancat.</p>,
+        title: 'Title',
+        children: <p>This is the content of the accordion.</p>,
     },
-};
-
-export const Open: Story = {
-    args: {
-        title: 'Iniciació',
-        children: (
-            <p>Ara el contingut està visible perquè obrim l’accordion.</p>
-        ),
-    },
-    //   play: async ({ canvasElement }) => {
-    //     // Obert per defecte: podries forçar l’estat si volguessis usar controls.
-    //   },
 };

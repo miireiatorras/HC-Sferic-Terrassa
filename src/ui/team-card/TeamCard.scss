@@ -9,7 +9,7 @@
     &__imageWrapper {
         position: relative;
         width: 100%;
-        padding-top: 66.66%; /* relació 3:2 */
+        padding-top: 66.66%;
         cursor: zoom-in;
     }
 
@@ -90,8 +90,6 @@
         }
     }
 }
-
-// 🔍 MODAL AMB IMATGE EN ZOOM
 
 .ImageModal {
     position: fixed;

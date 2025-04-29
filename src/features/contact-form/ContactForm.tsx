@@ -1,4 +1,3 @@
-// src/ui/contact-form/ContactForm.tsx
 import {
     toBEM,
     registerBlockName,
@@ -29,9 +28,6 @@ export type Props = BaseComponentProps & {
 /**
  * ContactForm renders a styled card with a heading, four Input controls,
  * and a submit button. Labels and placeholders are fully configurable.
- *
- * @param {Props} props – Component props.
- * @returns {JSX.Element} The rendered contact form.
  */
 export const ContactForm = ({
     title,

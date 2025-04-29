@@ -1,4 +1,3 @@
-// src/components/ContentSection/ContentSection.stories.tsx
 import type { Meta, StoryObj } from '@storybook/react';
 import { ContentSection, ContentSectionProps, Stat } from './ContentSection';
 import './ContentSection.scss';
@@ -11,7 +10,6 @@ const meta: Meta<typeof ContentSection> = {
 export default meta;
 type Story = StoryObj<typeof ContentSection>;
 
-// Ejemplo de stats para las historias
 const schoolStats: Stat[] = [
     { icon: 'trophy', value: '3‑6', label: 'Anys d’edat' },
     { icon: 'trophy', label: 'Categoria Escola' },

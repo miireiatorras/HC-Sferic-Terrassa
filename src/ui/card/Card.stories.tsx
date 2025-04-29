@@ -11,7 +11,6 @@ export default meta;
 
 type Story = StoryObj<typeof Card>;
 
-// History: Single editable card
 export const Playground: Story = {
     args: {
         number: '01',
@@ -20,7 +19,6 @@ export const Playground: Story = {
     },
 };
 
-// Múltiples cartes tal com apareixen a la pàgina “El Club”
 export const Grid: Story = {
     render: () => (
         <div

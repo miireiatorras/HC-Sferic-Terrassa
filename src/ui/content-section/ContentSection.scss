@@ -6,12 +6,12 @@
     border-radius: styles.$corner-sm;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    margin-bottom: 1.5rem; // separació entre seccions
+    margin-bottom: 1.5rem;
 
     &__container {
         display: flex;
         flex-direction: row;
-        align-items: center; // centrem verticalment per fer-ho menys alt
+        align-items: center;
         justify-content: space-between;
         width: 100%;
     }
@@ -24,13 +24,13 @@
 
     &__content {
         flex: 1 1 45%;
-        padding: 1rem; // padding molt ajustat
+        padding: 1rem;
     }
 
     &__title {
-        font-size: 1.5rem; // més petit
+        font-size: 1.5rem;
         font-weight: 600;
-        margin-bottom: 0.5rem; // menys separació
+        margin-bottom: 0.5rem;
         color: styles.$negre;
     }
 
@@ -47,7 +47,7 @@
 
     &__stats {
         display: flex;
-        gap: 1rem; // menys gap
+        gap: 1rem;
         margin-bottom: 0.75rem;
         flex-wrap: wrap;
     }
@@ -60,7 +60,7 @@
 
     &__statIcon {
         color: styles.$verd-logo;
-        font-size: 1.25rem; // ajusta l'icona una mica més petita
+        font-size: 1.25rem;
     }
 
     &__statText {
@@ -93,7 +93,7 @@
 
     &__image {
         flex: 1 1 45%;
-        max-height: 180px; // fixa alçada màxima
+        max-height: 180px;
         overflow: hidden;
         border-radius: 0 styles.$corner-sm styles.$corner-sm 0;
 

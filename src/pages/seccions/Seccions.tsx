@@ -4,9 +4,12 @@ import {
     registerBlockName,
     BaseComponentProps,
     getBaseComponentProps,
+    toBEM,
 } from '@/utils';
+import './Seccions.scss';
 import { ContentSection, Stat } from '@/ui/content-section/ContentSection';
 import Footer from '@/features/footer/Footer';
+import { Button } from '@/ui/button/Button';
 
 export type SeccionsProps = BaseComponentProps & {};
 
@@ -48,6 +51,79 @@ export const Seccions = ({ ...props }: SeccionsProps) => {
                 imageSrc="/banners/presentacio-nen.jpg"
                 imagePosition="right"
             />
+            <ContentSection
+                title="Hoquei formatiu"
+                description={
+                    <>
+                        <p>
+                            Aprenen a patinar i a utilitzar l’estic i la bola
+                            mentre desenvolupen les habilitats bàsiques de
+                            l’hoquei patins. Es treballen aspectes tècnics com
+                            l’equilibri, la coordinació i l’agilitat, i es
+                            fomenten valors com el respecte, l’esforç, el
+                            treball en equip i l’autosuperació.
+                        </p>
+                        <p>
+                            Mitjançant el joc dirigit, adquireixen hàbits i
+                            coneixements essencials per a la pràctica de
+                            l’hoquei patins.
+                        </p>
+                    </>
+                }
+                stats={schoolStats}
+                linkText="Consultar equips"
+                linkHref="/equips"
+                imageSrc="/DSC_7353.jpg"
+                imagePosition="left"
+            />
+            <ContentSection
+                title="Hoquei competició"
+                description={
+                    <>
+                        <p>
+                            Aprenen a patinar i a utilitzar l’estic i la bola
+                            mentre desenvolupen les habilitats bàsiques de
+                            l’hoquei patins. Es treballen aspectes tècnics com
+                            l’equilibri, la coordinació i l’agilitat, i es
+                            fomenten valors com el respecte, l’esforç, el
+                            treball en equip i l’autosuperació.
+                        </p>
+                        <p>
+                            Mitjançant el joc dirigit, adquireixen hàbits i
+                            coneixements essencials per a la pràctica de
+                            l’hoquei patins.
+                        </p>
+                    </>
+                }
+                stats={schoolStats}
+                linkText="Consultar equips"
+                linkHref="/equips"
+                imageSrc="/DSC_7420.jpg"
+                imagePosition="right"
+            />
+            <div
+                className={toBEM({
+                    block,
+                    element: 'gradient',
+                })}
+            >
+                <h2
+                    className={toBEM({
+                        block,
+                        element: 'h2',
+                    })}
+                >
+                    Prepara't per unir-te a HC. SFERIC Terrassa?
+                </h2>
+                <p
+                    className={toBEM({
+                        block,
+                        element: 'p',
+                    })}
+                ></p>
+                <Button>Unir-se al club</Button>
+                <Button>Descobrir més</Button>
+            </div>
             <Footer />
         </div>
     );

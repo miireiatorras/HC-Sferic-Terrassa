@@ -1,5 +1,4 @@
 import type { Meta, StoryObj } from '@storybook/react';
-// import { action } from '@storybook/addon-actions';
 import { ProductCard } from './ProductCard';
 import './ProductCard.scss';
 
@@ -41,10 +40,3 @@ export const ClickableLink: Story = {
         href: 'https://example.com/product/123',
     },
 };
-
-// export const ClickableButton: Story = {
-//   args: {
-//     ...Default.args,
-//     onClick: action('card-clicked'),
-//   },
-// } as ProductCardProps;

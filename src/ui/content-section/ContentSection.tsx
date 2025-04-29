@@ -8,9 +8,6 @@ import {
 import { Icon, IconNames } from '@/ui/Icon/Icon';
 import './ContentSection.scss';
 
-/**
- * Represents a single stat item with optional icons, value and label.
- */
 export type Stat = {
     /** Array of icons to display. */
     icons?: IconNames[];
@@ -22,9 +19,6 @@ export type Stat = {
     label: string;
 };
 
-/**
- * Props for the `ContentSection` component.
- */
 export type ContentSectionProps = BaseComponentProps & {
     /** Title of the section. */
     title: string;

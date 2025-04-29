@@ -1,4 +1,3 @@
-// src/components/Banner/Banner.stories.tsx
 import type { Meta, StoryObj } from '@storybook/react';
 import { Banner } from './Banner';
 import './Banner.scss';

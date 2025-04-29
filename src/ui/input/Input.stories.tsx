@@ -1,4 +1,3 @@
-// src/ui/input/Input.stories.tsx
 import type { Meta, StoryObj } from '@storybook/react';
 import { Input, Props as InputProps } from './Input';
 import './Input.scss';

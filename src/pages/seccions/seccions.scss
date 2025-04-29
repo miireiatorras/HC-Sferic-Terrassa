@@ -1,1 +1,11 @@
 @use '@/utils/styles';
+
+.Seccions {
+    &__gradient {
+        background: linear-gradient(
+            to bottom,
+            rgba(97, 152, 114, 0) 25%,
+            #619872 290%
+        );
+    }
+}

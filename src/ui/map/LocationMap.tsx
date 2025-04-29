@@ -16,13 +16,6 @@ const block = registerBlockName('LocationMap');
 
 /**
  * Displays a location card with an icon, address info and an embedded map.
- *
- * Usage:
- * <LocationMap
- *   title="Pavelló Municipal de La Maurina"
- *   address="Carrer Sardenya, 34, Terrassa, 08224 Barcelona"
- *   mapSrc="https://www.google.com/maps/embed?..."
- * />
  */
 export const LocationMap: React.FC<LocationMapProps> = ({
     title,

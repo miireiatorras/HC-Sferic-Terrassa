@@ -1,4 +1,3 @@
-// src/ui/info-card/ImageScrollGalery.tsx
 import {
     toBEM,
     registerBlockName,
