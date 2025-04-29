@@ -8,7 +8,7 @@
         "sourceMap": true,
         "useDefineForClassFields": true /* Emit ECMAScript-standard-compliant class fields. */,
         "skipLibCheck": true /* Skip type checking all .d.ts files. */,
-
+        "lib": ["DOM", "DOM.Iterable", "ESNext"],
         "moduleResolution": "node",
 
         "allowImportingTsExtensions": true,

@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@storybook/addons": "^7.6.17",
+    "framer-motion": "^12.9.2",
     "icomoon-react": "^3.0.0",
     "path": "^0.12.7",
     "react": "^19.0.0",
@@ -31,8 +32,8 @@
     "@storybook/react-vite": "^8.6.11",
     "@storybook/test": "^8.6.11",
     "@types/node": "^22.13.14",
-    "@types/react": "^19.0.10",
-    "@types/react-dom": "^19.0.4",
+    "@types/react": "^19.1.2",
+    "@types/react-dom": "^19.1.2",
     "@types/storybook__addons": "^4.1.1",
     "@vitejs/plugin-react": "^4.3.4",
     "@vitest/browser": "^3.0.9",
@@ -47,6 +48,7 @@
     "typescript": "~5.7.2",
     "typescript-eslint": "^8.24.1",
     "vite": "^6.2.0",
+    "vite-tsconfig-paths": "^5.1.4",
     "vitest": "^3.0.9"
   },
   "eslintConfig": {
