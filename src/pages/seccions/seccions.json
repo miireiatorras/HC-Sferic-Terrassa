@@ -1,0 +1,53 @@
+{
+    "bannerVariant": "seccions",
+    "header": "Consulta les diferents seccions d'hoquei que tenim",
+    "sections": [
+        {
+            "title": "Escola hoquei patins",
+            "description": "Aprenen a patinar i a utilitzar l’estic i la bola mentre desenvolupen les habilitats bàsiques de l’hoquei patins.\n\nMitjançant el joc dirigit, adquireixen hàbits i coneixements essencials per a la pràctica de l’hoquei patins.",
+            "stats": [
+                { "icon": "trophy", "value": "3-6", "label": "Anys d’edat" },
+                { "icon": "hockey-stick", "label": "Categoria Escola" },
+                { "icons": ["female", "male"], "label": "Equips mixtos" }
+            ],
+            "linkText": "Consultar equips",
+            "linkHref": "/equips",
+            "imageSrc": "/banners/presentacio-nen.jpg",
+            "imagePosition": "right"
+        },
+        {
+            "title": "Hoquei formatiu",
+            "description": "Aprenen a patinar i a utilitzar l’estic i la bola mentre desenvolupen les habilitats bàsiques de l’hoquei patins.\n\nMitjançant el joc dirigit, adquireixen hàbits i coneixements essencials per a la pràctica de l’hoquei patins.",
+            "stats": [
+                { "icon": "trophy", "value": "3-6", "label": "Anys d’edat" },
+                { "icon": "hockey-stick", "label": "Categoria Escola" },
+                { "icons": ["female", "male"], "label": "Equips mixtos" }
+            ],
+            "linkText": "Consultar equips",
+            "linkHref": "/equips",
+            "imageSrc": "/DSC_7420.jpg",
+            "imagePosition": "left"
+        },
+        {
+            "title": "Hoquei competició",
+            "description": "Aprenen a patinar i a utilitzar l’estic i la bola mentre desenvolupen les habilitats bàsiques de l’hoquei patins.\n\nMitjançant el joc dirigit, adquireixen hàbits i coneixements essencials per a la pràctica de l’hoquei patins.",
+            "stats": [
+                { "icon": "trophy", "value": "3-6", "label": "Anys d’edat" },
+                { "icon": "hockey-stick", "label": "Categoria Escola" },
+                { "icons": ["female", "male"], "label": "Equips mixtos" }
+            ],
+            "linkText": "Consultar equips",
+            "linkHref": "/equips",
+            "imageSrc": "/DSC_7353.jpg",
+            "imagePosition": "right"
+        }
+    ],
+    "cta": {
+        "heading": "Prepara't per unir-te a HC. SFERIC Terrassa?",
+        "text": "Tant si tot just comences com si vols competir al més alt nivell, tenim un programa perfecte per a tu.",
+        "buttons": [
+            { "text": "Uneix-te al club", "href": "#" },
+            { "text": "Consulta horari d’entrenaments", "href": "#" }
+        ]
+    }
+}

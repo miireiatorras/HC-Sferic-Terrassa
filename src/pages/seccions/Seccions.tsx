@@ -1,3 +1,7 @@
+// src/pages/seccions/Seccions.tsx
+
+import type { BannerVariant } from '@/ui/banner/Banner';
+import seccionsJson from './seccions.json';
 import { Banner } from '@/ui/banner/Banner';
 import Title from '@/ui/titles/Title';
 import {
@@ -6,159 +10,95 @@ import {
     getBaseComponentProps,
     toBEM,
 } from '@/utils';
-import './Seccions.scss';
 import { ContentSection, Stat } from '@/ui/content-section/ContentSection';
 import Footer from '@/features/footer/Footer';
 import { Button } from '@/ui/button/Button';
+import './Seccions.scss';
 
+// --- Tipado de la estructura JSON ---
+interface SectionData {
+    title: string;
+    description: string;
+    stats: Stat[];
+    linkText: string;
+    linkHref: string;
+    imageSrc: string;
+    imagePosition: 'left' | 'right';
+}
+
+interface CTAButton {
+    text: string;
+    href: string;
+}
+
+interface CTAData {
+    heading: string;
+    text: string;
+    buttons: CTAButton[];
+}
+
+interface SeccionsData {
+    bannerVariant: BannerVariant;
+    header: string;
+    sections: SectionData[];
+    cta: CTAData;
+}
+
+// Asunción de que el JSON cumple la interfaz
+const seccionsData = seccionsJson as SeccionsData;
+
+// Props del componente (igual que antes)
 export type SeccionsProps = BaseComponentProps & {};
 
 const block = registerBlockName('Seccions');
-export const Seccions = ({ ...props }: SeccionsProps) => {
-    const schoolStats: Stat[] = [
-        { icon: 'trophy', value: '3‑6', label: 'Anys d’edat' },
-        { icon: 'hockey-stick', label: 'Categoria Escola' },
-        { icons: ['female', 'male'], label: 'Equips mixtos' },
-    ];
+
+export const Seccions = (props: SeccionsProps) => {
+    const { bannerVariant, header, sections, cta } = seccionsData;
 
     return (
         <div {...getBaseComponentProps({ ...props, block })}>
             <Banner
-                variant="seccions"
-                className={toBEM({
-                    block,
-                    element: 'Banner',
-                })}
-            />{' '}
-            <Title>Consulta les diferents seccions d'hoquei que tenim</Title>
-            <ContentSection
-                title="Escola hoquei patins"
-                description={
-                    <>
-                        <p>
-                            Aprenen a patinar i a utilitzar l’estic i la bola
-                            mentre desenvolupen les habilitats bàsiques de
-                            l’hoquei patins. Es treballen aspectes tècnics com
-                            l’equilibri, la coordinació i l’agilitat, i es
-                            fomenten valors com el respecte, l’esforç, el
-                            treball en equip i l’autosuperació.
-                        </p>
-                        <p>
-                            Mitjançant el joc dirigit, adquireixen hàbits i
-                            coneixements essencials per a la pràctica de
-                            l’hoquei patins.
-                        </p>
-                    </>
-                }
-                stats={schoolStats}
-                linkText="Consultar equips"
-                linkHref="/equips"
-                imageSrc="/banners/presentacio-nen.jpg"
-                imagePosition="right"
+                variant={bannerVariant}
+                className={toBEM({ block, element: 'Banner' })}
             />
-            <ContentSection
-                title="Hoquei formatiu"
-                description={
-                    <>
-                        <p>
-                            Aprenen a patinar i a utilitzar l’estic i la bola
-                            mentre desenvolupen les habilitats bàsiques de
-                            l’hoquei patins. Es treballen aspectes tècnics com
-                            l’equilibri, la coordinació i l’agilitat, i es
-                            fomenten valors com el respecte, l’esforç, el
-                            treball en equip i l’autosuperació.
-                        </p>
-                        <p>
-                            Mitjançant el joc dirigit, adquireixen hàbits i
-                            coneixements essencials per a la pràctica de
-                            l’hoquei patins.
-                        </p>
-                    </>
-                }
-                stats={schoolStats}
-                linkText="Consultar equips"
-                linkHref="/equips"
-                imageSrc="/DSC_7420.jpg"
-                imagePosition="left"
-            />
-            <ContentSection
-                title="Hoquei competició"
-                description={
-                    <>
-                        <p>
-                            Aprenen a patinar i a utilitzar l’estic i la bola
-                            mentre desenvolupen les habilitats bàsiques de
-                            l’hoquei patins. Es treballen aspectes tècnics com
-                            l’equilibri, la coordinació i l’agilitat, i es
-                            fomenten valors com el respecte, l’esforç, el
-                            treball en equip i l’autosuperació.
-                        </p>
-                        <p>
-                            Mitjançant el joc dirigit, adquireixen hàbits i
-                            coneixements essencials per a la pràctica de
-                            l’hoquei patins.
-                        </p>
-                    </>
-                }
-                stats={schoolStats}
-                linkText="Consultar equips"
-                linkHref="/equips"
-                imageSrc="/DSC_7353.jpg"
-                imagePosition="right"
-            />
-            <div
-                className={toBEM({
-                    block,
-                    element: 'gradient',
-                })}
-            >
-                <h2
-                    className={toBEM({
-                        block,
-                        element: 'h2',
-                    })}
-                >
-                    Prepara't per unir-te a HC. SFERIC Terrassa?
+            <Title>{header}</Title>
+
+            {sections.map((sec, idx) => (
+                <ContentSection
+                    key={idx}
+                    title={sec.title}
+                    description={sec.description
+                        .split('\n\n')
+                        .map((p, pIdx) => (
+                            <p key={pIdx}>{p}</p>
+                        ))}
+                    stats={sec.stats}
+                    linkText={sec.linkText}
+                    linkHref={sec.linkHref}
+                    imageSrc={sec.imageSrc}
+                    imagePosition={sec.imagePosition}
+                />
+            ))}
+
+            <div className={toBEM({ block, element: 'gradient' })}>
+                <h2 className={toBEM({ block, element: 'h2' })}>
+                    {cta.heading}
                 </h2>
-                <p
-                    className={toBEM({
-                        block,
-                        element: 'p',
-                    })}
-                >
-                    Tant si tot just comences com si vols competir al més alt
-                    nivell, tenim un programa perfecte per a tu.
-                </p>
-                <div
-                    className={toBEM({
-                        block,
-                        element: 'buttons-container',
-                    })}
-                >
-                    <Button
-                        className={toBEM({
-                            block,
-                            element: 'Button',
-                        })}
-                    >
-                        Uneix-te al club
-                    </Button>
-                    <Button
-                        className={toBEM({
-                            block,
-                            element: 'Button',
-                        })}
-                    >
-                        Consulta horari d’entrenaments{' '}
-                    </Button>
+                <p className={toBEM({ block, element: 'p' })}>{cta.text}</p>
+                <div className={toBEM({ block, element: 'buttons-container' })}>
+                    {cta.buttons.map((btn, bIdx) => (
+                        <Button
+                            key={bIdx}
+                            className={toBEM({ block, element: 'Button' })}
+                            onClick={() => (window.location.href = btn.href)}
+                        >
+                            {btn.text}
+                        </Button>
+                    ))}
                 </div>
             </div>
-            <Footer
-                className={toBEM({
-                    block,
-                    element: 'Footer',
-                })}
-            />
+
+            <Footer className={toBEM({ block, element: 'Footer' })} />
         </div>
     );
 };

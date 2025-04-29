@@ -1,0 +1,98 @@
+# 1) BACKEND
+backend:
+    name: git-gateway
+    branch: main
+
+# 2) CARPETAS DE MEDIOS
+media_folder: 'public/uploads'
+public_folder: '/uploads'
+
+# 3) COLECCIONES
+collections:
+    - name: 'seccions'
+      label: 'Seccions'
+      files:
+          - file: 'src/pages/seccions/seccions.json'
+            label: 'Página Seccions'
+            name: 'seccions'
+            fields:
+                - {
+                      label: 'Variant Banner',
+                      name: 'bannerVariant',
+                      widget: 'string',
+                  }
+                - { label: 'Encabezado', name: 'header', widget: 'string' }
+                - label: 'Secciones'
+                  name: 'sections'
+                  widget: 'list'
+                  fields:
+                      - { label: 'Título', name: 'title', widget: 'string' }
+                      - {
+                            label: 'Descripción',
+                            name: 'description',
+                            widget: 'text',
+                        }
+                      - label: 'Stats'
+                        name: 'stats'
+                        widget: 'list'
+                        fields:
+                            - {
+                                  label: 'Icono',
+                                  name: 'icon',
+                                  widget: 'string',
+                                  required: false,
+                              }
+                            - {
+                                  label: 'Iconos',
+                                  name: 'icons',
+                                  widget: 'list',
+                                  required: false,
+                              }
+                            - {
+                                  label: 'Valor',
+                                  name: 'value',
+                                  widget: 'string',
+                                  required: false,
+                              }
+                            - {
+                                  label: 'Etiqueta',
+                                  name: 'label',
+                                  widget: 'string',
+                              }
+                      - {
+                            label: 'Texto Enlace',
+                            name: 'linkText',
+                            widget: 'string',
+                        }
+                      - {
+                            label: 'Href Enlace',
+                            name: 'linkHref',
+                            widget: 'string',
+                        }
+                      - { label: 'Imagen', name: 'imageSrc', widget: 'image' }
+                      - {
+                            label: 'Posición Imagen',
+                            name: 'imagePosition',
+                            widget: 'select',
+                            options: ['left', 'right'],
+                        }
+                - label: 'CTA'
+                  name: 'cta'
+                  widget: 'object'
+                  fields:
+                      - { label: 'Heading', name: 'heading', widget: 'string' }
+                      - { label: 'Texto', name: 'text', widget: 'text' }
+                      - label: 'Botones CTA'
+                        name: 'buttons'
+                        widget: 'list'
+                        fields:
+                            - {
+                                  label: 'Texto Botón',
+                                  name: 'text',
+                                  widget: 'string',
+                              }
+                            - {
+                                  label: 'Href Botón',
+                                  name: 'href',
+                                  widget: 'string',
+                              }
