@@ -2,13 +2,28 @@
 <html lang="es">
     <head>
         <meta charset="utf-8" />
-        <title>Panel Admin</title>
-        <!-- Widget de Identity para el login -->
-        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-        <!-- El CMS en sí -->
-        <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+        <title>Panel de Administración</title>
     </head>
     <body>
-        <!-- Aquí monta el CMS -->
+        <!-- Este div es donde Netlify CMS se monta -->
+        <div id="nc-root"></div>
+
+        <!-- Netlify Identity widget (para login) -->
+        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+        <script>
+            // Opcional: redirige al CMS tras el login
+            if (window.netlifyIdentity) {
+                window.netlifyIdentity.on('init', (user) => {
+                    if (!user) {
+                        window.netlifyIdentity.on('login', () => {
+                            document.location.href = '/admin/';
+                        });
+                    }
+                });
+            }
+        </script>
+
+        <!-- El propio CMS -->
+        <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
     </body>
 </html>
