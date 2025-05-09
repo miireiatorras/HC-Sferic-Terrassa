@@ -1,98 +1,89 @@
 {
-  "bannerVariant": "seccions",
-  "header": "Consulta les diferents seccions d'hoquei que tenim",
-  "sections": [
-    {
-      "title": "Escola hoquei patins",
-      "description": "Aprenen a patinar i a utilitzar l’estic i la bola mentre desenvolupen les habilitats bàsiques de l’hoquei patins.\n\nMitjançant el joc dirigit, adquireixen hàbits i coneixements essencials per a la pràctica de l’hoquei patins!",
-      "stats": [
+    "bannerVariant": "seccions",
+    "header": "Consulta les diferents seccions d'hoquei que tenim",
+    "sections": [
         {
-          "icon": "trophy",
-          "value": "3-6",
-          "label": "Anys d’edat"
+            "title": "Escola hoquei patins",
+            "description": "Aprenen a patinar i a utilitzar l’estic i la bola mentre desenvolupen les habilitats bàsiques de l’hoquei patins.\n\nMitjançant el joc dirigit, adquireixen hàbits i coneixements essencials per a la pràctica de l’hoquei patins!",
+            "stats": [
+                {
+                    "icon": "trophy",
+                    "value": "3-6",
+                    "label": "Anys d’edat"
+                },
+                {
+                    "icon": "hockey-stick",
+                    "label": "Categoria Escola"
+                },
+                {
+                    "icons": ["female", "male"],
+                    "label": "Equips mixtos"
+                }
+            ],
+            "linkText": "Consultar equips",
+            "linkHref": "/equips",
+            "imageSrc": "/banners/presentacio-nen-copia.jpg",
+            "imagePosition": "right"
         },
         {
-          "icon": "hockey-stick",
-          "label": "Categoria Escola"
+            "title": "Hoquei formatiu",
+            "description": "Pels que saben patinar o han fet Escola d’hoquei patins. Treballen la millora de les habilitats amb estic i bola i s’inicien en la pràctica de partits.  Aprenen la tècnica i la tàctica, i practiquen per a la millora de l’habilitat del patinatge i de la forma física. És on fem crèixer el planter del SFERIC i l’afició al Hoquei Patins.",
+            "stats": [
+                {
+                    "icon": "trophy",
+                    "value": "3-6",
+                    "label": "Anys d’edat"
+                },
+                {
+                    "icon": "hockey-stick",
+                    "label": "Categoria Escola"
+                },
+                {
+                    "icons": ["female", "male"],
+                    "label": "Equips mixtos"
+                }
+            ],
+            "linkText": "Consultar equips",
+            "linkHref": "/equips",
+            "imageSrc": "/DSC_7420-copia.jpg",
+            "imagePosition": "left"
         },
         {
-          "icons": [
-            "female",
-            "male"
-          ],
-          "label": "Equips mixtos"
+            "title": "Hoquei competició",
+            "description": "Pràctica esportiva d’Hoquei Patins de competició en les diferents categories de  la Federació Catalana de Patinatge, amb entrenaments adaptats a cada nivell, fomentant l’esperit de superació i el treball en equip.",
+            "stats": [
+                {
+                    "icon": "trophy",
+                    "value": "3-6",
+                    "label": "Anys d’edat"
+                },
+                {
+                    "icon": "hockey-stick",
+                    "label": "Categoria Escola"
+                },
+                {
+                    "icons": ["female", "male"],
+                    "label": "Equips mixtos"
+                }
+            ],
+            "linkText": "Consultar equips",
+            "linkHref": "/equips",
+            "imageSrc": "/DSC_7353-copia.jpg",
+            "imagePosition": "right"
         }
-      ],
-      "linkText": "Consultar equips",
-      "linkHref": "/equips",
-      "imageSrc": "/banners/presentacio-nen.jpg",
-      "imagePosition": "right"
-    },
-    {
-      "title": "Hoquei formatiu",
-      "description": "Pels que saben patinar o han fet Escola d’hoquei patins. Treballen la millora de les habilitats amb estic i bola i s’inicien en la pràctica de partits.  Aprenen la tècnica i la tàctica, i practiquen per a la millora de l’habilitat del patinatge i de la forma física. És on fem crèixer el planter del SFERIC i l’afició al Hoquei Patins.",
-      "stats": [
-        {
-          "icon": "trophy",
-          "value": "3-6",
-          "label": "Anys d’edat"
-        },
-        {
-          "icon": "hockey-stick",
-          "label": "Categoria Escola"
-        },
-        {
-          "icons": [
-            "female",
-            "male"
-          ],
-          "label": "Equips mixtos"
-        }
-      ],
-      "linkText": "Consultar equips",
-      "linkHref": "/equips",
-      "imageSrc": "/DSC_7420.jpg",
-      "imagePosition": "left"
-    },
-    {
-      "title": "Hoquei competició",
-      "description": "Pràctica esportiva d’Hoquei Patins de competició en les diferents categories de  la Federació Catalana de Patinatge, amb entrenaments adaptats a cada nivell, fomentant l’esperit de superació i el treball en equip.",
-      "stats": [
-        {
-          "icon": "trophy",
-          "value": "3-6",
-          "label": "Anys d’edat"
-        },
-        {
-          "icon": "hockey-stick",
-          "label": "Categoria Escola"
-        },
-        {
-          "icons": [
-            "female",
-            "male"
-          ],
-          "label": "Equips mixtos"
-        }
-      ],
-      "linkText": "Consultar equips",
-      "linkHref": "/equips",
-      "imageSrc": "/DSC_7353.jpg",
-      "imagePosition": "right"
+    ],
+    "cta": {
+        "heading": "Prepara't per unir-te a HC. SFERIC Terrassa?",
+        "text": "Tant si tot just comences com si vols competir al més alt nivell, tenim un programa perfecte per a tu.",
+        "buttons": [
+            {
+                "text": "Uneix-te al club",
+                "href": "#"
+            },
+            {
+                "text": "Consulta horari d’entrenaments",
+                "href": "#"
+            }
+        ]
     }
-  ],
-  "cta": {
-    "heading": "Prepara't per unir-te a HC. SFERIC Terrassa?",
-    "text": "Tant si tot just comences com si vols competir al més alt nivell, tenim un programa perfecte per a tu.",
-    "buttons": [
-      {
-        "text": "Uneix-te al club",
-        "href": "#"
-      },
-      {
-        "text": "Consulta horari d’entrenaments",
-        "href": "#"
-      }
-    ]
-  }
 }

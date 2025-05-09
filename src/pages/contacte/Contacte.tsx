@@ -8,7 +8,6 @@ import {
 import './Contacte.scss';
 import Title from '@/ui/titles/Title';
 import { Banner } from '@/ui/banner/Banner';
-import Footer from '@/features/footer/Footer';
 import { InfoCard } from '@/ui/info-card/InfoCard';
 import { LocationMap } from '@/ui/map/LocationMap';
 import { ContactForm } from '@/features/contact-form/ContactForm';
@@ -54,12 +53,6 @@ export const Contacte = ({ ...props }: ContacteProps) => {
                 <Title>Et llegim</Title>
                 <ContactForm title="Tens algun dubte? Omple el formulari i et respondrem" />
             </section>
-            <Footer
-                className={toBEM({
-                    block,
-                    element: 'Footer',
-                })}
-            />
         </div>
     );
 };

@@ -4,7 +4,6 @@ import {
     BaseComponentProps,
     getBaseComponentProps,
 } from '@/utils';
-// import Footer from './features/footer/Footer';
 import { Home } from './ui/layout/Home/Home';
 import { Navbar } from './ui/layout/navbar/Navbar';
 import { ElClub } from './pages/el-club/El-Club';
@@ -14,14 +13,14 @@ import { Botiga } from './pages/botiga/Botiga';
 import { Contacte } from './pages/contacte/Contacte';
 import { Inscripcions } from './pages/inscripcions/Inscripcions';
 import { Horari } from './pages/horari/Horari';
+import Footer from './features/footer/Footer';
+import { ScrollButton } from './ui/scroll-button/ScrollButton';
 
-export type AppProps = BaseComponentProps & {
-    children?: React.ReactNode;
-};
+export type AppProps = BaseComponentProps & {};
 
 const block = registerBlockName('App');
 
-export const App = ({ children, ...props }: AppProps) => {
+export const App = ({ ...props }: AppProps) => {
     return (
         <Router>
             <div {...getBaseComponentProps({ ...props, block })}>
@@ -35,18 +34,10 @@ export const App = ({ children, ...props }: AppProps) => {
                     <Route path="/botiga" element={<Botiga />} />
                     <Route path="/contacte" element={<Contacte />} />
                     <Route path="/inscripcions" element={<Inscripcions />} />
-
-                    {/* <Route path="/results" element={<ResultsPage />} />
-          <Route path="/details/:id" element={<DetailsPage />} />
-          <Route path="/emotions" element={<EmotionsPage />} /> */}
                 </Routes>
-                {/* <Footer
-                className={toBEM({
-                    block,
-                    element: 'Footer',
-                })}
-            /> */}
-                {children}
+                <ScrollButton />
+
+                <Footer />
             </div>
         </Router>
     );

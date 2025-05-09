@@ -8,7 +8,6 @@ import {
 import './equips.scss';
 import { Banner } from '@/ui/banner/Banner';
 import { TeamCard } from '@/ui/team-card/TeamCard';
-import Footer from '@/features/footer/Footer';
 import { DefaultAccordion } from '@/ui/defaultAccordion/DefaultAccordion';
 
 const initiacioTeams = [
@@ -220,12 +219,6 @@ export const Equips = ({ ...props }: EquipsProps) => {
                     </div>
                 </DefaultAccordion>
             </div>
-            <Footer
-                className={toBEM({
-                    block,
-                    element: 'Footer',
-                })}
-            />
         </div>
     );
 };

@@ -12,7 +12,6 @@ import { OrganisationTabs } from '@/features/organisation-tabs/OrganisationTabs'
 import { ImageScrollGallery } from '@/ui/ImageScrollGallery/ImageScrollGallery';
 import { TimelineCard } from '@/ui/timelineCard/TimelineCard';
 import { InfoCard } from '@/ui/info-card/InfoCard';
-import Footer from '@/features/footer/Footer';
 
 export type ElClubProps = BaseComponentProps;
 
@@ -163,12 +162,6 @@ export const ElClub = ({ ...props }: ElClubProps) => {
 
                 <OrganisationTabs />
             </section>
-            <Footer
-                className={toBEM({
-                    block,
-                    element: 'Footer',
-                })}
-            />
         </>
     );
 };

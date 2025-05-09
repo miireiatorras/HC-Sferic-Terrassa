@@ -11,7 +11,6 @@ import {
     toBEM,
 } from '@/utils';
 import { ContentSection, Stat } from '@/ui/content-section/ContentSection';
-import Footer from '@/features/footer/Footer';
 import { Button } from '@/ui/button/Button';
 import './seccions.scss';
 // --- Tipado de la estructura JSON ---
@@ -96,8 +95,6 @@ export const Seccions = (props: SeccionsProps) => {
                     ))}
                 </div>
             </div>
-
-            <Footer className={toBEM({ block, element: 'Footer' })} />
         </div>
     );
 };

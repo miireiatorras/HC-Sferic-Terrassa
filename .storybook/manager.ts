@@ -6,6 +6,6 @@ addons.setConfig({
         base: 'light',
         brandTitle: 'HC. SFERIC Terrassa',
         // brandUrl: 'https://sferic.com',
-        brandImage: '/logo-tranp.png',
+        brandImage: '/logo-tranp-negre.png',
     }),
 });

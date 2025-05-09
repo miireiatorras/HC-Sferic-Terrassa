@@ -10,7 +10,6 @@ import { ReadyToJoin } from '@/features/ReadyToJoin/ReadyToJoin';
 import { Caldendari } from '@/features/calendari/Calendari';
 import { Instagram } from '@/features/instagram/Instagram';
 import Patrocinadors from '@/features/patrocinadors/Patrocinadors';
-import Footer from '@/features/footer/Footer';
 import './Home.scss';
 
 export type HomeProps = BaseComponentProps & {};
@@ -37,12 +36,6 @@ export const Home = ({ ...props }: HomeProps) => {
             >
                 <Patrocinadors />
             </div>
-            <Footer
-                className={toBEM({
-                    block,
-                    element: 'Footer',
-                })}
-            />
         </main>
     );
 };

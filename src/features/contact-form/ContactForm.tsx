@@ -1,3 +1,5 @@
+import React, { useRef } from 'react';
+import { init, sendForm } from '@emailjs/browser';
 import {
     toBEM,
     registerBlockName,
@@ -5,16 +7,13 @@ import {
     getBaseComponentProps,
 } from '@/utils';
 import './ContactForm.scss';
-import { Input } from '../../ui/input/Input';
-import { JSX } from 'react';
+import { Input } from '@/ui/input/Input';
 
 const block = registerBlockName('ContactForm');
 
 export type Props = BaseComponentProps & {
     /** The title of the contact form. */
     title: string;
-    /** Function to handle form submission. */
-    onSubmit?: React.FormEventHandler<HTMLFormElement>;
     /** Labels and placeholders for the input fields. */
     nameLabel?: string;
     phoneLabel?: string;
@@ -27,12 +26,11 @@ export type Props = BaseComponentProps & {
 };
 
 /**
- * ContactForm renders a styled card with a heading, four Input controls,
- * and a submit button. Labels and placeholders are fully configurable.
+ * ContactForm renders a styled form that, on submit,
+ * envía los datos via EmailJS a la plantilla configurada.
  */
-export const ContactForm = ({
+export const ContactForm: React.FC<Props> = ({
     title,
-    onSubmit,
     nameLabel = 'Nom i Cognoms',
     phoneLabel = 'Telèfon',
     emailLabel = 'Email',
@@ -42,52 +40,81 @@ export const ContactForm = ({
     emailPlaceholder,
     messagePlaceholder,
     ...props
-}: Props): JSX.Element => (
-    <form
-        {...getBaseComponentProps({ ...props, block })}
-        onSubmit={onSubmit}
-        className={toBEM({ block })}
-    >
-        <h2 className={toBEM({ block, element: 'title' })}>{title}</h2>
+}) => {
+    init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
 
-        <div className={toBEM({ block, element: 'fields' })}>
-            <Input
-                id="name"
-                name="name"
-                type="text"
-                label={nameLabel}
-                placeholder={namePlaceholder ?? nameLabel}
-            />
+    const formRef = useRef<HTMLFormElement>(null);
 
-            <Input
-                id="phone"
-                name="phone"
-                type="tel"
-                label={phoneLabel}
-                placeholder={phonePlaceholder ?? phoneLabel}
-            />
+    const handleSubmit: React.FormEventHandler<HTMLFormElement> = (e) => {
+        e.preventDefault();
+        if (!formRef.current) return;
 
-            <Input
-                id="email"
-                name="email"
-                type="email"
-                label={emailLabel}
-                placeholder={emailPlaceholder ?? emailLabel}
-                fullWidth
-            />
+        sendForm(
+            import.meta.env.VITE_EMAILJS_SERVICE!,
+            import.meta.env.VITE_EMAILJS_TEMPLATE!,
+            formRef.current
+        )
+            .then(() => {
+                alert('¡Formulario enviado con éxito!');
+                formRef.current!.reset();
+            })
+            .catch((err) => {
+                console.error('Error al enviar:', err);
+                alert('Error enviando el formulario. Intenta de nuevo.');
+            });
+    };
 
-            <Input
-                id="message"
-                name="message"
-                type="textarea"
-                label={messageLabel}
-                placeholder={messagePlaceholder ?? messageLabel}
-                fullWidth
-            />
-        </div>
+    return (
+        <form
+            {...getBaseComponentProps({ ...props, block })}
+            ref={formRef}
+            onSubmit={handleSubmit}
+            className={toBEM({ block })}
+        >
+            <h2 className={toBEM({ block, element: 'title' })}>{title}</h2>
 
-        <button type="submit" className={toBEM({ block, element: 'button' })}>
-            Enviar
-        </button>
-    </form>
-);
+            <div className={toBEM({ block, element: 'fields' })}>
+                <Input
+                    id="name"
+                    name="name"
+                    type="text"
+                    label={nameLabel}
+                    placeholder={namePlaceholder ?? nameLabel}
+                />
+
+                <Input
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    label={phoneLabel}
+                    placeholder={phonePlaceholder ?? phoneLabel}
+                />
+
+                <Input
+                    id="email"
+                    name="email"
+                    type="email"
+                    label={emailLabel}
+                    placeholder={emailPlaceholder ?? emailLabel}
+                    fullWidth
+                />
+
+                <Input
+                    id="message"
+                    name="message"
+                    type="textarea"
+                    label={messageLabel}
+                    placeholder={messagePlaceholder ?? messageLabel}
+                    fullWidth
+                />
+            </div>
+
+            <button
+                type="submit"
+                className={toBEM({ block, element: 'button' })}
+            >
+                Enviar
+            </button>
+        </form>
+    );
+};

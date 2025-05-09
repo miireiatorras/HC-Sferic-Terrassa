@@ -1,0 +1,44 @@
+@use '@/utils/styles';
+
+.ScrollButton {
+    &__trigger {
+        position: fixed;
+        bottom: 24px;
+        right: 24px;
+        width: 48px;
+        height: 48px;
+        border: none;
+        border-radius: 50%;
+        background-color: styles.$verd-clar;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: transform 0.2s, background-color 0.2s;
+        z-index: 1000;
+    }
+
+    &__trigger:hover {
+        transform: scale(1.1);
+    }
+
+    &__icon {
+        width: 24px;
+        height: 24px;
+        fill: #fff;
+    }
+
+    @media (max-width: 600px) {
+        &__trigger {
+            bottom: 16px;
+            right: 16px;
+            width: 40px;
+            height: 40px;
+        }
+
+        &__icon {
+            width: 20px;
+            height: 20px;
+        }
+    }
+}

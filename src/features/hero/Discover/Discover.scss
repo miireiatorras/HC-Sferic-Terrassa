@@ -24,6 +24,8 @@
     }
 
     &__left-card {
+        cursor: pointer;
+
         position: relative;
         overflow: hidden;
         border-radius: styles.$corner-sm;
@@ -40,6 +42,7 @@
     }
 
     &__card {
+        cursor: pointer;
         position: relative;
         overflow: hidden;
         border-radius: styles.$corner-sm;
@@ -68,6 +71,26 @@
     &__left-card:hover &__image,
     &__card:hover &__image {
         transform: scale(1.1);
+    }
+
+    &__left-card {
+        @media (max-width: 768px) {
+            height: 14rem;
+        }
+    }
+
+    &__right-column {
+        @media (max-width: 768px) {
+            display: contents;
+        }
+    }
+
+    &__card {
+        height: 10.5rem;
+
+        @media (max-width: 768px) {
+            height: 14rem;
+        }
     }
 
     &__overlay {

@@ -1,4 +1,3 @@
-import Footer from '@/features/footer/Footer';
 import { Alert } from '@/ui/alert/Alert';
 import { Banner } from '@/ui/banner/Banner';
 import { PromoSection } from '@/ui/PromoSection/PromoSection';
@@ -60,12 +59,6 @@ export const Inscripcions = ({ ...props }: InscripcionsProps) => {
             >
                 VENIU A GAUDIR DE L’HOQUEI PATINS!!! #SomSFERIC #ORGULLVERD
             </p>
-            <Footer
-                className={toBEM({
-                    block,
-                    element: 'Footer',
-                })}
-            />
         </div>
     );
 };

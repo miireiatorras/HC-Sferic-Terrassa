@@ -1,4 +1,3 @@
-import Footer from '@/features/footer/Footer';
 import { ShopPartnerBanner } from '@/features/shopPartnerBanner/ShopPartnerBanner';
 import { Banner } from '@/ui/banner/Banner';
 import './Botiga.scss';
@@ -129,12 +128,6 @@ export const Botiga = ({ ...props }: BotigaProps) => {
             >
                 Accedeix a la botiga Hockey Team™
             </Button>
-            <Footer
-                className={toBEM({
-                    block,
-                    element: 'Footer',
-                })}
-            />
         </div>
     );
 };

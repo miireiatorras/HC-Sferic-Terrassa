@@ -23,13 +23,13 @@ const toValidClassName = (text: string) =>
  * @param {(string|null|false|undefined)[]?} information.modifiers Array of modifiers to apply to the BEM className
  * @returns {string} BEM styled className
  */
-export const toBEM = ({ block, element, modifiers }: ToBEMProps) => {
+export const toBEM = ({ block, element, modifiers }: ToBEMProps): string => {
     const classes: string[] = [];
-    let baseName: string = toValidClassName(block);
-    if (element) baseName += '__' + toValidClassName(element);
+    let baseName = toValidClassName(block);
+    if (element) baseName += `__${toValidClassName(element)}`;
     classes.push(baseName);
     modifiers?.filter(Boolean).forEach((mod) => {
-        classes.push(baseName + '--' + toValidClassName(mod as string));
+        classes.push(`${baseName}--${toValidClassName(mod as string)}`);
     });
     return classes.join(' ');
 };

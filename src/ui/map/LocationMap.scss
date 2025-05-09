@@ -1,18 +1,17 @@
 @use '@/utils/styles';
+
 .LocationMap {
     &__container {
         @include styles.content-spacing;
-
         display: grid;
-        grid-template-columns: 1fr 1fr;
         gap: 1rem;
-        align-items: center;
     }
 
     &__info {
         display: flex;
         align-items: center;
     }
+
     &__icon-wrapper {
         background-color: styles.$verd-estandard;
         border-radius: 50%;
@@ -20,7 +19,7 @@
         display: inline-flex;
         justify-content: center;
         align-items: center;
-        margin-right: 2rem;
+        margin-right: 1rem;
     }
 
     &__icon {
@@ -35,17 +34,21 @@
     }
 
     &__title {
-        margin: auto;
-
+        margin: 0;
         font-weight: 600;
+        font-size: 1rem;
+        line-height: 1.2;
     }
 
     &__address {
-        margin: auto;
+        margin: 0;
+        font-size: 0.875rem;
+        line-height: 1.3;
     }
 
     &__map {
-        width: 60%;
+        grid-column: 2;
+        width: 100%;
         height: 200px;
         border-radius: 0.5rem;
         overflow: hidden;

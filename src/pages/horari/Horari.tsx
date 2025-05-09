@@ -12,7 +12,6 @@ import { Schedule, ScheduleEvent } from '@/ui/schedule/Schedule';
 import { ScheduleLegend } from '@/features/schedule-legend/ScheduleLegend';
 import { Icon } from '@/ui/Icon/Icon';
 import { useState } from 'react';
-import Footer from '@/features/footer/Footer';
 
 const days = [
     'Dilluns',
@@ -153,12 +152,6 @@ export const Horari = ({ ...props }: HorariProps) => {
             </div>
             <Schedule days={days} events={filteredEvents} />
             <ScheduleLegend />
-            <Footer
-                className={toBEM({
-                    block,
-                    element: 'Footer',
-                })}
-            />
         </div>
     );
 };

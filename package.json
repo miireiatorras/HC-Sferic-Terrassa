@@ -12,7 +12,9 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@storybook/addons": "^7.6.17",
+    "emailjs-com": "^3.2.0",
     "framer-motion": "^12.9.2",
     "icomoon-react": "^3.0.0",
     "path": "^0.12.7",

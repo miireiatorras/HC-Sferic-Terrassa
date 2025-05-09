@@ -48,4 +48,33 @@
         color: styles.$negre;
         font-size: 0.875rem;
     }
+
+    @media (max-width: 768px) {
+        &__tablist {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            /* que no se envuelva y permita scroll */
+            flex-wrap: nowrap;
+        }
+        &__panel {
+            padding: 1rem;
+        }
+        &__panelHeader {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.5rem;
+            margin-bottom: 0.75rem;
+        }
+        &__panelTitle {
+            font-size: 0.9rem;
+            padding: 0.2rem 0.8rem;
+        }
+        &__memberCount {
+            font-size: 0.8rem;
+        }
+        &__cards {
+            grid-template-columns: 1fr;
+            gap: 0.75rem;
+        }
+    }
 }
