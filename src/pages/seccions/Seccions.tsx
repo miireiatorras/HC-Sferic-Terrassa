@@ -1,5 +1,4 @@
-// src/pages/seccions/Seccions.tsx
-
+import { Helmet } from '@dr.pogodin/react-helmet';
 import type { BannerVariant } from '@/ui/banner/Banner';
 import seccionsJson from './seccions.json';
 import { Banner } from '@/ui/banner/Banner';
@@ -13,6 +12,7 @@ import {
 import { ContentSection, Stat } from '@/ui/content-section/ContentSection';
 import { Button } from '@/ui/button/Button';
 import './seccions.scss';
+
 // --- Tipado de la estructura JSON ---
 interface SectionData {
     title: string;
@@ -45,56 +45,93 @@ interface SeccionsData {
 // Asunción de que el JSON cumple la interfaz
 const seccionsData = seccionsJson as SeccionsData;
 
-// Props del componente (igual que antes)
-export type SeccionsProps = BaseComponentProps & {};
+export type SeccionsProps = BaseComponentProps;
 
 const block = registerBlockName('Seccions');
 
 export const Seccions = (props: SeccionsProps) => {
     const { bannerVariant, header, sections, cta } = seccionsData;
+    const description = `${header} del HC SFERIC Terrassa. Descobreix les nostres seccions, estadístiques i enllaços d'interès.`;
 
     return (
-        <div {...getBaseComponentProps({ ...props, block })}>
-            <Banner
-                variant={bannerVariant}
-                className={toBEM({ block, element: 'Banner' })}
-            />
-            <Title>{header}</Title>
+        <>
+            <Helmet prioritizeSeoTags>
+                <title>HC SFERIC Terrassa – Seccions</title>
+                <meta name="description" content={description} />
 
-            {sections.map((sec, idx) => (
-                <ContentSection
-                    key={idx}
-                    title={sec.title}
-                    description={sec.description
-                        .split('\n\n')
-                        .map((p, pIdx) => (
-                            <p key={pIdx}>{p}</p>
-                        ))}
-                    stats={sec.stats}
-                    linkText={sec.linkText}
-                    linkHref={sec.linkHref}
-                    imageSrc={sec.imageSrc}
-                    imagePosition={sec.imagePosition}
+                <link
+                    rel="canonical"
+                    href="https://oksfericterrassa.netlify.app/seccions"
                 />
-            ))}
 
-            <div className={toBEM({ block, element: 'gradient' })}>
-                <h2 className={toBEM({ block, element: 'h2' })}>
-                    {cta.heading}
-                </h2>
-                <p className={toBEM({ block, element: 'p' })}>{cta.text}</p>
-                <div className={toBEM({ block, element: 'buttons-container' })}>
-                    {cta.buttons.map((btn, bIdx) => (
-                        <Button
-                            key={bIdx}
-                            className={toBEM({ block, element: 'Button' })}
-                            onClick={() => (window.location.href = btn.href)}
-                        >
-                            {btn.text}
-                        </Button>
-                    ))}
+                <meta
+                    property="og:url"
+                    content="https://oksfericterrassa.netlify.app/seccions"
+                />
+                <meta
+                    property="og:image"
+                    content="https://oksfericterrassa.netlify.app/preview-seccions.png"
+                />
+                <meta
+                    property="og:title"
+                    content={`HC SFERIC Terrassa – ${header}`}
+                />
+                <meta property="og:description" content={description} />
+
+                <meta name="twitter:card" content="summary_large_image" />
+            </Helmet>
+
+            <div {...getBaseComponentProps({ ...props, block })}>
+                <Banner
+                    variant={bannerVariant}
+                    className={toBEM({ block, element: 'Banner' })}
+                />
+                <Title>{header}</Title>
+
+                {sections.map((sec, idx) => (
+                    <ContentSection
+                        key={idx}
+                        title={sec.title}
+                        description={sec.description
+                            .split('\n\n')
+                            .map((p, pIdx) => (
+                                <p key={pIdx}>{p}</p>
+                            ))}
+                        stats={sec.stats}
+                        linkText={sec.linkText}
+                        linkHref={sec.linkHref}
+                        imageSrc={sec.imageSrc}
+                        imagePosition={sec.imagePosition}
+                    />
+                ))}
+
+                <div className={toBEM({ block, element: 'gradient' })}>
+                    <h2 className={toBEM({ block, element: 'h2' })}>
+                        {cta.heading}
+                    </h2>
+                    <p className={toBEM({ block, element: 'p' })}>{cta.text}</p>
+                    <div
+                        className={toBEM({
+                            block,
+                            element: 'buttons-container',
+                        })}
+                    >
+                        {cta.buttons.map((btn, bIdx) => (
+                            <Button
+                                key={bIdx}
+                                className={toBEM({ block, element: 'Button' })}
+                                onClick={() =>
+                                    (window.location.href = btn.href)
+                                }
+                            >
+                                {btn.text}
+                            </Button>
+                        ))}
+                    </div>
                 </div>
             </div>
-        </div>
+        </>
     );
 };
+
+export default Seccions;

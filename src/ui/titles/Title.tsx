@@ -8,9 +8,6 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import './Title.scss';
 
-/**
- * Props for the `Title` component.
- */
 export type TitleProps = BaseComponentProps & {
     /** Optional content to display as the title. */
     children?: React.ReactNode;

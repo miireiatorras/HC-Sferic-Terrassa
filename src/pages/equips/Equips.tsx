@@ -1,3 +1,4 @@
+import { Helmet } from '@dr.pogodin/react-helmet';
 import {
     registerBlockName,
     BaseComponentProps,
@@ -168,57 +169,87 @@ const seniorTeams = [
     },
 ];
 
-export type EquipsProps = BaseComponentProps & {};
+export type EquipsProps = BaseComponentProps;
 
 const block = registerBlockName('Equips');
+
 export const Equips = ({ ...props }: EquipsProps) => {
+    const description = `Descobreix tots els equips del HC SFERIC Terrassa: iniciació, formació i sèniors. Consulta jugadors, fotos i detalls de cada categoria.`;
+
     return (
-        <div {...getBaseComponentProps({ ...props, block })}>
-            <Banner
-                variant="equips"
-                className={toBEM({
-                    block,
-                    element: 'Banner',
-                })}
-            />{' '}
-            <div className="Equips">
-                <DefaultAccordion title="Iniciació">
-                    <div className="Equips__grid">
-                        {initiacioTeams.map((t, i) => (
-                            <TeamCard
-                                key={i}
-                                imageSrc={t.imageSrc}
-                                title={t.title}
-                                members={t.members}
-                            />
-                        ))}
-                    </div>
-                </DefaultAccordion>
-                <DefaultAccordion title="Hoquei formatiu">
-                    <div className="Equips__grid">
-                        {formatiuTeams.map((t, i) => (
-                            <TeamCard
-                                key={i}
-                                imageSrc={t.imageSrc}
-                                title={t.title}
-                                members={t.members}
-                            />
-                        ))}
-                    </div>
-                </DefaultAccordion>
-                <DefaultAccordion title="Sèniors">
-                    <div className="Equips__grid">
-                        {seniorTeams.map((t, i) => (
-                            <TeamCard
-                                key={i}
-                                imageSrc={t.imageSrc}
-                                title={t.title}
-                                members={t.members}
-                            />
-                        ))}
-                    </div>
-                </DefaultAccordion>
+        <>
+            <Helmet prioritizeSeoTags>
+                <title>HC SFERIC Terrassa – Equips</title>
+                <meta name="description" content={description} />
+
+                <link
+                    rel="canonical"
+                    href="https://oksfericterrassa.netlify.app/equips"
+                />
+
+                <meta
+                    property="og:url"
+                    content="https://oksfericterrassa.netlify.app/equips"
+                />
+                <meta
+                    property="og:image"
+                    content="https://oksfericterrassa.netlify.app/preview-equips.png"
+                />
+                <meta
+                    property="og:title"
+                    content="HC SFERIC Terrassa – Equips"
+                />
+                <meta property="og:description" content={description} />
+
+                <meta name="twitter:card" content="summary_large_image" />
+            </Helmet>
+
+            <div {...getBaseComponentProps({ ...props, block })}>
+                <Banner
+                    variant="equips"
+                    className={toBEM({ block, element: 'Banner' })}
+                />
+                <div className="Equips">
+                    <DefaultAccordion title="Iniciació">
+                        <div className="Equips__grid">
+                            {initiacioTeams.map((t, i) => (
+                                <TeamCard
+                                    key={i}
+                                    imageSrc={t.imageSrc}
+                                    title={t.title}
+                                    members={t.members}
+                                />
+                            ))}
+                        </div>
+                    </DefaultAccordion>
+                    <DefaultAccordion title="Hoquei formatiu">
+                        <div className="Equips__grid">
+                            {formatiuTeams.map((t, i) => (
+                                <TeamCard
+                                    key={i}
+                                    imageSrc={t.imageSrc}
+                                    title={t.title}
+                                    members={t.members}
+                                />
+                            ))}
+                        </div>
+                    </DefaultAccordion>
+                    <DefaultAccordion title="Sèniors">
+                        <div className="Equips__grid">
+                            {seniorTeams.map((t, i) => (
+                                <TeamCard
+                                    key={i}
+                                    imageSrc={t.imageSrc}
+                                    title={t.title}
+                                    members={t.members}
+                                />
+                            ))}
+                        </div>
+                    </DefaultAccordion>
+                </div>
             </div>
-        </div>
+        </>
     );
 };
+
+export default Equips;

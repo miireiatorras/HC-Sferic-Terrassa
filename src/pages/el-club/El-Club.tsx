@@ -1,3 +1,4 @@
+import { Helmet } from '@dr.pogodin/react-helmet';
 import {
     toBEM,
     registerBlockName,
@@ -14,10 +15,10 @@ import { TimelineCard } from '@/ui/timelineCard/TimelineCard';
 import { InfoCard } from '@/ui/info-card/InfoCard';
 
 export type ElClubProps = BaseComponentProps;
-
 const block = registerBlockName('ElClub');
 
 export const ElClub = ({ ...props }: ElClubProps) => {
+    const description = `Coneix la missió, valors i història del HC SFERIC Terrassa, el club d'Hoquei Patins amb més de 70 anys de trajectòria a Terrassa.`;
     const images = [
         '/old/antiga1.png',
         '/old/antiga2.png',
@@ -28,6 +29,31 @@ export const ElClub = ({ ...props }: ElClubProps) => {
 
     return (
         <>
+            <Helmet prioritizeSeoTags>
+                <title>HC SFERIC Terrassa – El club</title>
+                <meta name="description" content={description} />
+
+                <link
+                    rel="canonical"
+                    href="https://oksfericterrassa.netlify.app/el-club"
+                />
+                <meta
+                    property="og:url"
+                    content="https://oksfericterrassa.netlify.app/el-club"
+                />
+                <meta
+                    property="og:image"
+                    content="https://oksfericterrassa.netlify.app/preview-club.png"
+                />
+                <meta
+                    property="og:title"
+                    content="HC SFERIC Terrassa – El club"
+                />
+                <meta property="og:description" content={description} />
+
+                <meta name="twitter:card" content="summary_large_image" />
+            </Helmet>
+
             <Banner variant="el-club" />
             <Title>Missió i valors</Title>
             <section {...getBaseComponentProps({ ...props, block })}>
@@ -46,15 +72,15 @@ export const ElClub = ({ ...props }: ElClubProps) => {
                         Tenim com a objectiu{' '}
                         <strong>formar nens i joves</strong>, tant en la vessant
                         esportiva, mitjançant la pràctica de l’Hoquei Patins,
-                        com en la vessant social i humana, i així
+                        com en la vessant social i humana, i així{' '}
                         <strong>aportar un granet de sorra</strong> en la
                         millora de la societat...
                     </Card>
 
                     <Card number="03" title="Què volem?">
                         Actualment som l’únic club d’Hoquei Patins de Terrassa i
-                        volem que ens conegueu, i que us
-                        <strong> sumeu al nostre projecte.</strong>...
+                        volem que us <strong>sumeu al nostre projecte.</strong>
+                        ...
                     </Card>
 
                     <Card number="04" title="Com ho fem?">
@@ -64,7 +90,7 @@ export const ElClub = ({ ...props }: ElClubProps) => {
                     </Card>
                 </div>
 
-                <Title>La nostra història i origens</Title>
+                <Title>La nostra història i orígens</Title>
 
                 <ImageScrollGallery images={images} />
 
@@ -90,6 +116,7 @@ export const ElClub = ({ ...props }: ElClubProps) => {
                         description="És a la Temporada 2018–19, quan cada secció esdevé club independent: Club esportiu Sferic Bàsquet i Hoquei Club Sferic Terrassa."
                     />
                 </div>
+
                 <div className={toBEM({ block, element: 'info-grid' })}>
                     <InfoCard
                         icon="archive"
@@ -118,12 +145,8 @@ export const ElClub = ({ ...props }: ElClubProps) => {
                                 <strong>
                                     educativa, social, cultural i esportiva
                                 </strong>{' '}
-                                d’important rellevància, esdevenint com a
-                                element clau en la cohesió del barri de Ca
-                                n’Aurell i, per tant, de Terrassa. El club i les
-                                seves seccions evolucionen molt{' '}
-                                <strong>positivament</strong>, així com també ho
-                                fa el barri i la ciutat.
+                                d’importància en la cohesió del barri de Ca
+                                n’Aurell i, per tant, de Terrassa.
                             </>
                         }
                     />
@@ -143,18 +166,14 @@ export const ElClub = ({ ...props }: ElClubProps) => {
                 </div>
 
                 <Title>Organització del club</Title>
-                <p
-                    className={toBEM({
-                        block,
-                        element: 'p',
-                    })}
-                >
-                    Som una Entitat Sense Ànim de Lucre.Per tant, no busquem un
+                <p className={toBEM({ block, element: 'p' })}>
+                    Som una Entitat Sense Ànim de Lucre. Per tant, no busquem un
                     benefici econòmic sinó que perseguim una finalitat social,
-                    altruista, esportiva i comunitària. A nivell ecònomic, ens
+                    altruista, esportiva i comunitària. A nivell econòmic, ens
                     financem a través de les quotes dels socis, de donatius, de
-                    patrociandors i d’ajudes de les administracions. També
-                    comptem amb el suport de l’Ajuntament de Terrassa. <br />{' '}
+                    patrocinadors i d’ajudes de les administracions. També
+                    comptem amb el suport de l’Ajuntament de Terrassa.
+                    <br />
                     <br />
                     Pel que fa a l’estructura de Club, es configura de la
                     següent manera:

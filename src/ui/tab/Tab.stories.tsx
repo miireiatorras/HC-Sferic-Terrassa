@@ -10,6 +10,9 @@ const meta: Meta<typeof Tab> = {
 export default meta;
 type Story = StoryObj<typeof Tab>;
 
+/**
+ * * This story demonstrates the default state of the Tab component.
+ */
 export const Default: Story = {
     args: {
         label: 'Home',
@@ -17,6 +20,9 @@ export const Default: Story = {
     },
 };
 
+/**
+ * * This story demonstrates the active state of the Tab component.
+ */
 export const Active: Story = {
     args: {
         label: 'Home',
