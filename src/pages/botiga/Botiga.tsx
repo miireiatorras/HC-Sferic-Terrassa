@@ -116,7 +116,7 @@ export const Botiga = ({ ...props }: BotigaProps) => {
                             href="https://example.com/product/123"
                         />
                         <ProductCard
-                            imageSrc="/camiseta-jugador-1a-equipacion-hc-sferic-veteranos.jpg"
+                            imageSrc="/camiseta-portero-hc-castellar.jpg"
                             imageAlt="Sample product"
                             title="Faldilla SFERIC"
                             price="32€"
@@ -124,7 +124,7 @@ export const Botiga = ({ ...props }: BotigaProps) => {
                             href="https://example.com/product/123"
                         />
                         <ProductCard
-                            imageSrc="/camiseta-jugador-1a-equipacion-hc-sferic-veteranos.jpg"
+                            imageSrc="/faldilla-jugadora-hc-castellar.jpg"
                             imageAlt="Sample product"
                             title="Faldilla SFERIC"
                             price="32€"
@@ -132,7 +132,15 @@ export const Botiga = ({ ...props }: BotigaProps) => {
                             href="https://example.com/product/123"
                         />
                         <ProductCard
-                            imageSrc="/camiseta-jugador-1a-equipacion-hc-sferic-veteranos.jpg"
+                            imageSrc="/mitjons.png"
+                            imageAlt="Sample product"
+                            title="Faldilla SFERIC"
+                            price="32€"
+                            subtitle="(Impostos inclosos)"
+                            href="https://example.com/product/123"
+                        />
+                        <ProductCard
+                            imageSrc="/sticks.png"
                             imageAlt="Sample product"
                             title="Faldilla SFERIC"
                             price="32€"

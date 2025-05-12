@@ -13,7 +13,7 @@ export type HeroProps = BaseComponentProps;
 const block = registerBlockName('Hero');
 export const Hero = ({ ...props }: HeroProps) => {
     return (
-        <section {...getBaseComponentProps({ ...props, block })}>
+        <header {...getBaseComponentProps({ ...props, block })}>
             <div className={toBEM({ block, element: 'gradient' })} />
             <div
                 className={toBEM({
@@ -33,6 +33,6 @@ export const Hero = ({ ...props }: HeroProps) => {
                     </Button>
                 </div>
             </div>
-        </section>
+        </header>
     );
 };
