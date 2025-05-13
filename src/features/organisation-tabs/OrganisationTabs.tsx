@@ -33,22 +33,46 @@ const tabs: TabData[] = [
     {
         key: 'delegats',
         label: 'Delegats',
-        members: [],
+        members: [
+            { initials: 'EV', name: 'Eduard Villalba' },
+            { initials: 'ES', name: 'Eva Segarra' },
+            { initials: 'MP', name: 'Mònica Perarnau' },
+            { initials: 'LA', name: 'Luis Alcántara' },
+            { initials: 'AB', name: 'Andreu Benaiges' },
+            { initials: 'JG', name: 'Jose García' },
+            { initials: 'CS', name: 'Carles Salvador' },
+            { initials: 'GB', name: 'Guillem Bellmunt' },
+        ],
     },
     {
         key: 'junta',
         label: 'Junta',
-        members: [],
+        members: [
+            { initials: 'JL', name: 'Jose Luis Alonso' },
+            { initials: 'CA', name: 'Carlos Álvarez' },
+            { initials: 'GB', name: 'Guillem Bellmunt' },
+            { initials: 'JG', name: 'Jose García' },
+            { initials: 'GG', name: 'Gabriel Giménez' },
+            { initials: 'MG', name: 'Montse Gómez' },
+            { initials: 'SS', name: 'Sergi Sans' },
+        ],
     },
     {
         key: 'equip-tecnic',
         label: 'Equip tècnic',
-        members: [],
+        members: [
+            { initials: 'MC', name: 'Mireia Cabistany' },
+            { initials: 'LV', name: 'Laia Vila' },
+            { initials: 'AH', name: 'Adrián Hortal' },
+            { initials: 'JR', name: 'Joan Rosique' },
+            { initials: 'ME', name: 'Marc Esteve' },
+            { initials: 'MA', name: 'Marta Alonso' },
+        ],
     },
     {
         key: 'planificacio',
         label: 'Planificació i coordinació',
-        members: [],
+        members: [{ initials: 'ME', name: 'Marc Esteve' }],
     },
 ];
 

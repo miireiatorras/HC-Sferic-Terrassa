@@ -109,43 +109,43 @@ export const Botiga = ({ ...props }: BotigaProps) => {
                     >
                         <ProductCard
                             imageSrc="/camiseta-jugador-1a-equipacion-hc-sferic-veteranos.jpg"
-                            imageAlt="Sample product"
+                            imageAlt="Samarreta jugador 1a equipació"
                             title="Faldilla SFERIC"
                             price="32€"
                             subtitle="(Impostos inclosos)"
-                            href="https://example.com/product/123"
+                            href="https://hockeyteam.es/es/hc-sferic-terrassa/1406-584926-camiseta-jugador-1a-equipacion-hc-sferic-veteranos.html#/80-talla-s"
                         />
                         <ProductCard
                             imageSrc="/camiseta-portero-hc-castellar.jpg"
-                            imageAlt="Sample product"
-                            title="Faldilla SFERIC"
+                            imageAlt="Samarreta porter"
+                            title="Samarreta porter"
                             price="32€"
                             subtitle="(Impostos inclosos)"
-                            href="https://example.com/product/123"
+                            href="https://hockeyteam.es/es/hc-sferic-terrassa/1360-584074-camiseta-portero-hc-castellar.html#/80-talla-s"
                         />
                         <ProductCard
                             imageSrc="/faldilla-jugadora-hc-castellar.jpg"
-                            imageAlt="Sample product"
+                            imageAlt="Faldilla SFERIC"
                             title="Faldilla SFERIC"
                             price="32€"
                             subtitle="(Impostos inclosos)"
-                            href="https://example.com/product/123"
+                            href="https://hockeyteam.es/es/hc-sferic-terrassa/1361-584083-faldilla-jugadora-hc-castellar.html#/80-talla-s"
                         />
                         <ProductCard
                             imageSrc="/mitjons.png"
-                            imageAlt="Sample product"
-                            title="Faldilla SFERIC"
-                            price="32€"
+                            imageAlt="Mitjeta SFERIC"
+                            title="Mitjeta SFERIC"
+                            price="11€"
                             subtitle="(Impostos inclosos)"
-                            href="https://example.com/product/123"
+                            href="https://sfericok.playoffinformatica.com/Botiga.php"
                         />
                         <ProductCard
                             imageSrc="/sticks.png"
-                            imageAlt="Sample product"
-                            title="Faldilla SFERIC"
-                            price="32€"
+                            imageAlt={'Sticks SFERIC'}
+                            title="Sticks SFERIC"
+                            price="41,14€"
                             subtitle="(Impostos inclosos)"
-                            href="https://example.com/product/123"
+                            href="https://sfericok.playoffinformatica.com/Botiga.php"
                         />
                     </div>
                 </div>

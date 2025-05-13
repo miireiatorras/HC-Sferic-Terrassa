@@ -44,6 +44,16 @@
         color: styles.$verd-logo;
         font-size: 0.85rem;
         text-align: center;
+
+        &--iniciacio {
+            background: rgba(0, 72, 35, 0.05);
+        }
+        &--formatiu {
+            background: rgba(0, 72, 35, 0.1);
+        }
+        &--senior {
+            background: rgba(0, 72, 35, 0.2);
+        }
     }
 
     @media (max-width: 600px) {

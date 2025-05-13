@@ -106,6 +106,7 @@ export const Schedule = ({ days, events, ...props }: ScheduleProps) => {
                                                 className={toBEM({
                                                     block,
                                                     element: 'tdEvent',
+                                                    modifiers: [ev.category],
                                                 })}
                                             >
                                                 {ev.label}
