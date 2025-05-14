@@ -91,14 +91,14 @@ const events: ScheduleEvent[] = [
         start: '09:00',
         end: '23:30',
         label: 'PARTITS',
-        category: 'senior',
+        category: 'partit',
     },
     {
         day: 'Diumenge',
         start: '09:00',
         end: '14:00',
         label: 'PARTITS',
-        category: 'senior',
+        category: 'partit',
     },
 ];
 
@@ -141,13 +141,13 @@ export const Horari = ({ ...props }: HorariProps) => {
                     >
                         <Icon icon="printer" size="md" /> Imprimir
                     </button>
-                    <button
-                        type="button"
-                        onClick={() => window.print()}
+                    <a
+                        href="/schedule.pdf"
+                        download="Horari-SFERIC-24-25.pdf"
                         className={toBEM({ block, element: 'btn' })}
                     >
                         <Icon icon="download" size="md" /> PDF
-                    </button>
+                    </a>
                 </div>
             </div>
             <Schedule days={days} events={filteredEvents} />

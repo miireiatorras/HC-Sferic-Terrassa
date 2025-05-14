@@ -9,7 +9,10 @@ import {
 import './Button.scss';
 import { Icon as BaseIcon, IconNames } from '@/ui/Icon/Icon';
 
-export type ButtonIconInternalProps = { icon: IconNames; className?: string };
+export type ButtonIconInternalProps = {
+    icon: IconNames;
+    className?: string;
+};
 
 export type ButtonProps<ExternalIconProps extends object> =
     BaseComponentProps & {
@@ -19,22 +22,24 @@ export type ButtonProps<ExternalIconProps extends object> =
         variant?:
             | 'primary'
             | 'secondary'
+            | 'empty'
+            | 'text'
             | 'error'
             | 'warning'
-            | 'info'
-            | 'empty'
-            | 'text';
+            | 'info';
         /** Whether the button is in a loading state. */
         loading?: boolean;
-        /** Icon component and its external props. */
+        /** Custom Icon component and its external props. */
         Icon?: Compose<ButtonIconInternalProps, ExternalIconProps>;
         /** Name of the icon to show. */
         icon?: IconNames;
+        /** Position of the icon relative to the text. */
+        iconPosition?: 'left' | 'right';
         /** Click handler function. */
         onClick?: () => void;
-        /** Component type, defaults to 'button'. */
+        /** Component type, defaults to 'button' (can be 'a', React‐Router Link, etc.). */
         as?: React.ElementType;
-        /** Link destination if rendered as a link. */
+        /** If rendered as link, the href or to prop. */
         to?: string;
     };
 
@@ -42,7 +47,7 @@ const block = registerBlockName('Button');
 
 /**
  * `Button` is a versatile UI component that supports multiple variants,
- * optional icons, and link or button rendering.
+ * optional icons (left or right), and link or button rendering.
  */
 export const Button = <ExternalIconProps extends object>({
     className,
@@ -50,6 +55,7 @@ export const Button = <ExternalIconProps extends object>({
     variant = 'primary',
     icon,
     Icon = { component: BaseIcon, externalProps: {} as ExternalIconProps },
+    iconPosition = 'left',
     as: Component = 'button',
     to,
     onClick,
@@ -57,31 +63,36 @@ export const Button = <ExternalIconProps extends object>({
 }: ButtonProps<ExternalIconProps>) => {
     const isLink = Component !== 'button';
 
+    const bemProps = getBaseComponentProps({
+        ...props,
+        block,
+        className,
+        modifiers: [
+            variant,
+            icon ? 'with-icon' : null,
+            icon ? `icon-${iconPosition}` : null,
+        ].filter(Boolean) as string[],
+    });
+
     return (
         <Component
-            {...getBaseComponentProps({
-                ...props,
-                block,
-                modifiers: [variant, ...(icon ? ['with-icon'] : [])],
-                className,
-            })}
-            {...(isLink ? { to } : {})}
-            {...(!isLink ? { type: 'button', onClick } : { onClick })}
+            {...bemProps}
+            {...(isLink && to
+                ? // si es link tipo <a>
+                  { href: to }
+                : // botón normal
+                  { type: 'button', onClick })}
         >
-            <>
-                {icon && (
-                    <div
-                        className={toBEM({ block, element: 'icon-container' })}
-                    >
-                        <Icon.component
-                            icon={icon}
-                            {...Icon.externalProps}
-                            className="Icon"
-                        />
-                    </div>
-                )}
-                {children}
-            </>
+            {icon && (
+                <span className={toBEM({ block, element: 'icon-container' })}>
+                    <Icon.component
+                        icon={icon}
+                        {...Icon.externalProps}
+                        className={toBEM({ block, element: 'icon' })}
+                    />
+                </span>
+            )}
+            {children}
         </Component>
     );
 };
