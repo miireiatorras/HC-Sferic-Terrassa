@@ -150,6 +150,7 @@ export const Botiga = ({ ...props }: BotigaProps) => {
                     </div>
                 </div>
                 <Button
+                    variant="primary-green"
                     className={toBEM({
                         block,
                         element: 'Button',
@@ -158,6 +159,7 @@ export const Botiga = ({ ...props }: BotigaProps) => {
                     Accedeix a la nostra botiga online
                 </Button>
                 <Button
+                    variant="secondary-green"
                     className={toBEM({
                         block,
                         element: 'Button',

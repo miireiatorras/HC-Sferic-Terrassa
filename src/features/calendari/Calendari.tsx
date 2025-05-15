@@ -37,13 +37,13 @@ export const Caldendari = ({ ...props }: CaldendariProps) => {
                     })}
                 >
                     <Button
-                        variant="primary"
+                        variant="primary-white"
                         onClick={() => {}}
                         icon="instagram"
                     >
                         Accedeix al calendari
                     </Button>
-                    <Button variant="secondary" onClick={() => {}}>
+                    <Button variant="secondary-white" onClick={() => {}}>
                         Consulta horari entrenaments
                     </Button>
                 </div>

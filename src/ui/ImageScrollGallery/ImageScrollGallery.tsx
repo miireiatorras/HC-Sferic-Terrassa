@@ -1,3 +1,4 @@
+import { useRef, useState, useEffect } from 'react';
 import {
     toBEM,
     registerBlockName,
@@ -6,28 +7,56 @@ import {
 } from '@/utils';
 import './ImageScrollGalery.scss';
 import { Icon } from '../Icon/Icon';
-import { JSX } from 'react';
 
 export type Props = BaseComponentProps & {
-    /** Array of image URLs to be displayed in the gallery. */
     images: string[];
 };
 
 const block = registerBlockName('ImageScrollGallery');
 
-export type ImageScrollGalleryProps = Props;
+export const ImageScrollGallery = ({ images, ...props }: Props) => {
+    const containerRef = useRef<HTMLDivElement>(null);
+    const [canScrollLeft, setCanScrollLeft] = useState(false);
+    const [canScrollRight, setCanScrollRight] = useState(false);
 
-/**
- * ImageScrollGallery renders a horizontal, scrollable list of images
- * with an arrow icon indicating scroll direction.
- */
-export const ImageScrollGallery = ({
-    images,
-    ...props
-}: ImageScrollGalleryProps): JSX.Element => {
+    // Chequear en cada scroll o resize si podemos desplazar
+    const updateScrollButtons = () => {
+        const c = containerRef.current;
+        if (!c) return;
+        setCanScrollLeft(c.scrollLeft > 0);
+        setCanScrollRight(c.scrollLeft + c.clientWidth < c.scrollWidth);
+    };
+
+    useEffect(() => {
+        updateScrollButtons();
+        window.addEventListener('resize', updateScrollButtons);
+        return () => window.removeEventListener('resize', updateScrollButtons);
+    }, []);
+
     return (
         <div {...getBaseComponentProps({ ...props, block })}>
-            <div className={toBEM({ block, element: 'container' })}>
+            {/* Flecha izquierda */}
+            <div
+                className={toBEM({
+                    block,
+                    element: 'arrow',
+                    modifiers: ['left', canScrollLeft ? '' : 'disabled'],
+                })}
+                onClick={() => {
+                    containerRef.current?.scrollBy({
+                        left: -containerRef.current.clientWidth,
+                        behavior: 'smooth',
+                    });
+                }}
+            >
+                <Icon icon="chevron-up" size="md" />
+            </div>
+
+            <div
+                ref={containerRef}
+                onScroll={updateScrollButtons}
+                className={toBEM({ block, element: 'container' })}
+            >
                 {images.map((src, idx) => (
                     <img
                         key={idx}
@@ -36,11 +65,23 @@ export const ImageScrollGallery = ({
                     />
                 ))}
             </div>
-            <Icon
-                icon="chevron-up"
-                size="lg"
-                className={toBEM({ block, element: 'arrow' })}
-            />
+
+            {/* Flecha derecha */}
+            <div
+                className={toBEM({
+                    block,
+                    element: 'arrow',
+                    modifiers: ['right', canScrollRight ? '' : 'disabled'],
+                })}
+                onClick={() => {
+                    containerRef.current?.scrollBy({
+                        left: containerRef.current.clientWidth,
+                        behavior: 'smooth',
+                    });
+                }}
+            >
+                <Icon icon="chevron-up" size="md" />
+            </div>
         </div>
     );
 };

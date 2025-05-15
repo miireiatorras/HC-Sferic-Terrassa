@@ -19,10 +19,12 @@ export type ButtonProps<ExternalIconProps extends object> =
         /** Optional content inside the button. */
         children?: React.ReactNode;
         /** Visual variant of the button. */
+
         variant?:
-            | 'primary'
-            | 'secondary'
-            | 'empty'
+            | 'primary-green'
+            | 'primary-white'
+            | 'secondary-white'
+            | 'secondary-green'
             | 'text'
             | 'error'
             | 'warning'
@@ -52,7 +54,7 @@ const block = registerBlockName('Button');
 export const Button = <ExternalIconProps extends object>({
     className,
     children,
-    variant = 'primary',
+    variant = 'primary-green',
     icon,
     Icon = { component: BaseIcon, externalProps: {} as ExternalIconProps },
     iconPosition = 'left',

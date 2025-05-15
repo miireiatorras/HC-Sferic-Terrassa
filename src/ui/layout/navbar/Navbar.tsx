@@ -55,9 +55,9 @@ export const Navbar = (props: NavbarProps) => {
                 aria-label={isOpen ? 'Cerrar menú' : 'Abrir menú'}
             >
                 {isOpen ? (
-                    <Icon icon="group" size="sm" />
-                ) : (
                     <Icon icon="filter" size="sm" />
+                ) : (
+                    <Icon icon="group" size="sm" />
                 )}
             </button>
 
@@ -89,7 +89,7 @@ export const Navbar = (props: NavbarProps) => {
                 <Button
                     as={NavLink}
                     to="/inscripcions"
-                    variant="primary"
+                    variant="primary-white"
                     className={toBEM({ block, element: 'menu-button' })}
                 >
                     Inscriu-te
@@ -131,7 +131,7 @@ export const Navbar = (props: NavbarProps) => {
                         as={NavLink}
                         to="/inscripcions"
                         onClick={() => setIsOpen(false)}
-                        variant="primary"
+                        variant="primary-white"
                         className={toBEM({ block, element: 'mobile-button' })}
                     >
                         Inscriu-te

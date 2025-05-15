@@ -16,7 +16,6 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 1000;
 
-    // 1. Branding
     &__brand {
         display: flex;
         align-items: center;
@@ -37,7 +36,6 @@
         margin: 0;
     }
 
-    // 2. Toggle móvil
     &__toggle {
         display: none;
         background: none;
@@ -48,7 +46,10 @@
         }
     }
 
-    // 3. Menú desktop
+    &__mobile-menu {
+        display: none;
+    }
+
     &__menu {
         display: flex;
         justify-content: flex-end;
@@ -80,7 +81,6 @@
                 transform-origin: left center;
                 transition: transform 0.3s ease-in-out;
             }
-
             &:hover::after,
             &--active::after {
                 transform: scaleX(1);
@@ -88,7 +88,6 @@
         }
     }
 
-    // 4. CTA desktop
     &__cta {
         .Navbar__menu-button {
             padding: 0.5rem 1.25rem;
@@ -97,53 +96,47 @@
         }
     }
 
-    // 5. Por defecto, el panel móvil oculto
-    &__mobile-menu {
-        display: none;
-    }
-
-    /* === MÓVIL === */
     @media (max-width: 767px) {
-        grid-template-columns: 1fr;
+        & {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 1rem;
+            grid-template-columns: none;
+        }
 
-        // ocultar versión desktop
         &__menu,
         &__cta {
             display: none !important;
         }
-        // mostrar toggle
         &__toggle {
             display: flex;
-            justify-content: flex-end;
         }
 
-        // panel móvil
         &__mobile-menu {
+            display: none;
+            position: absolute;
+            top: 70px;
+            left: 50%;
+            transform: translateX(-50%);
             width: 100%;
-            /* position: absolute; */
-            /* top: 67px; */
-            /* left: 0; */
-            /* right: 0; */
-            /* bottom: 0; */
+            background-color: colors.$verd-logo;
+            padding: 1rem 0;
+            border-radius: 0 0 0.5rem 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             flex-direction: column;
-            /* padding: 14rem 1rem; */
-            gap: 1.5rem;
-            background-color: #037e3f;
+            align-items: center;
+            gap: 0.5rem;
             z-index: 999;
-            align-items: center;
-            justify-content: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            /* align-content: center; */
         }
         &__mobile-menu--open {
             display: flex;
         }
 
-        // lista móvil
         &__mobile-list {
             width: 100%;
+            margin: 0;
+            padding: 0;
             list-style: none;
         }
         &__mobile-item {
@@ -163,11 +156,11 @@
             }
         }
 
-        // CTA móvil
         &__mobile-cta {
             width: 100%;
             display: flex;
             justify-content: center;
+            padding: 0.5rem 0;
 
             .Navbar__mobile-button {
                 width: 80%;

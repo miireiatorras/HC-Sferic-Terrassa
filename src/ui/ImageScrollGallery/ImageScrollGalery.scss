@@ -3,35 +3,68 @@
 .ImageScrollGallery {
     @include styles.content-spacing;
     position: relative;
-    overflow-x: auto;
-    white-space: nowrap;
-    padding-bottom: 1rem;
+    /* ocultar scrollbar */
+    overflow: hidden;
 
     &__container {
         display: flex;
         gap: 1rem;
         overflow-x: auto;
         scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
         padding: 1rem 0;
+
+        /* esconder el scroll nativo */
+        scrollbar-width: none;
+        &::-webkit-scrollbar {
+            display: none;
+        }
     }
 
     &__image {
+        flex: 0 0 auto;
+
         object-fit: cover;
         scroll-snap-align: start;
         border-radius: 8px;
+        /* transición de hover y cuando cambie posición */
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        &:hover {
+            transform: scale(1.05);
+            opacity: 0.9;
+        }
     }
 
     &__arrow {
         position: absolute;
-        right: 0.5rem;
         top: 50%;
         transform: translateY(-50%);
-        pointer-events: none;
-        opacity: 0.7;
-    }
-
-    &__arrow {
-        transform: translateY(-50%) rotate(90deg);
+        background: rgba(0, 0, 0, 0.4);
+        border-radius: 50%;
+        width: 32px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
         color: styles.$blanc;
+        z-index: 10;
+        transition: opacity 0.2s;
+        opacity: 0.7;
+
+        &--left {
+            left: 0.5rem;
+        }
+        &--right {
+            right: 0.5rem;
+            transform: translateY(-50%) rotate(180deg);
+        }
+        &:hover {
+            opacity: 1;
+        }
+        &.disabled {
+            opacity: 0.2;
+            pointer-events: none;
+        }
     }
 }

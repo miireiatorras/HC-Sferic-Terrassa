@@ -25,10 +25,10 @@ export const Hero = ({ ...props }: HeroProps) => {
                     Benvinguts a <br /> HC. SFERIC Terrassa
                 </h1>
                 <div className={toBEM({ block, element: 'buttons' })}>
-                    <Button variant="primary" onClick={() => {}}>
+                    <Button variant="primary-white" onClick={() => {}}>
                         Uneix-te al club
                     </Button>
-                    <Button variant="secondary" onClick={() => {}}>
+                    <Button variant="secondary-white" onClick={() => {}}>
                         Decobreix més
                     </Button>
                 </div>

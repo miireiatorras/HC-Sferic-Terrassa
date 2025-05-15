@@ -6,9 +6,10 @@ import * as iconNames from '@/config/icons/constants';
 import { IconNames } from '@/ui/Icon/Icon';
 
 const variants = [
-    'primary',
-    'secondary',
-    'empty',
+    'primary-green',
+    'primary-white',
+    'secondary-green',
+    'secondary-white',
     'text',
     'error',
     'warning',
@@ -47,7 +48,7 @@ type Story = StoryObj<typeof Button>;
 /** Historia interactiva */
 export const Playground: Story = {
     args: {
-        variant: 'primary',
+        variant: 'primary-green',
         children: 'Button',
         icon: undefined,
         iconPosition: 'left',

@@ -15,21 +15,36 @@
     text-decoration: none;
     padding: 0.5rem 1.25rem;
 
-    // PRIMARY
-    &--primary {
+    &--primary-green {
         background-color: styles.$verd-logo;
         color: styles.$blanc;
-        border-color: styles.$verd-logo;
 
         &:hover {
-            background-color: styles.$verd-fosc;
-            border-color: styles.$verd-fosc;
+            background-color: #006933;
         }
     }
 
-    // SECONDARY
-    &--secondary {
+    &--primary-white {
         background-color: styles.$blanc;
+        color: styles.$negre;
+
+        &:hover {
+            background-color: #efefef;
+        }
+    }
+
+    &--secondary-white {
+        background-color: transparent;
+        color: styles.$blanc;
+        border-color: styles.$blanc;
+
+        &:hover {
+            background-color: styles.$blanc;
+            color: styles.$negre;
+        }
+    }
+    &--secondary-green {
+        background-color: transparent;
         color: styles.$verd-logo;
         border-color: styles.$verd-logo;
 
@@ -39,23 +54,6 @@
         }
     }
 
-    // EMPTY (borde + texto)
-    &--empty {
-        background-color: transparent;
-        color: styles.$verd-logo;
-        border-color: styles.$verd-logo;
-
-        &:hover {
-            background-color: rgba(
-                0,
-                72,
-                35,
-                0.1
-            ); // semitransparente: igual que legend
-        }
-    }
-
-    // TEXT / TERTIARY
     &--text {
         background-color: transparent;
         color: styles.$verd-logo;
@@ -67,7 +65,6 @@
         }
     }
 
-    // ERROR
     &--error {
         background-color: var(--color-error-light);
         color: var(--color-error-darker);
@@ -80,7 +77,6 @@
         }
     }
 
-    // WARNING
     &--warning {
         background-color: var(--color-warning-light);
         color: var(--color-warning-darker);
@@ -92,7 +88,6 @@
         }
     }
 
-    // INFO
     &--info {
         background-color: var(--color-info-light);
         color: var(--color-info-darker);
@@ -104,7 +99,6 @@
             border-color: var(--color-info-dark);
         }
     }
-    // Icon position modifiers
     &--icon-left {
         flex-direction: row;
     }

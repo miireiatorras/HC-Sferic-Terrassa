@@ -7,6 +7,7 @@ import {
 import './ReadyToJoin.scss';
 import { useEffect, useState } from 'react';
 import { Icon } from '@/ui/Icon/Icon';
+import { Button } from '@/ui/button/Button';
 
 const block = registerBlockName('ReadyToJoin');
 
@@ -159,14 +160,18 @@ export const ReadyToJoin = ({ ...props }: BaseComponentProps) => {
                     </div>
 
                     <div className={toBEM({ block, element: 'actions' })}>
-                        <button className={toBEM({ block, element: 'cta' })}>
+                        <Button
+                            variant="primary-green"
+                            className={toBEM({ block, element: 'cta' })}
+                        >
                             Uneix-te al club
-                        </button>
-                        <button
+                        </Button>
+                        <Button
+                            variant="secondary-green"
                             className={toBEM({ block, element: 'secondary' })}
                         >
                             Descobreix més →
-                        </button>
+                        </Button>
                     </div>
                 </div>
             </div>
