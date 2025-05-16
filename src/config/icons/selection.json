@@ -28,6 +28,54 @@
         {
             "icon": {
                 "paths": [
+                    "M810 274l-238 238 238 238-60 60-238-238-238 238-60-60 238-238-238-238 60-60 238 238 238-238z"
+                ],
+                "attrs": [],
+                "isMulticolor": false,
+                "isMulticolor2": false,
+                "tags": ["clear", "close"],
+                "grid": 24
+            },
+            "attrs": [],
+            "properties": {
+                "ligatures": "clear, close",
+                "id": 153,
+                "order": 16,
+                "prevSize": 24,
+                "code": 59648,
+                "name": "clear"
+            },
+            "setIdx": 1,
+            "setId": 5,
+            "iconIdx": 153
+        },
+        {
+            "icon": {
+                "paths": [
+                    "M128 256h768v86h-768v-86zM128 554v-84h768v84h-768zM128 768v-86h768v86h-768z"
+                ],
+                "attrs": [],
+                "isMulticolor": false,
+                "isMulticolor2": false,
+                "tags": ["menu"],
+                "grid": 24
+            },
+            "attrs": [],
+            "properties": {
+                "ligatures": "menu",
+                "id": 600,
+                "order": 17,
+                "prevSize": 24,
+                "code": 59649,
+                "name": "menu"
+            },
+            "setIdx": 1,
+            "setId": 5,
+            "iconIdx": 600
+        },
+        {
+            "icon": {
+                "paths": [
                     "M512 768l-300.954 158.208 57.498-335.104-243.507-237.312 336.486-48.896 150.477-304.896 150.477 304.896 336.486 48.896-243.507 237.312 57.498 335.104z"
                 ],
                 "attrs": [],

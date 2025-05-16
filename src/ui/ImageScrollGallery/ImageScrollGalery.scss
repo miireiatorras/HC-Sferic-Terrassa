@@ -3,7 +3,6 @@
 .ImageScrollGallery {
     @include styles.content-spacing;
     position: relative;
-    /* ocultar scrollbar */
     overflow: hidden;
 
     &__container {
@@ -14,7 +13,6 @@
         scroll-behavior: smooth;
         padding: 1rem 0;
 
-        /* esconder el scroll nativo */
         scrollbar-width: none;
         &::-webkit-scrollbar {
             display: none;
@@ -27,7 +25,6 @@
         object-fit: cover;
         scroll-snap-align: start;
         border-radius: 8px;
-        /* transición de hover y cuando cambie posición */
         transition: transform 0.3s ease, opacity 0.3s ease;
         &:hover {
             transform: scale(1.05);
@@ -54,10 +51,11 @@
 
         &--left {
             left: 0.5rem;
+            transform: rotate(-90deg);
         }
         &--right {
             right: 0.5rem;
-            transform: translateY(-50%) rotate(180deg);
+            transform: rotate(90deg);
         }
         &:hover {
             opacity: 1;

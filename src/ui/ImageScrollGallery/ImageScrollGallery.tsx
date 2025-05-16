@@ -19,7 +19,6 @@ export const ImageScrollGallery = ({ images, ...props }: Props) => {
     const [canScrollLeft, setCanScrollLeft] = useState(false);
     const [canScrollRight, setCanScrollRight] = useState(false);
 
-    // Chequear en cada scroll o resize si podemos desplazar
     const updateScrollButtons = () => {
         const c = containerRef.current;
         if (!c) return;
@@ -35,7 +34,6 @@ export const ImageScrollGallery = ({ images, ...props }: Props) => {
 
     return (
         <div {...getBaseComponentProps({ ...props, block })}>
-            {/* Flecha izquierda */}
             <div
                 className={toBEM({
                     block,
@@ -49,7 +47,14 @@ export const ImageScrollGallery = ({ images, ...props }: Props) => {
                     });
                 }}
             >
-                <Icon icon="chevron-up" size="md" />
+                <Icon
+                    icon="chevron-up"
+                    size="md"
+                    className={toBEM({
+                        block,
+                        element: 'Icon-left',
+                    })}
+                />
             </div>
 
             <div
@@ -66,7 +71,6 @@ export const ImageScrollGallery = ({ images, ...props }: Props) => {
                 ))}
             </div>
 
-            {/* Flecha derecha */}
             <div
                 className={toBEM({
                     block,
@@ -80,7 +84,14 @@ export const ImageScrollGallery = ({ images, ...props }: Props) => {
                     });
                 }}
             >
-                <Icon icon="chevron-up" size="md" />
+                <Icon
+                    icon="chevron-up"
+                    size="md"
+                    className={toBEM({
+                        block,
+                        element: 'Icon-right',
+                    })}
+                />
             </div>
         </div>
     );

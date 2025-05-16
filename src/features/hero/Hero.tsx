@@ -7,6 +7,7 @@ import {
 } from '@/utils';
 
 import './Hero.scss';
+import { NavLink } from 'react-router-dom';
 
 export type HeroProps = BaseComponentProps;
 
@@ -25,7 +26,7 @@ export const Hero = ({ ...props }: HeroProps) => {
                     Benvinguts a <br /> HC. SFERIC Terrassa
                 </h1>
                 <div className={toBEM({ block, element: 'buttons' })}>
-                    <Button variant="primary-white" onClick={() => {}}>
+                    <Button as={NavLink} to="/inscripcions" onClick={() => {}}>
                         Uneix-te al club
                     </Button>
                     <Button variant="secondary-white" onClick={() => {}}>

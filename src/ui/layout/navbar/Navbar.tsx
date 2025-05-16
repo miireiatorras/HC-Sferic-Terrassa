@@ -31,7 +31,6 @@ export const Navbar = (props: NavbarProps) => {
             {...getBaseComponentProps({ ...props, block })}
             className={toBEM({ block })}
         >
-            {/* 1. Branding */}
             <div className={toBEM({ block, element: 'brand' })}>
                 <NavLink
                     to="/"
@@ -48,20 +47,18 @@ export const Navbar = (props: NavbarProps) => {
                 </h1>
             </div>
 
-            {/* 2. Toggle móvil */}
             <button
                 className={toBEM({ block, element: 'toggle' })}
                 onClick={() => setIsOpen((o) => !o)}
-                aria-label={isOpen ? 'Cerrar menú' : 'Abrir menú'}
+                aria-label={isOpen ? 'Tancar menú' : 'Obrir menú'}
             >
                 {isOpen ? (
-                    <Icon icon="filter" size="sm" />
+                    <Icon icon="clear" size="lg" />
                 ) : (
-                    <Icon icon="group" size="sm" />
+                    <Icon icon="menu" size="lg" />
                 )}
             </button>
 
-            {/* 3. Menú desktop */}
             <ul className={toBEM({ block, element: 'menu' })}>
                 {links.map(({ to, label }) => (
                     <li
@@ -84,7 +81,6 @@ export const Navbar = (props: NavbarProps) => {
                 ))}
             </ul>
 
-            {/* 4. CTA desktop */}
             <div className={toBEM({ block, element: 'cta' })}>
                 <Button
                     as={NavLink}
@@ -96,7 +92,6 @@ export const Navbar = (props: NavbarProps) => {
                 </Button>
             </div>
 
-            {/* 5. Panel móvil */}
             <div
                 className={toBEM({
                     block,

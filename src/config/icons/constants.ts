@@ -1,4 +1,6 @@
 export const I_INTERSEX = 'intersex';
+export const I_CLEAR = 'clear';
+export const I_MENU = 'menu';
 export const I_EMAIL = 'email';
 export const I_GROUP_OUTLINE = 'group-outline';
 export const I_CALL = 'call';

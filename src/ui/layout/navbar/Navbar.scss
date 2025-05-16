@@ -41,9 +41,7 @@
         background: none;
         border: none;
         cursor: pointer;
-        svg {
-            stroke: colors.$blanc;
-        }
+        color: colors.$blanc;
     }
 
     &__mobile-menu {
@@ -94,6 +92,10 @@
             max-height: 50px;
             line-height: 1;
         }
+    }
+
+    svg {
+        fill: colors.$blanc;
     }
 
     @media (max-width: 767px) {

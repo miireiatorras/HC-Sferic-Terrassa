@@ -79,11 +79,7 @@ export const Button = <ExternalIconProps extends object>({
     return (
         <Component
             {...bemProps}
-            {...(isLink && to
-                ? // si es link tipo <a>
-                  { href: to }
-                : // botón normal
-                  { type: 'button', onClick })}
+            {...(isLink ? { to } : { type: 'button', onClick })}
         >
             {icon && (
                 <span className={toBEM({ block, element: 'icon-container' })}>
