@@ -33,7 +33,7 @@ function Patrocinadors() {
             <div className="contacte-main">
                 <p>Si t’agrada el que fem, suma-t’hi!</p>
                 <span>
-                    <a href="#contacte">Contacta’ns!</a>
+                    <a href="/contacte">Contacta’ns!</a>
                 </span>
             </div>
         </>

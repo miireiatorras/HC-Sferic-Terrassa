@@ -78,11 +78,13 @@
         "buttons": [
             {
                 "text": "Uneix-te al club",
-                "href": "#"
+                "href": "/inscripcions",
+                "variant": "primary-green"
             },
             {
                 "text": "Consulta horari d’entrenaments",
-                "href": "#"
+                "href": "/horari",
+                "variant": "secondary-green"
             }
         ]
     }

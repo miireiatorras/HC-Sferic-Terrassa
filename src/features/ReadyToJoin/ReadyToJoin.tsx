@@ -8,6 +8,7 @@ import './ReadyToJoin.scss';
 import { useEffect, useState } from 'react';
 import { Icon } from '@/ui/Icon/Icon';
 import { Button } from '@/ui/button/Button';
+import { NavLink } from 'react-router-dom';
 
 const block = registerBlockName('ReadyToJoin');
 
@@ -161,12 +162,16 @@ export const ReadyToJoin = ({ ...props }: BaseComponentProps) => {
 
                     <div className={toBEM({ block, element: 'actions' })}>
                         <Button
+                            as={NavLink}
+                            to="/inscripcions"
                             variant="primary-green"
                             className={toBEM({ block, element: 'cta' })}
                         >
                             Uneix-te al club
                         </Button>
                         <Button
+                            as={NavLink}
+                            to="/el-club"
                             variant="secondary-green"
                             className={toBEM({ block, element: 'secondary' })}
                         >

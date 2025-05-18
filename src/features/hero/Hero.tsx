@@ -29,7 +29,12 @@ export const Hero = ({ ...props }: HeroProps) => {
                     <Button as={NavLink} to="/inscripcions" onClick={() => {}}>
                         Uneix-te al club
                     </Button>
-                    <Button variant="secondary-white" onClick={() => {}}>
+                    <Button
+                        as={NavLink}
+                        to="/el-club"
+                        variant="secondary-white"
+                        onClick={() => {}}
+                    >
                         Decobreix més
                     </Button>
                 </div>

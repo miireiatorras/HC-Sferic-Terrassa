@@ -8,6 +8,7 @@ import {
 } from '@/utils';
 
 import './Calendari.scss';
+import { NavLink } from 'react-router-dom';
 
 export type CaldendariProps = BaseComponentProps & {
     children?: React.ReactNode;
@@ -37,13 +38,20 @@ export const Caldendari = ({ ...props }: CaldendariProps) => {
                     })}
                 >
                     <Button
+                        as={NavLink}
+                        to="http://www.hoqueipatins.fecapa.cat/ag/"
                         variant="primary-white"
                         onClick={() => {}}
                         icon="instagram"
                     >
                         Accedeix al calendari
                     </Button>
-                    <Button variant="secondary-white" onClick={() => {}}>
+                    <Button
+                        as={NavLink}
+                        to="/horari"
+                        variant="secondary-white"
+                        onClick={() => {}}
+                    >
                         Consulta horari entrenaments
                     </Button>
                 </div>

@@ -10,10 +10,9 @@ import {
     toBEM,
 } from '@/utils';
 import { ContentSection, Stat } from '@/ui/content-section/ContentSection';
-import { Button } from '@/ui/button/Button';
+import { Button, ButtonProps } from '@/ui/button/Button';
 import './seccions.scss';
 
-// --- Tipado de la estructura JSON ---
 interface SectionData {
     title: string;
     description: string;
@@ -27,6 +26,8 @@ interface SectionData {
 interface CTAButton {
     text: string;
     href: string;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    variant?: ButtonProps<any>['variant'];
 }
 
 interface CTAData {
@@ -42,7 +43,6 @@ interface SeccionsData {
     cta: CTAData;
 }
 
-// Asunción de que el JSON cumple la interfaz
 const seccionsData = seccionsJson as SeccionsData;
 
 export type SeccionsProps = BaseComponentProps;
@@ -120,6 +120,7 @@ export const Seccions = (props: SeccionsProps) => {
                             <Button
                                 key={bIdx}
                                 className={toBEM({ block, element: 'Button' })}
+                                variant={btn.variant}
                                 onClick={() =>
                                     (window.location.href = btn.href)
                                 }
