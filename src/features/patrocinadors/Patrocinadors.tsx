@@ -1,8 +1,21 @@
 import { motion } from 'framer-motion';
-import './patrocinadors.scss';
 import { Title } from '@/ui/titles/Title';
+import {
+    toBEM,
+    registerBlockName,
+    BaseComponentProps,
+    getBaseComponentProps,
+} from '@/utils';
 
-function Patrocinadors() {
+import './patrocinadors.scss';
+
+export type Props = BaseComponentProps & {
+    children?: React.ReactNode;
+};
+
+const block = registerBlockName('Patrocinadors');
+
+export const Patrocinadors = ({ children, ...props }: Props) => {
     const logos = [
         'elymet_mail.png',
         'hockeyteam-logo.png',
@@ -13,10 +26,10 @@ function Patrocinadors() {
     ];
 
     return (
-        <>
+        <div {...getBaseComponentProps({ ...props, block })}>
             <Title>Patrocinadors</Title>
 
-            <section className="logos-sponsors">
+            <div className={toBEM({ block, element: 'logos' })}>
                 {logos.map((src, index) => (
                     <motion.img
                         key={index}
@@ -26,18 +39,21 @@ function Patrocinadors() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true, amount: 0.2 }}
                         transition={{ duration: 0.6, ease: 'easeOut' }}
+                        className={toBEM({ block, element: 'logo' })}
                     />
                 ))}
-            </section>
+            </div>
 
-            <div className="contacte-main">
+            <div className={toBEM({ block, element: 'contacte' })}>
                 <p>Si t’agrada el que fem, suma-t’hi!</p>
                 <span>
                     <a href="/contacte">Contacta’ns!</a>
                 </span>
             </div>
-        </>
+
+            {children}
+        </div>
     );
-}
+};
 
 export default Patrocinadors;

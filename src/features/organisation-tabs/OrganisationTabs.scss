@@ -4,8 +4,9 @@
     @include styles.content-spacing;
     background: #f9fafb;
     border-radius: styles.$corner-sm;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.08);
     overflow: hidden;
+    margin-bottom: 3rem;
 
     &__tablist {
         display: flex;
@@ -53,7 +54,6 @@
         &__tablist {
             overflow-x: auto;
             -webkit-overflow-scrolling: touch;
-            /* que no se envuelva y permita scroll */
             flex-wrap: nowrap;
         }
         &__panel {

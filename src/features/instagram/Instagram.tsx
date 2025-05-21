@@ -2,10 +2,12 @@ import {
     registerBlockName,
     BaseComponentProps,
     getBaseComponentProps,
+    toBEM,
 } from '@/utils';
 
 import './Instagram.scss';
 import Title from '@/ui/titles/Title';
+import { Icon } from '@/ui/Icon/Icon';
 
 export type InstagramProps = BaseComponentProps & {};
 
@@ -14,7 +16,30 @@ export const Instagram = ({ ...props }: InstagramProps) => {
     return (
         <div {...getBaseComponentProps({ ...props, block })}>
             <Title>Troba'ns a Instagram!</Title>
-            {/* Aquí insertas tu iframe */}
+            <div
+                className={toBEM({
+                    block,
+                    element: 'div',
+                })}
+            >
+                <Icon
+                    icon="instagram"
+                    size="lg"
+                    className={toBEM({
+                        block,
+                        element: 'Icon',
+                    })}
+                />
+                <a
+                    href="https://www.instagram.com/oksfericterrassa/"
+                    className={toBEM({
+                        block,
+                        element: 'link',
+                    })}
+                >
+                    @oksfericterrassa
+                </a>
+            </div>
             {/* <iframe
                 src="//lightwidget.com/widgets/adabcc9a52015867b38dfac5623e9ef8.html"
                 className="lightwidget-widget w-full"

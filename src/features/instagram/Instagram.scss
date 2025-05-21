@@ -1,4 +1,15 @@
 @use '@/utils/styles';
 
 .Instagram {
+    color: styles.$verd-logo;
+
+    &__div {
+        @include styles.content-spacing;
+
+        @include styles.hflex(8px);
+        justify-content: flex-end;
+    }
+    &__link {
+        color: styles.$verd-logo;
+    }
 }

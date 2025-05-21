@@ -1,6 +1,7 @@
 @use '@/utils/styles';
 
 .Card {
+    max-width: 34.68rem;
     @include styles.content-spacing;
     position: relative;
     padding: 2rem;
@@ -15,12 +16,11 @@
         top: 0;
         left: 0;
         width: 100%;
-        height: 6px; // grosor de la línea
+        height: 6px;
         background: linear-gradient(
             90deg,
             styles.$verd-logo,
-            // empieza con el verde principal
-            lighten(styles.$verd-clar, 30%) // termina aclarándolo un poco
+            lighten(styles.$verd-clar, 30%)
         );
         border-top-left-radius: styles.$corner-sm;
         border-top-right-radius: styles.$corner-sm;

@@ -7,6 +7,7 @@ import {
 
 import './Discover.scss';
 import Title from '@/ui/titles/Title';
+import { Link } from 'react-router-dom';
 
 export type DiscoverProps = BaseComponentProps;
 
@@ -17,26 +18,40 @@ export const Discover = ({ ...props }: DiscoverProps) => {
             <Title>Descobreix el nostre club</Title>
 
             <div className={toBEM({ block, element: 'cards' })}>
-                <div className={toBEM({ block, element: 'left-card' })}>
+                <Link
+                    to="/el-club"
+                    className={toBEM({ block, element: 'left-card' })}
+                >
                     <img
                         src="/seccions.jpg"
                         alt="Seccions"
                         className={toBEM({ block, element: 'image' })}
                     />
                     <div className={toBEM({ block, element: 'overlay' })}>
-                        <h3 className={toBEM({ block, element: 'card-title' })}>
+                        <h3
+                            className={toBEM({
+                                block,
+                                element: 'card-title',
+                            })}
+                        >
                             Seccions
                         </h3>
                         <span
-                            className={toBEM({ block, element: 'card-link' })}
+                            className={toBEM({
+                                block,
+                                element: 'card-link',
+                            })}
                         >
                             Aprèn més &gt;
                         </span>
                     </div>
-                </div>
+                </Link>
 
                 <div className={toBEM({ block, element: 'right-column' })}>
-                    <div className={toBEM({ block, element: 'card' })}>
+                    <Link
+                        to="/equips"
+                        className={toBEM({ block, element: 'card' })}
+                    >
                         <img
                             src="/equips.jpg"
                             alt="Equips"
@@ -60,9 +75,12 @@ export const Discover = ({ ...props }: DiscoverProps) => {
                                 Aprèn més &gt;
                             </span>
                         </div>
-                    </div>
+                    </Link>
 
-                    <div className={toBEM({ block, element: 'card' })}>
+                    <Link
+                        to="/botiga"
+                        className={toBEM({ block, element: 'card' })}
+                    >
                         <img
                             src="/botiga.png"
                             alt="Botiga"
@@ -86,7 +104,7 @@ export const Discover = ({ ...props }: DiscoverProps) => {
                                 Aprèn més &gt;
                             </span>
                         </div>
-                    </div>
+                    </Link>
                 </div>
             </div>
         </section>

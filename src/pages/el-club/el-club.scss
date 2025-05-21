@@ -5,15 +5,13 @@
 
     &__timeline {
         @include styles.content-spacing;
-
         background-color: #f9fafb;
         display: flex;
         flex-direction: column;
-
         padding: 1.5rem;
         border-radius: 8px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-        margin-bottom: 1rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+        margin-bottom: 3.3rem;
     }
 
     &__heading {
@@ -28,6 +26,7 @@
         display: grid;
         grid-template-columns: 2fr 2fr;
         gap: 2rem;
+        justify-items: center;
     }
 
     &__info-grid {

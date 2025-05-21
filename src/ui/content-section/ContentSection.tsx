@@ -83,55 +83,63 @@ export const ContentSection = ({
                                         element: 'stat',
                                     })}
                                 >
-                                    {(s.icon || s.icons) && (
-                                        <div
-                                            className={toBEM({
-                                                block,
-                                                element: 'statIcon',
-                                            })}
-                                            style={{
-                                                display: 'flex',
-                                                gap: '0.5rem',
-                                            }}
-                                        >
-                                            {s.icon && (
-                                                <Icon icon={s.icon} size="lg" />
-                                            )}
-                                            {s.icons &&
-                                                s.icons.map((icon, index) => (
-                                                    <Icon
-                                                        key={index}
-                                                        icon={icon}
-                                                        size="lg"
-                                                    />
-                                                ))}
-                                        </div>
-                                    )}
-
                                     <div
                                         className={toBEM({
                                             block,
-                                            element: 'statText',
+                                            element: 'statContent',
                                         })}
                                     >
-                                        {s.value !== undefined && (
+                                        {(s.icon || s.icons) && (
+                                            <div
+                                                className={toBEM({
+                                                    block,
+                                                    element: 'statIcon',
+                                                })}
+                                            >
+                                                {s.icon && (
+                                                    <Icon
+                                                        icon={s.icon}
+                                                        size="lg"
+                                                    />
+                                                )}
+                                                {s.icons &&
+                                                    s.icons.map(
+                                                        (icon, index) => (
+                                                            <Icon
+                                                                key={index}
+                                                                icon={icon}
+                                                                size="lg"
+                                                            />
+                                                        )
+                                                    )}
+                                            </div>
+                                        )}
+
+                                        <div
+                                            className={toBEM({
+                                                block,
+                                                element: 'statText',
+                                            })}
+                                        >
+                                            {s.value !== undefined && (
+                                                <span
+                                                    className={toBEM({
+                                                        block,
+                                                        element: 'statValue',
+                                                    })}
+                                                >
+                                                    {s.value}
+                                                </span>
+                                            )}
                                             <span
                                                 className={toBEM({
                                                     block,
-                                                    element: 'statValue',
+                                                    element: 'statLabel',
                                                 })}
                                             >
-                                                {s.value}
+                                                {s.label}
                                             </span>
-                                        )}
-                                        <span
-                                            className={toBEM({
-                                                block,
-                                                element: 'statLabel',
-                                            })}
-                                        >
-                                            {s.label}
-                                        </span>
+                                        </div>
                                     </div>
                                 </div>
                             ))}
