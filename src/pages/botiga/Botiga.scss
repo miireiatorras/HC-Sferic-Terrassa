@@ -10,4 +10,9 @@
         flex-direction: row;
         justify-content: space-evenly;
     }
+
+    &__buttons-wrapper {
+        @include styles.hflex((8px), center, center);
+        margin-bottom: 5.43rem;
+    }
 }

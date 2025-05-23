@@ -1,8 +1,9 @@
 @use '@/utils/styles';
 
 .ProductCard {
-    max-width: 200px;
-    border: 1px solid gray;
+    width: 16rem;
+    max-height: 23.4rem;
+    border: 1px solid #d9d9d9;
     border-radius: 0.5rem;
     overflow: hidden;
     background-color: styles.$blanc;
@@ -16,9 +17,11 @@
         }
     }
 
+    &__image-wrapper {
+        text-align: center;
+    }
     &__image {
-        width: 100%;
-        height: auto;
+        max-height: 15.43rem;
     }
 
     &__info {

@@ -149,24 +149,31 @@ export const Botiga = ({ ...props }: BotigaProps) => {
                         />
                     </div>
                 </div>
-                <Button
-                    variant="primary-green"
+                <div
                     className={toBEM({
                         block,
-                        element: 'Button',
+                        element: 'buttons-wrapper',
                     })}
                 >
-                    Accedeix a la nostra botiga online
-                </Button>
-                <Button
-                    variant="secondary-green"
-                    className={toBEM({
-                        block,
-                        element: 'Button',
-                    })}
-                >
-                    Accedeix a la botiga Hockey Team™
-                </Button>
+                    <Button
+                        variant="primary-green"
+                        className={toBEM({
+                            block,
+                            element: 'Button',
+                        })}
+                    >
+                        Accedeix a la nostra botiga online
+                    </Button>
+                    <Button
+                        variant="secondary-green"
+                        className={toBEM({
+                            block,
+                            element: 'Button',
+                        })}
+                    >
+                        Accedeix a la botiga Hockey Team™
+                    </Button>
+                </div>
             </div>
         </>
     );

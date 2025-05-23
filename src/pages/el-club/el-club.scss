@@ -4,13 +4,14 @@
     background-color: styles.$blanc;
 
     &__timeline {
-        @include styles.content-spacing;
         background-color: #f9fafb;
         display: flex;
         flex-direction: column;
         padding: 1.5rem;
         border-radius: 8px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+        max-width: 90rem;
+        margin: auto;
         margin-bottom: 3.3rem;
     }
 

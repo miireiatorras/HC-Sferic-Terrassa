@@ -2,6 +2,7 @@
 
 .TimelineCard {
     &__year {
+        font-size: 1.25rem;
         font-weight: 700;
         color: styles.$verd-logo;
         width: 80px;
@@ -9,13 +10,14 @@
     }
 
     &__title {
+        font-size: 1.25rem;
         font-weight: 700;
         color: styles.$verd-logo;
         margin-bottom: 0.25rem;
     }
 
     &__description {
-        font-size: 0.95rem;
+        font-size: 1rem;
         color: #333;
     }
 }
