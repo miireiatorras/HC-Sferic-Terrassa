@@ -42,7 +42,8 @@ export const Caldendari = ({ ...props }: CaldendariProps) => {
                         to="http://www.hoqueipatins.fecapa.cat/ag/"
                         variant="primary-white"
                         onClick={() => {}}
-                        icon="instagram"
+                        icon="launch"
+                        iconPosition="right"
                     >
                         Accedeix al calendari
                     </Button>
