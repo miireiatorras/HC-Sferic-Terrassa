@@ -2,7 +2,7 @@
 
 .Discover {
     background-color: styles.$blanc;
-    margin-top: 3rem;
+    margin-top: 4rem;
 
     &__title {
         font-size: 1.75rem;
@@ -16,7 +16,7 @@
         @include styles.content-spacing;
         display: grid;
         grid-template-columns: 1.4fr 1fr;
-        gap: 1.5rem;
+        gap: 2.5rem;
 
         @media (max-width: 768px) {
             grid-template-columns: 1fr;
@@ -25,7 +25,6 @@
 
     &__left-card {
         cursor: pointer;
-
         position: relative;
         overflow: hidden;
         border-radius: styles.$corner-sm;
@@ -34,7 +33,7 @@
     &__right-column {
         display: flex;
         flex-direction: column;
-        gap: 1.5rem;
+        gap: 2.5rem;
 
         @media (max-width: 768px) {
             flex-direction: column;
@@ -46,7 +45,7 @@
         position: relative;
         overflow: hidden;
         border-radius: styles.$corner-sm;
-        height: 10.5rem;
+        height: 12.5rem;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
@@ -86,7 +85,7 @@
     }
 
     &__card {
-        height: 10.5rem;
+        height: 12.5rem;
 
         @media (max-width: 768px) {
             height: 14rem;

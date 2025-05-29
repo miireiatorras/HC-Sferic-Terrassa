@@ -1,11 +1,13 @@
 @use '@/utils/styles';
 
 .TimelineCard {
+    &__header {
+        @include styles.hflex((40px), stretch, stretch);
+    }
     &__year {
         font-size: 1.25rem;
         font-weight: 700;
         color: styles.$verd-logo;
-        width: 80px;
         flex-shrink: 0;
     }
 

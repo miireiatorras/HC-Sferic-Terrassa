@@ -22,12 +22,14 @@ export const TimelineCard = ({
 }: TimelineCardProps) => {
     return (
         <div {...getBaseComponentProps({ ...props, block: blockCard })}>
-            <p className={toBEM({ block: blockCard, element: 'year' })}>
-                {year}
-            </p>
-            <p className={toBEM({ block: blockCard, element: 'title' })}>
-                {title}
-            </p>
+            <div className={toBEM({ block: blockCard, element: 'header' })}>
+                <p className={toBEM({ block: blockCard, element: 'year' })}>
+                    {year}
+                </p>
+                <p className={toBEM({ block: blockCard, element: 'title' })}>
+                    {title}
+                </p>
+            </div>
             <p className={toBEM({ block: blockCard, element: 'description' })}>
                 {description}
             </p>

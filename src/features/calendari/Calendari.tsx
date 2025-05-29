@@ -52,6 +52,8 @@ export const Caldendari = ({ ...props }: CaldendariProps) => {
                         to="/horari"
                         variant="secondary-white"
                         onClick={() => {}}
+                        icon="arrow-right"
+                        iconPosition="right"
                     >
                         Consulta horari entrenaments
                     </Button>

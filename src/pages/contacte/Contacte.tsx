@@ -81,7 +81,13 @@ export const Contacte = ({ ...props }: ContacteProps) => {
                     className={toBEM({ block, element: 'et-llegim-section' })}
                 >
                     <Title>Et llegim</Title>
-                    <ContactForm title="Tens algun dubte? Omple el formulari i et respondrem" />
+                    <ContactForm
+                        title="Tens algun dubte? Omple el formulari i et respondrem"
+                        namePlaceholder="Introdueix el teu nom complet"
+                        phonePlaceholder="Introdueix el teu telèfon"
+                        emailPlaceholder="Introdueix el teu correu electrònic"
+                        messagePlaceholder="Escriu el teu missatge"
+                    />
                 </section>
             </div>
         </>

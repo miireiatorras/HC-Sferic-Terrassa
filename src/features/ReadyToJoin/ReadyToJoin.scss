@@ -14,7 +14,7 @@
         position: relative;
         overflow: visible;
         display: flex;
-        gap: 3rem;
+        gap: 4rem;
         align-items: center;
         justify-content: center;
         flex-wrap: wrap;
@@ -32,17 +32,17 @@
             width: 100%;
             height: 100%;
             background-color: styles.$verd-logo;
-            transform: rotate(-5deg);
+            transform: rotate(-3deg);
             z-index: 0;
         }
 
         img {
             display: block;
-            max-width: 350px;
+            max-width: 450px;
             width: 100%;
             z-index: 10000;
             position: relative;
-            transform: rotate(5deg);
+            transform: rotate(4deg);
 
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 
@@ -53,27 +53,30 @@
         }
     }
 
-    &__content {
+    &__main {
         max-width: 600px;
+    }
+
+    &__wrapper {
+        @include styles.vflex((43px), stretch, stretch);
     }
 
     &__title {
         font-size: 1.8rem;
         font-weight: bold;
-        margin-bottom: 1rem;
+        margin: 0 0 32px 0;
         color: styles.$negre;
     }
 
     &__description {
         font-size: 1rem;
         color: styles.$negre;
-        margin-bottom: 2rem;
+        margin: 0;
     }
 
     &__stats {
         display: flex;
-        gap: 2rem;
-        margin-bottom: 2rem;
+        justify-content: space-between;
 
         @media (max-width: 500px) {
             flex-direction: column;
@@ -83,6 +86,9 @@
 
     &__stat {
         text-align: center;
+    }
+    &__stat-wrapper {
+        @include styles.hflex((8px), center, center);
     }
 
     &__number {
@@ -97,26 +103,10 @@
 
     &__actions {
         display: flex;
-        gap: 1rem;
+        gap: 35px;
         flex-wrap: wrap;
     }
-
-    &__cta {
-        background-color: styles.$verd-logo;
-        color: styles.$blanc;
-        padding: 0.8rem 1.5rem;
-        border: none;
-        border-radius: styles.$corner-sm;
-        cursor: pointer;
-    }
-
-    &__secondary {
-        background: transparent;
-        border: 2px solid styles.$verd-logo;
-        color: styles.$verd-logo;
-        padding: 0.8rem 1.5rem;
-        border-radius: styles.$corner-sm;
-        font-weight: 600;
-        cursor: pointer;
+    .Button {
+        flex: 1 1 0;
     }
 }

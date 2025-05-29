@@ -121,6 +121,12 @@ export const Seccions = (props: SeccionsProps) => {
                                 key={bIdx}
                                 className={toBEM({ block, element: 'Button' })}
                                 variant={btn.variant}
+                                {...(bIdx === cta.buttons.length - 1
+                                    ? {
+                                          icon: 'arrow-right',
+                                          iconPosition: 'right',
+                                      }
+                                    : {})}
                                 onClick={() =>
                                     (window.location.href = btn.href)
                                 }

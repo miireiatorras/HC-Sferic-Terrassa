@@ -1,19 +1,27 @@
 @use '@/utils/styles';
 
 .Calendari {
+    margin-top: 92px;
     background-color: styles.$verd-logo;
+    padding: 29px 60px;
+    p {
+        margin: 0;
+    }
+    .Title,
+    .Title__title {
+        margin: 0;
+    }
 
     &__section {
-        @include styles.content-spacing;
-        padding: 2rem 0;
+        @include styles.vflex((43px), center, center);
         color: styles.$blanc;
+        padding-top: 43px;
         text-align: center;
     }
 
     &__buttons-container {
         display: flex;
         justify-content: center;
-        gap: 1rem;
-        margin-bottom: 2rem;
+        gap: 35px;
     }
 }

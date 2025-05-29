@@ -4,7 +4,6 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 0.5rem;
     font-size: 1rem;
     border-radius: styles.$corner-sm;
     border: 2px solid transparent;
@@ -13,6 +12,7 @@
         border-color 0.2s ease, text-decoration 0.2s ease;
     text-decoration: none;
     padding: 15px 30px;
+    gap: 19px;
 
     &--primary-green {
         background-color: styles.$verd-logo;

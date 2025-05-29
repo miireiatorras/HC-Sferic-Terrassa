@@ -6,7 +6,7 @@
         grid-template-columns: repeat(3, 1fr);
         justify-items: center;
         align-items: center;
-        margin: 2.5rem;
+        margin: 90px;
         gap: 10px;
     }
 
@@ -21,7 +21,7 @@
         &.storepack-logo,
         &.caldereria-logo,
         &.rmdislovall-logo {
-            width: 25%;
+            width: 30%;
         }
     }
 
@@ -29,6 +29,7 @@
         @include styles.hflex(4px);
         justify-content: center;
         align-items: center;
+        padding-bottom: 80px;
     }
 }
 

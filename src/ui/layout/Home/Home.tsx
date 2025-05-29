@@ -51,8 +51,8 @@ export const Home = ({ ...props }: HomeProps) => {
             <main {...getBaseComponentProps({ ...props, block })}>
                 <Hero />
                 <Discover />
-                <ReadyToJoin />
                 <Caldendari />
+                <ReadyToJoin />
                 <Instagram />
                 <div className={toBEM({ block, element: 'div' })}>
                     <Patrocinadors />

@@ -37,6 +37,8 @@ export const Hero = ({ ...props }: HeroProps) => {
                         as={NavLink}
                         to="/el-club"
                         variant="secondary-white"
+                        icon="arrow-right"
+                        iconPosition="right"
                     >
                         Decobreix més
                     </Button>
