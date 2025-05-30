@@ -96,83 +96,91 @@ export const Botiga = ({ ...props }: BotigaProps) => {
                         plataforma externa Playoff. Clicant al botó "Compra
                         Ara", et redirigirà a la seva pàgina web.
                     </Alert>
-                    <h2>
-                        Productes populars de Hockey Team™ i de la nostra botiga
-                        online
-                    </h2>
-                    <p>Consulta aquí els nostres productes destacats</p>
                     <div
                         className={toBEM({
                             block,
-                            element: 'products',
+                            element: 'products-section',
                         })}
                     >
-                        <ProductCard
-                            imageSrc="/camiseta-jugador-1a-equipacion-hc-sferic-veteranos.jpg"
-                            imageAlt="Samarreta jugador 1a equipació"
-                            title="Faldilla SFERIC"
-                            price="32€"
-                            subtitle="(Impostos inclosos)"
-                            href="https://hockeyteam.es/es/hc-sferic-terrassa/1406-584926-camiseta-jugador-1a-equipacion-hc-sferic-veteranos.html#/80-talla-s"
-                        />
-                        <ProductCard
-                            imageSrc="/camiseta-portero-hc-castellar.jpg"
-                            imageAlt="Samarreta porter"
-                            title="Samarreta porter"
-                            price="32€"
-                            subtitle="(Impostos inclosos)"
-                            href="https://hockeyteam.es/es/hc-sferic-terrassa/1360-584074-camiseta-portero-hc-castellar.html#/80-talla-s"
-                        />
-                        <ProductCard
-                            imageSrc="/faldilla-jugadora-hc-castellar.jpg"
-                            imageAlt="Faldilla SFERIC"
-                            title="Faldilla SFERIC"
-                            price="32€"
-                            subtitle="(Impostos inclosos)"
-                            href="https://hockeyteam.es/es/hc-sferic-terrassa/1361-584083-faldilla-jugadora-hc-castellar.html#/80-talla-s"
-                        />
-                        <ProductCard
-                            imageSrc="/mitjons.png"
-                            imageAlt="Mitjeta SFERIC"
-                            title="Mitjeta SFERIC"
-                            price="11€"
-                            subtitle="(Impostos inclosos)"
-                            href="https://sfericok.playoffinformatica.com/Botiga.php"
-                        />
-                        <ProductCard
-                            imageSrc="/sticks.png"
-                            imageAlt={'Sticks SFERIC'}
-                            title="Sticks SFERIC"
-                            price="41,14€"
-                            subtitle="(Impostos inclosos)"
-                            href="https://sfericok.playoffinformatica.com/Botiga.php"
-                        />
+                        <h2>
+                            Productes populars de Hockey Team™ i de la nostra
+                            botiga online
+                        </h2>
+                        <p>Consulta aquí els nostres productes destacats</p>
+                        <div
+                            className={toBEM({
+                                block,
+                                element: 'products',
+                            })}
+                        >
+                            <ProductCard
+                                imageSrc="/camiseta-jugador-1a-equipacion-hc-sferic-veteranos.jpg"
+                                imageAlt="Samarreta jugador 1a equipació"
+                                title="Faldilla SFERIC"
+                                price="32€"
+                                subtitle="(Impostos inclosos)"
+                                href="https://hockeyteam.es/es/hc-sferic-terrassa/1406-584926-camiseta-jugador-1a-equipacion-hc-sferic-veteranos.html#/80-talla-s"
+                            />
+                            <ProductCard
+                                imageSrc="/camiseta-portero-hc-castellar.jpg"
+                                imageAlt="Samarreta porter"
+                                title="Samarreta porter"
+                                price="32€"
+                                subtitle="(Impostos inclosos)"
+                                href="https://hockeyteam.es/es/hc-sferic-terrassa/1360-584074-camiseta-portero-hc-castellar.html#/80-talla-s"
+                            />
+                            <ProductCard
+                                imageSrc="/faldilla-jugadora-hc-castellar.jpg"
+                                imageAlt="Faldilla SFERIC"
+                                title="Faldilla SFERIC"
+                                price="32€"
+                                subtitle="(Impostos inclosos)"
+                                href="https://hockeyteam.es/es/hc-sferic-terrassa/1361-584083-faldilla-jugadora-hc-castellar.html#/80-talla-s"
+                            />
+                            <ProductCard
+                                imageSrc="/mitjons.png"
+                                imageAlt="Mitjeta SFERIC"
+                                title="Mitjeta SFERIC"
+                                price="11€"
+                                subtitle="(Impostos inclosos)"
+                                href="https://sfericok.playoffinformatica.com/Botiga.php"
+                            />
+                            <ProductCard
+                                imageSrc="/sticks.png"
+                                imageAlt={'Sticks SFERIC'}
+                                title="Sticks SFERIC"
+                                price="41,14€"
+                                subtitle="(Impostos inclosos)"
+                                href="https://sfericok.playoffinformatica.com/Botiga.php"
+                            />
+                        </div>
+
+                        <div
+                            className={toBEM({
+                                block,
+                                element: 'buttons-wrapper',
+                            })}
+                        >
+                            <Button
+                                variant="primary-green"
+                                className={toBEM({
+                                    block,
+                                    element: 'Button',
+                                })}
+                            >
+                                Accedeix a la nostra botiga online
+                            </Button>
+                            <Button
+                                variant="secondary-green"
+                                className={toBEM({
+                                    block,
+                                    element: 'Button',
+                                })}
+                            >
+                                Accedeix a la botiga Hockey Team™
+                            </Button>
+                        </div>
                     </div>
-                </div>
-                <div
-                    className={toBEM({
-                        block,
-                        element: 'buttons-wrapper',
-                    })}
-                >
-                    <Button
-                        variant="primary-green"
-                        className={toBEM({
-                            block,
-                            element: 'Button',
-                        })}
-                    >
-                        Accedeix a la nostra botiga online
-                    </Button>
-                    <Button
-                        variant="secondary-green"
-                        className={toBEM({
-                            block,
-                            element: 'Button',
-                        })}
-                    >
-                        Accedeix a la botiga Hockey Team™
-                    </Button>
                 </div>
             </div>
         </>

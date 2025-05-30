@@ -1,3 +1,11 @@
+export const I_MINGCUTE_GROUP_3_FILL = 'mingcute_group-3-fill';
+export const I_MATERIAL_SYMBOLS_LIGHT_TROPHY_OUTLINE =
+    'material-symbols-light_trophy-outline';
+export const I_MATERIAL_SYMBOLS_LIGHT_SPORTS_HOCKEY_SHARP =
+    'material-symbols-light_sports-hockey-sharp';
+export const I_FRAME = 'Frame';
+export const I_LIGHT_MALE = 'material-symbols-light_male';
+export const I_LIGHT_FEMALE = 'material-symbols-light_female';
 export const I_INTERSEX = 'intersex';
 export const I_CLEAR = 'clear';
 export const I_MENU = 'menu';

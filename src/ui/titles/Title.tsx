@@ -44,14 +44,14 @@ export const Title = ({
                 className={toBEM({ block, element: 'bar' })}
                 initial={{ x: '-100%', opacity: 0 }}
                 animate={inView ? { x: 0, opacity: 1 } : {}}
-                transition={{ duration: 0.8, ease: 'easeOut' }}
+                transition={{ duration: 0.6, ease: 'easeOut' }}
             />
 
             <motion.h1
                 className={toBEM({ block, element: 'title' })}
                 initial={{ x: '-100%', opacity: 0 }}
                 animate={inView ? { x: 0, opacity: 1 } : {}}
-                transition={{ duration: 0.8, ease: 'easeOut' }}
+                transition={{ duration: 0.6, ease: 'easeOut' }}
             >
                 {children}
             </motion.h1>

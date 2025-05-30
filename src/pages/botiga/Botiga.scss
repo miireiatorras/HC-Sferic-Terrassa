@@ -3,16 +3,114 @@
 .Botiga {
     &__main-content {
         @include styles.content-spacing;
-    }
+        margin-top: 60px;
 
+        p {
+            margin-top: 0;
+            margin-bottom: 60px;
+
+            &:first-of-type {
+                margin-bottom: 0;
+            }
+
+            &:nth-of-type(2) {
+                margin-top: 30px;
+            }
+        }
+
+        .ShopPartnerBanner {
+            margin-bottom: 55px;
+        }
+
+        .Alert {
+            margin-top: 60px;
+        }
+
+        h2 {
+            margin-top: 60px;
+            margin-bottom: 8px;
+        }
+    }
+    &__products-section {
+        @include styles.vflex((39px), stretch, stretch);
+    }
     &__products {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
+        @include styles.hflex((40px), stretch, space-evenly);
+
+        flex-wrap: wrap;
+        margin-bottom: 39px;
     }
 
     &__buttons-wrapper {
-        @include styles.hflex((8px), center, center);
-        margin-bottom: 5.43rem;
+        @include styles.hflex((35px), center, center);
+        margin: 0 350px;
+    }
+
+    &__Button {
+        flex: 1 1 0;
+    }
+
+    @media (max-width: 1530px) {
+        &__products {
+            justify-content: center;
+
+            & > * {
+                flex: 1 1 45%;
+                max-width: 100%;
+            }
+        }
+
+        &__buttons-wrapper {
+            margin: 0 2rem;
+        }
+
+        @media (max-width: 768px) {
+            &__main-content {
+                margin-top: 40px;
+
+                p {
+                    margin-bottom: 40px;
+
+                    &:nth-of-type(2) {
+                        margin-top: 24px;
+                    }
+                }
+
+                .ShopPartnerBanner {
+                    margin-bottom: 40px;
+                }
+
+                .Alert {
+                    margin-top: 40px;
+                }
+
+                h2 {
+                    margin-top: 40px;
+                    margin-bottom: 8px;
+                }
+            }
+
+            &__products {
+                flex-direction: column;
+                align-items: center;
+                gap: 32px;
+                margin-bottom: 32px;
+
+                & > * {
+                    flex: 1 1 100%;
+                    max-width: 100%;
+                }
+            }
+
+            &__buttons-wrapper {
+                flex-direction: column;
+                gap: 24px;
+                margin: 0 1rem;
+            }
+
+            &__Button {
+                width: 100%;
+            }
+        }
     }
 }

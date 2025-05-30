@@ -75,7 +75,7 @@ export const ReadyToJoin = ({ ...props }: BaseComponentProps) => {
                                             block,
                                             element: 'Icon',
                                         })}
-                                        icon="trophy"
+                                        icon="material-symbols-light_trophy-outline"
                                         size="xl"
                                     />
                                     <span
@@ -108,7 +108,7 @@ export const ReadyToJoin = ({ ...props }: BaseComponentProps) => {
                                             block,
                                             element: 'Icon',
                                         })}
-                                        icon="group-outline"
+                                        icon="mingcute_group-3-fill"
                                         size="xl"
                                     />
                                     <span
@@ -117,8 +117,7 @@ export const ReadyToJoin = ({ ...props }: BaseComponentProps) => {
                                             element: 'number',
                                         })}
                                     >
-                                        {/* posar un+ !! */}
-                                        <Counter end={100} />
+                                        + <Counter end={100} />
                                     </span>
                                 </div>
 
@@ -143,7 +142,7 @@ export const ReadyToJoin = ({ ...props }: BaseComponentProps) => {
                                             block,
                                             element: 'Icon',
                                         })}
-                                        icon="hockey-stick"
+                                        icon="material-symbols-light_sports-hockey-sharp"
                                         size="xl"
                                     />
                                     <span
