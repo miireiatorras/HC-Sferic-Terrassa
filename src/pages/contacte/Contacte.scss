@@ -3,12 +3,25 @@
 .Contacte {
     &__parlem-section {
         background-color: styles.$verd-logo;
+        padding: 27px 20px 50px 0;
     }
+
     &__info-grid {
+        padding-top: 50px;
         display: flex;
         flex-direction: row;
-        justify-content: space-evenly;
+        justify-content: space-around;
         align-items: center;
+        margin: 0 auto;
+    }
+
+    &__parlem-title {
+        margin: 0 0 0 53px;
+
+        .Title__title {
+            margin-bottom: 0;
+            margin-top: 0;
+        }
     }
 
     &__et-llegim-section {

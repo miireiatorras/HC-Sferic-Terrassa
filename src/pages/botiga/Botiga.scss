@@ -23,7 +23,7 @@
         }
 
         .Alert {
-            margin-top: 60px;
+            margin-top: 40px;
         }
 
         h2 {
@@ -32,7 +32,7 @@
         }
     }
     &__products-section {
-        @include styles.vflex((39px), stretch, stretch);
+        @include styles.vflex((30px), stretch, stretch);
     }
     &__products {
         @include styles.hflex((40px), stretch, space-evenly);

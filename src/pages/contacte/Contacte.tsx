@@ -60,7 +60,12 @@ export const Contacte = ({ ...props }: ContacteProps) => {
                 <section
                     className={toBEM({ block, element: 'parlem-section' })}
                 >
-                    <Title variant="light">Parlem?</Title>
+                    <Title
+                        className={toBEM({ block, element: 'parlem-title' })}
+                        variant="light"
+                    >
+                        Parlem?
+                    </Title>
                     <div className={toBEM({ block, element: 'info-grid' })}>
                         <InfoCard
                             icon="email"

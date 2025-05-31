@@ -5,7 +5,9 @@ import {
     BaseComponentProps,
     getBaseComponentProps,
 } from '@/utils';
+import { Button } from '@/ui/button/Button';
 import './PromoSection.scss';
+import { NavLink } from 'react-router-dom';
 
 const block = registerBlockName('PromoSection');
 
@@ -22,7 +24,7 @@ export type Props = BaseComponentProps & {
     buttonText: string;
     /** Click handler for the CTA button */
     onButtonClick?: React.MouseEventHandler<HTMLButtonElement>;
-    /** Optional URL: if provided, the button is rendered as a link */
+    /** Optional URL: if provided, the button will navigate there */
     buttonHref?: string;
 };
 
@@ -31,7 +33,7 @@ export type Props = BaseComponentProps & {
  *  - a top image
  *  - a bold heading
  *  - body text
- *  - a call-to-action button or link
+ *  - a call-to-action button (always Button component)
  *
  * All texts, image and button behavior are configurable via props.
  */
@@ -41,16 +43,8 @@ export const PromoSection = ({
     heading,
     children,
     buttonText,
-    onButtonClick,
-    buttonHref,
     ...props
 }: Props): JSX.Element => {
-    const Tag = buttonHref ? 'a' : 'button';
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const tagProps: any = buttonHref
-        ? { href: buttonHref, role: 'button' }
-        : { onClick: onButtonClick, type: 'button' };
-
     return (
         <div
             {...getBaseComponentProps({ ...props, block })}
@@ -68,9 +62,13 @@ export const PromoSection = ({
                 {children}
             </div>
 
-            <Tag {...tagProps} className={toBEM({ block, element: 'button' })}>
+            <Button
+                as={NavLink}
+                to="http://www.hoqueipatins.fecapa.cat/ag/"
+                variant="primary-green"
+            >
                 {buttonText}
-            </Tag>
+            </Button>
         </div>
     );
 };

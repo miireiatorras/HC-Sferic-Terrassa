@@ -41,7 +41,6 @@ export const Caldendari = ({ ...props }: CaldendariProps) => {
                         as={NavLink}
                         to="http://www.hoqueipatins.fecapa.cat/ag/"
                         variant="primary-white"
-                        onClick={() => {}}
                         icon="launch"
                         iconPosition="right"
                     >
@@ -51,7 +50,6 @@ export const Caldendari = ({ ...props }: CaldendariProps) => {
                         as={NavLink}
                         to="/horari"
                         variant="secondary-white"
-                        onClick={() => {}}
                         icon="arrow-right"
                         iconPosition="right"
                     >
