@@ -16,20 +16,26 @@
         border: 1px solid #e5e5e5;
         padding: 1rem;
         box-sizing: border-box;
-        height: 70px;
         vertical-align: middle;
+        font-weight: 500;
+    }
+    td {
+        height: 70px;
+    }
+    th {
+        height: 20px;
     }
 
     &__thTime {
         width: 120px;
-        background: #fafafa;
         font-size: 0.85rem;
         text-align: right;
         white-space: nowrap;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
     }
 
     &__thDay {
-        background: #fafafa;
         font-size: 0.9rem;
         font-weight: 600;
         text-align: center;
@@ -41,7 +47,7 @@
 
     &__tdEvent {
         background: rgba(0, 72, 35, 0.1);
-        color: styles.$verd-logo;
+        color: styles.$negre;
         font-size: 0.85rem;
         text-align: center;
 
