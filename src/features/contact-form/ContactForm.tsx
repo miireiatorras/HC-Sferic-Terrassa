@@ -1,5 +1,9 @@
+// ContactForm.tsx
 import React, { useRef } from 'react';
 import { init, sendForm } from '@emailjs/browser';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 import {
     toBEM,
     registerBlockName,
@@ -27,7 +31,7 @@ export type Props = BaseComponentProps & {
 
 /**
  * ContactForm renders a styled form that, on submit,
- * envía los datos via EmailJS a la plantilla configurada.
+ * envia els dades via EmailJS a la plantilla configurada.
  */
 export const ContactForm: React.FC<Props> = ({
     title,
@@ -55,12 +59,14 @@ export const ContactForm: React.FC<Props> = ({
             formRef.current
         )
             .then(() => {
-                alert('¡Formulario enviado con éxito!');
+                toast.success('El formulari s’ha enviat correctament.');
                 formRef.current!.reset();
             })
             .catch((err) => {
                 console.error('Error al enviar:', err);
-                alert('Error enviando el formulario. Intenta de nuevo.');
+                toast.error(
+                    'Hi ha hagut un error en enviar el formulari. Torna-ho a provar.'
+                );
             });
     };
 
@@ -80,6 +86,7 @@ export const ContactForm: React.FC<Props> = ({
                     type="text"
                     label={nameLabel}
                     placeholder={namePlaceholder ?? nameLabel}
+                    required
                 />
 
                 <Input
@@ -88,6 +95,7 @@ export const ContactForm: React.FC<Props> = ({
                     type="tel"
                     label={phoneLabel}
                     placeholder={phonePlaceholder ?? phoneLabel}
+                    required
                 />
 
                 <Input
@@ -97,6 +105,7 @@ export const ContactForm: React.FC<Props> = ({
                     label={emailLabel}
                     placeholder={emailPlaceholder ?? emailLabel}
                     fullWidth
+                    required
                 />
 
                 <Input
@@ -106,7 +115,21 @@ export const ContactForm: React.FC<Props> = ({
                     label={messageLabel}
                     placeholder={messagePlaceholder ?? messageLabel}
                     fullWidth
+                    required
                 />
+            </div>
+
+            <div className={toBEM({ block, element: 'checkbox' })}>
+                <input
+                    type="checkbox"
+                    id="disclaimerCheckbox"
+                    name="disclaimerCheckbox"
+                    required
+                />
+                <label htmlFor="disclaimerCheckbox">
+                    He llegit i accepto que les dades no seran cedides a tercers
+                    ni conservades un cop finalitzat el procés d’atenció.
+                </label>
             </div>
 
             <button
@@ -115,6 +138,16 @@ export const ContactForm: React.FC<Props> = ({
             >
                 Enviar
             </button>
+
+            <ToastContainer
+                position="top-right"
+                autoClose={5000}
+                hideProgressBar={false}
+                closeOnClick
+                pauseOnHover
+                draggable
+                style={{ marginTop: '5rem', zIndex: 9999 }}
+            />
         </form>
     );
 };

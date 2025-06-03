@@ -22,11 +22,12 @@ export type Props = BaseComponentProps & {
     placeholder?: string;
     /** Whether the input should take the full width of its container. */
     fullWidth?: boolean;
+    /** Whether the input is required. */
+    required?: boolean;
 };
 
 /**
- * `Input` renderiza un label + control (<input> o <textarea>),
- * aplicando BEM modifiers y los estilos definidos en Input.scss.
+ * `Input` renders a label + control (<input> or <textarea>),
  */
 export const Input = ({
     id,
@@ -35,6 +36,7 @@ export const Input = ({
     label,
     placeholder = '',
     fullWidth = false,
+    required = false,
     ...props
 }: Props): JSX.Element => {
     const mods = fullWidth ? ['full'] : [];
@@ -51,6 +53,7 @@ export const Input = ({
                     id={id}
                     name={name}
                     placeholder={placeholder}
+                    required={required}
                     className={toBEM({ block, element: 'control' })}
                 />
             ) : (
@@ -59,6 +62,7 @@ export const Input = ({
                     name={name}
                     type={type}
                     placeholder={placeholder}
+                    required={required}
                     className={toBEM({ block, element: 'control' })}
                 />
             )}

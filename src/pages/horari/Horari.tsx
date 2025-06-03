@@ -142,7 +142,7 @@ export const Horari = ({ ...props }: HorariProps) => {
                         <Icon icon="printer" size="md" /> Imprimir
                     </button>
                     <a
-                        href="/schedule.pdf"
+                        href="/horario_semanal.pdf"
                         download="Horari-SFERIC-24-25.pdf"
                         className={toBEM({ block, element: 'btn' })}
                     >

@@ -1,3 +1,4 @@
+// ContactForm.scss
 @use '@/utils/styles';
 @use '@/ui/button/Button';
 
@@ -14,7 +15,7 @@
         line-height: 36px;
         font-weight: 600;
         text-align: center;
-        margin-bottom: 2.5rem;
+        margin-bottom: 1.5rem;
         color: styles.$negre;
     }
 
@@ -28,6 +29,27 @@
         max-width: 560px;
     }
 
+    &__checkbox {
+        max-width: 560px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 2rem;
+
+        input[type='checkbox'] {
+            margin-right: 0.5rem;
+            width: 1rem;
+            height: 1rem;
+        }
+
+        label {
+            font-size: 0.875rem;
+            line-height: 1.4;
+            color: gray;
+        }
+    }
+
     &__button {
         display: block;
         width: 100%;
@@ -36,11 +58,9 @@
         padding: 0.75rem;
         @extend .Button;
         @extend .Button--primary-green;
-        max-width: 560px;
-        width: 100%;
-        margin: 0 auto;
         text-align: center;
     }
+
     @media (max-width: 768px) {
         padding: 2rem 1rem;
 
@@ -50,6 +70,14 @@
             row-gap: 1rem;
             max-width: 100%;
             margin-bottom: 2rem;
+        }
+
+        &__checkbox {
+            flex-direction: column;
+            align-items: flex-start;
+            input[type='checkbox'] {
+                padding-bottom: 0.5rem;
+            }
         }
 
         &__button {
