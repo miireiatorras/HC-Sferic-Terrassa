@@ -10,6 +10,6 @@ const meta: Meta<typeof OrganisationTabs> = {
 export default meta;
 type Story = StoryObj<typeof OrganisationTabs>;
 
-export const Default: Story = {
+export const Playground: Story = {
     render: () => <OrganisationTabs />,
 };

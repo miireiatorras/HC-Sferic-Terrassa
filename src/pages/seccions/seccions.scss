@@ -14,6 +14,10 @@
             #619872 290%
         );
         padding: 4.8rem;
+
+        @media (max-width: 768px) {
+            padding: 1.4rem;
+        }
     }
 
     &__buttons-container {
@@ -22,5 +26,9 @@
         align-items: center;
         gap: 1rem;
         margin-bottom: 2rem;
+
+        @media (max-width: 768px) {
+            @include styles.vflex((16pxm), stretch, stretch);
+        }
     }
 }

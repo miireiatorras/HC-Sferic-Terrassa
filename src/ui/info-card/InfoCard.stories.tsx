@@ -11,7 +11,7 @@ export default meta;
 
 type Story = StoryObj<typeof InfoCard>;
 
-export const Default: Story = {
+export const Playground: Story = {
     args: {
         icon: 'archive',
         text: (
@@ -20,20 +20,6 @@ export const Default: Story = {
                 barri de Ca n’Aurell de Terrassa i en concret a l’activitat de
                 la seva <strong>parròquia</strong>, la Sagrada Família...{' '}
                 <strong>SFERIC</strong>.
-            </>
-        ),
-    },
-};
-
-export const WithFamilyIcon: Story = {
-    args: {
-        icon: 'family_restroom',
-        text: (
-            <>
-                L’SFERIC és una de les entitats de referència i realitza una
-                tasca <strong>educativa, social, cultural i esportiva</strong>{' '}
-                d’important rellevància, esdevenint element clau en la cohesió
-                del barri.
             </>
         ),
     },

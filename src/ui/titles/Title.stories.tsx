@@ -19,9 +19,16 @@ export const Playground: Story = {
     },
 };
 
-export const Variant = () => (
-    <div className="sferic-title-variant">
-        <Title variant="default">Calendari</Title>
-        <Title variant="light">Calendari</Title>
-    </div>
-);
+export const Variant: Story = {
+    render: () => (
+        <div
+            style={{
+                backgroundColor: '#f0f0f0',
+                padding: '1rem',
+            }}
+        >
+            <Title variant="default">Calendari</Title>
+            <Title variant="light">Calendari</Title>
+        </div>
+    ),
+};

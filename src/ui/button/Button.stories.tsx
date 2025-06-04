@@ -45,7 +45,7 @@ const meta: Meta<typeof Button> = {
 export default meta;
 type Story = StoryObj<typeof Button>;
 
-/** Historia interactiva */
+/** Interactive button */
 export const Playground: Story = {
     args: {
         variant: 'primary-green',
@@ -55,33 +55,116 @@ export const Playground: Story = {
     },
 };
 
-/** Todas las variantes sin icono */
+/** All types of button variants. They all have a different implementation */
 export const Variants: Story = {
     render: () => (
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem' }}>
-            {variants.map((v) => (
-                <Button key={v} variant={v}>
-                    {v.charAt(0).toUpperCase() + v.slice(1)}
-                </Button>
-            ))}
+        <div style={{ padding: '1rem', backgroundColor: '#fafafa' }}>
+            <h3 style={{ marginBottom: '0.5rem' }}>Buttons – Variants</h3>
+            <div
+                style={{
+                    display: 'grid',
+                    gridTemplateColumns:
+                        'repeat(auto-fill, minmax(160px, 1fr))',
+                    gap: '1rem',
+                }}
+            >
+                {variants.map((v) => (
+                    <div
+                        key={v}
+                        style={{
+                            display: 'flex',
+                            flexDirection: 'column',
+                            alignItems: 'center',
+                            gap: '0.5rem',
+                        }}
+                    >
+                        <span style={{ fontSize: '0.875rem', color: '#555' }}>
+                            {v}
+                        </span>
+                        <Button variant={v}>
+                            {v.charAt(0).toUpperCase() + v.slice(1)}
+                        </Button>
+                    </div>
+                ))}
+            </div>
         </div>
     ),
 };
 
-/** Con icono y posición configurada */
-export const WithIconAndPositions: Story = {
+/** Buttons with different icon positions */
+export const IconPositions: Story = {
     render: () => (
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem' }}>
-            {variants.map((v) => (
-                <React.Fragment key={v}>
-                    <Button variant={v} icon="arrow-right" iconPosition="left">
-                        {v} L
-                    </Button>
-                    <Button variant={v} icon="arrow-right" iconPosition="right">
-                        {v} R
-                    </Button>
-                </React.Fragment>
-            ))}
+        <div style={{ padding: '1rem', backgroundColor: '#fafafa' }}>
+            <h3 style={{ marginBottom: '1rem' }}>
+                Buttons – Icon Left & Icon Right
+            </h3>
+            <div
+                style={{
+                    display: 'grid',
+                    gridTemplateColumns: '1fr 1fr',
+                    gap: '2rem',
+                }}
+            >
+                <div style={{ fontWeight: 'bold', textAlign: 'center' }}>
+                    Icon Left
+                </div>
+                <div style={{ fontWeight: 'bold', textAlign: 'center' }}>
+                    Icon Right
+                </div>
+
+                {variants.map((v) => (
+                    <React.Fragment key={v}>
+                        <div
+                            style={{
+                                display: 'flex',
+                                flexDirection: 'column',
+                                alignItems: 'center',
+                                gap: '0.5rem',
+                                padding: '0.5rem 0',
+                            }}
+                        >
+                            <span
+                                style={{ fontSize: '0.875rem', color: '#555' }}
+                            >
+                                {v}
+                            </span>
+                            <Button
+                                variant={v}
+                                icon="arrow-right"
+                                iconPosition="left"
+                            >
+                                {`${
+                                    v.charAt(0).toUpperCase() + v.slice(1)
+                                } Left`}
+                            </Button>
+                        </div>
+                        <div
+                            style={{
+                                display: 'flex',
+                                flexDirection: 'column',
+                                alignItems: 'center',
+                                gap: '0.5rem',
+                                padding: '0.5rem 0',
+                            }}
+                        >
+                            <span
+                                style={{ fontSize: '0.875rem', color: '#555' }}
+                            >
+                                {v}
+                            </span>
+                            <Button
+                                variant={v}
+                                icon="arrow-right"
+                                iconPosition="right"
+                            >
+                                {`${
+                                    v.charAt(0).toUpperCase() + v.slice(1)
+                                } Right`}
+                            </Button>
+                        </div>
+                    </React.Fragment>
+                ))}
+            </div>
         </div>
     ),
 };

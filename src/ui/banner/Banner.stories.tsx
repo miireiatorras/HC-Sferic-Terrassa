@@ -11,15 +11,15 @@ const meta: Meta<typeof Banner> = {
 export default meta;
 type Story = StoryObj<typeof Banner>;
 
-/** Un Banner individual editable via la prop `variant` */
+/** Default Banner with 'contacte' variant */
 export const Playground: Story = {
     args: {
         variant: 'contacte',
     },
 };
 
-/** Mostra tots els variants en columnes per veure’ls de cop */
-export const AllVariants: Story = {
+/** All variants, each of them with a different picture and text */
+export const Variants: Story = {
     render: () => (
         <div
             style={{

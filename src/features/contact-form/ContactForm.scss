@@ -73,7 +73,7 @@
         }
 
         &__checkbox {
-            flex-direction: column;
+            flex-direction: row;
             align-items: flex-start;
             input[type='checkbox'] {
                 padding-bottom: 0.5rem;

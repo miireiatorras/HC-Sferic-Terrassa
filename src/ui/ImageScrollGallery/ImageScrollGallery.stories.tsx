@@ -19,7 +19,7 @@ const sampleImages = [
     '/old/antiga5.png',
 ];
 
-export const Default: Story = {
+export const Playground: Story = {
     args: {
         images: sampleImages,
     },

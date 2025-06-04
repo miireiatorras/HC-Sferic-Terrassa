@@ -10,7 +10,7 @@ const meta: Meta<typeof MemberCard> = {
 export default meta;
 type Story = StoryObj<typeof MemberCard>;
 
-export const Default: Story = {
+export const Playground: Story = {
     args: {
         initials: 'EJ',
         name: 'Elena Jordán',

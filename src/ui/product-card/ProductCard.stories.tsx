@@ -23,19 +23,12 @@ export default meta;
 
 type Story = StoryObj<typeof ProductCard>;
 
-export const Default: Story = {
+export const Playground: Story = {
     args: {
         imageSrc: '/camiseta-jugador-1a-equipacion-hc-sferic-veteranos.jpg',
         imageAlt: 'Sample product',
         title: 'Faldilla SFERIC',
         price: '32€',
         subtitle: '(Impostos inclosos)',
-    },
-};
-
-export const ClickableLink: Story = {
-    args: {
-        ...Default.args,
-        href: 'https://example.com/product/123',
     },
 };

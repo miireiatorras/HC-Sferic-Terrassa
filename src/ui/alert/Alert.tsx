@@ -14,7 +14,7 @@ export type Props = BaseComponentProps & {
     /** The message or content to display inside the alert. */
     children: React.ReactNode;
     /** Which icon to show on the left side. */
-    icon: IconNames;
+    icon?: IconNames;
     /** The color variant of the alert. */
     variant?: 'success' | 'info' | 'warning' | 'error' | 'open-in-new-tab';
 };
@@ -36,7 +36,10 @@ export const Alert = ({
                 modifiers: [variant],
             })}
         >
-            <Icon icon={icon} className={toBEM({ block, element: 'icon' })} />
+            <Icon
+                icon={icon ?? 'launch'}
+                className={toBEM({ block, element: 'icon' })}
+            />
             <div className={toBEM({ block, element: 'content' })}>
                 {children}
             </div>

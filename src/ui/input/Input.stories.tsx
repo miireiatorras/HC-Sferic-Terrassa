@@ -22,7 +22,7 @@ export default meta;
 
 type Story = StoryObj<typeof Input>;
 
-export const Default: Story = {
+export const Playground: Story = {
     args: {
         id: 'name',
         name: 'name',
@@ -33,20 +33,73 @@ export const Default: Story = {
     } as InputProps,
 };
 
-export const FullWidth: Story = {
-    args: {
-        ...Default.args,
-        fullWidth: true,
-    } as InputProps,
-};
-
-export const TextArea: Story = {
-    args: {
-        id: 'message',
-        name: 'message',
-        label: 'Message',
-        placeholder: 'Your message...',
-        type: 'textarea',
-        fullWidth: true,
-    } as InputProps,
+export const Variants: Story = {
+    render: () => {
+        const types: InputProps['type'][] = [
+            'text',
+            'email',
+            'tel',
+            'textarea',
+        ];
+        return (
+            <div
+                style={{
+                    padding: '2rem',
+                    backgroundColor: '#fafafa',
+                    minHeight: '100vh',
+                }}
+            >
+                <h2 style={{ marginBottom: '1.5rem', textAlign: 'center' }}>
+                    Input Variants
+                </h2>
+                <div
+                    style={{
+                        display: 'grid',
+                        gridTemplateColumns:
+                            'repeat(auto-fit, minmax(240px, 1fr))',
+                        gap: '2rem',
+                    }}
+                >
+                    {types.map((t) => (
+                        <div
+                            key={t}
+                            style={{
+                                display: 'flex',
+                                flexDirection: 'column',
+                                gap: '0.75rem',
+                                padding: '1rem',
+                                backgroundColor: '#fff',
+                                borderRadius: '8px',
+                                boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
+                            }}
+                        >
+                            <h3
+                                style={{
+                                    margin: 0,
+                                    fontSize: '1rem',
+                                    color: '#333',
+                                }}
+                            >
+                                {(t ?? '').charAt(0).toUpperCase() +
+                                    (t ?? '').slice(1)}{' '}
+                                Input
+                            </h3>
+                            <Input
+                                id={`${t}-input`}
+                                name={t as string}
+                                type={t}
+                                label={`Label (${t})`}
+                                placeholder={
+                                    t === 'textarea'
+                                        ? 'Enter your message...'
+                                        : `Enter your ${t}`
+                                }
+                                fullWidth
+                            />
+                        </div>
+                    ))}
+                </div>
+            </div>
+        );
+    },
 };

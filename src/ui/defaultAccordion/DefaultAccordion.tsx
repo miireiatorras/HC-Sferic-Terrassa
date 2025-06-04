@@ -26,7 +26,7 @@ export const DefaultAccordion = ({
     children,
     ...props
 }: DefaultAccordionProps) => {
-    const [open, setOpen] = useState(false);
+    const [open, setOpen] = useState(true);
     return (
         <div
             {...getBaseComponentProps({

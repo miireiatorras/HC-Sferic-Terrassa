@@ -14,12 +14,6 @@ const meta: Meta<typeof ScrollButton> = {
 export default meta;
 type Story = StoryObj<typeof ScrollButton>;
 
-export const Default: Story = {
+export const Playground: Story = {
     args: {},
-};
-
-export const WithChildren: Story = {
-    args: {
-        children: <span>Scroll</span>,
-    },
 };

@@ -31,7 +31,7 @@ export default meta;
 
 type Story = StoryObj<typeof ShopPartnerBanner>;
 
-export const Default: Story = {
+export const Playground: Story = {
     args: {
         logoSrc: '/logos-sponsors/hockeyteam-logo.png',
         logoAlt: 'Hockey Team logo',

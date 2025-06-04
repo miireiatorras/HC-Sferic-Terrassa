@@ -13,7 +13,7 @@ type Story = StoryObj<typeof Tab>;
 /**
  * * This story demonstrates the default state of the Tab component.
  */
-export const Default: Story = {
+export const Playground: Story = {
     args: {
         label: 'Home',
         active: false,
@@ -23,9 +23,17 @@ export const Default: Story = {
 /**
  * * This story demonstrates the active state of the Tab component.
  */
-export const Active: Story = {
-    args: {
-        label: 'Home',
-        active: true,
-    },
-};
+export const Variants = () => (
+    <div
+        style={{
+            display: 'flex',
+            gap: '1rem',
+            padding: '1rem',
+            backgroundColor: '#f0f0f0',
+        }}
+    >
+        <Tab label="Home" active={true} />
+        <Tab label="Profile" active={false} />
+        <Tab label="Settings" active={false} />
+    </div>
+);
