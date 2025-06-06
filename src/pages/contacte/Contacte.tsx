@@ -25,18 +25,15 @@ export const Contacte = ({ ...props }: ContacteProps) => {
                 <title>HC SFERIC Terrassa – Contacte</title>
                 <meta name="description" content={description} />
 
-                <link
-                    rel="canonical"
-                    href="https://oksfericterrassa.netlify.app/contacte"
-                />
+                <link rel="canonical" href="https://sfericok.cat/contacte" />
 
                 <meta
                     property="og:url"
-                    content="https://oksfericterrassa.netlify.app/contacte"
+                    content="https://sfericok.cat/contacte"
                 />
                 <meta
                     property="og:image"
-                    content="https://oksfericterrassa.netlify.app/preview-contacte.png"
+                    content="https://sfericok.cat/preview-contacte.png"
                 />
                 <meta
                     property="og:title"

@@ -187,18 +187,12 @@ export const Equips = ({ ...props }: EquipsProps) => {
                 <title>HC SFERIC Terrassa – Equips</title>
                 <meta name="description" content={description} />
 
-                <link
-                    rel="canonical"
-                    href="https://oksfericterrassa.netlify.app/equips"
-                />
+                <link rel="canonical" href="https://sfericok.cat/equips" />
 
-                <meta
-                    property="og:url"
-                    content="https://oksfericterrassa.netlify.app/equips"
-                />
+                <meta property="og:url" content="https://sfericok.cat/equips" />
                 <meta
                     property="og:image"
-                    content="https://oksfericterrassa.netlify.app/preview-equips.png"
+                    content="https://sfericok.cat/preview-equips.png"
                 />
                 <meta
                     property="og:title"

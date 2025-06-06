@@ -25,18 +25,12 @@ export const Botiga = ({ ...props }: BotigaProps) => {
                 <title>HC SFERIC Terrassa – Botiga</title>
                 <meta name="description" content={description} />
 
-                <link
-                    rel="canonical"
-                    href="https://oksfericterrassa.netlify.app/botiga"
-                />
+                <link rel="canonical" href="https://sfericok.cat/botiga" />
 
-                <meta
-                    property="og:url"
-                    content="https://oksfericterrassa.netlify.app/botiga"
-                />
+                <meta property="og:url" content="https://sfericok.cat/botiga" />
                 <meta
                     property="og:image"
-                    content="https://oksfericterrassa.netlify.app/preview-botiga.png"
+                    content="https://sfericok.cat/preview-botiga.png"
                 />
                 <meta
                     property="og:title"

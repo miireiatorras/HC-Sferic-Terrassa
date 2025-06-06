@@ -12,6 +12,7 @@ import { Schedule, ScheduleEvent } from '@/ui/schedule/Schedule';
 import { ScheduleLegend } from '@/features/schedule-legend/ScheduleLegend';
 import { Icon } from '@/ui/Icon/Icon';
 import { useState } from 'react';
+import { Helmet } from '@dr.pogodin/react-helmet';
 
 const days = [
     'Dilluns',
@@ -110,48 +111,72 @@ export const Horari = ({ ...props }: HorariProps) => {
 
     const filteredEvents =
         filter === 'all' ? events : events.filter((e) => e.category === filter);
+    const description = `Descobreix tots els equips del HC SFERIC Terrassa: iniciació, formació i sèniors. Consulta jugadors, fotos i detalls de cada categoria.`;
+
     return (
-        <div {...getBaseComponentProps({ ...props, block })}>
-            <Banner variant="horari" />
-            <Title>Entrena amb nosaltres! </Title>
-            <div className={toBEM({ block, element: 'controls' })}>
-                <div className={toBEM({ block, element: 'filter' })}>
-                    <Icon icon="filter" size="md" />
-                    <select
-                        value={filter}
-                        onChange={(e) =>
-                            setFilter(
-                                e.target.value as
-                                    | ScheduleEvent['category']
-                                    | 'all'
-                            )
-                        }
-                    >
-                        <option value="all">Tots els equips</option>
-                        <option value="iniciacio">Iniciació</option>
-                        <option value="formatiu">Formatiu</option>
-                        <option value="senior">Sènior</option>
-                    </select>
+        <>
+            <Helmet prioritizeSeoTags>
+                <title>HC SFERIC Terrassa – Horari</title>
+                <meta name="description" content={description} />
+
+                <link rel="canonical" href="https://sfericok.cat/horari" />
+
+                <meta property="og:url" content="https://sfericok.cat/horari" />
+                <meta
+                    property="og:image"
+                    content="https://sfericok.cat/preview-horari.png"
+                />
+                <meta
+                    property="og:title"
+                    content="HC SFERIC Terrassa – Horari"
+                />
+                <meta property="og:description" content={description} />
+
+                <meta name="twitter:card" content="summary_large_image" />
+            </Helmet>
+
+            <div {...getBaseComponentProps({ ...props, block })}>
+                <Banner variant="horari" />
+                <Title>Entrena amb nosaltres! </Title>
+                <div className={toBEM({ block, element: 'controls' })}>
+                    <div className={toBEM({ block, element: 'filter' })}>
+                        <Icon icon="filter" size="md" />
+                        <select
+                            value={filter}
+                            onChange={(e) =>
+                                setFilter(
+                                    e.target.value as
+                                        | ScheduleEvent['category']
+                                        | 'all'
+                                )
+                            }
+                        >
+                            <option value="all">Tots els equips</option>
+                            <option value="iniciacio">Iniciació</option>
+                            <option value="formatiu">Formatiu</option>
+                            <option value="senior">Sènior</option>
+                        </select>
+                    </div>
+                    <div className={toBEM({ block, element: 'actions' })}>
+                        <button
+                            type="button"
+                            onClick={() => window.print()}
+                            className={toBEM({ block, element: 'btn' })}
+                        >
+                            <Icon icon="printer" size="md" /> Imprimir
+                        </button>
+                        <a
+                            href="/horario_semanal.pdf"
+                            download="Horari-SFERIC-24-25.pdf"
+                            className={toBEM({ block, element: 'btn' })}
+                        >
+                            <Icon icon="download" size="md" /> PDF
+                        </a>
+                    </div>
                 </div>
-                <div className={toBEM({ block, element: 'actions' })}>
-                    <button
-                        type="button"
-                        onClick={() => window.print()}
-                        className={toBEM({ block, element: 'btn' })}
-                    >
-                        <Icon icon="printer" size="md" /> Imprimir
-                    </button>
-                    <a
-                        href="/horario_semanal.pdf"
-                        download="Horari-SFERIC-24-25.pdf"
-                        className={toBEM({ block, element: 'btn' })}
-                    >
-                        <Icon icon="download" size="md" /> PDF
-                    </a>
-                </div>
+                <Schedule days={days} events={filteredEvents} />
+                <ScheduleLegend />
             </div>
-            <Schedule days={days} events={filteredEvents} />
-            <ScheduleLegend />
-        </div>
+        </>
     );
 };

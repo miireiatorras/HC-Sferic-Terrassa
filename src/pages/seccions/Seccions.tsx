@@ -58,27 +58,21 @@ export const Seccions = (props: SeccionsProps) => {
             <Helmet prioritizeSeoTags>
                 <title>HC SFERIC Terrassa – Seccions</title>
                 <meta name="description" content={description} />
-
-                <link
-                    rel="canonical"
-                    href="https://oksfericterrassa.netlify.app/seccions"
-                />
+                <link rel="canonical" href="https://sfericok.cat/seccions" />
 
                 <meta
                     property="og:url"
-                    content="https://oksfericterrassa.netlify.app/seccions"
+                    content="https://sfericok.cat/seccions"
                 />
                 <meta
                     property="og:image"
-                    content="https://oksfericterrassa.netlify.app/preview-seccions.png"
+                    content="https://sfericok.cat/preview-seccions.png"
                 />
                 <meta
                     property="og:title"
                     content={`HC SFERIC Terrassa – ${header}`}
                 />
                 <meta property="og:description" content={description} />
-
-                <meta name="twitter:card" content="summary_large_image" />
             </Helmet>
 
             <div {...getBaseComponentProps({ ...props, block })}>

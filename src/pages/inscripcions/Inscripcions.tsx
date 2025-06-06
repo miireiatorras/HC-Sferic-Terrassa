@@ -26,16 +26,16 @@ export const Inscripcions = ({ ...props }: InscripcionsProps) => {
 
                 <link
                     rel="canonical"
-                    href="https://oksfericterrassa.netlify.app/inscripcions"
+                    href="https://sfericok.cat/inscripcions"
                 />
 
                 <meta
                     property="og:url"
-                    content="https://oksfericterrassa.netlify.app/inscripcions"
+                    content="https://sfericok.cat/inscripcions"
                 />
                 <meta
                     property="og:image"
-                    content="https://oksfericterrassa.netlify.app/inscripcions-full.png"
+                    content="https://sfericok.cat/inscripcions-full.png"
                 />
                 <meta
                     property="og:title"

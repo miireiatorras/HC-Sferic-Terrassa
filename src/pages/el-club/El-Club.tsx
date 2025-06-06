@@ -18,7 +18,6 @@ export type ElClubProps = BaseComponentProps;
 const block = registerBlockName('ElClub');
 
 export const ElClub = ({ ...props }: ElClubProps) => {
-    const description = `Coneix la missió, valors i història del HC SFERIC Terrassa, el club d'Hoquei Patins amb més de 70 anys de trajectòria a Terrassa.`;
     const images = [
         '/old/antiga1.png',
         '/old/antiga2.png',
@@ -26,24 +25,21 @@ export const ElClub = ({ ...props }: ElClubProps) => {
         '/old/antiga4.png',
         '/old/antiga5.png',
     ];
-
+    const description = `Coneix la missió, valors i història del HC SFERIC Terrassa, el club d'Hoquei Patins amb més de 70 anys de trajectòria a Terrassa.`;
     return (
         <>
             <Helmet prioritizeSeoTags>
                 <title>HC SFERIC Terrassa – El club</title>
                 <meta name="description" content={description} />
 
-                <link
-                    rel="canonical"
-                    href="https://oksfericterrassa.netlify.app/el-club"
-                />
+                <link rel="canonical" href="https://sfericok.cat/el-club" />
                 <meta
                     property="og:url"
-                    content="https://oksfericterrassa.netlify.app/el-club"
+                    content="https://sfericok.cat/el-club"
                 />
                 <meta
                     property="og:image"
-                    content="https://oksfericterrassa.netlify.app/preview-club.png"
+                    content="https://sfericok.cat/preview-club.png"
                 />
                 <meta
                     property="og:title"
