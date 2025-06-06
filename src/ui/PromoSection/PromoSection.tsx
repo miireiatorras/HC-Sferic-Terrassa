@@ -64,7 +64,7 @@ export const PromoSection = ({
 
             <Button
                 as={NavLink}
-                to="http://www.hoqueipatins.fecapa.cat/ag/"
+                to="https://docs.google.com/forms/d/e/1FAIpQLSccAPpV2KQ_yJYKAwE0RcNCKknv4BFVvb7gkVEfUXescob0lA/viewform"
                 variant="primary-green"
             >
                 {buttonText}
