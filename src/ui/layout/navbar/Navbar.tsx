@@ -42,9 +42,9 @@ export const Navbar = (props: NavbarProps) => {
                         className={toBEM({ block, element: 'logo-img' })}
                     />
                 </NavLink>
-                <h1 className={toBEM({ block, element: 'title' })}>
+                <h2 className={toBEM({ block, element: 'title' })}>
                     HC. SFERIC TERRASSA
-                </h1>
+                </h2>
             </div>
 
             <button

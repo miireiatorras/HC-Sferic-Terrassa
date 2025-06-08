@@ -10,12 +10,12 @@ import {
 import './Calendari.scss';
 import { NavLink } from 'react-router-dom';
 
-export type CaldendariProps = BaseComponentProps & {
+export type CalendariProps = BaseComponentProps & {
     children?: React.ReactNode;
 };
 
 const block = registerBlockName('Calendari');
-export const Caldendari = ({ ...props }: CaldendariProps) => {
+export const Calendari = ({ ...props }: CalendariProps) => {
     return (
         <div {...getBaseComponentProps({ ...props, block })}>
             <Title variant="light">Calendari partits</Title>

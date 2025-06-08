@@ -56,10 +56,10 @@ export const ReadyToJoin = ({ ...props }: BaseComponentProps) => {
                     >
                         <p className={toBEM({ block, element: 'description' })}>
                             Formar part del nostre club és un orgull. Aquí
-                            trobaràs un ambient familiar on gaudir de l’hoquei,
-                            aprendre i créixer amb valors. Vine a compartir la
-                            passió per l’esport en un club proper, compromès i
-                            ple d’esperit d’equip!
+                            trobaràs un ambient familiar on gaudir de l’hoquei
+                            patins, aprendre i créixer amb valors. Vine a
+                            compartir la passió per l’esport en un club proper,
+                            compromès i ple d’esperit d’equip!
                         </p>
 
                         <div className={toBEM({ block, element: 'stats' })}>

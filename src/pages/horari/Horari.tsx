@@ -121,7 +121,7 @@ export const Horari = ({ ...props }: HorariProps) => {
 
                 <link rel="canonical" href="https://sfericok.cat/horari" />
 
-                <meta property="og:url" content="https://sfericok.cat/horari" />
+                <meta property="og:image" content="/logo-tranp-negre.png" />
                 <meta
                     property="og:image"
                     content="https://sfericok.cat/preview-horari.png"

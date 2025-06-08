@@ -37,13 +37,10 @@ export const ElClub = ({ ...props }: ElClubProps) => {
                     property="og:url"
                     content="https://sfericok.cat/el-club"
                 />
-                <meta
-                    property="og:image"
-                    content="https://sfericok.cat/preview-club.png"
-                />
+                <meta property="og:image" content="/logo-tranp-negre.png" />
                 <meta
                     property="og:title"
-                    content="HC SFERIC Terrassa – El club"
+                    content="HC SFERIC Terrassa – El Club"
                 />
                 <meta property="og:description" content={description} />
 

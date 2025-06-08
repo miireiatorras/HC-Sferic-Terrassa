@@ -24,7 +24,6 @@ export const LocationMap: React.FC<LocationMapProps> = ({
 }) => {
     return (
         <div className={toBEM({ block, element: 'container' })}>
-            {/* Columna 1: icono + texto */}
             <div className={toBEM({ block, element: 'info' })}>
                 <div className={toBEM({ block, element: 'icon-wrapper' })}>
                     <Icon
@@ -42,7 +41,6 @@ export const LocationMap: React.FC<LocationMapProps> = ({
                 </div>
             </div>
 
-            {/* Columna 2: iframe del mapa */}
             <div className={toBEM({ block, element: 'map' })}>
                 <iframe
                     title={`Map of ${title}`}

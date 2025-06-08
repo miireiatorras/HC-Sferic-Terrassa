@@ -31,10 +31,7 @@ export const Contacte = ({ ...props }: ContacteProps) => {
                     property="og:url"
                     content="https://sfericok.cat/contacte"
                 />
-                <meta
-                    property="og:image"
-                    content="https://sfericok.cat/preview-contacte.png"
-                />
+                <meta property="og:image" content="/logo-tranp-negre.png" />
                 <meta
                     property="og:title"
                     content="HC SFERIC Terrassa – Contacte"

@@ -24,7 +24,14 @@ export const Footer = (props: FooterProps) => {
                     />
                 </div>
                 <div className={toBEM({ block, element: 'col' })}>
-                    <h4>HC. SFERIC Terrassa</h4>
+                    <p
+                        className={toBEM({
+                            block,
+                            element: 'title',
+                        })}
+                    >
+                        HC. SFERIC Terrassa
+                    </p>
                     <div className={toBEM({ block, element: 'ubicacio' })}>
                         <Icon icon="location_on" size="lg" />
                         <p>
@@ -46,7 +53,14 @@ export const Footer = (props: FooterProps) => {
                 </div>
 
                 <div className={toBEM({ block, element: 'col' })}>
-                    <h4>Enllaços ràpids</h4>
+                    <p
+                        className={toBEM({
+                            block,
+                            element: 'title',
+                        })}
+                    >
+                        Enllaços ràpids
+                    </p>
                     <ul className={toBEM({ block, element: 'menu' })}>
                         <li>
                             <Link to="/">Inici</Link>
@@ -76,7 +90,14 @@ export const Footer = (props: FooterProps) => {
                 </div>
 
                 <div className={toBEM({ block, element: 'col' })}>
-                    <h4>Segueix-nos!</h4>
+                    <p
+                        className={toBEM({
+                            block,
+                            element: 'title',
+                        })}
+                    >
+                        Segueix-nos!
+                    </p>
                     <div className={toBEM({ block, element: 'instagram' })}>
                         <Icon icon="instagram" size="lg" />
                         <a

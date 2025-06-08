@@ -3,11 +3,16 @@
 .footer {
     background-color: styles.$verd-logo;
     color: styles.$blanc;
-    padding: 1.5rem;
-
+    padding: 1.4rem;
+    &__title {
+        font-size: 1.25rem;
+        font-weight: 600;
+        line-height: 20px;
+    }
     a {
         color: styles.$blanc;
         text-decoration: none;
+        font-size: 0.9rem;
 
         &:hover {
             text-decoration: underline;
@@ -32,7 +37,7 @@
 
         p {
             margin: 0.3rem 0;
-            font-size: 15px;
+            font-size: 0.9rem;
         }
     }
 
@@ -43,11 +48,11 @@
     }
 
     &__logo {
-        width: 40%;
+        width: 35%;
     }
 
     &__logo-sferic {
-        width: 90%;
+        width: 60%;
     }
 
     &__email,

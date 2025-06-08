@@ -28,10 +28,7 @@ export const Botiga = ({ ...props }: BotigaProps) => {
                 <link rel="canonical" href="https://sfericok.cat/botiga" />
 
                 <meta property="og:url" content="https://sfericok.cat/botiga" />
-                <meta
-                    property="og:image"
-                    content="https://sfericok.cat/preview-botiga.png"
-                />
+                <meta property="og:image" content="/logo-tranp-negre.png" />
                 <meta
                     property="og:title"
                     content="HC SFERIC Terrassa – Botiga"

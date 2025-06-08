@@ -4,7 +4,7 @@
     color: styles.$verd-logo;
 
     &__div {
-        @include styles.content-spacing;
+        margin: 0 2rem 0 0;
 
         @include styles.hflex(8px);
         justify-content: flex-end;

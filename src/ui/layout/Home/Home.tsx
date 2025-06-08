@@ -8,7 +8,7 @@ import {
 import { Hero } from '@/features/hero/Hero';
 import Discover from '@/features/hero/Discover/Discover';
 import { ReadyToJoin } from '@/features/ReadyToJoin/ReadyToJoin';
-import { Caldendari } from '@/features/calendari/Calendari';
+import { Calendari } from '@/features/calendari/Calendari';
 import { Instagram } from '@/features/instagram/Instagram';
 import Patrocinadors from '@/features/patrocinadors/Patrocinadors';
 import './Home.scss';
@@ -35,13 +35,10 @@ export const Home = ({ ...props }: HomeProps) => {
                     property="og:url"
                     content="https://oksfericterrassa.netlify.app/"
                 />
-                <meta
-                    property="og:image"
-                    content="https://oksfericterrassa.netlify.app/preview-home.png"
-                />
+                <meta property="og:image" content="/logo-tranp-negre.png" />
                 <meta
                     property="og:title"
-                    content="HC SFERIC Terrassa – Inici"
+                    content="HC SFERIC Terrassa. Club d'Hoquei Patins - Inici"
                 />
                 <meta property="og:description" content={description} />
 
@@ -51,7 +48,7 @@ export const Home = ({ ...props }: HomeProps) => {
             <main {...getBaseComponentProps({ ...props, block })}>
                 <Hero />
                 <Discover />
-                <Caldendari />
+                <Calendari />
                 <ReadyToJoin />
                 <Instagram />
                 <div className={toBEM({ block, element: 'div' })}>

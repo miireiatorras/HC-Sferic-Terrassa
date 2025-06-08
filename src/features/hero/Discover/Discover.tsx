@@ -28,14 +28,14 @@ export const Discover = ({ ...props }: DiscoverProps) => {
                         className={toBEM({ block, element: 'image' })}
                     />
                     <div className={toBEM({ block, element: 'overlay' })}>
-                        <h3
+                        <p
                             className={toBEM({
                                 block,
                                 element: 'card-title',
                             })}
                         >
                             Seccions
-                        </h3>
+                        </p>
                         <span
                             className={toBEM({
                                 block,
@@ -58,14 +58,14 @@ export const Discover = ({ ...props }: DiscoverProps) => {
                             className={toBEM({ block, element: 'image' })}
                         />
                         <div className={toBEM({ block, element: 'overlay' })}>
-                            <h3
+                            <p
                                 className={toBEM({
                                     block,
                                     element: 'card-title',
                                 })}
                             >
                                 Equips
-                            </h3>
+                            </p>
                             <span
                                 className={toBEM({
                                     block,
@@ -87,14 +87,14 @@ export const Discover = ({ ...props }: DiscoverProps) => {
                             className={toBEM({ block, element: 'image' })}
                         />
                         <div className={toBEM({ block, element: 'overlay' })}>
-                            <h3
+                            <p
                                 className={toBEM({
                                     block,
                                     element: 'card-title',
                                 })}
                             >
                                 Botiga
-                            </h3>
+                            </p>
                             <span
                                 className={toBEM({
                                     block,

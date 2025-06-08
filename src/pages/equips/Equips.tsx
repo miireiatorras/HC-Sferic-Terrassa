@@ -190,10 +190,7 @@ export const Equips = ({ ...props }: EquipsProps) => {
                 <link rel="canonical" href="https://sfericok.cat/equips" />
 
                 <meta property="og:url" content="https://sfericok.cat/equips" />
-                <meta
-                    property="og:image"
-                    content="https://sfericok.cat/preview-equips.png"
-                />
+                <meta property="og:image" content="/logo-tranp-negre.png" />
                 <meta
                     property="og:title"
                     content="HC SFERIC Terrassa – Equips"
