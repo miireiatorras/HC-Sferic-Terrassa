@@ -5,12 +5,30 @@ import {
     getBaseComponentProps,
 } from '@/utils';
 import './ReadyToJoin.scss';
-import { useEffect, useState } from 'react';
-import { Icon } from '@/ui/Icon/Icon';
+import { useEffect, useState, useRef } from 'react';
+import { Icon, IconNames } from '@/ui/Icon/Icon';
 import { Button } from '@/ui/button/Button';
 import { NavLink } from 'react-router-dom';
 
 const block = registerBlockName('ReadyToJoin');
+
+function useOnScreen<T extends HTMLElement>(
+    ref: React.RefObject<T | null>,
+    rootMargin = '0px'
+) {
+    const [isVisible, setIsVisible] = useState(false);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => entry.isIntersecting && setIsVisible(true),
+            { rootMargin }
+        );
+        if (ref.current) observer.observe(ref.current);
+        return () => observer.disconnect();
+    }, [ref, rootMargin]);
+
+    return isVisible;
+}
 
 const Counter = ({ end }: { end: number }) => {
     const [count, setCount] = useState(0);
@@ -35,6 +53,54 @@ const Counter = ({ end }: { end: number }) => {
 
     return <span>{count}</span>;
 };
+const StatItem = ({
+    end,
+    icon,
+    label,
+    plus = false,
+}: {
+    end: number;
+    icon: IconNames;
+    label: string;
+    plus?: boolean;
+}) => {
+    const ref = useRef<HTMLDivElement | null>(null);
+    const visible = useOnScreen(ref, '-50px');
+    const [started, setStarted] = useState(false);
+
+    useEffect(() => {
+        if (visible) {
+            setStarted(true);
+        }
+    }, [visible]);
+
+    return (
+        <div ref={ref} className={toBEM({ block, element: 'stat' })}>
+            <div className={toBEM({ block, element: 'stat-wrapper' })}>
+                <Icon
+                    className={toBEM({ block, element: 'Icon' })}
+                    icon={icon}
+                    size="xl"
+                />
+                <span className={toBEM({ block, element: 'number' })}>
+                    {started ? (
+                        <>
+                            {plus && '+'}
+                            <Counter end={end} />
+                        </>
+                    ) : plus ? (
+                        '+0'
+                    ) : (
+                        '0'
+                    )}
+                </span>
+            </div>
+            <span className={toBEM({ block, element: 'span-text' })}>
+                {label}
+            </span>
+        </div>
+    );
+};
 export const ReadyToJoin = ({ ...props }: BaseComponentProps) => {
     return (
         <section {...getBaseComponentProps({ ...props, block })}>
@@ -48,121 +114,32 @@ export const ReadyToJoin = ({ ...props }: BaseComponentProps) => {
                     <h2 className={toBEM({ block, element: 'title' })}>
                         Preparat per unir-te a HC. Sferic Terrassa?
                     </h2>
-                    <div
-                        className={toBEM({
-                            block,
-                            element: 'wrapper',
-                        })}
-                    >
+                    <div className={toBEM({ block, element: 'wrapper' })}>
                         <p className={toBEM({ block, element: 'description' })}>
                             Formar part del nostre club és un orgull. Aquí
-                            trobaràs un ambient familiar on gaudir de l’hoquei
-                            patins, aprendre i créixer amb valors. Vine a
-                            compartir la passió per l’esport en un club proper,
-                            compromès i ple d’esperit d’equip!
+                            trobaràs un ambient familiar on gaudir de l’hoquei,
+                            aprendre i créixer amb valors. Vine a compartir la
+                            passió per l’esport en un club proper, compromès i
+                            ple d’esperit d’equip!
                         </p>
 
                         <div className={toBEM({ block, element: 'stats' })}>
-                            <div className={toBEM({ block, element: 'stat' })}>
-                                <div
-                                    className={toBEM({
-                                        block,
-                                        element: 'stat-wrapper',
-                                    })}
-                                >
-                                    <Icon
-                                        className={toBEM({
-                                            block,
-                                            element: 'Icon',
-                                        })}
-                                        icon="material-symbols-light_trophy-outline"
-                                        size="xl"
-                                    />
-                                    <span
-                                        className={toBEM({
-                                            block,
-                                            element: 'number',
-                                        })}
-                                    >
-                                        <Counter end={75} />
-                                    </span>
-                                </div>
-                                <span
-                                    className={toBEM({
-                                        block,
-                                        element: 'span-text',
-                                    })}
-                                >
-                                    anys d'història
-                                </span>
-                            </div>
-                            <div className={toBEM({ block, element: 'stat' })}>
-                                <div
-                                    className={toBEM({
-                                        block,
-                                        element: 'stat-wrapper',
-                                    })}
-                                >
-                                    <Icon
-                                        className={toBEM({
-                                            block,
-                                            element: 'Icon',
-                                        })}
-                                        icon="mingcute_group-3-fill"
-                                        size="xl"
-                                    />
-                                    <span
-                                        className={toBEM({
-                                            block,
-                                            element: 'number',
-                                        })}
-                                    >
-                                        + <Counter end={100} />
-                                    </span>
-                                </div>
-
-                                <span
-                                    className={toBEM({
-                                        block,
-                                        element: 'span-text',
-                                    })}
-                                >
-                                    jugadors entrenats{' '}
-                                </span>
-                            </div>
-                            <div className={toBEM({ block, element: 'stat' })}>
-                                <div
-                                    className={toBEM({
-                                        block,
-                                        element: 'stat-wrapper',
-                                    })}
-                                >
-                                    <Icon
-                                        className={toBEM({
-                                            block,
-                                            element: 'Icon',
-                                        })}
-                                        icon="material-symbols-light_sports-hockey-sharp"
-                                        size="xl"
-                                    />
-                                    <span
-                                        className={toBEM({
-                                            block,
-                                            element: 'number',
-                                        })}
-                                    >
-                                        <Counter end={11} />
-                                    </span>
-                                </div>
-                                <span
-                                    className={toBEM({
-                                        block,
-                                        element: 'span-text',
-                                    })}
-                                >
-                                    equips jugant
-                                </span>
-                            </div>
+                            <StatItem
+                                end={75}
+                                icon="material-symbols-light_trophy-outline"
+                                label="anys d'història"
+                            />
+                            <StatItem
+                                end={100}
+                                icon="mingcute_group-3-fill"
+                                label="jugadors entrenats"
+                                plus
+                            />
+                            <StatItem
+                                end={11}
+                                icon="material-symbols-light_sports-hockey-sharp"
+                                label="equips jugant"
+                            />
                         </div>
 
                         <div className={toBEM({ block, element: 'actions' })}>
@@ -177,13 +154,15 @@ export const ReadyToJoin = ({ ...props }: BaseComponentProps) => {
                             <Button
                                 as={NavLink}
                                 to="/el-club"
+                                icon="arrow-right"
+                                iconPosition="right"
                                 variant="secondary-green"
                                 className={toBEM({
                                     block,
                                     element: 'secondary',
                                 })}
                             >
-                                Descobreix més →
+                                Descobreix més
                             </Button>
                         </div>
                     </div>

@@ -23,18 +23,12 @@ export const Home = ({ ...props }: HomeProps) => {
     return (
         <>
             <Helmet prioritizeSeoTags>
-                <title>HC SFERIC Terrassa – Inici</title>
+                <title>HC SFERIC Terrassa. Club d'Hoquei Patins - Inici</title>
                 <meta name="description" content={description} />
 
-                <link
-                    rel="canonical"
-                    href="https://oksfericterrassa.netlify.app/"
-                />
+                <link rel="canonical" href="https:/sfericok.cat/" />
 
-                <meta
-                    property="og:url"
-                    content="https://oksfericterrassa.netlify.app/"
-                />
+                <meta property="og:url" content="https:/sfericok.cat/" />
                 <meta property="og:image" content="/logo-tranp-negre.png" />
                 <meta
                     property="og:title"
