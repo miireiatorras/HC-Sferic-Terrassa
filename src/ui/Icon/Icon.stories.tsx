@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Icon } from './Icon';
 import './Icon.scss';
-import * as iconNames from '@/config/icons/constants';
+import * as iconNames from '../../config/icons/constants';
 
 const sizes = ['xs', 'sm', 'md', 'ml', 'lg', 'xl'] as const;
 
