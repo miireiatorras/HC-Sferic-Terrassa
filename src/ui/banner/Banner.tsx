@@ -91,7 +91,7 @@ export const Banner = ({ variant, ...props }: BannerProps) => {
             />
             <div className={toBEM({ block, element: 'overlay' })} />
             <div className={toBEM({ block, element: 'content' })}>
-                <h2 className={toBEM({ block, element: 'title' })}>{title}</h2>
+                <h1 className={toBEM({ block, element: 'title' })}>{title}</h1>
                 <p className={toBEM({ block, element: 'subtitle' })}>
                     {subtitle}
                 </p>

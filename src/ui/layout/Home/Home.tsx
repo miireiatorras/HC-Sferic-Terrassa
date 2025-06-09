@@ -23,7 +23,7 @@ export const Home = ({ ...props }: HomeProps) => {
     return (
         <>
             <Helmet prioritizeSeoTags>
-                <title>HC SFERIC Terrassa – Inici</title>
+                <title>HC SFERIC Terrassa. Club d'Hoquei Patins - Inici</title>
                 <meta name="description" content={description} />
 
                 <link

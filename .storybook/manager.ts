@@ -5,7 +5,7 @@ addons.setConfig({
     theme: create({
         base: 'light',
         brandTitle: 'HC. SFERIC Terrassa',
-        // brandUrl: 'https://sferic.com',
+        brandUrl: 'https://sfericok.cat',
         brandImage: '/logo-tranp-negre.png',
     }),
 });
