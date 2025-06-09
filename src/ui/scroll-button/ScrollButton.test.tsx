@@ -5,7 +5,6 @@ import { ScrollButton } from './ScrollButton';
 
 describe('ScrollButton component', () => {
     beforeEach(() => {
-        // Reset scrollTo spy before each test
         window.scrollTo = vi.fn();
     });
 
@@ -54,7 +53,6 @@ describe('ScrollButton component', () => {
         });
 
         render(<ScrollButton />);
-        // Simulate reaching the bottom
         Object.defineProperty(window, 'scrollY', {
             configurable: true,
             value: scrollHeight - innerHeight + 1,

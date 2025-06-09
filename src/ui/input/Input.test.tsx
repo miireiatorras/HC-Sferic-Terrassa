@@ -20,12 +20,10 @@ describe('Input component', () => {
             />
         );
 
-        // Label is linked to the input
         const label = screen.getByText('Test Label');
         expect(label).toBeInTheDocument();
         expect(label).toHaveAttribute('for', 'test-input');
 
-        // Input element is in the document
         const input = screen.getByRole('textbox');
         expect(input).toBeInTheDocument();
         expect(input).toHaveAttribute('id', 'test-input');

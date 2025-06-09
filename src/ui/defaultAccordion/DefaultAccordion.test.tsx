@@ -12,12 +12,10 @@ describe('DefaultAccordion component', () => {
             <DefaultAccordion title={titleText}>{contentText}</DefaultAccordion>
         );
 
-        // Header button with title
         const headerButton = screen.getByRole('button', { name: titleText });
         expect(headerButton).toBeInTheDocument();
         expect(headerButton).toHaveClass('DefaultAccordion__header');
 
-        // Content should be visible initially
         const content = screen.getByText(contentText);
         expect(content).toBeInTheDocument();
         expect(content.parentElement).toHaveClass('DefaultAccordion__content');
@@ -30,11 +28,9 @@ describe('DefaultAccordion component', () => {
 
         const headerButton = screen.getByRole('button', { name: titleText });
 
-        // First click: collapse (hide content)
         fireEvent.click(headerButton);
         expect(screen.queryByText(contentText)).toBeNull();
 
-        // Second click: expand (show content)
         fireEvent.click(headerButton);
         expect(screen.getByText(contentText)).toBeInTheDocument();
     });
@@ -45,15 +41,12 @@ describe('DefaultAccordion component', () => {
         );
         const wrapper = container.firstChild as HTMLElement;
 
-        // Initially open
         expect(wrapper).toHaveClass('DefaultAccordion--open');
 
-        // Collapse
         const headerButton = screen.getByRole('button', { name: titleText });
         fireEvent.click(headerButton);
         expect(wrapper).not.toHaveClass('DefaultAccordion--open');
 
-        // Expand again
         fireEvent.click(headerButton);
         expect(wrapper).toHaveClass('DefaultAccordion--open');
     });

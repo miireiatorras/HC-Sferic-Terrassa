@@ -23,14 +23,11 @@ describe('MemberCard component', () => {
         render(<MemberCard {...defaultProps} data-testid="card" />);
 
         const card = screen.getByTestId('card');
-        // la clase base para el block should be "MemberCard"
         expect(card).toHaveClass('MemberCard');
 
-        // avatar element
         const avatar = screen.getByText(defaultProps.initials);
         expect(avatar).toHaveClass('MemberCard__avatar');
 
-        // name element
         const nameElem = screen.getByText(defaultProps.name);
         expect(nameElem).toHaveClass('MemberCard__name');
     });

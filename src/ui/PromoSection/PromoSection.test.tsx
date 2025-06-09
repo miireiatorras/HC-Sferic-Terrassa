@@ -20,7 +20,6 @@ describe('PromoSection component', () => {
             </MemoryRouter>
         );
 
-        // Image
         const img = screen.getByAltText(
             defaultProps.imageAlt!
         ) as HTMLImageElement;
@@ -28,7 +27,6 @@ describe('PromoSection component', () => {
         expect(img.src).toContain(defaultProps.imageSrc);
         expect(img).toHaveClass('PromoSection__image');
 
-        // Heading
         const heading = screen.getByRole('heading', {
             level: 2,
             name: defaultProps.heading,
@@ -36,7 +34,6 @@ describe('PromoSection component', () => {
         expect(heading).toBeInTheDocument();
         expect(heading).toHaveClass('PromoSection__heading');
 
-        // Body content
         expect(screen.getByText(bodyText)).toBeInTheDocument();
         const contentDiv =
             heading.nextElementSibling?.parentElement?.querySelector(
@@ -45,12 +42,10 @@ describe('PromoSection component', () => {
         expect(contentDiv).toBeInTheDocument();
         expect(contentDiv).toHaveTextContent(bodyText);
 
-        // CTA link (NavLink)
         const link = screen.getByRole('link', {
             name: defaultProps.buttonText,
         });
         expect(link).toBeInTheDocument();
-        // The component hardcodes this URL
         expect(link).toHaveAttribute(
             'href',
             'https://docs.google.com/forms/d/e/1FAIpQLSccAPpV2KQ_yJYKAwE0RcNCKknv4BFVvb7gkVEfUXescob0lA/viewform'

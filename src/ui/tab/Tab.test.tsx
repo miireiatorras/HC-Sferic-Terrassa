@@ -19,14 +19,12 @@ describe('Tab component', () => {
     it('applies the default BEM class for the item element', () => {
         render(<Tab {...defaultProps} data-testid="tab" />);
         const button = screen.getByTestId('tab');
-        // Debe incluir la clase de elemento "Tab__item"
         expect(button).toHaveClass('Tab__item');
     });
 
     it('adds the active modifier class when active is true', () => {
         render(<Tab {...defaultProps} active data-testid="tab" />);
         const button = screen.getByTestId('tab');
-        // Debe incluir tanto la clase base como el modificador
         expect(button).toHaveClass('Tab__item', 'Tab__item--active');
     });
 

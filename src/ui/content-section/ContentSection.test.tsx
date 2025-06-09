@@ -37,17 +37,14 @@ describe('ContentSection component', () => {
 
     it('renders all provided stats with labels and values', () => {
         render(<ContentSection {...defaultProps} />);
-        // Stats container
         const statsContainer = screen
             .getByText(defaultProps.stats![0].label)
             .closest('div');
         expect(statsContainer).toHaveClass('ContentSection__stat');
 
-        // First stat: Users / 100
         expect(screen.getByText('Users')).toBeInTheDocument();
         expect(screen.getByText('100')).toBeInTheDocument();
 
-        // Second stat: Clicks / More
         expect(screen.getByText('Clicks')).toBeInTheDocument();
         expect(screen.getByText('More')).toBeInTheDocument();
     });

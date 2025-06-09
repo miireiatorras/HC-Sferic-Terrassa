@@ -13,14 +13,12 @@ describe('LocationMap component', () => {
     it('renders the title and address with correct BEM classes', () => {
         render(<LocationMap {...defaultProps} />);
 
-        // Title
         const heading = screen.getByRole('heading', {
             name: defaultProps.title,
         });
         expect(heading).toBeInTheDocument();
         expect(heading).toHaveClass('LocationMap__title');
 
-        // Address
         const address = screen.getByText(defaultProps.address);
         expect(address).toBeInTheDocument();
         expect(address).toHaveClass('LocationMap__address');

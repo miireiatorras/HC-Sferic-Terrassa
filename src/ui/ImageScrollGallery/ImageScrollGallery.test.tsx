@@ -23,7 +23,6 @@ describe('ImageScrollGallery component', () => {
         const gallery = container.querySelector(
             '.ImageScrollGallery__container'
         ) as HTMLElement;
-        // Simula un contenedor con scrollWidth > clientWidth
         Object.defineProperty(gallery, 'clientWidth', {
             value: 100,
             configurable: true,
@@ -35,7 +34,6 @@ describe('ImageScrollGallery component', () => {
         gallery.scrollLeft = 0;
         gallery.scrollBy = vi.fn();
 
-        // Dispara el evento scroll para actualizar los botones
         fireEvent.scroll(gallery);
 
         const rightArrow = container.querySelector(
@@ -45,30 +43,25 @@ describe('ImageScrollGallery component', () => {
             '.ImageScrollGallery__arrow--left'
         ) as HTMLElement;
 
-        // Al inicio: no puede desplazarse a la izquierda, solo a la derecha
         expect(leftArrow).toHaveClass('ImageScrollGallery__arrow--disabled');
         expect(rightArrow).not.toHaveClass(
             'ImageScrollGallery__arrow--disabled'
         );
 
-        // Clic en flecha derecha desplaza hacia la derecha
         fireEvent.click(rightArrow);
         expect(gallery.scrollBy).toHaveBeenCalledWith({
             left: gallery.clientWidth,
             behavior: 'smooth',
         });
 
-        // Simula estar al final
         gallery.scrollLeft = gallery.scrollWidth - gallery.clientWidth;
         fireEvent.scroll(gallery);
 
-        // Ahora solo debería poder desplazarse a la izquierda
         expect(rightArrow).toHaveClass('ImageScrollGallery__arrow--disabled');
         expect(leftArrow).not.toHaveClass(
             'ImageScrollGallery__arrow--disabled'
         );
 
-        // Clic en flecha izquierda desplaza hacia la izquierda
         fireEvent.click(leftArrow);
         expect(gallery.scrollBy).toHaveBeenCalledWith({
             left: -gallery.clientWidth,

@@ -1,9 +1,7 @@
-// src/ui/icon/Icon.test.tsx
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import { describe, it, expect, vi } from 'vitest';
 
-// Mock icomoon-react to render a simple SVG with predictable props
 vi.mock('icomoon-react', () => {
     return {
         __esModule: true,
@@ -33,14 +31,12 @@ describe('Icon component', () => {
     it('applies the BEM block class', () => {
         render(<Icon icon={ICON_NAME} data-testid="icon" />);
         const icon = screen.getByTestId('icon');
-        // Should include the base block class "Icon"
         expect(icon).toHaveClass('Icon');
     });
 
     it('adds the size modifier class when size prop is provided', () => {
         render(<Icon icon={ICON_NAME} size="md" data-testid="icon-sm" />);
         const icon = screen.getByTestId('icon-sm');
-        // Should include both block and modifier, e.g. "Icon--md"
         expect(icon).toHaveClass('Icon', 'Icon--md');
     });
 

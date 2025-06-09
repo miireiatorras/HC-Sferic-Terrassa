@@ -13,7 +13,6 @@ describe('TimelineCard component', () => {
     it('renders the year, title, and description', () => {
         render(<TimelineCard {...defaultProps} data-testid="card" />);
 
-        // Verifica que el año, el título y la descripción estén en el documento
         expect(screen.getByText(defaultProps.year)).toBeInTheDocument();
         expect(screen.getByText(defaultProps.title)).toBeInTheDocument();
         expect(screen.getByText(defaultProps.description)).toBeInTheDocument();
@@ -23,22 +22,17 @@ describe('TimelineCard component', () => {
         render(<TimelineCard {...defaultProps} data-testid="card" />);
 
         const card = screen.getByTestId('card');
-        // La clase base del bloque
         expect(card).toHaveClass('TimelineCard');
 
-        // El contenedor header debe tener la clase element
         const header = card.querySelector('.TimelineCard__header');
         expect(header).toBeInTheDocument();
 
-        // Elemento year
         const yearEl = screen.getByText(defaultProps.year);
         expect(yearEl).toHaveClass('TimelineCard__year');
 
-        // Elemento title
         const titleEl = screen.getByText(defaultProps.title);
         expect(titleEl).toHaveClass('TimelineCard__title');
 
-        // Elemento description
         const descEl = screen.getByText(defaultProps.description);
         expect(descEl).toHaveClass('TimelineCard__description');
     });
