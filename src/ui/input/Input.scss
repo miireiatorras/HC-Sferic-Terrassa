@@ -12,6 +12,10 @@
         font-size: 0.875rem;
         margin-bottom: 0.5rem;
         color: gray;
+
+        @media (max-width: 768px) {
+            font-size: 0.8rem;
+        }
     }
 
     textarea {
@@ -34,6 +38,10 @@
             outline: none;
             border-color: styles.$verd-estandard;
             box-shadow: 0 0 0 3px rgba(styles.$verd-estandard, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            font-size: 0.875rem;
         }
     }
 }

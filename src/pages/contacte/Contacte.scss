@@ -23,17 +23,6 @@
 
         @media (max-width: 768px) {
             margin-left: 30px;
-
-            .Title__title {
-                font-size: 1.75rem;
-            }
-        }
-        @media (max-width: 480px) {
-            margin-left: 15px;
-
-            .Title__title {
-                font-size: 1.5rem;
-            }
         }
     }
 
@@ -84,13 +73,11 @@
             &::before {
                 opacity: 0.4;
             }
-            padding: 0 20px;
         }
         @media (max-width: 480px) {
             &::before {
                 opacity: 0.3;
             }
-            padding: 0 10px;
         }
     }
 }

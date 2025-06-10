@@ -5,11 +5,23 @@
         @include styles.content-spacing;
         display: grid;
         gap: 1rem;
+
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
     }
 
     &__info {
         display: flex;
         align-items: center;
+
+        @media (max-width: 768px) {
+            gap: 1rem;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
     }
 
     &__icon-wrapper {
@@ -20,6 +32,10 @@
         justify-content: center;
         align-items: center;
         margin-right: 1rem;
+
+        @media (max-width: 768px) {
+            margin-bottom: 0.5rem;
+        }
     }
 
     &__icon {
@@ -31,6 +47,10 @@
     &__details {
         display: flex;
         flex-direction: column;
+
+        @media (max-width: 768px) {
+            align-items: center;
+        }
     }
 
     &__title {
@@ -52,5 +72,9 @@
         height: 200px;
         border-radius: 0.5rem;
         overflow: hidden;
+
+        @media (max-width: 768px) {
+            grid-column: 1;
+        }
     }
 }

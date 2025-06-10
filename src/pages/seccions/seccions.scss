@@ -1,9 +1,20 @@
 @use '@/utils/styles';
 
 .Seccions {
-    p,
     h2 {
         margin: 0;
+
+        @media (max-width: 768px) {
+            font-size: 1.25rem;
+        }
+    }
+
+    p {
+        margin: 0;
+
+        @media (max-width: 768px) {
+            font-size: 0.9rem;
+        }
     }
     &__gradient {
         text-align: center;
@@ -17,6 +28,7 @@
 
         @media (max-width: 768px) {
             padding: 1.4rem;
+            @include styles.vflex((30px), center, center);
         }
     }
 
@@ -28,7 +40,7 @@
         margin-bottom: 2rem;
 
         @media (max-width: 768px) {
-            @include styles.vflex((16pxm), stretch, stretch);
+            @include styles.vflex((16px), stretch, stretch);
         }
     }
 }

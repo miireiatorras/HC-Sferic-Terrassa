@@ -9,6 +9,10 @@
         font-weight: 700;
         color: styles.$verd-logo;
         flex-shrink: 0;
+
+        @media (max-width: 768px) {
+            font-size: 1.1rem;
+        }
     }
 
     &__title {
@@ -16,10 +20,21 @@
         font-weight: 700;
         color: styles.$verd-logo;
         margin-bottom: 0.25rem;
+
+        @media (max-width: 768px) {
+            font-size: 1.1rem;
+        }
+        @media (max-width: 480px) {
+            font-size: 1rem;
+        }
     }
 
     &__description {
         font-size: 1rem;
         color: #333;
+
+        @media (max-width: 768px) {
+            font-size: 0.9rem;
+        }
     }
 }

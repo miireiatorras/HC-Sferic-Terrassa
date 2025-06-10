@@ -1,11 +1,11 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import {
     registerBlockName,
     BaseComponentProps,
     getBaseComponentProps,
     toBEM,
 } from '@/utils';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import { Button } from '@/ui/button/Button';
 import './Navbar.scss';
 import { Icon } from '@/ui/Icon/Icon';
@@ -25,7 +25,11 @@ const links = [
 
 export const Navbar = (props: NavbarProps) => {
     const [isOpen, setIsOpen] = useState(false);
+    const location = useLocation();
 
+    useEffect(() => {
+        setIsOpen(false);
+    }, [location.pathname]);
     return (
         <nav
             {...getBaseComponentProps({ ...props, block })}
@@ -42,9 +46,14 @@ export const Navbar = (props: NavbarProps) => {
                         className={toBEM({ block, element: 'logo-img' })}
                     />
                 </NavLink>
-                <h2 className={toBEM({ block, element: 'title' })}>
-                    HC. SFERIC TERRASSA
-                </h2>
+                <NavLink
+                    to="/"
+                    className={toBEM({ block, element: 'title-link' })}
+                >
+                    <h2 className={toBEM({ block, element: 'title' })}>
+                        HC. SFERIC TERRASSA
+                    </h2>
+                </NavLink>
             </div>
 
             <button
@@ -125,7 +134,6 @@ export const Navbar = (props: NavbarProps) => {
                     <Button
                         as={NavLink}
                         to="/inscripcions"
-                        onClick={() => setIsOpen(false)}
                         variant="primary-white"
                         className={toBEM({ block, element: 'mobile-button' })}
                     >

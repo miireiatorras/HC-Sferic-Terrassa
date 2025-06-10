@@ -35,10 +35,12 @@ export const Patrocinadors = ({ children, ...props }: Props) => {
                         key={index}
                         src={`/logos-sponsors/${src}`}
                         alt={src.split('.')[0]}
-                        initial={{ opacity: 0, y: 50 }}
+                        initial={{ opacity: 0, y: 5 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true, amount: 0.2 }}
-                        transition={{ duration: 0.6, ease: 'easeOut' }}
+                        transition={{
+                            duration: 1,
+                            ease: 'easeInOut',
+                        }}
                         className={toBEM({ block, element: 'logo' })}
                     />
                 ))}

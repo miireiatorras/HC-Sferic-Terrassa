@@ -10,7 +10,10 @@
         border-radius: styles.$corner-sm;
         margin-bottom: 2rem;
     }
-
+    &__wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
     th,
     td {
         border: 1px solid #e5e5e5;

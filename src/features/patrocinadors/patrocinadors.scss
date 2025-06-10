@@ -32,23 +32,23 @@
         &.storepack-logo,
         &.caldereria-logo,
         &.rmdislovall-logo {
-            width: 30%;
+            width: 35%;
         }
 
-        @media (max-width: 768px) {
-            width: 50%;
-            &.storepack-logo,
-            &.caldereria-logo,
-            &.rmdislovall-logo {
-                width: 50%;
-            }
-        }
-        @media (max-width: 480px) {
+        @media (max-width: 1000px) {
             width: 40%;
             &.storepack-logo,
             &.caldereria-logo,
             &.rmdislovall-logo {
                 width: 40%;
+            }
+        }
+        @media (max-width: 480px) {
+            width: 30%;
+            &.storepack-logo,
+            &.caldereria-logo,
+            &.rmdislovall-logo {
+                width: 30%;
             }
         }
     }

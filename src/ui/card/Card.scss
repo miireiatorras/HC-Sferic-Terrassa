@@ -6,7 +6,6 @@
     position: relative;
     padding: 2rem;
     background-color: styles.$blanc;
-    border-radius: styles.$corner-sm;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     overflow: visible;
 
@@ -22,8 +21,6 @@
             styles.$verd-logo,
             lighten(styles.$verd-clar, 30%)
         );
-        border-top-left-radius: styles.$corner-sm;
-        border-top-right-radius: styles.$corner-sm;
         z-index: 2;
     }
 
@@ -44,6 +41,10 @@
         margin-bottom: 1rem;
         z-index: 1;
         color: styles.$negre;
+
+        @media (max-width: 768px) {
+            font-size: 1.125rem;
+        }
     }
 
     &__body {
@@ -52,5 +53,9 @@
         line-height: 1.5;
         z-index: 1;
         color: styles.$negre;
+
+        @media (max-width: 768px) {
+            font-size: 0.9rem;
+        }
     }
 }

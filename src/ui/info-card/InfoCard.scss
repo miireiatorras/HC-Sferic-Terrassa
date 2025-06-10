@@ -32,5 +32,9 @@
         strong {
             font-weight: 700;
         }
+
+        @media (max-width: 480px) {
+            font-size: 0.875rem;
+        }
     }
 }
