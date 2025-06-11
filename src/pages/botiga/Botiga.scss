@@ -1,6 +1,7 @@
 @use '@/utils/styles';
 
 .Botiga {
+    background-color: white;
     &__main-content {
         @include styles.content-spacing;
         margin-top: 60px;

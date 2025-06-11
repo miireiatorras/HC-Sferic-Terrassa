@@ -161,7 +161,10 @@ export const Horari = ({ ...props }: HorariProps) => {
                         <button
                             type="button"
                             onClick={() => window.print()}
-                            className={toBEM({ block, element: 'btn' })}
+                            className={toBEM({
+                                block,
+                                element: 'btn-imprimir',
+                            })}
                         >
                             <Icon icon="printer" size="md" /> Imprimir
                         </button>

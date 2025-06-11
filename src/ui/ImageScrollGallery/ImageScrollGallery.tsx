@@ -64,6 +64,7 @@ export const ImageScrollGallery = ({ images, ...props }: Props) => {
             >
                 {images.map((src, idx) => (
                     <img
+                        loading="lazy"
                         key={idx}
                         src={src}
                         className={toBEM({ block, element: 'image' })}

@@ -51,6 +51,7 @@ export const PromoSection = ({
             className={toBEM({ block })}
         >
             <img
+                loading="lazy"
                 src={imageSrc}
                 alt={imageAlt}
                 className={toBEM({ block, element: 'image' })}

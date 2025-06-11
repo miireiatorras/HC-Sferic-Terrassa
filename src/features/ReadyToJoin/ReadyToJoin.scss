@@ -18,12 +18,17 @@
         align-items: center;
         justify-content: center;
         flex-wrap: wrap;
+
+        @media (max-width: 500px) {
+            display: block;
+        }
     }
 
     &__image {
         position: relative;
         z-index: 1;
         width: fit-content;
+        transition: transform 0.3s ease-in-out;
 
         &::before {
             content: '';
@@ -34,6 +39,7 @@
             background-color: styles.$verd-logo;
             transform: rotate(-3deg);
             z-index: 0;
+            transition: transform 0.3s ease-in-out;
         }
 
         img {
@@ -43,6 +49,7 @@
             z-index: 10000;
             position: relative;
             transform: rotate(4deg);
+            transition: transform 0.3s ease-in-out;
 
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 
@@ -50,6 +57,10 @@
                 transform: rotate(3deg) scale(1.05);
                 transition: transform 0.3s ease-in-out;
             }
+        }
+        &:hover::before {
+            transform: rotate(-5deg);
+            transition: transform 0.3s ease-in-out;
         }
     }
 
@@ -70,6 +81,7 @@
         @media (max-width: 500px) {
             font-size: 1.5rem;
             text-align: center;
+            margin-top: 3.5rem;
         }
     }
 

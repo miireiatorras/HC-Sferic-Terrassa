@@ -157,7 +157,11 @@ export const ContentSection = ({
                 </div>
 
                 <div className={toBEM({ block, element: 'image' })}>
-                    <img src={imageSrc} alt={imageAlt ?? title} />
+                    <img
+                        loading="lazy"
+                        src={imageSrc}
+                        alt={imageAlt ?? title}
+                    />
                 </div>
             </div>
         </section>

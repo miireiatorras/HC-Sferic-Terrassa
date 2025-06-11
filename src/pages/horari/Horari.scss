@@ -1,6 +1,7 @@
 @use '@/utils/styles';
 
 .Horari {
+    background-color: white;
     &__controls {
         @include styles.content-spacing;
         display: flex;
@@ -28,7 +29,8 @@
         display: flex;
         gap: 1rem;
 
-        .Horari__btn {
+        .Horari__btn,
+        .Horari__btn-imprimir {
             text-decoration: none;
 
             display: flex;
@@ -43,6 +45,12 @@
 
             &:hover {
                 text-decoration: underline;
+            }
+        }
+
+        .Horari__btn-imprimir {
+            @media (max-width: 768px) {
+                display: none;
             }
         }
     }

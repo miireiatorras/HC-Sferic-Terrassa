@@ -32,6 +32,12 @@
         font-weight: bold;
         color: lighten(styles.$verd-clar, 30%);
         z-index: 0;
+
+        @media (max-width: 1000px) {
+            font-size: 4rem;
+            top: -0.5rem;
+            right: 0.5rem;
+        }
     }
 
     &__title {

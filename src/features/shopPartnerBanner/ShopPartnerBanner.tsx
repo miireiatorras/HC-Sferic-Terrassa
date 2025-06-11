@@ -56,6 +56,7 @@ export const ShopPartnerBanner = ({
         >
             <div className={toBEM({ block, element: 'left' })}>
                 <img
+                    loading="lazy"
                     src={logoSrc}
                     alt={logoAlt}
                     className={toBEM({ block, element: 'logo' })}

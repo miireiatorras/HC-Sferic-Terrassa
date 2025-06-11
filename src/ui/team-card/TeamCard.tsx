@@ -41,6 +41,7 @@ export const TeamCard = ({
                     onClick={() => setIsOpen(true)}
                 >
                     <img
+                        loading="lazy"
                         className={toBEM({ block, element: 'image' })}
                         src={imageSrc}
                         alt={title}
@@ -86,6 +87,7 @@ export const TeamCard = ({
             {isOpen && (
                 <div className="ImageModal" onClick={() => setIsOpen(false)}>
                     <img
+                        loading="lazy"
                         src={imageSrc}
                         alt={title}
                         className="ImageModal__img"

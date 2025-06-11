@@ -41,6 +41,7 @@ export const Navbar = (props: NavbarProps) => {
                     className={toBEM({ block, element: 'logo-link' })}
                 >
                     <img
+                        loading="lazy"
                         src="/logo-tranp.png"
                         alt="logo"
                         className={toBEM({ block, element: 'logo-img' })}

@@ -107,7 +107,11 @@ export const ReadyToJoin = ({ ...props }: BaseComponentProps) => {
             <div className={toBEM({ block, element: 'container' })}>
                 <div className={toBEM({ block, element: 'bg' })} />
                 <div className={toBEM({ block, element: 'image' })}>
-                    <img src="/patinem-junts.jpg" alt="Patinem junts!" />
+                    <img
+                        loading="lazy"
+                        src="/patinem-junts.jpg"
+                        alt="Patinem junts!"
+                    />
                 </div>
 
                 <div className={toBEM({ block, element: 'main' })}>

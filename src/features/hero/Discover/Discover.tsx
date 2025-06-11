@@ -19,10 +19,11 @@ export const Discover = ({ ...props }: DiscoverProps) => {
 
             <div className={toBEM({ block, element: 'cards' })}>
                 <Link
-                    to="/el-club"
+                    to="/seccions"
                     className={toBEM({ block, element: 'left-card' })}
                 >
                     <img
+                        loading="lazy"
                         src="/seccions.jpg"
                         alt="Seccions"
                         className={toBEM({ block, element: 'image' })}
@@ -53,7 +54,7 @@ export const Discover = ({ ...props }: DiscoverProps) => {
                         className={toBEM({ block, element: 'card' })}
                     >
                         <img
-                            src="/equips.jpg"
+                            src="/equips.webp"
                             alt="Equips"
                             className={toBEM({ block, element: 'image' })}
                         />

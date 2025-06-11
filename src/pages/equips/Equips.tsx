@@ -13,7 +13,7 @@ import { DefaultAccordion } from '@/ui/defaultAccordion/DefaultAccordion';
 
 const initiacioTeams = [
     {
-        imageSrc: '/fotos-grups/Escola.jpg',
+        imageSrc: '/fotos-grups/Escola-min.webp',
         title: 'Escola',
         members: [
             'Aimar Suárez',
@@ -24,7 +24,7 @@ const initiacioTeams = [
         ],
     },
     {
-        imageSrc: '/fotos-grups/Prebenjami.jpg',
+        imageSrc: '/fotos-grups/Prebenjami-min.webp',
         title: 'Prebenjamí',
         members: [
             'Ibai Mirabet',
@@ -38,7 +38,7 @@ const initiacioTeams = [
         ],
     },
     {
-        imageSrc: '/fotos-grups/BenjamiB.jpg',
+        imageSrc: '/fotos-grups/BenjamiB-min.webp',
         title: 'Benjamí B',
         members: [
             'Paula Río',
@@ -55,7 +55,7 @@ const initiacioTeams = [
 
 const formatiuTeams = [
     {
-        imageSrc: '/fotos-grups/BenjamiA.jpg',
+        imageSrc: '/fotos-grups/BenjamiA-min.webp',
         title: 'Benjamí A',
         members: [
             'Ivet Esteve',
@@ -67,7 +67,7 @@ const formatiuTeams = [
         ],
     },
     {
-        imageSrc: '/fotos-grups/Alevi.jpg',
+        imageSrc: '/fotos-grups/Alevi-min.webp',
         title: 'Aleví',
         members: [
             'Emma Giménez',
@@ -83,7 +83,7 @@ const formatiuTeams = [
         ],
     },
     {
-        imageSrc: '/fotos-grups/Infantil.jpg',
+        imageSrc: '/fotos-grups/Infantil-min.webp',
         title: 'Infantil',
         members: [
             'Laia Bellmunt',
@@ -99,7 +99,7 @@ const formatiuTeams = [
         ],
     },
     {
-        imageSrc: '/fotos-grups/Juvenil.jpg',
+        imageSrc: '/fotos-grups/Juvenil-min.webp',
         title: 'Juvenil',
         members: [
             'Jan Bellmunt',
@@ -114,7 +114,7 @@ const formatiuTeams = [
 
 const seniorTeams = [
     {
-        imageSrc: '/fotos-grups/SeniorMasculiB.jpg',
+        imageSrc: '/fotos-grups/SeniorMasculiB-min.webp',
         title: 'Sènior masculí B',
         members: [
             'Pol Fargas',
@@ -127,7 +127,7 @@ const seniorTeams = [
         ],
     },
     {
-        imageSrc: '/fotos-grups/SeniorMasculiA.jpg',
+        imageSrc: '/fotos-grups/SeniorMasculiA-min.webp',
         title: 'Sènior masculí A',
         members: [
             'Iu Campos',
@@ -142,7 +142,7 @@ const seniorTeams = [
         ],
     },
     {
-        imageSrc: '/fotos-grups/SeniorFemeni.jpg',
+        imageSrc: '/fotos-grups/SeniorFemeni-min.webp',
         title: 'Sènior femení',
         members: [
             'Maite Rosique',
@@ -158,7 +158,7 @@ const seniorTeams = [
         ],
     },
     {
-        imageSrc: '/fotos-grups/Veterans.jpg',
+        imageSrc: '/fotos-grups/Veterans-min.webp',
         title: 'Veterans',
         members: [
             'Joan Morral',

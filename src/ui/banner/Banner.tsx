@@ -30,43 +30,43 @@ const BANNERS: Record<
         title: 'Contacte',
         subtitle:
             'Contacta amb nosaltres per a qualsevol consulta i segueix de prop el nostre club!',
-        image: '/banners/banner-contacte.jpg',
+        image: '/banners/banner-contacte-min.webp',
     },
     equips: {
         title: 'Equips',
         subtitle:
             'Coneix els nostres equips, des de les categories més joves fins a les màximes.',
-        image: '/banners/banner-equips.jpg',
+        image: '/banners/banner-equips-min.webp',
     },
     'el-club': {
         title: 'El Club',
         subtitle:
             'Des de 1952, hem estat construint una tradició d’excel·lència en hoquei patins.',
-        image: '/banners/banner-el-club.jpg',
+        image: '/banners/banner-el-club-min.webp',
     },
     botiga: {
         title: 'Botiga',
         subtitle:
             'Tens tot el que necessites per jugar a hoquei patins. Descobreix la nostra botiga on línia.',
-        image: '/banners/banner-botiga.jpg',
+        image: '/banners/banner-botiga-min.webp',
     },
     'inscriu-te': {
         title: 'Inscriu-te',
         subtitle:
             'Uneix-te a nosaltres! Inscriu‑te i forma part d’aquesta gran família d’hoquei patins.',
-        image: '/banners/banner-inscriute.jpg',
+        image: '/banners/banner-inscriute-min.webp',
     },
     seccions: {
         title: 'Seccions',
         subtitle:
             'Explora les seccions del club i viu hoquei patins amb nosaltres.',
-        image: '/banners/banner-seccions.jpg',
+        image: '/banners/banner-seccions-min.webp',
     },
     horari: {
         title: 'Horari',
         subtitle:
             'Consulta els horaris d’entrenament de cada equip i vine a entrenar amb nosaltres!',
-        image: '/banners/banner-horari.jpg',
+        image: '/banners/banner-horari-min.webp',
     },
 };
 

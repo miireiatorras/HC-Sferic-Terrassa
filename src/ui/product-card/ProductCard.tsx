@@ -58,6 +58,7 @@ export const ProductCard = ({
         >
             <div className={toBEM({ block, element: 'image-wrapper' })}>
                 <img
+                    loading="lazy"
                     src={imageSrc}
                     alt={imageAlt}
                     className={toBEM({ block, element: 'image' })}

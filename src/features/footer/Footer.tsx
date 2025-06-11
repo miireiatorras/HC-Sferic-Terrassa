@@ -18,6 +18,7 @@ export const Footer = (props: FooterProps) => {
             <section className={toBEM({ block, element: 'section' })}>
                 <div className={toBEM({ block, element: 'col-img' })}>
                     <img
+                        loading="lazy"
                         src="/logo-tranp.png"
                         alt="logo"
                         className={toBEM({ block, element: 'logo' })}
@@ -111,6 +112,7 @@ export const Footer = (props: FooterProps) => {
                 </div>
                 <div className={toBEM({ block, element: 'col-img' })}>
                     <img
+                        loading="lazy"
                         src="/logo-sferic-footer.png"
                         alt="logo"
                         className={toBEM({ block, element: 'logo-sferic' })}
@@ -124,6 +126,7 @@ export const Footer = (props: FooterProps) => {
                     Torras
                 </small>
                 <img
+                    loading="lazy"
                     src="/logo-ajuntament.png"
                     alt="Ajuntament"
                     className={toBEM({ block, element: 'ajuntament' })}

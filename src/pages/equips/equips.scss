@@ -1,5 +1,6 @@
 @use '@/utils/styles';
 .Equips {
+    background-color: white;
     &__grid {
         @include styles.content-spacing;
         display: grid;
