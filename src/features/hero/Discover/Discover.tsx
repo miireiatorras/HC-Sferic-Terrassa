@@ -14,10 +14,7 @@ export type DiscoverProps = BaseComponentProps;
 const block = registerBlockName('Discover');
 export const Discover = ({ ...props }: DiscoverProps) => {
     return (
-        <section
-            {...getBaseComponentProps({ ...props, block })}
-            aria-label="Descobreix el nostre club"
-        >
+        <section {...getBaseComponentProps({ ...props, block })}>
             <Title>Descobreix el nostre club</Title>
 
             <div className={toBEM({ block, element: 'cards' })}>

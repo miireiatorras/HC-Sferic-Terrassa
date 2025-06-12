@@ -28,7 +28,7 @@ export const InfoCard = ({ icon, text, ...props }: Props): JSX.Element => {
                 <Icon
                     icon={icon}
                     className={toBEM({ block, element: 'icon' })}
-                    aria-hidden="true"
+                    // aria-hidden="true"
                 />
             </div>
             <p className={toBEM({ block, element: 'text' })}>{text}</p>

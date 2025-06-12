@@ -88,10 +88,10 @@ export const TeamCard = ({
                 <div
                     className="ImageModal"
                     onClick={() => setIsOpen(false)}
-                    role="dialog"
-                    aria-modal="true"
-                    tabIndex={-1}
-                    aria-label={`Imatge ampliada de ${title}`}
+                    // role="dialog"
+                    // aria-modal="true"
+                    // tabIndex={-1}
+                    // aria-label={`Imatge ampliada de ${title}`}
                 >
                     <img
                         loading="lazy"

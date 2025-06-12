@@ -103,17 +103,14 @@ const StatItem = ({
 };
 export const ReadyToJoin = ({ ...props }: BaseComponentProps) => {
     return (
-        <section
-            {...getBaseComponentProps({ ...props, block })}
-            aria-labelledby="ready-to-join-title"
-        >
+        <section {...getBaseComponentProps({ ...props, block })}>
             <div className={toBEM({ block, element: 'container' })}>
                 <div className={toBEM({ block, element: 'bg' })} />
                 <div className={toBEM({ block, element: 'image' })}>
                     <img
                         loading="lazy"
                         src="/patinem-junts.jpg"
-                        alt="Patinem junts! HC SFERIC Terrassa"
+                        alt="Patinem junts!"
                     />
                 </div>
 
@@ -130,11 +127,7 @@ export const ReadyToJoin = ({ ...props }: BaseComponentProps) => {
                             ple d’esperit d’equip!
                         </p>
 
-                        <div
-                            role="list"
-                            aria-label="Estadístiques del club"
-                            className={toBEM({ block, element: 'stats' })}
-                        >
+                        <div className={toBEM({ block, element: 'stats' })}>
                             <StatItem
                                 end={75}
                                 icon="material-symbols-light_trophy-outline"

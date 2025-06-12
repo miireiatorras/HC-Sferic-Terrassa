@@ -95,7 +95,7 @@ export const ContentSection = ({
                                                     block,
                                                     element: 'statIcon',
                                                 })}
-                                                aria-hidden="true"
+                                                // aria-hidden="true"
                                             >
                                                 {s.icon && (
                                                     <Icon

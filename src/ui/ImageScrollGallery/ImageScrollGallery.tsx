@@ -46,9 +46,6 @@ export const ImageScrollGallery = ({ images, ...props }: Props) => {
                         behavior: 'smooth',
                     });
                 }}
-                aria-label="Desplaça la galeria cap a l'esquerra"
-                role="button"
-                tabIndex={0}
             >
                 <Icon
                     icon="chevron-up"
@@ -57,7 +54,6 @@ export const ImageScrollGallery = ({ images, ...props }: Props) => {
                         block,
                         element: 'Icon-left',
                     })}
-                    aria-hidden="true"
                 />
             </div>
 
@@ -65,15 +61,12 @@ export const ImageScrollGallery = ({ images, ...props }: Props) => {
                 ref={containerRef}
                 onScroll={updateScrollButtons}
                 className={toBEM({ block, element: 'container' })}
-                aria-label="Galeria d'imatges scrollable"
-                role="region"
             >
                 {images.map((src, idx) => (
                     <img
                         loading="lazy"
                         key={idx}
                         src={src}
-                        alt={`Imatge ${idx + 1}`}
                         className={toBEM({ block, element: 'image' })}
                     />
                 ))}
@@ -91,9 +84,6 @@ export const ImageScrollGallery = ({ images, ...props }: Props) => {
                         behavior: 'smooth',
                     });
                 }}
-                aria-label="Desplaça la galeria cap a la dreta"
-                role="button"
-                tabIndex={0}
             >
                 <Icon
                     icon="chevron-up"
@@ -102,7 +92,6 @@ export const ImageScrollGallery = ({ images, ...props }: Props) => {
                         block,
                         element: 'Icon-right',
                     })}
-                    aria-hidden="true"
                 />
             </div>
         </div>
