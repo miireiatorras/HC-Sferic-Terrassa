@@ -16,12 +16,23 @@
         display: flex;
         align-items: center;
         gap: 0.5rem;
+        background-color: styles.$blanc;
+
+        label {
+            display: none;
+        }
 
         select {
+            background-color: styles.$blanc;
             padding: 0.4rem 0.6rem;
             border: 1px solid #ccc;
             border-radius: styles.$corner-sm;
             font-size: 0.9rem;
+
+            option {
+                background-color: styles.$blanc;
+                color: styles.$negre;
+            }
         }
     }
 

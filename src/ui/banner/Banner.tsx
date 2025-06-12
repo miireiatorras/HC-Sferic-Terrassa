@@ -84,6 +84,7 @@ export const Banner = ({ variant, ...props }: BannerProps) => {
                 block,
                 modifiers: [variant],
             })}
+            aria-label={`Banner: ${title}`}
         >
             <div
                 className={toBEM({ block, element: 'background' })}

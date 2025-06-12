@@ -47,6 +47,7 @@
     &__details {
         display: flex;
         flex-direction: column;
+        color: styles.$negre;
 
         @media (max-width: 768px) {
             align-items: center;

@@ -34,22 +34,25 @@ export const Navbar = (props: NavbarProps) => {
         <nav
             {...getBaseComponentProps({ ...props, block })}
             className={toBEM({ block })}
+            aria-label="Navegació principal"
         >
             <div className={toBEM({ block, element: 'brand' })}>
                 <NavLink
                     to="/"
                     className={toBEM({ block, element: 'logo-link' })}
+                    aria-label="Inici"
                 >
                     <img
                         loading="lazy"
-                        src="/logo-tranp.png"
-                        alt="logo"
+                        src="/favicon.ico"
+                        alt="logo HC SFERIC Terrassa"
                         className={toBEM({ block, element: 'logo-img' })}
                     />
                 </NavLink>
                 <NavLink
                     to="/"
                     className={toBEM({ block, element: 'title-link' })}
+                    aria-label="Inici"
                 >
                     <h2 className={toBEM({ block, element: 'title' })}>
                         HC. SFERIC TERRASSA
@@ -61,19 +64,26 @@ export const Navbar = (props: NavbarProps) => {
                 className={toBEM({ block, element: 'toggle' })}
                 onClick={() => setIsOpen((o) => !o)}
                 aria-label={isOpen ? 'Tancar menú' : 'Obrir menú'}
+                aria-expanded={isOpen}
+                aria-controls="navbar-menu"
             >
                 {isOpen ? (
-                    <Icon icon="clear" size="lg" />
+                    <Icon icon="clear" size="lg" aria-hidden="true" />
                 ) : (
-                    <Icon icon="menu" size="lg" />
+                    <Icon icon="menu" size="lg" aria-hidden="true" />
                 )}
             </button>
 
-            <ul className={toBEM({ block, element: 'menu' })}>
+            <ul
+                className={toBEM({ block, element: 'menu' })}
+                role="menubar"
+                id="navbar-menu"
+            >
                 {links.map(({ to, label }) => (
                     <li
                         key={to}
                         className={toBEM({ block, element: 'menu-item' })}
+                        role="none"
                     >
                         <NavLink
                             to={to}
@@ -84,6 +94,9 @@ export const Navbar = (props: NavbarProps) => {
                                     modifiers: isActive ? ['active'] : [],
                                 })
                             }
+                            role="menuitem"
+                            tabIndex={0}
+                            aria-label={label}
                         >
                             {label}
                         </NavLink>

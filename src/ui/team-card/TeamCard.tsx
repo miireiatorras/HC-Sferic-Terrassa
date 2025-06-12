@@ -53,14 +53,14 @@ export const TeamCard = ({
                                 element: 'overlayInner',
                             })}
                         >
-                            <h3
+                            <p
                                 className={toBEM({
                                     block,
                                     element: 'overlayTitle',
                                 })}
                             >
                                 {title}
-                            </h3>
+                            </p>
                             <ul
                                 className={toBEM({
                                     block,
@@ -85,7 +85,14 @@ export const TeamCard = ({
             </div>
 
             {isOpen && (
-                <div className="ImageModal" onClick={() => setIsOpen(false)}>
+                <div
+                    className="ImageModal"
+                    onClick={() => setIsOpen(false)}
+                    role="dialog"
+                    aria-modal="true"
+                    tabIndex={-1}
+                    aria-label={`Imatge ampliada de ${title}`}
+                >
                     <img
                         loading="lazy"
                         src={imageSrc}

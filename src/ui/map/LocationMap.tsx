@@ -32,9 +32,9 @@ export const LocationMap: React.FC<LocationMapProps> = ({
                     />
                 </div>
                 <div className={toBEM({ block, element: 'details' })}>
-                    <h4 className={toBEM({ block, element: 'title' })}>
+                    <p className={toBEM({ block, element: 'title' })}>
                         {title}
-                    </h4>
+                    </p>
                     <p className={toBEM({ block, element: 'address' })}>
                         {address}
                     </p>

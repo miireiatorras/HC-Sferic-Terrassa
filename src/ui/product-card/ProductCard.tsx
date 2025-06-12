@@ -65,7 +65,7 @@ export const ProductCard = ({
                 />
             </div>
             <div className={toBEM({ block, element: 'info' })}>
-                <h4 className={toBEM({ block, element: 'title' })}>{title}</h4>
+                <p className={toBEM({ block, element: 'title' })}>{title}</p>
                 <div className={toBEM({ block, element: 'price' })}>
                     {price}
                 </div>

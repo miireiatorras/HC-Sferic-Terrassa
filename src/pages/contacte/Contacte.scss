@@ -2,6 +2,7 @@
 
 .Contacte {
     background-color: white;
+    color: styles.$negre;
     &__parlem-section {
         background-color: styles.$verd-logo;
         padding: 27px 20px 50px 0;
@@ -86,4 +87,5 @@
 html,
 body {
     overflow-x: hidden;
+    color: styles.$negre;
 }

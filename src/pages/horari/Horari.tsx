@@ -141,6 +141,12 @@ export const Horari = ({ ...props }: HorariProps) => {
                 <div className={toBEM({ block, element: 'controls' })}>
                     <div className={toBEM({ block, element: 'filter' })}>
                         <Icon icon="filter" size="md" />
+                        <label
+                            htmlFor="horari-filter"
+                            className={toBEM({ block, element: 'label' })}
+                        >
+                            Filtra per categoria
+                        </label>
                         <select
                             value={filter}
                             onChange={(e) =>

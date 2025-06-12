@@ -15,6 +15,7 @@ import { Inscripcions } from './pages/inscripcions/Inscripcions';
 import { Horari } from './pages/horari/Horari';
 import Footer from './features/footer/Footer';
 import { ScrollButton } from './ui/scroll-button/ScrollButton';
+import NotFound from './pages/NotFound';
 
 export type AppProps = BaseComponentProps & {};
 
@@ -34,6 +35,7 @@ export const App = ({ ...props }: AppProps) => {
                     <Route path="/botiga" element={<Botiga />} />
                     <Route path="/contacte" element={<Contacte />} />
                     <Route path="/inscripcions" element={<Inscripcions />} />
+                    <Route path="*" element={<NotFound />} />
                 </Routes>
                 <ScrollButton />
 
