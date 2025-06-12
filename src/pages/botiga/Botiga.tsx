@@ -12,6 +12,7 @@ import { Alert } from '@/ui/alert/Alert';
 import { ProductCard } from '@/ui/product-card/ProductCard';
 import { Button } from '@/ui/button/Button';
 import { Helmet } from '@dr.pogodin/react-helmet';
+import { NavLink } from 'react-router-dom';
 
 export type BotigaProps = BaseComponentProps & {};
 
@@ -153,6 +154,8 @@ export const Botiga = ({ ...props }: BotigaProps) => {
                             })}
                         >
                             <Button
+                                as={NavLink}
+                                to="https://sfericok.playoffinformatica.com/Botiga.php"
                                 variant="primary-green"
                                 className={toBEM({
                                     block,
@@ -162,6 +165,8 @@ export const Botiga = ({ ...props }: BotigaProps) => {
                                 Accedeix a la nostra botiga online
                             </Button>
                             <Button
+                                as={NavLink}
+                                to="https://hockeyteam.es/es/index.php?controller=search&s=sferic"
                                 variant="secondary-green"
                                 className={toBEM({
                                     block,

@@ -6,7 +6,7 @@ import {
 } from '@/utils';
 import './footer.scss';
 import { Icon } from '@/ui/Icon/Icon';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 export type FooterProps = BaseComponentProps;
 
@@ -17,12 +17,18 @@ export const Footer = (props: FooterProps) => {
         <footer {...getBaseComponentProps({ ...props, block })}>
             <section className={toBEM({ block, element: 'section' })}>
                 <div className={toBEM({ block, element: 'col-img' })}>
-                    <img
-                        loading="lazy"
-                        src="/favicon.ico"
-                        alt="logo"
-                        className={toBEM({ block, element: 'logo' })}
-                    />
+                    <NavLink
+                        to="/"
+                        className={toBEM({ block, element: 'logo-link' })}
+                        aria-label="Inici"
+                    >
+                        <img
+                            loading="lazy"
+                            src="/favicon.ico"
+                            alt="logo"
+                            className={toBEM({ block, element: 'logo' })}
+                        />
+                    </NavLink>
                 </div>
                 <div className={toBEM({ block, element: 'col' })}>
                     <p
@@ -34,7 +40,7 @@ export const Footer = (props: FooterProps) => {
                         HC. SFERIC Terrassa
                     </p>
                     <div className={toBEM({ block, element: 'ubicacio' })}>
-                        <Icon icon="location_on" size="lg" />
+                        <Icon icon="location_on" size="lg" aria-hidden="true" />
                         <p>
                             Pavelló Municipal de “La Maurina”
                             <br />
@@ -42,14 +48,29 @@ export const Footer = (props: FooterProps) => {
                         </p>
                     </div>
                     <div className={toBEM({ block, element: 'email' })}>
-                        <Icon icon="email" size="lg" />
-                        <a href="mailto:info.sfericok@gmail.com">
+                        <Icon icon="email" size="lg" aria-hidden="true" />
+                        <a
+                            href="mailto:info.sfericok@gmail.com"
+                            aria-label="Envia un correu a info.sfericok@gmail.com"
+                        >
                             info.sfericok@gmail.com
                         </a>
                     </div>
                     <div className={toBEM({ block, element: 'telefon' })}>
-                        <Icon icon="call" size="lg" />
-                        <p>(+34) 609 061 492 / 616 860 388</p>
+                        <Icon icon="call" size="lg" aria-hidden="true" />
+                        <a
+                            href="tel:+34609061492"
+                            aria-label="Truca al 609 061 492"
+                        >
+                            (+34) 609 061 492
+                        </a>{' '}
+                        /{' '}
+                        <a
+                            href="tel:+34616860388"
+                            aria-label="Truca al 616 860 388"
+                        >
+                            616 860 388
+                        </a>
                     </div>
                 </div>
 
@@ -100,11 +121,12 @@ export const Footer = (props: FooterProps) => {
                         Segueix-nos!
                     </p>
                     <div className={toBEM({ block, element: 'instagram' })}>
-                        <Icon icon="instagram" size="lg" />
+                        <Icon icon="instagram" size="lg" aria-hidden="true" />
                         <a
                             href="https://www.instagram.com/oksfericterrassa/"
                             target="_blank"
                             rel="noopener noreferrer"
+                            aria-label="Instagram HC SFERIC Terrassa"
                         >
                             @oksfericterrassa
                         </a>
@@ -114,7 +136,7 @@ export const Footer = (props: FooterProps) => {
                     <img
                         loading="lazy"
                         src="/logo-sferic-footer.png"
-                        alt="logo"
+                        alt="logo HC SFERIC Terrassa"
                         className={toBEM({ block, element: 'logo-sferic' })}
                     />
                 </div>
