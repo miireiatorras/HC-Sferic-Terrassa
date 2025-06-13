@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import {
     ShopPartnerBanner,
-    Props as ShopPartnerBannerProps,
+    ShopPartnerBannerProps as ShopPartnerBannerProps,
 } from './ShopPartnerBanner';
 import './ShopPartnerBanner.scss';
 

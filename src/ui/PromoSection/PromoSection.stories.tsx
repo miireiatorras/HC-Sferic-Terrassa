@@ -1,6 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import { PromoSection, Props as PromoSectionProps } from './PromoSection';
+import {
+    PromoSection,
+    PromoSectionProps as PromoSectionProps,
+} from './PromoSection';
 import './PromoSection.scss';
 
 const meta: Meta<typeof PromoSection> = {
