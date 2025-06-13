@@ -1,7 +1,14 @@
+import React from 'react';
+import data from './inscripcions.json';
+import './inscripcions.scss';
+
 import { Helmet } from '@dr.pogodin/react-helmet';
-import { Alert } from '@/ui/alert/Alert';
+import { Alert, AlertProps } from '@/ui/alert/Alert';
 import { Banner } from '@/ui/banner/Banner';
-import { PromoSection } from '@/ui/PromoSection/PromoSection';
+import {
+    PromoSection,
+    PromoSectionProps,
+} from '@/ui/PromoSection/PromoSection';
 import Title from '@/ui/titles/Title';
 import {
     registerBlockName,
@@ -9,78 +16,101 @@ import {
     getBaseComponentProps,
     toBEM,
 } from '@/utils';
-import './inscripcions.scss';
 
 export type InscripcionsProps = BaseComponentProps;
 
+interface SEO {
+    title: string;
+    description: string;
+    canonical: string;
+    og: {
+        url: string;
+        image: string;
+        title: string;
+        description: string;
+    };
+    twitter: {
+        card: string;
+    };
+}
+interface InscripcionsData {
+    seo: SEO;
+    bannerVariant: string;
+    heading: string;
+    alert: {
+        icon: AlertProps['icon'];
+        variant: AlertProps['variant'];
+        text: string;
+    };
+    promoSection: PromoSectionProps & { text: string; buttonText: string };
+    footerParagraph: string;
+}
+
+const {
+    seo,
+    bannerVariant = 'inscriu-te',
+    heading = '',
+    alert = { icon: 'launch', variant: 'open-in-new-tab', text: '' },
+    promoSection = {
+        imageSrc: '',
+        imageAlt: '',
+        heading: '',
+        text: '',
+        buttonText: '',
+    },
+    footerParagraph = '',
+} = (data as InscripcionsData) || {};
+
 const block = registerBlockName('Inscripcions');
 
-export const Inscripcions = ({ ...props }: InscripcionsProps) => {
-    const description = `Inscripcions obertes per a la temporada 2025-2026 del HC SFERIC Terrassa. Apunta't ara i viu la passió de l’hoquei patins al millor club de Terrassa!`;
-
+export const Inscripcions: React.FC<InscripcionsProps> = (props) => {
     return (
         <>
             <Helmet prioritizeSeoTags>
-                <title>HC SFERIC Terrassa – Inscripcions</title>
-                <meta name="description" content={description} />
+                <title>{seo.title}</title>
+                <meta name="description" content={seo.description} />
+                <link rel="canonical" href={seo.canonical} />
 
-                <link
-                    rel="canonical"
-                    href="https://sfericok.cat/inscripcions"
-                />
-
-                <meta
-                    property="og:url"
-                    content="https://sfericok.cat/inscripcions"
-                />
-                <meta
-                    property="og:image"
-                    content="https://sfericok.cat/inscripcions-full.png"
-                />
-                <meta
-                    property="og:title"
-                    content="HC SFERIC Terrassa – Inscripcions"
-                />
-                <meta property="og:description" content={description} />
-
-                <meta name="twitter:card" content="summary_large_image" />
+                <meta property="og:url" content={seo.og.url} />
+                <meta property="og:image" content={seo.og.image} />
+                <meta property="og:title" content={seo.og.title} />
+                <meta property="og:description" content={seo.og.description} />
+                <meta name="twitter:card" content={seo.twitter.card} />
             </Helmet>
 
             <div {...getBaseComponentProps({ ...props, block })}>
                 <Banner
-                    variant="inscriu-te"
+                    variant={
+                        bannerVariant as React.ComponentProps<
+                            typeof Banner
+                        >['variant']
+                    }
                     className={toBEM({ block, element: 'Banner' })}
                 />
 
                 <Title className={toBEM({ block, element: 'Title' })}>
-                    Apunta't i gaudeix del nostre club
+                    {heading}
                 </Title>
-                <div
-                    className={toBEM({
-                        block,
-                        element: 'div',
-                    })}
-                >
+
+                <div className={toBEM({ block, element: 'content' })}>
                     <Alert
-                        icon="launch"
-                        variant="open-in-new-tab"
+                        icon={alert.icon}
+                        variant={alert.variant}
                         className={toBEM({ block, element: 'Alert' })}
                     >
-                        Les inscripcions es gestionen a través de la plataforma
-                        PlayOff. Clicant el botó, s’accedeix al formulari que
-                        s’ha de realitzar per apuntar-te al club i gaudir de
-                        tots els seus avantatges.
+                        {alert.text}
                     </Alert>
+
                     <PromoSection
-                        imageSrc="/inscripcions-full.png"
-                        imageAlt="Season 2024-2025 Flyer"
-                        heading="Ja estan OBERTES les inscripcions de la TEMPORADA 2025-2026 🎉!"
-                        children="No et quedis fora! Uneix-te a la família Sferic Hoquei Patins Terrassa i viu la passió de l’hoquei en un ambient únic amb els millors entrenadors i companys 💪"
-                        buttonText="Apunta't ara!"
+                        imageSrc={promoSection.imageSrc}
+                        imageAlt={promoSection.imageAlt}
+                        heading={promoSection.heading}
+                        children={promoSection.text}
+                        buttonText={promoSection.buttonText}
                     />
+
                     <p className={toBEM({ block, element: 'p' })}>
-                        VENIU A GAUDIR DE L’HOQUEI PATINS!!! #SomSFERIC
-                        #ORGULLVERD
+                        {footerParagraph}
                     </p>
                 </div>
             </div>

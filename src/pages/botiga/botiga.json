@@ -1,0 +1,97 @@
+{
+    "seo": {
+        "title": "HC SFERIC Terrassa – Botiga",
+        "description": "Compra el material oficial del HC SFERIC Terrassa: roba esportiva, equipació i accessoris disponibles en línia o a la nostra botiga col·laboradora de Cerdanyola del Vallès.",
+        "canonical": "https://sfericok.cat/botiga",
+        "og": {
+            "url": "https://sfericok.cat/botiga",
+            "image": "/logo-tranp-negre.png",
+            "title": "HC SFERIC Terrassa – Botiga",
+            "description": "Compra el material oficial del HC SFERIC Terrassa: roba esportiva, equipació i accessoris disponibles en línia o a la nostra botiga col·laboradora de Cerdanyola del Vallès."
+        },
+        "twitter": {
+            "card": "summary_large_image"
+        }
+    },
+    "bannerVariant": "botiga",
+    "header": "Compra aquí el nostre material!",
+    "shopPartnerBanner": {
+        "logoSrc": "/logos-sponsors/hockeyteam-logo.png",
+        "logoAlt": "Hockey Team logo",
+        "title": "Botiga col·laboradora de material oficial",
+        "items": [
+            "Material de qualitat premium",
+            "Roba esportiva per a professionals"
+        ],
+        "reviewsLabel": "Opinions verificades",
+        "rating": 5,
+        "className": "shop-partner-banner"
+    },
+    "paragraphs": [
+        "Oferim material oficial de l’Hoquei SFERIC disponible a la venta a la nostra botiga a Cerdanyola del Vallès. El millor servei, el millor material i al millor preu. Es pot demanar amb recollida a la botiga o entrega al Club. Pots aconseguir la teva equipació clicant sobre les samarretes. Agafa la teva!",
+        "Per a demanar mitjetes, estics i/o buff’s, o si tens material que no utilitzes, contacta’ns!"
+    ],
+    "alert": {
+        "variant": "open-in-new-tab",
+        "icon": "launch",
+        "text": "El material està disponible a la venta a través de la plataforma externa Playoff. Clicant al botó \"Compra Ara\", et redirigirà a la seva pàgina web."
+    },
+    "productsSection": {
+        "buttons": [
+            {
+                "text": "Accedeix a la nostra botiga online",
+                "href": "https://sfericok.playoffinformatica.com/Botiga.php",
+                "variant": "primary-green"
+            },
+            {
+                "text": "Accedeix a la botiga Hockey Team™",
+                "href": "https://hockeyteam.es/es/index.php?controller=search&s=sferic",
+                "variant": "secondary-green"
+            }
+        ],
+        "heading": "Productes populars de Hockey Team™ i de la nostra botiga online",
+        "subheading": "Consulta aquí els nostres productes destacats",
+        "products": [
+            {
+                "imageSrc": "/camiseta-jugador-1a-equipacion-hc-sferic-veteranos.jpg",
+                "imageAlt": "Samarreta jugador 1a equipació",
+                "title": "Faldilla SFERIC",
+                "price": "32€",
+                "subtitle": "(Impostos inclosos)",
+                "href": "https://hockeyteam.es/es/hc-sferic-terrassa/1406-584926-camiseta-jugador-1a-equipacion-hc-sferic-veteranos.html#/80-talla-s"
+            },
+            {
+                "imageSrc": "/camiseta-portero-hc-castellar.jpg",
+                "imageAlt": "Samarreta porter",
+                "title": "Samarreta porter",
+                "price": "32€",
+                "subtitle": "(Impostos inclosos)",
+                "href": "https://hockeyteam.es/es/hc-sferic-terrassa/1360-584074-camiseta-portero-hc-castellar.html#/80-talla-s"
+            },
+            {
+                "imageSrc": "/faldilla-jugadora-hc-castellar.jpg",
+                "imageAlt": "Faldilla SFERIC",
+                "title": "Faldilla SFERIC",
+                "price": "32€",
+                "subtitle": "(Impostos inclosos)",
+                "href": "https://hockeyteam.es/es/hc-sferic-terrassa/1361-584083-faldilla-jugadora-hc-castellar.html#/80-talla-s"
+            },
+            {
+                "imageSrc": "/mitjons.png",
+                "imageAlt": "Mitjeta SFERIC",
+                "title": "Mitjeta SFERIC",
+                "price": "11€",
+                "subtitle": "(Impostos inclosos)",
+                "href": "https://sfericok.playoffinformatica.com/Botiga.php"
+            },
+            {
+                "imageSrc": "/sticks.png",
+                "imageAlt": "Sticks SFERIC",
+                "title": "Sticks SFERIC",
+                "price": "41,14€",
+                "subtitle": "(Impostos inclosos)",
+                "href": "https://sfericok.playoffinformatica.com/Botiga.php"
+            }
+        ]
+    }
+}

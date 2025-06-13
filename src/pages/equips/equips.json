@@ -1,0 +1,189 @@
+{
+    "seo": {
+        "title": "HC SFERIC Terrassa – Equips",
+        "description": "Descobreix tots els equips del HC SFERIC Terrassa: iniciació, formació i sèniors. Consulta jugadors, fotos i detalls de cada categoria.",
+        "canonical": "https://sfericok.cat/equips",
+        "og": {
+            "url": "https://sfericok.cat/equips",
+            "image": "/logo-tranp-negre.png",
+            "title": "HC SFERIC Terrassa – Equips",
+            "description": "Descobreix tots els equips del HC SFERIC Terrassa: iniciació, formació i sèniors. Consulta jugadors, fotos i detalls de cada categoria."
+        },
+        "twitter": {
+            "card": "summary_large_image"
+        }
+    },
+    "bannerVariant": "equips",
+    "categories": [
+        {
+            "title": "Iniciació",
+            "teams": [
+                {
+                    "imageSrc": "/fotos-grups/Escola-min.webp",
+                    "title": "Escola",
+                    "members": [
+                        "Aimar Suárez",
+                        "Alma Ejea",
+                        "Lluc Soler",
+                        "Mar Villalba",
+                        "Anna"
+                    ]
+                },
+                {
+                    "imageSrc": "/fotos-grups/Prebenjami-min.webp",
+                    "title": "Prebenjamí",
+                    "members": [
+                        "Ibai Mirabet",
+                        "Clara López",
+                        "Abril Tallon",
+                        "Pol Reguant",
+                        "Aina Rediu",
+                        "Paula Río",
+                        "Ariadna Mirabet",
+                        "Roc Villalba"
+                    ]
+                },
+                {
+                    "imageSrc": "/fotos-grups/BenjamiB-min.webp",
+                    "title": "Benjamí B",
+                    "members": [
+                        "Paula Río",
+                        "Abril Tallon",
+                        "Clara López",
+                        "Dídac Río",
+                        "Marina Barrio",
+                        "Samuel Crespo",
+                        "Àlex Osuna",
+                        "Emilio Osuna"
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Hoquei formatiu",
+            "teams": [
+                {
+                    "imageSrc": "/fotos-grups/BenjamiA-min.webp",
+                    "title": "Benjamí A",
+                    "members": [
+                        "Ivet Esteve",
+                        "Marina Sans",
+                        "Èlia Ramírez",
+                        "Adrián Alcántara",
+                        "Guillem Giménez",
+                        "Oliver García"
+                    ]
+                },
+                {
+                    "imageSrc": "/fotos-grups/Alevi-min.webp",
+                    "title": "Aleví",
+                    "members": [
+                        "Emma Giménez",
+                        "Marina Álvarez",
+                        "Laia Bellmunt",
+                        "Llorenç Salvador",
+                        "Arlet Ramírez",
+                        "Laia Álvarez",
+                        "Mireia Ribas",
+                        "Miquel Sánchez",
+                        "Mima Campos",
+                        "Melanie Garcia"
+                    ]
+                },
+                {
+                    "imageSrc": "/fotos-grups/Infantil-min.webp",
+                    "title": "Infantil",
+                    "members": [
+                        "Laia Bellmunt",
+                        "Llorenç Salvador",
+                        "Emma Giménez",
+                        "Luna Osuna",
+                        "Arlet Ramírez",
+                        "Mireia Ribas",
+                        "Mima Campos",
+                        "Laia Álvarez",
+                        "Quim Agudo",
+                        "Marina Álvarez"
+                    ]
+                },
+                {
+                    "imageSrc": "/fotos-grups/Juvenil-min.webp",
+                    "title": "Juvenil",
+                    "members": [
+                        "Jan Bellmunt",
+                        "Iu Campos",
+                        "Luna Osuna",
+                        "Júlia Codinas",
+                        "Quim Agudo",
+                        "Emma Escobar"
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Sèniors",
+            "teams": [
+                {
+                    "imageSrc": "/fotos-grups/SeniorMasculiB-min.webp",
+                    "title": "Sènior masculí B",
+                    "members": [
+                        "Pol Fargas",
+                        "Roger Sallent",
+                        "Genís Martínez",
+                        "Pol Costa",
+                        "Albert Segura",
+                        "Enric Amadeo",
+                        "Jaume Collell"
+                    ]
+                },
+                {
+                    "imageSrc": "/fotos-grups/SeniorMasculiA-min.webp",
+                    "title": "Sènior masculí A",
+                    "members": [
+                        "Iu Campos",
+                        "David Boces",
+                        "Ivan Alegre",
+                        "Nacho Hortal",
+                        "Jan Bellmunt",
+                        "Adri Hortal",
+                        "Gerard Puig",
+                        "Guiu Puignenllat",
+                        "Júlia Codinas"
+                    ]
+                },
+                {
+                    "imageSrc": "/fotos-grups/SeniorFemeni-min.webp",
+                    "title": "Sènior femení",
+                    "members": [
+                        "Maite Rosique",
+                        "Gemma Cortés",
+                        "Lara Jaime",
+                        "Laura Manzanares",
+                        "Emma Escobar",
+                        "Alba Atienza",
+                        "Ingrid Mariscal",
+                        "Marta Alonso",
+                        "Ona Puignenllat",
+                        "Maria Baucells"
+                    ]
+                },
+                {
+                    "imageSrc": "/fotos-grups/Veterans-min.webp",
+                    "title": "Veterans",
+                    "members": [
+                        "Joan Morral",
+                        "Sergio Gatón",
+                        "Iu Campos",
+                        "Francesc Cortés",
+                        "Carlos Moya",
+                        "Marc Esteve",
+                        "Oscar Anglada",
+                        "Albert De Rueda",
+                        "Santi Lleonart",
+                        "Edu Villalba"
+                    ]
+                }
+            ]
+        }
+    ]
+}

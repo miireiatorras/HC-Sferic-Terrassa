@@ -9,7 +9,7 @@ import './ProductCard.scss';
 
 const block = registerBlockName('ProductCard');
 
-export type Props = BaseComponentProps & {
+export type ProductCardProps = BaseComponentProps & {
     /** URL of the product image */
     imageSrc: string;
     /** Alt text for the product image */
@@ -40,7 +40,7 @@ export const ProductCard = ({
     onClick,
     href,
     ...props
-}: Props): JSX.Element => {
+}: ProductCardProps): JSX.Element => {
     const isClickable = Boolean(onClick || href);
     const modifiers = isClickable ? ['clickable'] : [];
     const Tag = href ? 'a' : 'div';

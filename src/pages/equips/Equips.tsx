@@ -1,4 +1,11 @@
+import React from 'react';
+import data from './equips.json';
+import './equips.scss';
+
 import { Helmet } from '@dr.pogodin/react-helmet';
+import { Banner } from '@/ui/banner/Banner';
+import { TeamCard, TeamCardProps } from '@/ui/team-card/TeamCard';
+import { DefaultAccordion } from '@/ui/defaultAccordion/DefaultAccordion';
 import {
     registerBlockName,
     BaseComponentProps,
@@ -6,244 +13,64 @@ import {
     toBEM,
 } from '@/utils';
 
-import './equips.scss';
-import { Banner } from '@/ui/banner/Banner';
-import { TeamCard } from '@/ui/team-card/TeamCard';
-import { DefaultAccordion } from '@/ui/defaultAccordion/DefaultAccordion';
+interface SEO {
+    title: string;
+    description: string;
+    canonical: string;
+    og: { url: string; image: string; title: string; description: string };
+    twitter: { card: string };
+}
 
-const initiacioTeams = [
-    {
-        imageSrc: '/fotos-grups/Escola-min.webp',
-        title: 'Escola',
-        members: [
-            'Aimar Suárez',
-            'Alma Ejea',
-            'Lluc Soler',
-            'Mar Villalba',
-            'Anna',
-        ],
-    },
-    {
-        imageSrc: '/fotos-grups/Prebenjami-min.webp',
-        title: 'Prebenjamí',
-        members: [
-            'Ibai Mirabet',
-            'Clara López',
-            'Abril Tallon',
-            'Pol Reguant',
-            'Aina Rediu',
-            'Paula Río',
-            'Ariadna Mirabet',
-            'Roc Villalba',
-        ],
-    },
-    {
-        imageSrc: '/fotos-grups/BenjamiB-min.webp',
-        title: 'Benjamí B',
-        members: [
-            'Paula Río',
-            'Abril Tallon',
-            'Clara López',
-            'Dídac Río',
-            'Marina Barrio',
-            'Samuel Crespo',
-            'Àlex Osuna',
-            'Emilio Osuna',
-        ],
-    },
-];
+interface Category {
+    title: string;
+    teams: TeamCardProps[];
+}
 
-const formatiuTeams = [
-    {
-        imageSrc: '/fotos-grups/BenjamiA-min.webp',
-        title: 'Benjamí A',
-        members: [
-            'Ivet Esteve',
-            'Marina Sans',
-            'Èlia Ramírez',
-            'Adrián Alcántara',
-            'Guillem Giménez',
-            'Oliver García',
-        ],
-    },
-    {
-        imageSrc: '/fotos-grups/Alevi-min.webp',
-        title: 'Aleví',
-        members: [
-            'Emma Giménez',
-            'Marina Álvarez',
-            'Laia Bellmunt',
-            'Llorenç Salvador',
-            'Arlet Ramírez',
-            'Laia Álvarez',
-            'Mireia Ribas',
-            'Miquel Sánchez',
-            'Mima Campos',
-            'Melanie Garcia',
-        ],
-    },
-    {
-        imageSrc: '/fotos-grups/Infantil-min.webp',
-        title: 'Infantil',
-        members: [
-            'Laia Bellmunt',
-            'Llorenç Salvador',
-            'Emma Giménez',
-            'Luna Osuna',
-            'Arlet Ramírez',
-            'Mireia Ribas',
-            'Mima Campos',
-            'Laia Álvarez',
-            'Quim Agudo',
-            'Marina Álvarez',
-        ],
-    },
-    {
-        imageSrc: '/fotos-grups/Juvenil-min.webp',
-        title: 'Juvenil',
-        members: [
-            'Jan Bellmunt',
-            'Iu Campos',
-            'Luna Osuna',
-            'Júlia Codinas',
-            'Quim Agudo',
-            'Emma Escobar',
-        ],
-    },
-];
+interface EquipsData {
+    seo: SEO;
+    bannerVariant: string;
+    categories: Category[];
+}
 
-const seniorTeams = [
-    {
-        imageSrc: '/fotos-grups/SeniorMasculiB-min.webp',
-        title: 'Sènior masculí B',
-        members: [
-            'Pol Fargas',
-            'Roger Sallent',
-            'Genís Martínez',
-            'Pol Costa',
-            'Albert Segura',
-            'Enric Amadeo',
-            'Jaume Collell',
-        ],
-    },
-    {
-        imageSrc: '/fotos-grups/SeniorMasculiA-min.webp',
-        title: 'Sènior masculí A',
-        members: [
-            'Iu Campos',
-            'David Boces',
-            'Ivan Alegre',
-            'Nacho Hortal',
-            'Jan Bellmunt',
-            'Adri Hortal',
-            'Gerard Puig',
-            'Guiu Puignenllat',
-            'Júlia Codinas',
-        ],
-    },
-    {
-        imageSrc: '/fotos-grups/SeniorFemeni-min.webp',
-        title: 'Sènior femení',
-        members: [
-            'Maite Rosique',
-            'Gemma Cortés',
-            'Lara Jaime',
-            'Laura Manzanares',
-            'Emma Escobar',
-            'Alba Atienza',
-            'Ingrid Mariscal',
-            'Marta Alonso',
-            'Ona Puignenllat',
-            'Maria Baucells',
-        ],
-    },
-    {
-        imageSrc: '/fotos-grups/Veterans-min.webp',
-        title: 'Veterans',
-        members: [
-            'Joan Morral',
-            'Sergio Gatón',
-            'Iu Campos',
-            'Francesc Cortés',
-            'Carlos Moya',
-            'Marc Esteve',
-            'Oscar Anglada',
-            'Albert De Rueda',
-            'Santi Lleonart',
-            'Edu Villalba',
-        ],
-    },
-];
+const { seo, bannerVariant, categories } = data as EquipsData;
+const block = registerBlockName('Equips');
 
 export type EquipsProps = BaseComponentProps;
 
-const block = registerBlockName('Equips');
-
-export const Equips = ({ ...props }: EquipsProps) => {
-    const description = `Descobreix tots els equips del HC SFERIC Terrassa: iniciació, formació i sèniors. Consulta jugadors, fotos i detalls de cada categoria.`;
-
+export const Equips: React.FC<EquipsProps> = (props) => {
     return (
         <>
             <Helmet prioritizeSeoTags>
-                <title>HC SFERIC Terrassa – Equips</title>
-                <meta name="description" content={description} />
+                <title>{seo.title}</title>
+                <meta name="description" content={seo.description} />
+                <link rel="canonical" href={seo.canonical} />
 
-                <link rel="canonical" href="https://sfericok.cat/equips" />
-
-                <meta property="og:url" content="https://sfericok.cat/equips" />
-                <meta property="og:image" content="/logo-tranp-negre.png" />
-                <meta
-                    property="og:title"
-                    content="HC SFERIC Terrassa – Equips"
-                />
-                <meta property="og:description" content={description} />
-
-                <meta name="twitter:card" content="summary_large_image" />
+                <meta property="og:url" content={seo.og.url} />
+                <meta property="og:image" content={seo.og.image} />
+                <meta property="og:title" content={seo.og.title} />
+                <meta property="og:description" content={seo.og.description} />
+                <meta name="twitter:card" content={seo.twitter.card} />
             </Helmet>
 
             <div {...getBaseComponentProps({ ...props, block })}>
                 <Banner
-                    variant="equips"
+                    variant={
+                        bannerVariant as React.ComponentProps<
+                            typeof Banner
+                        >['variant']
+                    }
                     className={toBEM({ block, element: 'Banner' })}
                 />
-                <div className="Equips">
-                    <DefaultAccordion title="Iniciació">
-                        <div className="Equips__grid">
-                            {initiacioTeams.map((t, i) => (
-                                <TeamCard
-                                    key={i}
-                                    imageSrc={t.imageSrc}
-                                    title={t.title}
-                                    members={t.members}
-                                />
+
+                {categories.map((cat, i) => (
+                    <DefaultAccordion key={i} title={cat.title}>
+                        <div className={toBEM({ block, element: 'grid' })}>
+                            {cat.teams.map((team, j) => (
+                                <TeamCard key={j} {...team} />
                             ))}
                         </div>
                     </DefaultAccordion>
-                    <DefaultAccordion title="Hoquei formatiu">
-                        <div className="Equips__grid">
-                            {formatiuTeams.map((t, i) => (
-                                <TeamCard
-                                    key={i}
-                                    imageSrc={t.imageSrc}
-                                    title={t.title}
-                                    members={t.members}
-                                />
-                            ))}
-                        </div>
-                    </DefaultAccordion>
-                    <DefaultAccordion title="Sèniors">
-                        <div className="Equips__grid">
-                            {seniorTeams.map((t, i) => (
-                                <TeamCard
-                                    key={i}
-                                    imageSrc={t.imageSrc}
-                                    title={t.title}
-                                    members={t.members}
-                                />
-                            ))}
-                        </div>
-                    </DefaultAccordion>
-                </div>
+                ))}
             </div>
         </>
     );

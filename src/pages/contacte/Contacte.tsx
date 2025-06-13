@@ -1,92 +1,108 @@
+import React from 'react';
+import data from './contacte.json';
+import './Contacte.scss';
+
 import { Helmet } from '@dr.pogodin/react-helmet';
+import { Banner } from '@/ui/banner/Banner';
+import Title from '@/ui/titles/Title';
+import { InfoCard } from '@/ui/info-card/InfoCard';
+import { LocationMap, LocationMapProps } from '@/ui/map/LocationMap';
+import {
+    ContactForm,
+    ContactFormProps,
+} from '@/features/contact-form/ContactForm';
 import {
     registerBlockName,
     BaseComponentProps,
     getBaseComponentProps,
     toBEM,
 } from '@/utils';
-import './Contacte.scss';
-import Title from '@/ui/titles/Title';
-import { Banner } from '@/ui/banner/Banner';
-import { InfoCard } from '@/ui/info-card/InfoCard';
-import { LocationMap } from '@/ui/map/LocationMap';
-import { ContactForm } from '@/features/contact-form/ContactForm';
+import { IconNames } from '@/ui/Icon/Icon';
+
+interface SEO {
+    title: string;
+    description: string;
+    canonical: string;
+    og: { url: string; image: string; title: string; description: string };
+    twitter: { card: string };
+}
+interface ContacteData {
+    seo: SEO;
+    bannerVariant: string;
+    locationMap: LocationMapProps;
+    parlemSection: {
+        title: string;
+        items: Array<{ icon: IconNames; text: string }>;
+    };
+    readSection: {
+        title: string;
+        contactForm: ContactFormProps;
+    };
+}
+
+const {
+    seo,
+    bannerVariant = 'contacte',
+    locationMap,
+    parlemSection,
+    readSection,
+} = (data as ContacteData) || {};
 
 export type ContacteProps = BaseComponentProps;
-
 const block = registerBlockName('Contacte');
 
-export const Contacte = ({ ...props }: ContacteProps) => {
-    const description = `Contacta amb HC SFERIC Terrassa: ens trobes al Pavelló Municipal de La Maurina o escriu-nos a info.sfericok@gmail.com.`;
-
+export const Contacte: React.FC<ContacteProps> = (props) => {
     return (
         <>
             <Helmet prioritizeSeoTags>
-                <title>HC SFERIC Terrassa – Contacte</title>
-                <meta name="description" content={description} />
+                <title>{seo.title}</title>
+                <meta name="description" content={seo.description} />
+                <link rel="canonical" href={seo.canonical} />
 
-                <link rel="canonical" href="https://sfericok.cat/contacte" />
-
-                <meta
-                    property="og:url"
-                    content="https://sfericok.cat/contacte"
-                />
-                <meta property="og:image" content="/logo-tranp-negre.png" />
-                <meta
-                    property="og:title"
-                    content="HC SFERIC Terrassa – Contacte"
-                />
-                <meta property="og:description" content={description} />
-
-                <meta name="twitter:card" content="summary_large_image" />
+                <meta property="og:url" content={seo.og.url} />
+                <meta property="og:image" content={seo.og.image} />
+                <meta property="og:title" content={seo.og.title} />
+                <meta property="og:description" content={seo.og.description} />
+                <meta name="twitter:card" content={seo.twitter.card} />
             </Helmet>
 
             <div {...getBaseComponentProps({ ...props, block })}>
-                <Banner variant="contacte" />
-                <Title>On ens trobem?</Title>
-
-                <LocationMap
-                    title="Pavelló Municipal de “La Maurina”"
-                    address="Carrer Sardenya, 34, Terrassa, 08224 Barcelona"
-                    mapSrc="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2868.673804104774!2d1.990687675927687!3d41.56304037127805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a49298cca97331%3A0xbd289a3e7def4d19!2sPolideportivo%20Municipal%20La%20Maurina!5e1!3m2!1ses!2ses!4v1745516807393!5m2!1ses!2ses"
+                <Banner
+                    variant={
+                        bannerVariant as React.ComponentProps<
+                            typeof Banner
+                        >['variant']
+                    }
                 />
+
+                <Title>On ens trobem?</Title>
+                <LocationMap {...locationMap} />
 
                 <section
                     className={toBEM({ block, element: 'parlem-section' })}
                 >
                     <Title
-                        className={toBEM({ block, element: 'parlem-title' })}
                         variant="light"
+                        className={toBEM({ block, element: 'parlem-title' })}
                     >
-                        Parlem?
+                        {parlemSection.title}
                     </Title>
                     <div className={toBEM({ block, element: 'info-grid' })}>
-                        <InfoCard
-                            icon="email"
-                            text={<>info.sfericok@gmail.com</>}
-                        />
-                        <InfoCard
-                            icon="call"
-                            text={<>(+34) 609 061 492 / 616 860 388</>}
-                        />
-                        <InfoCard
-                            icon="instagram"
-                            text={<>@oksfericterrassa</>}
-                        />
+                        {parlemSection.items.map((item, i) => (
+                            <InfoCard
+                                key={i}
+                                icon={item.icon}
+                                text={<> {item.text} </>}
+                            />
+                        ))}
                     </div>
                 </section>
 
                 <section
                     className={toBEM({ block, element: 'et-llegim-section' })}
                 >
-                    <Title>Et llegim</Title>
-                    <ContactForm
-                        title="Tens algun dubte? Omple el formulari i et respondrem"
-                        namePlaceholder="Introdueix el teu nom complet"
-                        phonePlaceholder="Introdueix el teu telèfon"
-                        emailPlaceholder="Introdueix el teu correu electrònic"
-                        messagePlaceholder="Escriu el teu missatge"
-                    />
+                    <Title>{readSection.title}</Title>
+                    <ContactForm {...readSection.contactForm} />
                 </section>
             </div>
         </>

@@ -10,7 +10,7 @@ import { JSX } from 'react';
 
 const block = registerBlockName('Alert');
 
-export type Props = BaseComponentProps & {
+export type AlertProps = BaseComponentProps & {
     /** The message or content to display inside the alert. */
     children: React.ReactNode;
     /** Which icon to show on the left side. */
@@ -27,7 +27,7 @@ export const Alert = ({
     icon,
     variant = 'info',
     ...props
-}: Props): JSX.Element => {
+}: AlertProps): JSX.Element => {
     return (
         <div
             {...getBaseComponentProps({

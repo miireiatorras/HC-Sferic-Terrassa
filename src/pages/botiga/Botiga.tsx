@@ -1,6 +1,12 @@
-import { ShopPartnerBanner } from '@/features/shopPartnerBanner/ShopPartnerBanner';
-import { Banner } from '@/ui/banner/Banner';
+import React from 'react';
+import botigaDataJson from './botiga.json';
 import './Botiga.scss';
+import {
+    ShopPartnerBanner,
+    ShopPartnerBannerProps,
+} from '@/features/shopPartnerBanner/ShopPartnerBanner';
+import { Banner } from '@/ui/banner/Banner';
+import type { BannerVariant } from '@/ui/banner/Banner';
 import Title from '@/ui/titles/Title';
 import {
     registerBlockName,
@@ -8,24 +14,72 @@ import {
     getBaseComponentProps,
     toBEM,
 } from '@/utils';
-import { Alert } from '@/ui/alert/Alert';
-import { ProductCard } from '@/ui/product-card/ProductCard';
-import { Button } from '@/ui/button/Button';
+import { Alert, AlertProps } from '@/ui/alert/Alert';
+import { ProductCard, ProductCardProps } from '@/ui/product-card/ProductCard';
+import { Button, ButtonProps } from '@/ui/button/Button';
 import { Helmet } from '@dr.pogodin/react-helmet';
 import { NavLink } from 'react-router-dom';
 
-export type BotigaProps = BaseComponentProps & {};
+interface BotigaData {
+    bannerVariant?: BannerVariant;
+    header?: string;
+    shopPartnerBanner?: ShopPartnerBannerProps;
+    paragraphs?: string[];
+    alert?: {
+        variant?: AlertProps['variant'];
+        icon?: AlertProps['icon'];
+        text?: string;
+    };
+    productsSection?: {
+        heading?: string;
+        subheading?: string;
+        products?: ProductCardProps[];
+        buttons?: Array<{
+            text: string;
+            href: string;
+            variant?: ButtonProps<object>['variant'];
+        }>;
+    };
+}
 
+const {
+    bannerVariant = 'botiga',
+    header = '',
+    shopPartnerBanner = {
+        logoSrc: '',
+        title: '',
+        items: [],
+        reviewsLabel: '',
+        rating: 0,
+    } as ShopPartnerBannerProps,
+    paragraphs = [],
+    alert = { variant: 'info', icon: 'launch', text: '' },
+    productsSection = {
+        heading: '',
+        subheading: '',
+        products: [],
+        buttons: [],
+    },
+} = (botigaDataJson as BotigaData) || {};
+
+const {
+    heading: productsHeading = '',
+    subheading: productsSubheading = '',
+    products = [],
+    buttons = [],
+} = productsSection;
+
+export type BotigaProps = BaseComponentProps;
 const block = registerBlockName('Botiga');
-export const Botiga = ({ ...props }: BotigaProps) => {
-    const description = `Compra el material oficial del HC SFERIC Terrassa: roba esportiva, equipació i accessoris disponibles en línia o a la nostra botiga col·laboradora de Cerdanyola del Vallès.`;
+
+export const Botiga: React.FC<BotigaProps> = (props) => {
+    const description = `${header} del HC SFERIC Terrassa. Compra roba esportiva, equipació i accessoris oficials.`;
 
     return (
         <>
             <Helmet prioritizeSeoTags>
                 <title>HC SFERIC Terrassa – Botiga</title>
                 <meta name="description" content={description} />
-
                 <link rel="canonical" href="https://sfericok.cat/botiga" />
 
                 <meta property="og:url" content="https://sfericok.cat/botiga" />
@@ -35,116 +89,43 @@ export const Botiga = ({ ...props }: BotigaProps) => {
                     content="HC SFERIC Terrassa – Botiga"
                 />
                 <meta property="og:description" content={description} />
-
                 <meta name="twitter:card" content="summary_large_image" />
             </Helmet>
+
             <div {...getBaseComponentProps({ ...props, block })}>
-                <Banner variant="botiga" />
-                <Title>Compra aquí el nostre material!</Title>
-                <div
-                    className={toBEM({
-                        block,
-                        element: 'main-content',
-                    })}
-                >
+                <Banner variant={bannerVariant} />
+
+                <Title>{header}</Title>
+
+                <div className={toBEM({ block, element: 'main-content' })}>
                     <ShopPartnerBanner
-                        logoSrc="/logos-sponsors/hockeyteam-logo.png"
-                        logoAlt="Hockey Team logo"
-                        title="Botiga col·laboradora de material oficial"
-                        items={[
-                            'Material de qualitat premium',
-                            'Roba esportiva per a professionals',
-                        ]}
-                        reviewsLabel="Opinions verificades"
-                        rating={5}
+                        {...shopPartnerBanner}
                         className="shop-partner-banner"
                     />
-                    <p
-                        className={toBEM({
-                            block,
-                            element: 'p',
-                        })}
-                    >
-                        Oferim material oficial de l’Hoquei SFERIC disponible a
-                        la venta a la nostra botiga a Cerdanyola del Vallès. El
-                        millor servei, el millor material i al millor preu. Es
-                        pot demanar amb recollida a la botiga o entrega al Club.
-                        Pots aconseguir la teva equipació clicant sobre les
-                        samarretes. Agafa la teva!
-                    </p>
 
-                    <p
-                        className={toBEM({
-                            block,
-                            element: 'p',
-                        })}
-                    >
-                        Per a demanar mitjetes, estics i/o buff’s, o si tens
-                        material que no utilitzes, contacta’ns!
-                    </p>
-                    <Alert variant="open-in-new-tab" icon="launch">
-                        {' '}
-                        El material està disponible a la venta a través de la
-                        plataforma externa Playoff. Clicant al botó "Compra
-                        Ara", et redirigirà a la seva pàgina web.
+                    {paragraphs.map((txt, i) => (
+                        <p key={i} className={toBEM({ block, element: 'p' })}>
+                            {txt}
+                        </p>
+                    ))}
+
+                    <Alert variant={alert.variant} icon={alert.icon}>
+                        {alert.text}
                     </Alert>
+
                     <div
                         className={toBEM({
                             block,
                             element: 'products-section',
                         })}
                     >
-                        <h2>
-                            Productes populars de Hockey Team™ i de la nostra
-                            botiga online
-                        </h2>
-                        <p>Consulta aquí els nostres productes destacats</p>
-                        <div
-                            className={toBEM({
-                                block,
-                                element: 'products',
-                            })}
-                        >
-                            <ProductCard
-                                imageSrc="/camiseta-jugador-1a-equipacion-hc-sferic-veteranos.jpg"
-                                imageAlt="Samarreta jugador 1a equipació"
-                                title="Faldilla SFERIC"
-                                price="32€"
-                                subtitle="(Impostos inclosos)"
-                                href="https://hockeyteam.es/es/hc-sferic-terrassa/1406-584926-camiseta-jugador-1a-equipacion-hc-sferic-veteranos.html#/80-talla-s"
-                            />
-                            <ProductCard
-                                imageSrc="/camiseta-portero-hc-castellar.jpg"
-                                imageAlt="Samarreta porter"
-                                title="Samarreta porter"
-                                price="32€"
-                                subtitle="(Impostos inclosos)"
-                                href="https://hockeyteam.es/es/hc-sferic-terrassa/1360-584074-camiseta-portero-hc-castellar.html#/80-talla-s"
-                            />
-                            <ProductCard
-                                imageSrc="/faldilla-jugadora-hc-castellar.jpg"
-                                imageAlt="Faldilla SFERIC"
-                                title="Faldilla SFERIC"
-                                price="32€"
-                                subtitle="(Impostos inclosos)"
-                                href="https://hockeyteam.es/es/hc-sferic-terrassa/1361-584083-faldilla-jugadora-hc-castellar.html#/80-talla-s"
-                            />
-                            <ProductCard
-                                imageSrc="/mitjons.png"
-                                imageAlt="Mitjeta SFERIC"
-                                title="Mitjeta SFERIC"
-                                price="11€"
-                                subtitle="(Impostos inclosos)"
-                                href="https://sfericok.playoffinformatica.com/Botiga.php"
-                            />
-                            <ProductCard
-                                imageSrc="/sticks.png"
-                                imageAlt={'Sticks SFERIC'}
-                                title="Sticks SFERIC"
-                                price="41,14€"
-                                subtitle="(Impostos inclosos)"
-                                href="https://sfericok.playoffinformatica.com/Botiga.php"
-                            />
+                        <h2>{productsHeading}</h2>
+                        <p>{productsSubheading}</p>
+
+                        <div className={toBEM({ block, element: 'products' })}>
+                            {products.map((prod, i) => (
+                                <ProductCard key={i} {...prod} />
+                            ))}
                         </div>
 
                         <div
@@ -153,28 +134,20 @@ export const Botiga = ({ ...props }: BotigaProps) => {
                                 element: 'buttons-wrapper',
                             })}
                         >
-                            <Button
-                                as={NavLink}
-                                to="https://sfericok.playoffinformatica.com/Botiga.php"
-                                variant="primary-green"
-                                className={toBEM({
-                                    block,
-                                    element: 'Button',
-                                })}
-                            >
-                                Accedeix a la nostra botiga online
-                            </Button>
-                            <Button
-                                as={NavLink}
-                                to="https://hockeyteam.es/es/index.php?controller=search&s=sferic"
-                                variant="secondary-green"
-                                className={toBEM({
-                                    block,
-                                    element: 'Button',
-                                })}
-                            >
-                                Accedeix a la botiga Hockey Team™
-                            </Button>
+                            {buttons.map((btn, i) => (
+                                <Button
+                                    key={i}
+                                    as={NavLink}
+                                    to={btn.href}
+                                    variant={btn.variant}
+                                    className={toBEM({
+                                        block,
+                                        element: 'Button',
+                                    })}
+                                >
+                                    {btn.text}
+                                </Button>
+                            ))}
                         </div>
                     </div>
                 </div>
@@ -182,3 +155,5 @@ export const Botiga = ({ ...props }: BotigaProps) => {
         </>
     );
 };
+
+export default Botiga;

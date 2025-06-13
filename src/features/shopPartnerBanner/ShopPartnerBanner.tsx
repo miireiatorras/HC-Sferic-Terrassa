@@ -10,7 +10,7 @@ import { JSX } from 'react';
 
 const block = registerBlockName('ShopPartnerBanner');
 
-export type Props = BaseComponentProps & {
+export type ShopPartnerBannerProps = BaseComponentProps & {
     /** URL of the partner logo image */
     logoSrc: string;
     /** Alt text for the partner logo */
@@ -40,7 +40,7 @@ export const ShopPartnerBanner = ({
     reviewsLabel,
     rating,
     ...props
-}: Props): JSX.Element => {
+}: ShopPartnerBannerProps): JSX.Element => {
     const stars = Array.from({ length: rating }, (_, i) => (
         <Icon
             key={i}

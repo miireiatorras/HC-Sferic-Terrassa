@@ -13,6 +13,9 @@ export type FooterProps = BaseComponentProps;
 const block = registerBlockName('footer');
 
 export const Footer = (props: FooterProps) => {
+    const user = 'info.sferic';
+    const domain = 'gmail.com';
+
     return (
         <footer {...getBaseComponentProps({ ...props, block })}>
             <section className={toBEM({ block, element: 'section' })}>
@@ -50,10 +53,10 @@ export const Footer = (props: FooterProps) => {
                     <div className={toBEM({ block, element: 'email' })}>
                         <Icon icon="email" size="lg" aria-hidden="true" />
                         <a
-                            href="mailto:info.sfericok@gmail.com"
+                            href={`mailto:${user}@${domain}`}
                             aria-label="Envia un correu a info.sfericok@gmail.com"
                         >
-                            info.sfericok@gmail.com
+                            {user}@{domain}
                         </a>
                     </div>
                     <div className={toBEM({ block, element: 'telefon' })}>

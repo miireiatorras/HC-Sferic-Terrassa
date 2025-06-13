@@ -1,0 +1,126 @@
+{
+    "seo": {
+        "title": "HC SFERIC Terrassa – Horari",
+        "description": "Descobreix tots els equips del HC SFERIC Terrassa: iniciació, formació i sèniors. Consulta jugadors, fotos i detalls de cada categoria.",
+        "canonical": "https://sfericok.cat/horari",
+        "og": {
+            "url": "https://sfericok.cat/horari",
+            "image": "https://sfericok.cat/preview-horari.png",
+            "title": "HC SFERIC Terrassa – Horari",
+            "description": "Descobreix tots els equips del HC SFERIC Terrassa: iniciació, formació i sèniors. Consulta jugadors, fotos i detalls de cada categoria."
+        },
+        "twitter": {
+            "card": "summary_large_image"
+        }
+    },
+    "bannerVariant": "horari",
+    "heading": "Entrena amb nosaltres!",
+    "days": [
+        "Dilluns",
+        "Dimarts",
+        "Dimecres",
+        "Dijous",
+        "Divendres",
+        "Dissabte",
+        "Diumenge"
+    ],
+    "events": [
+        {
+            "day": "Dilluns",
+            "start": "14:00",
+            "end": "17:30",
+            "label": "ESCOLA – PORTERS",
+            "category": "iniciacio"
+        },
+        {
+            "day": "Dilluns",
+            "start": "19:00",
+            "end": "20:30",
+            "label": "JUVENIL – SÈNIORS MASCULINS A I B",
+            "category": "formatiu"
+        },
+        {
+            "day": "Dilluns",
+            "start": "20:30",
+            "end": "22:00",
+            "label": "SÈNIOR FEMENÍ + SÈNIOR MASCULÍ A",
+            "category": "senior"
+        },
+        {
+            "day": "Dimecres",
+            "start": "14:00",
+            "end": "17:30",
+            "label": "ESCOLA – PREBENJAMÍ (PISTA EXTERIOR)",
+            "category": "formatiu"
+        },
+        {
+            "day": "Dimecres",
+            "start": "19:00",
+            "end": "20:30",
+            "label": "JUVENIL – SÈNIORS MASCULINS A I B",
+            "category": "senior"
+        },
+        {
+            "day": "Dimecres",
+            "start": "22:00",
+            "end": "23:30",
+            "label": "SÈNIOR FEMENÍ + SÈNIOR MASCULÍ A",
+            "category": "senior"
+        },
+        {
+            "day": "Dijous",
+            "start": "17:30",
+            "end": "18:30",
+            "label": "ESCOLA",
+            "category": "iniciacio"
+        },
+        {
+            "day": "Dijous",
+            "start": "17:30",
+            "end": "19:00",
+            "label": "PREBENJAMÍ – BENJAMÍ",
+            "category": "iniciacio"
+        },
+        {
+            "day": "Divendres",
+            "start": "14:00",
+            "end": "17:30",
+            "label": "PREBENJAMÍ (PISTA EXTERIOR)",
+            "category": "formatiu"
+        },
+        {
+            "day": "Dissabte",
+            "start": "09:00",
+            "end": "23:30",
+            "label": "PARTITS",
+            "category": "partit"
+        },
+        {
+            "day": "Diumenge",
+            "start": "09:00",
+            "end": "14:00",
+            "label": "PARTITS",
+            "category": "partit"
+        }
+    ],
+    "filterOptions": [
+        { "value": "all", "label": "Tots els equips" },
+        { "value": "iniciacio", "label": "Iniciació" },
+        { "value": "formatiu", "label": "Formatiu" },
+        { "value": "senior", "label": "Sènior" }
+    ],
+    "actions": [
+        {
+            "type": "button",
+            "icon": "printer",
+            "text": "Imprimir"
+        },
+        {
+            "type": "link",
+            "icon": "download",
+            "text": "PDF",
+            "href": "/horario_semanal.pdf",
+            "download": "Horari-SFERIC-24-25.pdf"
+        }
+    ]
+}

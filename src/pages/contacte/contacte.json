@@ -1,0 +1,40 @@
+{
+    "seo": {
+        "title": "HC SFERIC Terrassa – Contacte",
+        "description": "Contacta amb HC SFERIC Terrassa: ens trobes al Pavelló Municipal de La Maurina o escriu-nos a info.sfericok@gmail.com.",
+        "canonical": "https://sfericok.cat/contacte",
+        "og": {
+            "url": "https://sfericok.cat/contacte",
+            "image": "/logo-tranp-negre.png",
+            "title": "HC SFERIC Terrassa – Contacte",
+            "description": "Contacta amb HC SFERIC Terrassa: ens trobes al Pavelló Municipal de La Maurina o escriu-nos a info.sfericok@gmail.com."
+        },
+        "twitter": {
+            "card": "summary_large_image"
+        }
+    },
+    "bannerVariant": "contacte",
+    "locationMap": {
+        "title": "Pavelló Municipal de “La Maurina”",
+        "address": "Carrer Sardenya, 34, Terrassa, 08224 Barcelona",
+        "mapSrc": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2868.673804104774!2d1.990687675927687!3d41.56304037127805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a49298cca97331%3A0xbd289a3e7def4d19!2sPolideportivo%20Municipal%20La%20Maurina!5e1!3m2!1ses!2ses!4v1745516807393!5m2!1ses!2ses"
+    },
+    "parlemSection": {
+        "title": "Parlem?",
+        "items": [
+            { "icon": "email", "text": "info.sfericok@gmail.com" },
+            { "icon": "call", "text": "(+34) 609 061 492 / 616 860 388" },
+            { "icon": "instagram", "text": "@oksfericterrassa" }
+        ]
+    },
+    "readSection": {
+        "title": "Et llegim",
+        "contactForm": {
+            "title": "Tens algun dubte? Omple el formulari i et respondrem",
+            "namePlaceholder": "Introdueix el teu nom complet",
+            "phonePlaceholder": "Introdueix el teu telèfon",
+            "emailPlaceholder": "Introdueix el teu correu electrònic",
+            "messagePlaceholder": "Escriu el teu missatge"
+        }
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "seo": {
+        "title": "HC SFERIC Terrassa – Inscripcions",
+        "description": "Inscripcions obertes per a la temporada 2025-2026 del HC SFERIC Terrassa. Apunta't ara i viu la passió de l’hoquei patins al millor club de Terrassa!",
+        "canonical": "https://sfericok.cat/inscripcions",
+        "og": {
+            "url": "https://sfericok.cat/inscripcions",
+            "image": "https://sfericok.cat/inscripcions-full.png",
+            "title": "HC SFERIC Terrassa – Inscripcions",
+            "description": "Inscripcions obertes per a la temporada 2025-2026 del HC SFERIC Terrassa. Apunta't ara i viu la passió de l’hoquei patins al millor club de Terrassa!"
+        },
+        "twitter": {
+            "card": "summary_large_image"
+        }
+    },
+    "bannerVariant": "inscriu-te",
+    "heading": "Apunta't i gaudeix del nostre club",
+    "alert": {
+        "icon": "launch",
+        "variant": "open-in-new-tab",
+        "text": "Les inscripcions es gestionen a través de la plataforma PlayOff. Clicant el botó, s’accedeix al formulari que s’ha de realitzar per apuntar-te al club i gaudir de tots els seus avantatges."
+    },
+    "promoSection": {
+        "imageSrc": "/inscripcions-full.png",
+        "imageAlt": "Season 2024-2025 Flyer",
+        "heading": "Ja estan OBERTES les inscripcions de la TEMPORADA 2025-2026 🎉!",
+        "text": "No et quedis fora! Uneix-te a la família Sferic Hoquei Patins Terrassa i viu la passió de l’hoquei en un ambient únic amb els millors entrenadors i companys 💪",
+        "buttonText": "Apunta't ara!"
+    },
+    "footerParagraph": "VENIU A GAUDIR DE L’HOQUEI PATINS!!! #SomSFERIC #ORGULLVERD"
+}

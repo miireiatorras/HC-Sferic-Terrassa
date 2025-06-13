@@ -1,4 +1,3 @@
-// ContactForm.tsx
 import React, { useRef } from 'react';
 import { init, sendForm } from '@emailjs/browser';
 import { toast, ToastContainer } from 'react-toastify';
@@ -15,7 +14,7 @@ import { Input } from '@/ui/input/Input';
 
 const block = registerBlockName('ContactForm');
 
-export type Props = BaseComponentProps & {
+export type ContactFormProps = BaseComponentProps & {
     /** The title of the contact form. */
     title: string;
     /** Labels and placeholders for the input fields. */
@@ -33,7 +32,7 @@ export type Props = BaseComponentProps & {
  * ContactForm renders a styled form that, on submit,
  * envia els dades via EmailJS a la plantilla configurada.
  */
-export const ContactForm: React.FC<Props> = ({
+export const ContactForm: React.FC<ContactFormProps> = ({
     title,
     nameLabel = 'Nom i Cognoms',
     phoneLabel = 'Telèfon',

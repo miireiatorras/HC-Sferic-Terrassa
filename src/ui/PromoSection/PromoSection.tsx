@@ -11,7 +11,7 @@ import { NavLink } from 'react-router-dom';
 
 const block = registerBlockName('PromoSection');
 
-export type Props = BaseComponentProps & {
+export type PromoSectionProps = BaseComponentProps & {
     /** URL of the main promotional image */
     imageSrc: string;
     /** Alt text for the promotional image */
@@ -44,7 +44,7 @@ export const PromoSection = ({
     children,
     buttonText,
     ...props
-}: Props): JSX.Element => {
+}: PromoSectionProps): JSX.Element => {
     return (
         <div
             {...getBaseComponentProps({ ...props, block })}
