@@ -696,7 +696,7 @@ collections:
                             - label: 'Jugadores'
                               name: 'members'
                               widget: 'list'
-                              field:
+                              fields:
                                   - {
                                         label: 'Nombre',
                                         name: 'member',
