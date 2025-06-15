@@ -12,7 +12,7 @@ collections:
     - name: 'inici'
       label: 'Inici'
       files:
-          - file: 'src/components/Discover/discover.json'
+          - file: 'src/features/hero/Discover/discover.json'
             name: 'discover'
             label: 'Descobreix'
             fields:
@@ -61,7 +61,7 @@ collections:
                             widget: 'string',
                         }
 
-          - file: 'src/components/Calendari/calendari.json'
+          - file: 'src/features/calendari/calendari.json'
             name: 'calendari'
             label: 'Calendari'
             fields:
@@ -98,7 +98,7 @@ collections:
                             required: false,
                         }
 
-          - file: 'src/components/ReadyToJoin/readyToJoin.json'
+          - file: 'src/features/ReadyToJoin/readyToJoin.json'
             name: 'readyToJoin'
             label: 'Ready To Join'
             fields:
@@ -144,7 +144,7 @@ collections:
                             required: false,
                         }
 
-          - file: 'src/components/Patrocinadors/patrocinadors.json'
+          - file: 'src/features/patrocinadors/patrocinadors.json'
             name: 'patrocinadors'
             label: 'Patrocinadors'
             fields:
