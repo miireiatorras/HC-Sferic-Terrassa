@@ -1,27 +1,27 @@
 {
-  "ariaLabel": "Descobreix el nostre club",
-  "header": "Descobreix el nostre club",
-  "leftCard": {
-    "to": "/seccions",
-    "imageSrc": "/seccions.jpg",
-    "imageAlt": "Seccions",
-    "title": "Seccions",
-    "linkText": "Aprèn més >"
-  },
-  "rightCards": [
-    {
-      "to": "/equips",
-      "imageSrc": "/equips.webp",
-      "imageAlt": "Equips",
-      "title": "Equips",
-      "linkText": "Aprèn més >"
+    "ariaLabel": "Descobreix el nostre club",
+    "header": "Descobreix el nostre club",
+    "leftCard": {
+        "to": "/seccions",
+        "imageSrc": "/seccions.jpg",
+        "imageAlt": "Seccions",
+        "title": "Seccions",
+        "linkText": "Aprèn més >"
     },
-    {
-      "to": "/botiga",
-      "imageSrc": "/uploads/hockeyteam-logo.png",
-      "imageAlt": "Botiga",
-      "title": "Botiga",
-      "linkText": "Aprèn més >"
-    }
-  ]
+    "rightCards": [
+        {
+            "to": "/equips",
+            "imageSrc": "/equips.webp",
+            "imageAlt": "Equips",
+            "title": "Equips",
+            "linkText": "Aprèn més >"
+        },
+        {
+            "to": "/botiga",
+            "imageSrc": "/botiga.png",
+            "imageAlt": "Botiga",
+            "title": "Botiga",
+            "linkText": "Aprèn més >"
+        }
+    ]
 }
