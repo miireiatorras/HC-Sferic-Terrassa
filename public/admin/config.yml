@@ -169,199 +169,27 @@ collections:
                             name: 'linkHref',
                             widget: 'string',
                         }
-
-    - name: 'seccions'
-      label: 'Seccions'
-      files:
-          - file: 'src/pages/seccions/seccions.json'
-            label: 'Página Seccions'
-            name: 'seccions'
-            fields:
-                - {
-                      label: 'Variant Banner',
-                      name: 'bannerVariant',
-                      widget: 'string',
-                  }
-                - { label: 'Encabezado', name: 'header', widget: 'string' }
-                - label: 'Secciones'
-                  name: 'sections'
-                  widget: 'list'
+          - name: 'seccions'
+            label: 'Seccions'
+            files:
+                - file: 'src/pages/seccions/seccions.json'
+                  label: 'Página Seccions'
+                  name: 'seccions'
                   fields:
-                      - { label: 'Título', name: 'title', widget: 'string' }
                       - {
-                            label: 'Descripción',
-                            name: 'description',
-                            widget: 'text',
-                        }
-                      - label: 'Stats'
-                        name: 'stats'
-                        widget: 'list'
-                        fields:
-                            - {
-                                  label: 'Icono',
-                                  name: 'icon',
-                                  widget: 'string',
-                                  required: false,
-                              }
-                            - {
-                                  label: 'Iconos',
-                                  name: 'icons',
-                                  widget: 'list',
-                                  required: false,
-                              }
-                            - {
-                                  label: 'Valor',
-                                  name: 'value',
-                                  widget: 'string',
-                                  required: false,
-                              }
-                            - {
-                                  label: 'Etiqueta',
-                                  name: 'label',
-                                  widget: 'string',
-                              }
-                      - {
-                            label: 'Texto Enlace',
-                            name: 'linkText',
+                            label: 'Variant Banner',
+                            name: 'bannerVariant',
                             widget: 'string',
                         }
                       - {
-                            label: 'Href Enlace',
-                            name: 'linkHref',
+                            label: 'Encabezado',
+                            name: 'header',
                             widget: 'string',
                         }
-                      - { label: 'Imagen', name: 'imageSrc', widget: 'image' }
-                      - label: 'Posición Imagen'
-                        name: 'imagePosition'
-                        widget: 'select'
-                        options: ['left', 'right']
-                - label: 'CTA'
-                  name: 'cta'
-                  widget: 'object'
-                  fields:
-                      - { label: 'Heading', name: 'heading', widget: 'string' }
-                      - { label: 'Texto', name: 'text', widget: 'text' }
-                      - label: 'Botones CTA'
-                        name: 'buttons'
+                      - label: 'Secciones'
+                        name: 'sections'
                         widget: 'list'
                         fields:
-                            - {
-                                  label: 'Texto Botón',
-                                  name: 'text',
-                                  widget: 'string',
-                              }
-                            - {
-                                  label: 'Href Botón',
-                                  name: 'href',
-                                  widget: 'string',
-                              }
-
-    - name: 'el-club'
-      label: 'El Club'
-      files:
-          - file: 'src/pages/el-club/el-club.json'
-            label: 'Página El Club'
-            name: 'el-club'
-            fields:
-                - label: 'SEO'
-                  name: 'seo'
-                  widget: 'object'
-                  fields:
-                      - { label: 'Título', name: 'title', widget: 'string' }
-                      - {
-                            label: 'Descripción',
-                            name: 'description',
-                            widget: 'text',
-                        }
-                      - {
-                            label: 'Canonical',
-                            name: 'canonical',
-                            widget: 'string',
-                        }
-                      - label: 'Open Graph'
-                        name: 'og'
-                        widget: 'object'
-                        fields:
-                            - { label: 'URL', name: 'url', widget: 'string' }
-                            - {
-                                  label: 'Imagen OG',
-                                  name: 'image',
-                                  widget: 'image',
-                              }
-                            - {
-                                  label: 'OG Título',
-                                  name: 'title',
-                                  widget: 'string',
-                              }
-                            - {
-                                  label: 'OG Descripción',
-                                  name: 'description',
-                                  widget: 'text',
-                              }
-                      - label: 'Twitter'
-                        name: 'twitter'
-                        widget: 'object'
-                        fields:
-                            - { label: 'Card', name: 'card', widget: 'string' }
-
-                - {
-                      label: 'Banner Variant',
-                      name: 'bannerVariant',
-                      widget: 'string',
-                  }
-
-                - label: 'Mission Section'
-                  name: 'missionSection'
-                  widget: 'object'
-                  fields:
-                      - {
-                            label: 'Título sección',
-                            name: 'title',
-                            widget: 'string',
-                        }
-                      - label: 'Cards'
-                        name: 'cards'
-                        widget: 'list'
-                        fields:
-                            - {
-                                  label: 'Número',
-                                  name: 'number',
-                                  widget: 'string',
-                              }
-                            - {
-                                  label: 'Título',
-                                  name: 'title',
-                                  widget: 'string',
-                              }
-                            - {
-                                  label: 'Contenido HTML',
-                                  name: 'content',
-                                  widget: 'text',
-                              }
-
-                - label: 'History Section'
-                  name: 'historySection'
-                  widget: 'object'
-                  fields:
-                      - {
-                            label: 'Título sección',
-                            name: 'title',
-                            widget: 'string',
-                        }
-                      - label: 'Imágenes'
-                        name: 'images'
-                        widget: 'list'
-                        fields:
-                            - {
-                                  label: 'Imagen',
-                                  name: 'image',
-                                  widget: 'image',
-                              }
-                      - label: 'Timeline'
-                        name: 'timeline'
-                        widget: 'list'
-                        fields:
-                            - { label: 'Año', name: 'year', widget: 'string' }
                             - {
                                   label: 'Título',
                                   name: 'title',
@@ -372,152 +200,928 @@ collections:
                                   name: 'description',
                                   widget: 'text',
                               }
-
-                - label: 'Info Grid'
-                  name: 'infoGrid'
-                  widget: 'list'
-                  fields:
-                      - { label: 'Icono', name: 'icon', widget: 'string' }
-                      - { label: 'Texto HTML', name: 'text', widget: 'text' }
-
-                - label: 'Organisation Section'
-                  name: 'organisationSection'
-                  widget: 'object'
-                  fields:
-                      - {
-                            label: 'Título sección',
-                            name: 'title',
-                            widget: 'string',
-                        }
-                      - label: 'Párrafos'
-                        name: 'paragraphs'
-                        widget: 'list'
-                        fields:
-                            - { label: 'Texto', name: 'p', widget: 'text' }
-                      - {
-                            label: 'Mostrar tabs',
-                            name: 'showTabs',
-                            widget: 'boolean',
-                        }
-
-    - name: 'botiga'
-      label: 'Botiga'
-      files:
-          - file: 'src/pages/botiga/botiga.json'
-            label: 'Página Botiga'
-            name: 'botiga'
-            fields:
-                - label: 'SEO'
-                  name: 'seo'
-                  widget: 'object'
-                  fields:
-                      - { label: 'Título', name: 'title', widget: 'string' }
-                      - {
-                            label: 'Descripción',
-                            name: 'description',
-                            widget: 'text',
-                        }
-                      - {
-                            label: 'Canonical',
-                            name: 'canonical',
-                            widget: 'string',
-                        }
-                      - label: 'Open Graph'
-                        name: 'og'
-                        widget: 'object'
-                        fields:
-                            - { label: 'URL', name: 'url', widget: 'string' }
+                            - label: 'Stats'
+                              name: 'stats'
+                              widget: 'list'
+                              fields:
+                                  - {
+                                        label: 'Icono',
+                                        name: 'icon',
+                                        widget: 'string',
+                                        required: false,
+                                    }
+                                  - {
+                                        label: 'Iconos',
+                                        name: 'icons',
+                                        widget: 'list',
+                                        required: false,
+                                    }
+                                  - {
+                                        label: 'Valor',
+                                        name: 'value',
+                                        widget: 'string',
+                                        required: false,
+                                    }
+                                  - {
+                                        label: 'Etiqueta',
+                                        name: 'label',
+                                        widget: 'string',
+                                    }
                             - {
-                                  label: 'Imagen OG',
-                                  name: 'image',
-                                  widget: 'image',
+                                  label: 'Texto Enlace',
+                                  name: 'linkText',
+                                  widget: 'string',
                               }
                             - {
-                                  label: 'OG Título',
+                                  label: 'Href Enlace',
+                                  name: 'linkHref',
+                                  widget: 'string',
+                              }
+                            - {
+                                  label: 'Imagen',
+                                  name: 'imageSrc',
+                                  widget: 'image',
+                              }
+                            - label: 'Posición Imagen'
+                              name: 'imagePosition'
+                              widget: 'select'
+                              options: ['left', 'right']
+                      - label: 'CTA'
+                        name: 'cta'
+                        widget: 'object'
+                        fields:
+                            - {
+                                  label: 'Heading',
+                                  name: 'heading',
+                                  widget: 'string',
+                              }
+                            - { label: 'Texto', name: 'text', widget: 'text' }
+                            - label: 'Botones CTA'
+                              name: 'buttons'
+                              widget: 'list'
+                              fields:
+                                  - {
+                                        label: 'Texto Botón',
+                                        name: 'text',
+                                        widget: 'string',
+                                    }
+                                  - {
+                                        label: 'Href Botón',
+                                        name: 'href',
+                                        widget: 'string',
+                                    }
+
+          - name: 'el-club'
+            label: 'El Club'
+            files:
+                - file: 'src/pages/el-club/el-club.json'
+                  label: 'Página El Club'
+                  name: 'el-club'
+                  fields:
+                      - label: 'SEO'
+                        name: 'seo'
+                        widget: 'object'
+                        fields:
+                            - {
+                                  label: 'Título',
                                   name: 'title',
                                   widget: 'string',
                               }
                             - {
-                                  label: 'OG Descripción',
+                                  label: 'Descripción',
                                   name: 'description',
                                   widget: 'text',
                               }
-                      - label: 'Twitter'
-                        name: 'twitter'
+                            - {
+                                  label: 'Canonical',
+                                  name: 'canonical',
+                                  widget: 'string',
+                              }
+                            - label: 'Open Graph'
+                              name: 'og'
+                              widget: 'object'
+                              fields:
+                                  - {
+                                        label: 'URL',
+                                        name: 'url',
+                                        widget: 'string',
+                                    }
+                                  - {
+                                        label: 'Imagen OG',
+                                        name: 'image',
+                                        widget: 'image',
+                                    }
+                                  - {
+                                        label: 'OG Título',
+                                        name: 'title',
+                                        widget: 'string',
+                                    }
+                                  - {
+                                        label: 'OG Descripción',
+                                        name: 'description',
+                                        widget: 'text',
+                                    }
+                            - label: 'Twitter'
+                              name: 'twitter'
+                              widget: 'object'
+                              fields:
+                                  - {
+                                        label: 'Card',
+                                        name: 'card',
+                                        widget: 'string',
+                                    }
+
+                      - {
+                            label: 'Banner Variant',
+                            name: 'bannerVariant',
+                            widget: 'string',
+                        }
+
+                      - label: 'Mission Section'
+                        name: 'missionSection'
                         widget: 'object'
                         fields:
-                            - { label: 'Card', name: 'card', widget: 'string' }
+                            - {
+                                  label: 'Título sección',
+                                  name: 'title',
+                                  widget: 'string',
+                              }
+                            - label: 'Cards'
+                              name: 'cards'
+                              widget: 'list'
+                              fields:
+                                  - {
+                                        label: 'Número',
+                                        name: 'number',
+                                        widget: 'string',
+                                    }
+                                  - {
+                                        label: 'Título',
+                                        name: 'title',
+                                        widget: 'string',
+                                    }
+                                  - {
+                                        label: 'Contenido HTML',
+                                        name: 'content',
+                                        widget: 'text',
+                                    }
 
-                - {
-                      label: 'Banner Variant',
-                      name: 'bannerVariant',
-                      widget: 'string',
-                  }
-                - { label: 'Header', name: 'header', widget: 'string' }
+                      - label: 'History Section'
+                        name: 'historySection'
+                        widget: 'object'
+                        fields:
+                            - {
+                                  label: 'Título sección',
+                                  name: 'title',
+                                  widget: 'string',
+                              }
+                            - label: 'Imágenes'
+                              name: 'images'
+                              widget: 'list'
+                              fields:
+                                  - {
+                                        label: 'Imagen',
+                                        name: 'image',
+                                        widget: 'image',
+                                    }
+                            - label: 'Timeline'
+                              name: 'timeline'
+                              widget: 'list'
+                              fields:
+                                  - {
+                                        label: 'Año',
+                                        name: 'year',
+                                        widget: 'string',
+                                    }
+                                  - {
+                                        label: 'Título',
+                                        name: 'title',
+                                        widget: 'string',
+                                    }
+                                  - {
+                                        label: 'Descripción',
+                                        name: 'description',
+                                        widget: 'text',
+                                    }
 
-                - label: 'Shop Partner Banner'
-                  name: 'shopPartnerBanner'
-                  widget: 'object'
-                  fields:
-                      - { label: 'Logo SRC', name: 'logoSrc', widget: 'image' }
-                      - { label: 'Logo Alt', name: 'logoAlt', widget: 'string' }
-                      - { label: 'Título', name: 'title', widget: 'string' }
-                      - label: 'Items'
-                        name: 'items'
+                      - label: 'Info Grid'
+                        name: 'infoGrid'
                         widget: 'list'
                         fields:
-                            - { label: 'Item', name: 'item', widget: 'string' }
+                            - { label: 'Icono', name: 'icon', widget: 'string' }
+                            - {
+                                  label: 'Texto HTML',
+                                  name: 'text',
+                                  widget: 'text',
+                              }
+
+                      - label: 'Organisation Section'
+                        name: 'organisationSection'
+                        widget: 'object'
+                        fields:
+                            - {
+                                  label: 'Título sección',
+                                  name: 'title',
+                                  widget: 'string',
+                              }
+                            - label: 'Párrafos'
+                              name: 'paragraphs'
+                              widget: 'list'
+                              fields:
+                                  - {
+                                        label: 'Texto',
+                                        name: 'p',
+                                        widget: 'text',
+                                    }
+                            - {
+                                  label: 'Mostrar tabs',
+                                  name: 'showTabs',
+                                  widget: 'boolean',
+                              }
+
+          - name: 'botiga'
+            label: 'Botiga'
+            files:
+                - file: 'src/pages/botiga/botiga.json'
+                  label: 'Página Botiga'
+                  name: 'botiga'
+                  fields:
+                      - label: 'SEO'
+                        name: 'seo'
+                        widget: 'object'
+                        fields:
+                            - {
+                                  label: 'Título',
+                                  name: 'title',
+                                  widget: 'string',
+                              }
+                            - {
+                                  label: 'Descripción',
+                                  name: 'description',
+                                  widget: 'text',
+                              }
+                            - {
+                                  label: 'Canonical',
+                                  name: 'canonical',
+                                  widget: 'string',
+                              }
+                            - label: 'Open Graph'
+                              name: 'og'
+                              widget: 'object'
+                              fields:
+                                  - {
+                                        label: 'URL',
+                                        name: 'url',
+                                        widget: 'string',
+                                    }
+                                  - {
+                                        label: 'Imagen OG',
+                                        name: 'image',
+                                        widget: 'image',
+                                    }
+                                  - {
+                                        label: 'OG Título',
+                                        name: 'title',
+                                        widget: 'string',
+                                    }
+                                  - {
+                                        label: 'OG Descripción',
+                                        name: 'description',
+                                        widget: 'text',
+                                    }
+                            - label: 'Twitter'
+                              name: 'twitter'
+                              widget: 'object'
+                              fields:
+                                  - {
+                                        label: 'Card',
+                                        name: 'card',
+                                        widget: 'string',
+                                    }
+
                       - {
-                            label: 'Reviews Label',
-                            name: 'reviewsLabel',
+                            label: 'Banner Variant',
+                            name: 'bannerVariant',
                             widget: 'string',
                         }
-                      - { label: 'Rating', name: 'rating', widget: 'number' }
-                      - {
-                            label: 'Class Name',
-                            name: 'className',
-                            widget: 'string',
-                        }
+                      - { label: 'Header', name: 'header', widget: 'string' }
 
-                - label: 'Paragraphs'
-                  name: 'paragraphs'
-                  widget: 'list'
-                  fields:
-                      - { label: 'Texto', name: 'text', widget: 'text' }
+                      - label: 'Shop Partner Banner'
+                        name: 'shopPartnerBanner'
+                        widget: 'object'
+                        fields:
+                            - {
+                                  label: 'Logo SRC',
+                                  name: 'logoSrc',
+                                  widget: 'image',
+                              }
+                            - {
+                                  label: 'Logo Alt',
+                                  name: 'logoAlt',
+                                  widget: 'string',
+                              }
+                            - {
+                                  label: 'Título',
+                                  name: 'title',
+                                  widget: 'string',
+                              }
+                            - label: 'Items'
+                              name: 'items'
+                              widget: 'list'
+                              fields:
+                                  - {
+                                        label: 'Item',
+                                        name: 'item',
+                                        widget: 'string',
+                                    }
+                            - {
+                                  label: 'Reviews Label',
+                                  name: 'reviewsLabel',
+                                  widget: 'string',
+                              }
+                            - {
+                                  label: 'Rating',
+                                  name: 'rating',
+                                  widget: 'number',
+                              }
+                            - {
+                                  label: 'Class Name',
+                                  name: 'className',
+                                  widget: 'string',
+                              }
 
-                - label: 'Alert'
-                  name: 'alert'
-                  widget: 'object'
-                  fields:
-                      - {
-                            label: 'Variant',
-                            name: 'variant',
-                            widget: 'select',
-                            options:
-                                [
-                                    'open-in-new-tab',
-                                    'error',
-                                    'warning',
-                                    'info',
-                                    'success',
-                                ],
-                        }
-                      - { label: 'Icon', name: 'icon', widget: 'string' }
-                      - { label: 'Text', name: 'text', widget: 'text' }
-
-                - label: 'Products Section'
-                  name: 'productsSection'
-                  widget: 'object'
-                  fields:
-                      - { label: 'Heading', name: 'heading', widget: 'string' }
-                      - {
-                            label: 'Subheading',
-                            name: 'subheading',
-                            widget: 'string',
-                        }
-                      - label: 'Products'
-                        name: 'products'
+                      - label: 'Paragraphs'
+                        name: 'paragraphs'
                         widget: 'list'
+                        fields:
+                            - { label: 'Texto', name: 'text', widget: 'text' }
+
+                      - label: 'Alert'
+                        name: 'alert'
+                        widget: 'object'
+                        fields:
+                            - {
+                                  label: 'Variant',
+                                  name: 'variant',
+                                  widget: 'select',
+                                  options:
+                                      [
+                                          'open-in-new-tab',
+                                          'error',
+                                          'warning',
+                                          'info',
+                                          'success',
+                                      ],
+                              }
+                            - { label: 'Icon', name: 'icon', widget: 'string' }
+                            - { label: 'Text', name: 'text', widget: 'text' }
+
+                      - label: 'Products Section'
+                        name: 'productsSection'
+                        widget: 'object'
+                        fields:
+                            - {
+                                  label: 'Heading',
+                                  name: 'heading',
+                                  widget: 'string',
+                              }
+                            - {
+                                  label: 'Subheading',
+                                  name: 'subheading',
+                                  widget: 'string',
+                              }
+                            - label: 'Products'
+                              name: 'products'
+                              widget: 'list'
+                              fields:
+                                  - {
+                                        label: 'Image Src',
+                                        name: 'imageSrc',
+                                        widget: 'image',
+                                    }
+                                  - {
+                                        label: 'Image Alt',
+                                        name: 'imageAlt',
+                                        widget: 'string',
+                                    }
+                                  - {
+                                        label: 'Título',
+                                        name: 'title',
+                                        widget: 'string',
+                                    }
+                                  - {
+                                        label: 'Precio',
+                                        name: 'price',
+                                        widget: 'string',
+                                    }
+                                  - {
+                                        label: 'Subtitle',
+                                        name: 'subtitle',
+                                        widget: 'string',
+                                    }
+                                  - {
+                                        label: 'Href',
+                                        name: 'href',
+                                        widget: 'string',
+                                    }
+                            - label: 'Buttons'
+                              name: 'buttons'
+                              widget: 'list'
+                              fields:
+                                  - {
+                                        label: 'Text',
+                                        name: 'text',
+                                        widget: 'string',
+                                    }
+                                  - {
+                                        label: 'Href',
+                                        name: 'href',
+                                        widget: 'string',
+                                    }
+                                  - {
+                                        label: 'Variant',
+                                        name: 'variant',
+                                        widget: 'string',
+                                    }
+
+          - name: 'horari'
+            label: 'Horari'
+            files:
+                - file: 'src/pages/horari/horari.json'
+                  label: 'Página Horari'
+                  name: 'horari'
+                  fields:
+                      - label: 'SEO'
+                        name: 'seo'
+                        widget: 'object'
+                        fields:
+                            - {
+                                  label: 'Título',
+                                  name: 'title',
+                                  widget: 'string',
+                              }
+                            - {
+                                  label: 'Descripción',
+                                  name: 'description',
+                                  widget: 'text',
+                              }
+                            - {
+                                  label: 'Canonical',
+                                  name: 'canonical',
+                                  widget: 'string',
+                              }
+                            - label: 'Open Graph'
+                              name: 'og'
+                              widget: 'object'
+                              fields:
+                                  - {
+                                        label: 'URL',
+                                        name: 'url',
+                                        widget: 'string',
+                                    }
+                                  - {
+                                        label: 'Imagen OG',
+                                        name: 'image',
+                                        widget: 'image',
+                                    }
+                                  - {
+                                        label: 'OG Título',
+                                        name: 'title',
+                                        widget: 'string',
+                                    }
+                                  - {
+                                        label: 'OG Descripción',
+                                        name: 'description',
+                                        widget: 'text',
+                                    }
+                            - label: 'Twitter'
+                              name: 'twitter'
+                              widget: 'object'
+                              fields:
+                                  - {
+                                        label: 'Card',
+                                        name: 'card',
+                                        widget: 'string',
+                                    }
+
+                      - {
+                            label: 'Banner Variant',
+                            name: 'bannerVariant',
+                            widget: 'string',
+                        }
+                      - { label: 'Heading', name: 'heading', widget: 'string' }
+
+                      - label: 'Days'
+                        name: 'days'
+                        widget: 'list'
+                        fields:
+                            - { label: 'Día', name: 'day', widget: 'string' }
+
+                      - label: 'Events'
+                        name: 'events'
+                        widget: 'list'
+                        fields:
+                            - { label: 'Día', name: 'day', widget: 'string' }
+                            - {
+                                  label: 'Inicio',
+                                  name: 'start',
+                                  widget: 'string',
+                              }
+                            - { label: 'Fin', name: 'end', widget: 'string' }
+                            - {
+                                  label: 'Etiqueta',
+                                  name: 'label',
+                                  widget: 'string',
+                              }
+                            - {
+                                  label: 'Categoría',
+                                  name: 'category',
+                                  widget: 'select',
+                                  options:
+                                      [
+                                          'iniciacio',
+                                          'formatiu',
+                                          'senior',
+                                          'partit',
+                                      ],
+                              }
+
+                      - label: 'Filter Options'
+                        name: 'filterOptions'
+                        widget: 'list'
+                        fields:
+                            - {
+                                  label: 'Value',
+                                  name: 'value',
+                                  widget: 'string',
+                              }
+                            - {
+                                  label: 'Label',
+                                  name: 'label',
+                                  widget: 'string',
+                              }
+
+                      - label: 'Actions'
+                        name: 'actions'
+                        widget: 'list'
+                        fields:
+                            - {
+                                  label: 'Tipo',
+                                  name: 'type',
+                                  widget: 'select',
+                                  options: ['button', 'link'],
+                              }
+                            - { label: 'Icono', name: 'icon', widget: 'string' }
+                            - { label: 'Texto', name: 'text', widget: 'string' }
+                            - {
+                                  label: 'Href',
+                                  name: 'href',
+                                  widget: 'string',
+                                  required: false,
+                              }
+                            - {
+                                  label: 'Download',
+                                  name: 'download',
+                                  widget: 'string',
+                                  required: false,
+                              }
+          - name: 'contacte'
+            label: 'Contacte'
+            files:
+                - file: 'src/pages/contacte/contacte.json'
+                  name: 'contacte'
+                  label: 'Página Contacte'
+                  fields:
+                      - label: 'SEO'
+                        name: 'seo'
+                        widget: 'object'
+                        fields:
+                            - {
+                                  label: 'Título',
+                                  name: 'title',
+                                  widget: 'string',
+                              }
+                            - {
+                                  label: 'Descripción',
+                                  name: 'description',
+                                  widget: 'text',
+                              }
+                            - {
+                                  label: 'Canonical',
+                                  name: 'canonical',
+                                  widget: 'string',
+                              }
+                            - label: 'Open Graph'
+                              name: 'og'
+                              widget: 'object'
+                              fields:
+                                  - {
+                                        label: 'URL',
+                                        name: 'url',
+                                        widget: 'string',
+                                    }
+                                  - {
+                                        label: 'Imagen OG',
+                                        name: 'image',
+                                        widget: 'image',
+                                    }
+                                  - {
+                                        label: 'OG Título',
+                                        name: 'title',
+                                        widget: 'string',
+                                    }
+                                  - {
+                                        label: 'OG Descripción',
+                                        name: 'description',
+                                        widget: 'text',
+                                    }
+                            - label: 'Twitter'
+                              name: 'twitter'
+                              widget: 'object'
+                              fields:
+                                  - {
+                                        label: 'Card',
+                                        name: 'card',
+                                        widget: 'string',
+                                    }
+
+                      - {
+                            label: 'Banner Variant',
+                            name: 'bannerVariant',
+                            widget: 'string',
+                        }
+
+                      - label: 'Location Map'
+                        name: 'locationMap'
+                        widget: 'object'
+                        fields:
+                            - {
+                                  label: 'Título',
+                                  name: 'title',
+                                  widget: 'string',
+                              }
+                            - {
+                                  label: 'Dirección',
+                                  name: 'address',
+                                  widget: 'string',
+                              }
+                            - {
+                                  label: 'Map Src',
+                                  name: 'mapSrc',
+                                  widget: 'string',
+                              }
+
+                      - label: 'Parlem Section'
+                        name: 'parlemSection'
+                        widget: 'object'
+                        fields:
+                            - {
+                                  label: 'Título',
+                                  name: 'title',
+                                  widget: 'string',
+                              }
+                            - label: 'Items'
+                              name: 'items'
+                              widget: 'list'
+                              fields:
+                                  - {
+                                        label: 'Icon',
+                                        name: 'icon',
+                                        widget: 'string',
+                                    }
+                                  - {
+                                        label: 'Texto',
+                                        name: 'text',
+                                        widget: 'string',
+                                    }
+
+                      - label: 'Read Section'
+                        name: 'readSection'
+                        widget: 'object'
+                        fields:
+                            - {
+                                  label: 'Título',
+                                  name: 'title',
+                                  widget: 'string',
+                              }
+                            - label: 'Contact Form'
+                              name: 'contactForm'
+                              widget: 'object'
+                              fields:
+                                  - {
+                                        label: 'Título',
+                                        name: 'title',
+                                        widget: 'string',
+                                    }
+                                  - {
+                                        label: 'Nombre Placeholder',
+                                        name: 'namePlaceholder',
+                                        widget: 'string',
+                                    }
+                                  - {
+                                        label: 'Teléfono Placeholder',
+                                        name: 'phonePlaceholder',
+                                        widget: 'string',
+                                    }
+                                  - {
+                                        label: 'Email Placeholder',
+                                        name: 'emailPlaceholder',
+                                        widget: 'string',
+                                    }
+                                  - {
+                                        label: 'Mensaje Placeholder',
+                                        name: 'messagePlaceholder',
+                                        widget: 'string',
+                                    }
+          - name: 'equips'
+            label: 'Equips'
+            files:
+                - file: 'src/pages/equips/equips.json'
+                  name: 'equips'
+                  label: 'Página Equips'
+                  fields:
+                      - label: 'SEO'
+                        name: 'seo'
+                        widget: 'object'
+                        fields:
+                            - {
+                                  label: 'Título',
+                                  name: 'title',
+                                  widget: 'string',
+                              }
+                            - {
+                                  label: 'Descripción',
+                                  name: 'description',
+                                  widget: 'text',
+                              }
+                            - {
+                                  label: 'Canonical',
+                                  name: 'canonical',
+                                  widget: 'string',
+                              }
+                            - label: 'Open Graph'
+                              name: 'og'
+                              widget: 'object'
+                              fields:
+                                  - {
+                                        label: 'URL',
+                                        name: 'url',
+                                        widget: 'string',
+                                    }
+                                  - {
+                                        label: 'Imagen OG',
+                                        name: 'image',
+                                        widget: 'image',
+                                    }
+                                  - {
+                                        label: 'OG Título',
+                                        name: 'title',
+                                        widget: 'string',
+                                    }
+                                  - {
+                                        label: 'OG Descripción',
+                                        name: 'description',
+                                        widget: 'text',
+                                    }
+                            - label: 'Twitter'
+                              name: 'twitter'
+                              widget: 'object'
+                              fields:
+                                  - {
+                                        label: 'Card',
+                                        name: 'card',
+                                        widget: 'string',
+                                    }
+
+                      - {
+                            label: 'Banner Variant',
+                            name: 'bannerVariant',
+                            widget: 'string',
+                        }
+
+                      - label: 'Categorías'
+                        name: 'categories'
+                        widget: 'list'
+                        fields:
+                            - {
+                                  label: 'Título sección',
+                                  name: 'title',
+                                  widget: 'string',
+                              }
+                            - label: 'Equipos'
+                              name: 'teams'
+                              widget: 'list'
+                              fields:
+                                  - {
+                                        label: 'Foto',
+                                        name: 'imageSrc',
+                                        widget: 'image',
+                                    }
+                                  - {
+                                        label: 'Título',
+                                        name: 'title',
+                                        widget: 'string',
+                                    }
+                                  - label: 'Jugadores'
+                                    name: 'members'
+                                    widget: 'list'
+                                    fields:
+                                        - {
+                                              label: 'Nombre',
+                                              name: 'member',
+                                              widget: 'string',
+                                          }
+
+          - name: 'inscripcions'
+            label: 'Inscripcions'
+            files:
+                - file: 'src/pages/inscripcions/inscripcions.json'
+                  label: 'Página Inscripcions'
+                  name: 'inscripcions'
+                  fields:
+                      - label: 'SEO'
+                        name: 'seo'
+                        widget: 'object'
+                        fields:
+                            - {
+                                  label: 'Título',
+                                  name: 'title',
+                                  widget: 'string',
+                              }
+                            - {
+                                  label: 'Descripción',
+                                  name: 'description',
+                                  widget: 'text',
+                              }
+                            - {
+                                  label: 'Canonical',
+                                  name: 'canonical',
+                                  widget: 'string',
+                              }
+                            - label: 'Open Graph'
+                              name: 'og'
+                              widget: 'object'
+                              fields:
+                                  - {
+                                        label: 'URL',
+                                        name: 'url',
+                                        widget: 'string',
+                                    }
+                                  - {
+                                        label: 'Imagen OG',
+                                        name: 'image',
+                                        widget: 'image',
+                                    }
+                                  - {
+                                        label: 'OG Título',
+                                        name: 'title',
+                                        widget: 'string',
+                                    }
+                                  - {
+                                        label: 'OG Descripción',
+                                        name: 'description',
+                                        widget: 'text',
+                                    }
+                            - label: 'Twitter'
+                              name: 'twitter'
+                              widget: 'object'
+                              fields:
+                                  - {
+                                        label: 'Card',
+                                        name: 'card',
+                                        widget: 'string',
+                                    }
+
+                      - {
+                            label: 'Banner Variant',
+                            name: 'bannerVariant',
+                            widget: 'string',
+                        }
+                      - { label: 'Heading', name: 'heading', widget: 'string' }
+
+                      - label: 'Alert'
+                        name: 'alert'
+                        widget: 'object'
+                        fields:
+                            - { label: 'Icon', name: 'icon', widget: 'string' }
+                            - {
+                                  label: 'Variant',
+                                  name: 'variant',
+                                  widget: 'select',
+                                  options:
+                                      [
+                                          'open-in-new-tab',
+                                          'error',
+                                          'warning',
+                                          'info',
+                                          'success',
+                                      ],
+                              }
+                            - { label: 'Texto', name: 'text', widget: 'text' }
+
+                      - label: 'Promo Section'
+                        name: 'promoSection'
+                        widget: 'object'
                         fields:
                             - {
                                   label: 'Image Src',
@@ -530,113 +1134,19 @@ collections:
                                   widget: 'string',
                               }
                             - {
-                                  label: 'Título',
-                                  name: 'title',
+                                  label: 'Heading',
+                                  name: 'heading',
                                   widget: 'string',
                               }
+                            - { label: 'Text', name: 'text', widget: 'text' }
                             - {
-                                  label: 'Precio',
-                                  name: 'price',
-                                  widget: 'string',
-                              }
-                            - {
-                                  label: 'Subtitle',
-                                  name: 'subtitle',
-                                  widget: 'string',
-                              }
-                            - { label: 'Href', name: 'href', widget: 'string' }
-                      - label: 'Buttons'
-                        name: 'buttons'
-                        widget: 'list'
-                        fields:
-                            - { label: 'Text', name: 'text', widget: 'string' }
-                            - { label: 'Href', name: 'href', widget: 'string' }
-                            - {
-                                  label: 'Variant',
-                                  name: 'variant',
+                                  label: 'Button Text',
+                                  name: 'buttonText',
                                   widget: 'string',
                               }
 
-    - name: 'horari'
-      label: 'Horari'
-      files:
-          - file: 'src/pages/horari/horari.json'
-            label: 'Página Horari'
-            name: 'horari'
-            fields:
-                - label: 'SEO'
-                  name: 'seo'
-                  widget: 'object'
-                  fields:
-                      - { label: 'Título', name: 'title', widget: 'string' }
                       - {
-                            label: 'Descripción',
-                            name: 'description',
+                            label: 'Footer Paragraph',
+                            name: 'footerParagraph',
                             widget: 'text',
                         }
-                      - {
-                            label: 'Canonical',
-                            name: 'canonical',
-                            widget: 'string',
-                        }
-                      - label: 'Open Graph'
-                        name: 'og'
-                        widget: 'object'
-                        fields:
-                            - { label: 'URL', name: 'url', widget: 'string' }
-                            - {
-                                  label: 'Imagen OG',
-                                  name: 'image',
-                                  widget: 'image',
-                              }
-                            - {
-                                  label: 'OG Título',
-                                  name: 'title',
-                                  widget: 'string',
-                              }
-                            - {
-                                  label: 'OG Descripción',
-                                  name: 'description',
-                                  widget: 'text',
-                              }
-                      - label: 'Twitter'
-                        name: 'twitter'
-                        widget: 'object'
-                        fields:
-                            - { label: 'Card', name: 'card', widget: 'string' }
-
-                - {
-                      label: 'Banner Variant',
-                      name: 'bannerVariant',
-                      widget: 'string',
-                  }
-                - { label: 'Heading', name: 'heading', widget: 'string' }
-
-                - label: 'Days'
-                  name: 'days'
-                  widget: 'list'
-                  fields:
-                      - { label: 'Día', name: 'day', widget: 'string' }
-
-                - label: 'Events'
-                  name: 'events'
-                  widget: 'list'
-                  fields:
-                      - { label: 'Día', name: 'day', widget: 'string' }
-                      - { label: 'Inicio', name: 'start', widget: 'string' }
-                      - { label: 'Fin', name: 'end', widget: 'string' }
-                      - { label: 'Etiqueta', name: 'label', widget: 'string' }
-                      - {
-                            label: 'Categoría',
-                            name: 'category',
-                            widget: 'select',
-                            options:
-                                ['iniciacio', 'formatiu', 'senior', 'partit'],
-                        }
-
-                - label: 'Filter Options'
-                  name: 'filterOptions'
-                  widget: 'list'
-                  fields:
-                      - { label: 'Value', name: 'value', widget: 'string' }
-                      - { label: 'Label', name: 'label', widget: 'string' }
