@@ -1,3 +1,4 @@
+import React from 'react';
 import { motion } from 'framer-motion';
 import { Title } from '@/ui/titles/Title';
 import {
@@ -6,8 +7,20 @@ import {
     BaseComponentProps,
     getBaseComponentProps,
 } from '@/utils';
-
+import data from './patrocinadors.json';
 import './patrocinadors.scss';
+
+interface PatrocinadorsData {
+    header: string;
+    logos: string[];
+    contact: {
+        text: string;
+        linkText: string;
+        linkHref: string;
+    };
+}
+
+const { header, logos, contact } = data as PatrocinadorsData;
 
 export type Props = BaseComponentProps & {
     children?: React.ReactNode;
@@ -15,19 +28,10 @@ export type Props = BaseComponentProps & {
 
 const block = registerBlockName('Patrocinadors');
 
-export const Patrocinadors = ({ children, ...props }: Props) => {
-    const logos = [
-        'elymet_mail.png',
-        'hockeyteam-logo.png',
-        'moto-project-logo.jpg',
-        'rmdislovall-logo.png',
-        'storepack-logo.png',
-        'caldereria-jocasa-logo.png',
-    ];
-
+export const Patrocinadors: React.FC<Props> = ({ children, ...props }) => {
     return (
         <div {...getBaseComponentProps({ ...props, block })}>
-            <Title>Patrocinadors</Title>
+            <Title>{header}</Title>
 
             <div className={toBEM({ block, element: 'logos' })}>
                 {logos.map((src, index) => (
@@ -37,19 +41,16 @@ export const Patrocinadors = ({ children, ...props }: Props) => {
                         alt={src.split('.')[0]}
                         initial={{ opacity: 0, y: 5 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        transition={{
-                            duration: 1,
-                            ease: 'easeInOut',
-                        }}
+                        transition={{ duration: 1, ease: 'easeInOut' }}
                         className={toBEM({ block, element: 'logo' })}
                     />
                 ))}
             </div>
 
             <div className={toBEM({ block, element: 'contacte' })}>
-                <p>Si t’agrada el que fem, suma-t’hi!</p>
+                <p>{contact.text}</p>
                 <span>
-                    <a href="/contacte">Contacta’ns!</a>
+                    <a href={contact.linkHref}>{contact.linkText}</a>
                 </span>
             </div>
 

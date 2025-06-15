@@ -1,119 +1,105 @@
+import React from 'react';
+import data from './discover.json';
+
+import Title from '@/ui/titles/Title';
+import { Link } from 'react-router-dom';
 import {
     toBEM,
     registerBlockName,
     BaseComponentProps,
     getBaseComponentProps,
 } from '@/utils';
-
 import './Discover.scss';
-import Title from '@/ui/titles/Title';
-import { Link } from 'react-router-dom';
 
-export type DiscoverProps = BaseComponentProps;
+interface CardData {
+    to: string;
+    imageSrc: string;
+    imageAlt: string;
+    title: string;
+    linkText: string;
+}
+
+interface DiscoverData {
+    ariaLabel: string;
+    header: string;
+    leftCard: CardData;
+    rightCards: CardData[];
+}
+
+const { ariaLabel, header, leftCard, rightCards } = data as DiscoverData;
 
 const block = registerBlockName('Discover');
-export const Discover = ({ ...props }: DiscoverProps) => {
+
+export const Discover: React.FC<BaseComponentProps> = (props) => {
     return (
         <section
             {...getBaseComponentProps({ ...props, block })}
-            aria-label="Descobreix el nostre club"
+            aria-label={ariaLabel}
         >
-            <Title>Descobreix el nostre club</Title>
+            <Title>{header}</Title>
 
             <div className={toBEM({ block, element: 'cards' })}>
                 <Link
-                    to="/seccions"
+                    to={leftCard.to}
                     className={toBEM({ block, element: 'left-card' })}
                 >
                     <img
                         loading="lazy"
-                        src="/seccions.jpg"
-                        alt="Seccions"
+                        src={leftCard.imageSrc}
+                        alt={leftCard.imageAlt}
                         className={toBEM({ block, element: 'image' })}
                     />
                     <div className={toBEM({ block, element: 'overlay' })}>
-                        <p
-                            className={toBEM({
-                                block,
-                                element: 'card-title',
-                            })}
-                        >
-                            Seccions
+                        <p className={toBEM({ block, element: 'card-title' })}>
+                            {leftCard.title}
                         </p>
                         <span
-                            className={toBEM({
-                                block,
-                                element: 'card-link',
-                            })}
+                            className={toBEM({ block, element: 'card-link' })}
                         >
-                            Aprèn més &gt;
+                            {leftCard.linkText}
                         </span>
                     </div>
                 </Link>
 
                 <div className={toBEM({ block, element: 'right-column' })}>
-                    <Link
-                        to="/equips"
-                        className={toBEM({ block, element: 'card' })}
-                    >
-                        <img
-                            loading="lazy"
-                            src="/equips.webp"
-                            alt="Equips"
-                            className={toBEM({ block, element: 'image' })}
-                        />
-                        <div className={toBEM({ block, element: 'overlay' })}>
-                            <p
-                                className={toBEM({
-                                    block,
-                                    element: 'card-title',
-                                })}
+                    {rightCards.map((card, i) => (
+                        <Link
+                            key={i}
+                            to={card.to}
+                            className={toBEM({ block, element: 'card' })}
+                        >
+                            <img
+                                loading="lazy"
+                                src={card.imageSrc}
+                                alt={card.imageAlt}
+                                className={toBEM({ block, element: 'image' })}
+                            />
+                            <div
+                                className={toBEM({ block, element: 'overlay' })}
                             >
-                                Equips
-                            </p>
-                            <span
-                                className={toBEM({
-                                    block,
-                                    element: 'card-link',
-                                })}
-                            >
-                                Aprèn més &gt;
-                            </span>
-                        </div>
-                    </Link>
-
-                    <Link
-                        to="/botiga"
-                        className={toBEM({ block, element: 'card' })}
-                    >
-                        <img
-                            loading="lazy"
-                            src="/botiga.png"
-                            alt="Botiga"
-                            className={toBEM({ block, element: 'image' })}
-                        />
-                        <div className={toBEM({ block, element: 'overlay' })}>
-                            <p
-                                className={toBEM({
-                                    block,
-                                    element: 'card-title',
-                                })}
-                            >
-                                Botiga
-                            </p>
-                            <span
-                                className={toBEM({
-                                    block,
-                                    element: 'card-link',
-                                })}
-                            >
-                                Aprèn més &gt;
-                            </span>
-                        </div>
-                    </Link>
+                                <p
+                                    className={toBEM({
+                                        block,
+                                        element: 'card-title',
+                                    })}
+                                >
+                                    {card.title}
+                                </p>
+                                <span
+                                    className={toBEM({
+                                        block,
+                                        element: 'card-link',
+                                    })}
+                                >
+                                    {card.linkText}
+                                </span>
+                            </div>
+                        </Link>
+                    ))}
                 </div>
             </div>
         </section>
     );
 };
+
 export default Discover;

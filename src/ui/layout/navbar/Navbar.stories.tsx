@@ -3,9 +3,8 @@ import { Navbar } from './Navbar';
 import type { Meta, StoryObj } from '@storybook/react';
 
 const meta: Meta<typeof Navbar> = {
-    title: 'Sferic/Navbar',
+    title: 'Sferic/Features/Navbar',
     component: Navbar,
-    tags: ['autodocs'],
     decorators: [
         (Story) => (
             <MemoryRouter>

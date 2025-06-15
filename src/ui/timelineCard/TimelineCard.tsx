@@ -4,7 +4,6 @@ import {
     BaseComponentProps,
     getBaseComponentProps,
 } from '@/utils';
-
 import './TimelineCard.scss';
 
 export type TimelineCardProps = BaseComponentProps & {
@@ -13,26 +12,25 @@ export type TimelineCardProps = BaseComponentProps & {
     description: string;
 };
 
-const blockCard = registerBlockName('TimelineCard');
+const block = registerBlockName('TimelineCard');
+
 export const TimelineCard = ({
     year,
     title,
     description,
     ...props
-}: TimelineCardProps) => {
-    return (
-        <div {...getBaseComponentProps({ ...props, block: blockCard })}>
-            <div className={toBEM({ block: blockCard, element: 'header' })}>
-                <p className={toBEM({ block: blockCard, element: 'year' })}>
-                    {year}
-                </p>
-                <p className={toBEM({ block: blockCard, element: 'title' })}>
-                    {title}
+}: TimelineCardProps) => (
+    <div {...getBaseComponentProps({ ...props, block })}>
+        <div className={toBEM({ block, element: 'row' })}>
+            <div className={toBEM({ block, element: 'year' })}>{year}</div>
+            <div className={toBEM({ block, element: 'content' })}>
+                <p className={toBEM({ block, element: 'title' })}>{title}</p>
+                <p className={toBEM({ block, element: 'description' })}>
+                    {description}
                 </p>
             </div>
-            <p className={toBEM({ block: blockCard, element: 'description' })}>
-                {description}
-            </p>
         </div>
-    );
-};
+    </div>
+);
+
+export default TimelineCard;

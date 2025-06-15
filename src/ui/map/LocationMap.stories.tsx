@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { LocationMap } from './LocationMap';
 
 const meta: Meta<typeof LocationMap> = {
-    title: 'Sferic/LocationMap',
+    title: 'Sferic/UI/LocationMap',
     component: LocationMap,
     tags: ['autodocs'],
     argTypes: {
@@ -24,7 +24,7 @@ export default meta;
 
 type Story = StoryObj<typeof LocationMap>;
 
-export const Default: Story = {
+export const Playground: Story = {
     args: {
         title: 'Pavelló Municipal de “La Maurina”',
         address: 'Carrer Sardenya, 34, Terrassa, 08224 Barcelona',

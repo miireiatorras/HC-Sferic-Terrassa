@@ -3,7 +3,7 @@ import { ContentSection, ContentSectionProps, Stat } from './ContentSection';
 import './ContentSection.scss';
 
 const meta: Meta<typeof ContentSection> = {
-    title: 'Sferic/ContentSection',
+    title: 'Sferic/UI/ContentSection',
     component: ContentSection,
     tags: ['autodocs'],
 };
@@ -11,8 +11,8 @@ export default meta;
 type Story = StoryObj<typeof ContentSection>;
 
 const schoolStats: Stat[] = [
-    { icon: 'trophy', value: '3-6', label: 'Anys d’edat' },
-    { icon: 'trophy', label: 'Categoria Escola' },
+    { icon: 'trophy', label: 'Anys d’edat' },
+    { icon: 'Frame', label: 'Categoria Escola' },
     { icon: 'trophy', label: 'Equips mixtos' },
 ];
 
@@ -36,7 +36,7 @@ const baseArgs: ContentSectionProps = {
     stats: schoolStats,
     linkText: 'Consultar equips',
     linkHref: '/equips',
-    imageSrc: '/escola-hoquei-patins.jpg',
+    imageSrc: '/banners/presentacio-nen-copia.webp',
     imageAlt: 'Escola hoquei patins',
     imagePosition: 'right',
 };
@@ -47,6 +47,7 @@ export const Playground: Story = {
     },
 };
 
+/** This story demonstrates the different variants of the ContentSection component */
 export const Variants: Story = {
     render: () => (
         <div

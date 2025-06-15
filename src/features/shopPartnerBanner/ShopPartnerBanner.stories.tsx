@@ -6,7 +6,7 @@ import {
 import './ShopPartnerBanner.scss';
 
 const meta: Meta<typeof ShopPartnerBanner> = {
-    title: 'Sferic/ShopPartnerBanner',
+    title: 'Sferic/UI/ShopPartnerBanner',
     component: ShopPartnerBanner,
     tags: ['autodocs'],
     argTypes: {

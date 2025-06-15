@@ -1,67 +1,66 @@
+import React from 'react';
+import data from './calendari.json';
 import { Button } from '@/ui/button/Button';
 import Title from '@/ui/titles/Title';
+import { NavLink } from 'react-router-dom';
 import {
     toBEM,
     registerBlockName,
     BaseComponentProps,
     getBaseComponentProps,
 } from '@/utils';
-
 import './Calendari.scss';
-import { NavLink } from 'react-router-dom';
+import { IconNames } from '@/ui/Icon/Icon';
 
-export type CalendariProps = BaseComponentProps & {
-    children?: React.ReactNode;
-};
+import type { ButtonProps } from '@/ui/button/Button';
+import { TitleProps } from '@/ui/titles/Title';
+
+interface ButtonData {
+    text: string;
+    href: string;
+    variant: ButtonProps<object>['variant'];
+    icon?: IconNames;
+    iconPosition?: 'left' | 'right';
+}
+
+interface CalendariData {
+    header: string;
+    headerVariant?: TitleProps['variant'];
+    paragraphs: string[];
+    buttons: ButtonData[];
+}
+
+const { header, headerVariant, paragraphs, buttons } =
+    data as unknown as CalendariData;
 
 const block = registerBlockName('Calendari');
-export const Calendari = ({ ...props }: CalendariProps) => {
+
+export const Calendari: React.FC<BaseComponentProps> = (props) => {
     return (
         <div {...getBaseComponentProps({ ...props, block })}>
-            <Title variant="light">Calendari partits</Title>
-            <section
-                className={toBEM({
-                    block,
-                    element: 'section',
-                })}
-            >
-                <p>
-                    La pàgina web oficial de la Federació de Hoquei Patins
-                    disposa de tots els horaris dels partits de la temporada.
-                    Consulta tant la data, pista, hora, equip rival i inclús
-                    resultats!
-                </p>
-                <div
-                    className={toBEM({
-                        block,
-                        element: 'buttons-container',
-                    })}
-                >
-                    <Button
-                        as={NavLink}
-                        to="http://www.hoqueipatins.fecapa.cat/ag/"
-                        variant="primary-white"
-                        icon="launch"
-                        iconPosition="right"
-                    >
-                        Accedeix al calendari
-                    </Button>
-                    <Button
-                        as={NavLink}
-                        to="/horari"
-                        variant="secondary-white"
-                        icon="arrow-right"
-                        iconPosition="right"
-                    >
-                        Consulta horari entrenaments
-                    </Button>
+            <Title variant={headerVariant}>{header}</Title>
+            <section className={toBEM({ block, element: 'section' })}>
+                {paragraphs[0] && <p>{paragraphs[0]}</p>}
+
+                <div className={toBEM({ block, element: 'buttons-container' })}>
+                    {buttons.map((btn, i) => (
+                        <Button
+                            key={i}
+                            as={NavLink}
+                            to={btn.href}
+                            variant={btn.variant}
+                            icon={btn.icon}
+                            iconPosition={btn.iconPosition}
+                        >
+                            {btn.text}
+                        </Button>
+                    ))}
                 </div>
-                <p>
-                    Al nostre Instagram trobaràs tota la informació sobre els
-                    pròxims partits i qualsevol novetat o modificació que hi
-                    hagi!{' '}
-                </p>
+
+                {paragraphs[1] && <p>{paragraphs[1]}</p>}
             </section>
         </div>
     );
 };
+
+export default Calendari;

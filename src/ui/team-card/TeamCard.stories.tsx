@@ -3,7 +3,7 @@ import { TeamCard } from './TeamCard';
 import './TeamCard.scss';
 
 const meta: Meta<typeof TeamCard> = {
-    title: 'Sferic/TeamCard',
+    title: 'Sferic/UI/TeamCard',
     component: TeamCard,
     tags: ['autodocs'],
 };

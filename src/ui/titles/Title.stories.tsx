@@ -3,7 +3,7 @@ import { Title } from './Title';
 import './Title.scss';
 
 const meta: Meta<typeof Title> = {
-    title: 'Sferic/Title',
+    title: 'Sferic/UI/Title',
     component: Title,
     tags: ['autodocs'],
 };
@@ -19,7 +19,8 @@ export const Playground: Story = {
     },
 };
 
-export const Variant: Story = {
+/** This story demonstrates the different variants of the Title component */
+export const Variants: Story = {
     render: () => (
         <div
             style={{

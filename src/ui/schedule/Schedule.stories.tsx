@@ -3,7 +3,7 @@ import { Schedule, ScheduleEvent } from './Schedule';
 import './Schedule.scss';
 
 const meta: Meta<typeof Schedule> = {
-    title: 'Sferic/Schedule',
+    title: 'Sferic/UI/Schedule',
     component: Schedule,
     tags: ['autodocs'],
 };
@@ -78,8 +78,4 @@ export const Playground: Story = {
         days: sampleDays,
         events: sampleEvents,
     },
-};
-
-export const AllDaysFull: Story = {
-    render: () => <Schedule days={sampleDays} events={sampleEvents} />,
 };

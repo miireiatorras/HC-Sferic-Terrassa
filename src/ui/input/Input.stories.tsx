@@ -3,7 +3,7 @@ import { Input, Props as InputProps } from './Input';
 import './Input.scss';
 
 const meta: Meta<typeof Input> = {
-    title: 'Sferic/Input',
+    title: 'Sferic/UI/Input',
     component: Input,
     tags: ['autodocs'],
     argTypes: {
@@ -33,6 +33,7 @@ export const Playground: Story = {
     } as InputProps,
 };
 
+/** This story demonstrates the different variants of the Input component */
 export const Variants: Story = {
     render: () => {
         const types: InputProps['type'][] = [

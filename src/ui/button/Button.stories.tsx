@@ -19,7 +19,7 @@ const variants = [
 const iconOptions = [undefined, ...(Object.values(iconNames) as IconNames[])];
 
 const meta: Meta<typeof Button> = {
-    title: 'Sferic/Button',
+    title: 'Sferic/UI/Button',
     component: Button,
     tags: ['autodocs'],
     argTypes: {

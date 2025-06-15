@@ -6,7 +6,7 @@ import * as iconNames from '@/config/icons/constants';
 const sizes = ['xs', 'sm', 'md', 'ml', 'lg', 'xl'] as const;
 
 const meta: Meta<typeof Icon> = {
-    title: 'Sferic/Icon',
+    title: 'Sferic/UI/Icon',
     component: Icon,
     tags: ['autodocs'],
 };

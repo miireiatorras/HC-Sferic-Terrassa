@@ -3,7 +3,7 @@ import { InfoCard } from './InfoCard';
 import './InfoCard.scss';
 
 const meta: Meta<typeof InfoCard> = {
-    title: 'Sferic/InfoCard',
+    title: 'Sferic/UI/InfoCard',
     component: InfoCard,
     tags: ['autodocs'],
 };

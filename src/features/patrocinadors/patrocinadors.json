@@ -1,0 +1,16 @@
+{
+    "header": "Patrocinadors",
+    "logos": [
+        "elymet_mail.png",
+        "hockeyteam-logo.png",
+        "moto-project-logo.jpg",
+        "rmdislovall-logo.png",
+        "storepack-logo.png",
+        "caldereria-jocasa-logo.png"
+    ],
+    "contact": {
+        "text": "Si t’agrada el que fem, suma-t’hi!",
+        "linkText": "Contacta’ns!",
+        "linkHref": "/contacte"
+    }
+}

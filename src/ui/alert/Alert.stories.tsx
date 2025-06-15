@@ -5,7 +5,7 @@ import * as iconNames from '@/config/icons/constants';
 import './Alert.scss';
 
 const meta: Meta<typeof Alert> = {
-    title: 'Sferic/Alert',
+    title: 'Sferic/UI/Alert',
     component: Alert,
     tags: ['autodocs'],
     argTypes: {
@@ -65,6 +65,7 @@ export const OpenInNewTab: Story = {
     },
 };
 
+/** This story demonstrates the different variants of the Alert component */
 export const Variants: Story = {
     render: () => (
         <div

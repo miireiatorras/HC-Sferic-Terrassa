@@ -3,7 +3,7 @@ import { ProductCard } from './ProductCard';
 import './ProductCard.scss';
 
 const meta: Meta<typeof ProductCard> = {
-    title: 'Sferic/ProductCard',
+    title: 'Sferic/UI/ProductCard',
     component: ProductCard,
     tags: ['autodocs'],
     argTypes: {

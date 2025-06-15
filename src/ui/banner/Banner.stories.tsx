@@ -3,7 +3,7 @@ import { Banner } from './Banner';
 import './Banner.scss';
 
 const meta: Meta<typeof Banner> = {
-    title: 'Sferic/Banner',
+    title: 'Sferic/UI/Banner',
     component: Banner,
     tags: ['autodocs'],
 };

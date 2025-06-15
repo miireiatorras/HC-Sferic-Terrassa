@@ -3,7 +3,7 @@ import { TimelineCard } from './TimelineCard';
 import './TimelineCard.scss';
 
 const meta: Meta<typeof TimelineCard> = {
-    title: 'Sferic/TimelineCard',
+    title: 'Sferic/UI/TimelineCard',
     component: TimelineCard,
     tags: ['autodocs'],
 };

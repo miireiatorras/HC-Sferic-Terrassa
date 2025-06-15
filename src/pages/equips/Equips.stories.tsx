@@ -4,9 +4,8 @@ import { TeamCard } from '@/ui/team-card/TeamCard';
 import { DefaultAccordion } from '@/ui/defaultAccordion/DefaultAccordion';
 
 const meta: Meta = {
-    title: 'Sferic/Equips',
+    title: 'Sferic/Features/Equips',
     component: TeamCard,
-    tags: ['autodocs'],
 };
 export default meta;
 type Story = StoryObj;

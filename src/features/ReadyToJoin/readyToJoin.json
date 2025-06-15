@@ -1,0 +1,40 @@
+{
+    "image": {
+        "src": "/patinem-junts.jpg",
+        "alt": "Patinem junts! HC SFERIC Terrassa"
+    },
+    "title": "Preparat per unir-te a HC. Sferic Terrassa?",
+    "description": "Formar part del nostre club és un orgull. Aquí trobaràs un ambient familiar on gaudir de l’hoquei, aprendre i créixer amb valors. Vine a compartir la passió per l’esport en un club proper, compromès i ple d’esperit d’equip!",
+    "stats": [
+        {
+            "end": 75,
+            "icon": "material-symbols-light_trophy-outline",
+            "label": "anys d'història"
+        },
+        {
+            "end": 100,
+            "icon": "mingcute_group-3-fill",
+            "label": "jugadors entrenats",
+            "plus": true
+        },
+        {
+            "end": 11,
+            "icon": "material-symbols-light_sports-hockey-sharp",
+            "label": "equips jugant"
+        }
+    ],
+    "actions": [
+        {
+            "text": "Uneix-te al club",
+            "href": "/inscripcions",
+            "variant": "primary-green"
+        },
+        {
+            "text": "Descobreix més",
+            "href": "/el-club",
+            "variant": "secondary-green",
+            "icon": "arrow-right",
+            "iconPosition": "right"
+        }
+    ]
+}

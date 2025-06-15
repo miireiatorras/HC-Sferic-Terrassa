@@ -3,7 +3,7 @@ import { MemberCard } from './MemberCard';
 import './MemberCard.scss';
 
 const meta: Meta<typeof MemberCard> = {
-    title: 'Sferic/MemberCard',
+    title: 'Sferic/UI/MemberCard',
     component: MemberCard,
     tags: ['autodocs'],
 };

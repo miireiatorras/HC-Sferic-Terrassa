@@ -3,7 +3,7 @@ import { Card } from './Card';
 import './Card.scss';
 
 const meta: Meta<typeof Card> = {
-    title: 'Sferic/Card',
+    title: 'Sferic/UI/Card',
     component: Card,
     tags: ['autodocs'],
 };
@@ -19,6 +19,7 @@ export const Playground: Story = {
     },
 };
 
+/** This story displays a grid of cards. */
 export const Grid: Story = {
     render: () => (
         <div

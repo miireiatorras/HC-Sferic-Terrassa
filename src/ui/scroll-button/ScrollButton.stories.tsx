@@ -3,7 +3,7 @@ import { ScrollButton } from './ScrollButton';
 import './ScrollButton.scss';
 
 const meta: Meta<typeof ScrollButton> = {
-    title: 'Sferic/ScrollButton',
+    title: 'Sferic/UI/ScrollButton',
     component: ScrollButton,
     tags: ['autodocs'],
     parameters: {

@@ -17,15 +17,10 @@ const block = registerBlockName('ScrollButton');
 /**
  * A floating scroll button that toggles between a down arrow (to scroll to bottom)
  * and an up arrow (to scroll to top) once the user reaches the bottom.
- *
- * @component
- * @example
- * <ScrollButton />
  */
 export const ScrollButton = ({ children, ...props }: ScrollButtonProps) => {
     const [atBottom, setAtBottom] = useState(false);
 
-    // Detect when user has scrolled to bottom
     useEffect(() => {
         const onScroll = () => {
             const scrollY = window.scrollY + window.innerHeight;

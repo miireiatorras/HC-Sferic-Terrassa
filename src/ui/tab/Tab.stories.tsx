@@ -3,7 +3,7 @@ import { Tab } from './Tab';
 import './Tab.scss';
 
 const meta: Meta<typeof Tab> = {
-    title: 'Sferic/Tab',
+    title: 'Sferic/UI/Tab',
     component: Tab,
     tags: ['autodocs'],
 };

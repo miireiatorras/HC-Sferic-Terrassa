@@ -3,7 +3,7 @@ import { DefaultAccordion } from './DefaultAccordion';
 import './DefaultAccordion.scss';
 
 const meta: Meta<typeof DefaultAccordion> = {
-    title: 'Sferic/DefaultAccordion',
+    title: 'Sferic/UI/DefaultAccordion',
     component: DefaultAccordion,
     tags: ['autodocs'],
 };

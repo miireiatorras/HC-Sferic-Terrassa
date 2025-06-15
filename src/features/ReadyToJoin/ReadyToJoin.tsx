@@ -1,14 +1,39 @@
+// ReadyToJoin.tsx
+import React, { useEffect, useState, useRef } from 'react';
+import data from './readyToJoin.json';
 import {
     toBEM,
     registerBlockName,
     BaseComponentProps,
     getBaseComponentProps,
 } from '@/utils';
-import './ReadyToJoin.scss';
-import { useEffect, useState, useRef } from 'react';
 import { Icon, IconNames } from '@/ui/Icon/Icon';
-import { Button } from '@/ui/button/Button';
+import { Button, ButtonProps } from '@/ui/button/Button';
 import { NavLink } from 'react-router-dom';
+import './ReadyToJoin.scss';
+
+interface StatItemData {
+    end: number;
+    icon: IconNames;
+    label: string;
+    plus?: boolean;
+}
+interface ActionData {
+    text: string;
+    href: string;
+    variant: ButtonProps<object>['variant'];
+    icon?: IconNames;
+    iconPosition?: 'left' | 'right';
+}
+interface ReadyToJoinData {
+    image: { src: string; alt: string };
+    title: string;
+    description: string;
+    stats: StatItemData[];
+    actions: ActionData[];
+}
+
+const { image, title, description, stats, actions } = data as ReadyToJoinData;
 
 const block = registerBlockName('ReadyToJoin');
 
@@ -17,7 +42,6 @@ function useOnScreen<T extends HTMLElement>(
     rootMargin = '0px'
 ) {
     const [isVisible, setIsVisible] = useState(false);
-
     useEffect(() => {
         const observer = new IntersectionObserver(
             ([entry]) => entry.isIntersecting && setIsVisible(true),
@@ -26,18 +50,15 @@ function useOnScreen<T extends HTMLElement>(
         if (ref.current) observer.observe(ref.current);
         return () => observer.disconnect();
     }, [ref, rootMargin]);
-
     return isVisible;
 }
 
 const Counter = ({ end }: { end: number }) => {
     const [count, setCount] = useState(0);
-
     useEffect(() => {
         let start = 0;
         const duration = 2000;
         const step = end / (duration / 16);
-
         const interval = setInterval(() => {
             start += step;
             if (start >= end) {
@@ -47,33 +68,23 @@ const Counter = ({ end }: { end: number }) => {
                 setCount(Math.ceil(start));
             }
         }, 16);
-
         return () => clearInterval(interval);
     }, [end]);
-
     return <span>{count}</span>;
 };
+
 const StatItem = ({
     end,
     icon,
     label,
     plus = false,
-}: {
-    end: number;
-    icon: IconNames;
-    label: string;
-    plus?: boolean;
-}) => {
+}: StatItemData & { plus?: boolean }) => {
     const ref = useRef<HTMLDivElement | null>(null);
     const visible = useOnScreen(ref, '-50px');
     const [started, setStarted] = useState(false);
-
     useEffect(() => {
-        if (visible) {
-            setStarted(true);
-        }
+        if (visible) setStarted(true);
     }, [visible]);
-
     return (
         <div ref={ref} className={toBEM({ block, element: 'stat' })}>
             <div className={toBEM({ block, element: 'stat-wrapper' })}>
@@ -101,7 +112,8 @@ const StatItem = ({
         </div>
     );
 };
-export const ReadyToJoin = ({ ...props }: BaseComponentProps) => {
+
+export const ReadyToJoin: React.FC<BaseComponentProps> = ({ ...props }) => {
     return (
         <section
             {...getBaseComponentProps({ ...props, block })}
@@ -110,24 +122,19 @@ export const ReadyToJoin = ({ ...props }: BaseComponentProps) => {
             <div className={toBEM({ block, element: 'container' })}>
                 <div className={toBEM({ block, element: 'bg' })} />
                 <div className={toBEM({ block, element: 'image' })}>
-                    <img
-                        loading="lazy"
-                        src="/patinem-junts.jpg"
-                        alt="Patinem junts! HC SFERIC Terrassa"
-                    />
+                    <img loading="lazy" src={image.src} alt={image.alt} />
                 </div>
 
                 <div className={toBEM({ block, element: 'main' })}>
-                    <h2 className={toBEM({ block, element: 'title' })}>
-                        Preparat per unir-te a HC. Sferic Terrassa?
+                    <h2
+                        id="ready-to-join-title"
+                        className={toBEM({ block, element: 'title' })}
+                    >
+                        {title}
                     </h2>
                     <div className={toBEM({ block, element: 'wrapper' })}>
                         <p className={toBEM({ block, element: 'description' })}>
-                            Formar part del nostre club és un orgull. Aquí
-                            trobaràs un ambient familiar on gaudir de l’hoquei,
-                            aprendre i créixer amb valors. Vine a compartir la
-                            passió per l’esport en un club proper, compromès i
-                            ple d’esperit d’equip!
+                            {description}
                         </p>
 
                         <div
@@ -135,46 +142,31 @@ export const ReadyToJoin = ({ ...props }: BaseComponentProps) => {
                             aria-label="Estadístiques del club"
                             className={toBEM({ block, element: 'stats' })}
                         >
-                            <StatItem
-                                end={75}
-                                icon="material-symbols-light_trophy-outline"
-                                label="anys d'història"
-                            />
-                            <StatItem
-                                end={100}
-                                icon="mingcute_group-3-fill"
-                                label="jugadors entrenats"
-                                plus
-                            />
-                            <StatItem
-                                end={11}
-                                icon="material-symbols-light_sports-hockey-sharp"
-                                label="equips jugant"
-                            />
+                            {stats.map((s, i) => (
+                                <StatItem key={i} {...s} />
+                            ))}
                         </div>
 
                         <div className={toBEM({ block, element: 'actions' })}>
-                            <Button
-                                as={NavLink}
-                                to="/inscripcions"
-                                variant="primary-green"
-                                className={toBEM({ block, element: 'cta' })}
-                            >
-                                Uneix-te al club
-                            </Button>
-                            <Button
-                                as={NavLink}
-                                to="/el-club"
-                                icon="arrow-right"
-                                iconPosition="right"
-                                variant="secondary-green"
-                                className={toBEM({
-                                    block,
-                                    element: 'secondary',
-                                })}
-                            >
-                                Descobreix més
-                            </Button>
+                            {actions.map((act, i) => (
+                                <Button
+                                    key={i}
+                                    as={NavLink}
+                                    to={act.href}
+                                    variant={act.variant}
+                                    icon={act.icon}
+                                    iconPosition={act.iconPosition}
+                                    className={toBEM({
+                                        block,
+                                        element:
+                                            act.variant === 'secondary-green'
+                                                ? 'secondary'
+                                                : 'cta',
+                                    })}
+                                >
+                                    {act.text}
+                                </Button>
+                            ))}
                         </div>
                     </div>
                 </div>
@@ -182,3 +174,5 @@ export const ReadyToJoin = ({ ...props }: BaseComponentProps) => {
         </section>
     );
 };
+
+export default ReadyToJoin;

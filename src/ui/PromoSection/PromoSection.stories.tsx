@@ -1,15 +1,19 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
-import {
-    PromoSection,
-    PromoSectionProps as PromoSectionProps,
-} from './PromoSection';
+import { PromoSection } from './PromoSection';
 import './PromoSection.scss';
+import { MemoryRouter } from 'react-router-dom';
 
 const meta: Meta<typeof PromoSection> = {
-    title: 'Sferic/PromoSection',
+    title: 'Sferic/UI/PromoSection',
     component: PromoSection,
     tags: ['autodocs'],
+    decorators: [
+        (Story) => (
+            <MemoryRouter>
+                <Story />
+            </MemoryRouter>
+        ),
+    ],
     argTypes: {
         imageSrc: { control: 'text', description: 'URL of the top image' },
         imageAlt: { control: 'text', description: 'Alt text for the image' },
@@ -33,7 +37,7 @@ export default meta;
 
 type Story = StoryObj<typeof PromoSection>;
 
-export const Default: Story = {
+export const Playground: Story = {
     args: {
         imageSrc: '/inscripcions-full.png',
         imageAlt: 'Season 2024-2025 Flyer',
@@ -43,18 +47,4 @@ export const Default: Story = {
             'No et quedis fora! Uneix-te a la família Sferic Hoquei Patins Terrassa i viu la passió de l’hoquei en un ambient únic, amb els millors entrenadors i companys 💪',
         buttonText: "Apunta't ara!",
     },
-};
-
-export const ClickableLink: Story = {
-    args: {
-        ...Default.args,
-        buttonHref: 'https://sfericok.cat/inscripcions',
-    } as PromoSectionProps,
-};
-
-export const WithClickHandler: Story = {
-    args: {
-        ...Default.args,
-        onButtonClick: action('sign-up-clicked'),
-    } as PromoSectionProps,
 };

@@ -3,7 +3,7 @@ import { ImageScrollGallery } from './ImageScrollGallery';
 import './ImageScrollGalery.scss';
 
 const meta: Meta<typeof ImageScrollGallery> = {
-    title: 'Sferic/ImageScrollGallery',
+    title: 'Sferic/UI/ImageScrollGallery',
     component: ImageScrollGallery,
     tags: ['autodocs'],
 };

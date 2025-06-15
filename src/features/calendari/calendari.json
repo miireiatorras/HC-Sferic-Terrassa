@@ -1,0 +1,24 @@
+{
+    "header": "Calendari partits",
+    "headerVariant": "light",
+    "paragraphs": [
+        "La pàgina web oficial de la Federació de Hoquei Patins disposa de tots els horaris dels partits de la temporada. Consulta tant la data, pista, hora, equip rival i inclús resultats!",
+        "Al nostre Instagram trobaràs tota la informació sobre els pròxims partits i qualsevol novetat o modificació que hi hagi!"
+    ],
+    "buttons": [
+        {
+            "text": "Accedeix al calendari",
+            "href": "http://www.hoqueipatins.fecapa.cat/ag/",
+            "variant": "primary-white",
+            "icon": "launch",
+            "iconPosition": "right"
+        },
+        {
+            "text": "Consulta horari entrenaments",
+            "href": "/horari",
+            "variant": "secondary-white",
+            "icon": "arrow-right",
+            "iconPosition": "right"
+        }
+    ]
+}
