@@ -168,7 +168,6 @@ collections:
                             label: 'Link Href',
                             name: 'linkHref',
                             widget: 'string',
-     
                         }
     - name: 'seccions'
       label: 'Seccions'
@@ -668,49 +667,69 @@ collections:
     - name: 'footer'
       label: 'Footer'
       files:
-        - file: 'src/components/Footer/footer.json'
-          name: 'footer'
-          label: 'Component Footer'
-          fields:
-            - label: 'Ubicació'
-              name: 'ubicacio'
-              widget: 'object'
-              fields:
-                - { label: 'Títol', name: 'title', widget: 'string' }
-                - { label: 'Text', name: 'text', widget: 'text' }
+          - file: 'src/components/Footer/footer.json'
+            name: 'footer'
+            label: 'Component Footer'
+            fields:
+                - label: 'Ubicació'
+                  name: 'ubicacio'
+                  widget: 'object'
+                  fields:
+                      - { label: 'Títol', name: 'title', widget: 'string' }
+                      - { label: 'Text', name: 'text', widget: 'text' }
 
-            - label: 'Email'
-              name: 'email'
-              widget: 'object'
-              fields:
-                - { label: 'Usuari', name: 'user', widget: 'string' }
-                - { label: 'Domini', name: 'domain', widget: 'string' }
+                - label: 'Email'
+                  name: 'email'
+                  widget: 'object'
+                  fields:
+                      - { label: 'Usuari', name: 'user', widget: 'string' }
+                      - { label: 'Domini', name: 'domain', widget: 'string' }
 
-            - label: 'Telèfons'
-              name: 'telefon'
-              widget: 'list'
-              field: { label: 'Telèfon', name: 'tel', widget: 'string' }
+                - label: 'Telèfons'
+                  name: 'telefon'
+                  widget: 'list'
+                  field: { label: 'Telèfon', name: 'tel', widget: 'string' }
 
-            - label: 'Enllaços ràpids'
-              name: 'menu'
-              widget: 'list'
-              fields:
-                - { label: 'Text', name: 'text', widget: 'string' }
-                - { label: 'Enllaç (href)', name: 'href', widget: 'string' }
+                - label: 'Enllaços ràpids'
+                  name: 'menu'
+                  widget: 'list'
+                  fields:
+                      - { label: 'Text', name: 'text', widget: 'string' }
+                      - {
+                            label: 'Enllaç (href)',
+                            name: 'href',
+                            widget: 'string',
+                        }
 
-            - label: 'Instagram'
-              name: 'instagram'
-              widget: 'object'
-              fields:
-                - { label: 'Usuari', name: 'username', widget: 'string' }
-                - { label: 'Enllaç', name: 'href', widget: 'string' }
+                - label: 'Instagram'
+                  name: 'instagram'
+                  widget: 'object'
+                  fields:
+                      - { label: 'Usuari', name: 'username', widget: 'string' }
+                      - { label: 'Enllaç', name: 'href', widget: 'string' }
 
-            - { label: 'Ruta imatge logo footer', name: 'logoFooterSrc', widget: 'string' }
-            - { label: 'Enllaç del logo principal', name: 'logoLinkHref', widget: 'string' }
-            - { label: 'Ruta imatge del logo principal', name: 'logoSrc', widget: 'string' }
-            - { label: 'Copyright', name: 'copyright', widget: 'string' }
-            - { label: 'Ruta imatge Ajuntament', name: 'ajuntamentSrc', widget: 'string' }
-                    
+                - {
+                      label: 'Ruta imatge logo footer',
+                      name: 'logoFooterSrc',
+                      widget: 'string',
+                  }
+                - {
+                      label: 'Enllaç del logo principal',
+                      name: 'logoLinkHref',
+                      widget: 'string',
+                  }
+                - {
+                      label: 'Ruta imatge del logo principal',
+                      name: 'logoSrc',
+                      widget: 'string',
+                  }
+                - { label: 'Copyright', name: 'copyright', widget: 'string' }
+                - {
+                      label: 'Ruta imatge Ajuntament',
+                      name: 'ajuntamentSrc',
+                      widget: 'string',
+                  }
+
     - name: 'contacte'
       label: 'Contacte'
       files:
