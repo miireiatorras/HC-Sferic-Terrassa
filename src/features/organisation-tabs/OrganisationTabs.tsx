@@ -9,8 +9,6 @@ import { Tab } from '@/ui/tab/Tab';
 import { MemberCard } from '@/ui/member-card/MemberCard';
 import './OrganisationTabs.scss';
 
-export type OrganisationTabsProps = BaseComponentProps;
-
 type TabKey =
     | 'presidencia'
     | 'delegats'
@@ -18,13 +16,13 @@ type TabKey =
     | 'equip-tecnic'
     | 'planificacio';
 
-interface TabData {
+export interface TabData {
     key: TabKey;
     label: string;
     members: { initials: string; name: string }[];
 }
 
-const tabs: TabData[] = [
+const defaultTabs: TabData[] = [
     {
         key: 'presidencia',
         label: 'Presidència',
@@ -78,13 +76,19 @@ const tabs: TabData[] = [
 
 const block = registerBlockName('OrganisationTabs');
 
-export const OrganisationTabs = ({ ...props }: OrganisationTabsProps) => {
+export interface OrganisationTabsProps extends BaseComponentProps {
+    tabs?: TabData[];
+}
+
+export const OrganisationTabs = ({
+    tabs = defaultTabs,
+    ...props
+}: OrganisationTabsProps) => {
     const [activeKey, setActiveKey] = useState<TabKey>('presidencia');
     const activeTab = tabs.find((t) => t.key === activeKey)!;
 
     return (
         <section {...getBaseComponentProps({ ...props, block })}>
-            {/* Tabs horizontales */}
             <nav className={toBEM({ block, element: 'tablist' })}>
                 {tabs.map((tab) => (
                     <Tab
@@ -96,7 +100,6 @@ export const OrganisationTabs = ({ ...props }: OrganisationTabsProps) => {
                 ))}
             </nav>
 
-            {/* Contenido del tab activo */}
             <div className={toBEM({ block, element: 'panel' })}>
                 <div className={toBEM({ block, element: 'panelHeader' })}>
                     <span className={toBEM({ block, element: 'panelTitle' })}>

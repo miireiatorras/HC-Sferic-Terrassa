@@ -69,6 +69,7 @@ export const PromoSection = ({
                 as={NavLink}
                 to="https://docs.google.com/forms/d/e/1FAIpQLSccAPpV2KQ_yJYKAwE0RcNCKknv4BFVvb7gkVEfUXescob0lA/viewform"
                 variant="primary-green"
+                className={toBEM({ block, element: 'button' })}
             >
                 {buttonText}
             </Button>

@@ -1,6 +1,7 @@
 @use '@/utils/styles';
 
 .PromoSection {
+    @include styles.vflex((0px), center, center);
     background-color: styles.$blanc;
     border-radius: 0.5rem;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
@@ -40,6 +41,7 @@
     }
 
     &__button {
+        flex: 1 1;
         display: inline-block;
         padding: 0.75rem 1.5rem;
         font-size: 1rem;
@@ -51,6 +53,8 @@
         text-decoration: none;
         cursor: pointer;
         transition: background-color 0.2s;
+        width: 100%;
+        margin-top: 1.5rem;
 
         &:hover {
             background-color: styles.$verd-fosc;

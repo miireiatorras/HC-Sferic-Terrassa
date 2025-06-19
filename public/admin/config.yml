@@ -398,6 +398,26 @@ collections:
                             name: 'showTabs',
                             widget: 'boolean',
                         }
+                      - label: 'Pestanyes'
+                        name: 'tabs'
+                        widget: 'list'
+                        fields:
+                            - { label: 'Clau', name: 'key', widget: 'string' }
+                            - {
+                                  label: 'Etiqueta',
+                                  name: 'label',
+                                  widget: 'string',
+                              }
+                      - label: 'Members'
+                        name: 'members'
+                        widget: 'list'
+                        fields:
+                            - {
+                                  label: 'Inicials',
+                                  name: 'initials',
+                                  widget: 'string',
+                              }
+                            - { label: 'Nom', name: 'name', widget: 'string' }
 
     - name: 'botiga'
       label: 'Botiga'

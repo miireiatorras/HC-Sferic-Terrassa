@@ -12,7 +12,10 @@ import {
 import { Banner, BannerVariant } from '@/ui/banner/Banner';
 import Title from '@/ui/titles/Title';
 import { Card } from '@/ui/card/Card';
-import { OrganisationTabs } from '@/features/organisation-tabs/OrganisationTabs';
+import {
+    OrganisationTabs,
+    TabData,
+} from '@/features/organisation-tabs/OrganisationTabs';
 import { ImageScrollGallery } from '@/ui/ImageScrollGallery/ImageScrollGallery';
 import { TimelineCard } from '@/ui/timelineCard/TimelineCard';
 import { InfoCard } from '@/ui/info-card/InfoCard';
@@ -22,39 +25,55 @@ interface SEO {
     title: string;
     description: string;
     canonical: string;
-    og: { url: string; image: string; title: string; description: string };
-    twitter: { card: string };
+    og: {
+        url: string;
+        image: string;
+        title: string;
+        description: string;
+    };
+    twitter: {
+        card: string;
+    };
 }
+
 interface MissionCard {
     number: string;
     title: string;
     content: string;
 }
+
 interface TimelineEntry {
     year: string;
     title: string;
     description: string;
 }
+
 interface InfoEntry {
     icon: IconNames;
     text: string;
 }
 
+interface OrganisationSection {
+    title: string;
+    paragraphs: string[];
+    showTabs: boolean;
+    tabs: TabData[];
+}
+
 interface ElClubData {
     seo: SEO;
     bannerVariant: string;
-    missionSection: { title: string; cards: MissionCard[] };
+    missionSection: {
+        title: string;
+        cards: MissionCard[];
+    };
     historySection: {
         title: string;
         images: string[];
         timeline: TimelineEntry[];
     };
     infoGrid: InfoEntry[];
-    organisationSection: {
-        title: string;
-        paragraphs: string[];
-        showTabs: boolean;
-    };
+    organisationSection: OrganisationSection;
 }
 
 const {
@@ -137,7 +156,9 @@ export const ElClub: React.FC<ElClubProps> = (props) => {
                     </p>
                 ))}
 
-                {organisationSection.showTabs && <OrganisationTabs />}
+                {organisationSection.showTabs && (
+                    <OrganisationTabs tabs={organisationSection.tabs} />
+                )}
             </section>
         </>
     );
