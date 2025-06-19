@@ -667,7 +667,7 @@ collections:
     - name: 'footer'
       label: 'Footer'
       files:
-          - file: 'src/components/Footer/footer.json'
+          - file: 'src/features/footer/footer.json'
             name: 'footer'
             label: 'Component Footer'
             fields:
