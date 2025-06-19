@@ -138,7 +138,7 @@ export const Footer = (props: FooterProps) => {
                 <div className={toBEM({ block, element: 'col-img' })}>
                     <img
                         loading="lazy"
-                        src="/logo-sferic-footer.png"
+                        src="/logo-sferic-footer.webp"
                         alt="logo HC SFERIC Terrassa"
                         className={toBEM({ block, element: 'logo-sferic' })}
                     />
@@ -152,7 +152,7 @@ export const Footer = (props: FooterProps) => {
                 </small>
                 <img
                     loading="lazy"
-                    src="/logo-ajuntament.png"
+                    src="/logo-ajuntament.webp"
                     alt="Ajuntament"
                     className={toBEM({ block, element: 'ajuntament' })}
                 />

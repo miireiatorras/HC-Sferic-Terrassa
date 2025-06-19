@@ -83,7 +83,7 @@ export const Botiga: React.FC<BotigaProps> = (props) => {
                 <link rel="canonical" href="https://sfericok.cat/botiga" />
 
                 <meta property="og:url" content="https://sfericok.cat/botiga" />
-                <meta property="og:image" content="/logo-tranp-negre.png" />
+                <meta property="og:image" content="/logo-tranp-negre.webp" />
                 <meta
                     property="og:title"
                     content="HC SFERIC Terrassa – Botiga"

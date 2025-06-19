@@ -5,7 +5,7 @@
         "canonical": "https://sfericok.cat/el-club",
         "og": {
             "url": "https://sfericok.cat/el-club",
-            "image": "/logo-tranp-negre.png",
+            "image": "/logo-tranp-negre.webp",
             "title": "HC SFERIC Terrassa – El Club",
             "description": "Coneix la missió, valors i història del HC SFERIC Terrassa, el club d'Hoquei Patins amb més de 70 anys de trajectòria a Terrassa."
         },
@@ -42,11 +42,11 @@
     "historySection": {
         "title": "La nostra història i orígens",
         "images": [
-            "/old/antiga1.png",
-            "/old/antiga2.png",
-            "/old/antiga3.png",
-            "/old/antiga4.png",
-            "/old/antiga5.png"
+            "/old/antiga1.webp",
+            "/old/antiga2.webp",
+            "/old/antiga3.webp",
+            "/old/antiga4.webp",
+            "/old/antiga5.webp"
         ],
         "timeline": [
             {

@@ -29,7 +29,7 @@ export const Home = ({ ...props }: HomeProps) => {
                 <link rel="canonical" href="https:/sfericok.cat/" />
 
                 <meta property="og:url" content="https:/sfericok.cat/" />
-                <meta property="og:image" content="/logo-tranp-negre.png" />
+                <meta property="og:image" content="/logo-tranp-negre.webp" />
                 <meta
                     property="og:title"
                     content="HC SFERIC Terrassa. Club d'Hoquei Patins - Inici"

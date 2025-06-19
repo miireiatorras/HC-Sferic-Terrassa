@@ -12,11 +12,11 @@ export default meta;
 type Story = StoryObj<typeof ImageScrollGallery>;
 
 const sampleImages = [
-    '/old/antiga1.png',
-    '/old/antiga2.png',
-    '/old/antiga3.png',
-    '/old/antiga4.png',
-    '/old/antiga5.png',
+    '/old/antiga1.webp',
+    '/old/antiga2.webp',
+    '/old/antiga3.webp',
+    '/old/antiga4.webp',
+    '/old/antiga5.webp',
 ];
 
 export const Playground: Story = {

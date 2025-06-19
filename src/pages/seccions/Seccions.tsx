@@ -64,7 +64,7 @@ export const Seccions = (props: SeccionsProps) => {
                     property="og:url"
                     content="https://sfericok.cat/seccions"
                 />
-                <meta property="og:image" content="/logo-tranp-negre.png" />
+                <meta property="og:image" content="/logo-tranp-negre.webp" />
                 <meta
                     property="og:title"
                     content={`HC SFERIC Terrassa – ${header}`}

@@ -33,7 +33,7 @@ type Story = StoryObj<typeof ShopPartnerBanner>;
 
 export const Playground: Story = {
     args: {
-        logoSrc: '/logos-sponsors/hockeyteam-logo.png',
+        logoSrc: '/logos-sponsors/hockeyteam-logo.webp',
         logoAlt: 'Hockey Team logo',
         title: 'Botiga col·laboradora de material oficial',
         items: [

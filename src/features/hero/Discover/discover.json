@@ -3,7 +3,7 @@
     "header": "Descobreix el nostre club",
     "leftCard": {
         "to": "/seccions",
-        "imageSrc": "/seccions.jpg",
+        "imageSrc": "/seccions.webp",
         "imageAlt": "Seccions",
         "title": "Seccions",
         "linkText": "Aprèn més >"
