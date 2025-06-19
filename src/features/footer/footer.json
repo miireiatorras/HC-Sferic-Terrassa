@@ -1,0 +1,30 @@
+{
+    "ubicacio": {
+        "title": "HC. SFERIC Terrassa",
+        "text": "Pavelló Municipal de “La Maurina”\nCarrer Sardenya, 34, Terrassa, 08224 Barcelona"
+    },
+    "email": {
+        "user": "info.sferic",
+        "domain": "gmail.com"
+    },
+    "telefon": ["+34609061492", "+34616860388"],
+    "menu": [
+        { "text": "Inici", "href": "/" },
+        { "text": "El Club", "href": "/el-club" },
+        { "text": "Seccions", "href": "/seccions" },
+        { "text": "Equips", "href": "/equips" },
+        { "text": "Horari", "href": "/horari-entrenaments" },
+        { "text": "Botiga", "href": "/botiga" },
+        { "text": "Contacte", "href": "/contacte" },
+        { "text": "Inscriu-te", "href": "/inscripcions" }
+    ],
+    "instagram": {
+        "username": "@oksfericterrassa",
+        "href": "https://www.instagram.com/oksfericterrassa/"
+    },
+    "logoFooterSrc": "/logo-sferic-footer.webp",
+    "logoLinkHref": "/",
+    "logoSrc": "/favicon.ico",
+    "copyright": "© 2025 Sferic Hoquei patins Terrassa. Dissenyat per Mireia Torras",
+    "ajuntamentSrc": "/logo-ajuntament.webp"
+}

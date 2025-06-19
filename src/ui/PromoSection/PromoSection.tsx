@@ -51,10 +51,12 @@ export const PromoSection = ({
             className={toBEM({ block })}
         >
             <img
-                loading="lazy"
                 src={imageSrc}
                 alt={imageAlt}
                 className={toBEM({ block, element: 'image' })}
+                decoding="async"
+                fetchPriority="high"
+                style={{ width: '100%', height: 'auto', objectFit: 'cover' }}
             />
 
             <h2 className={toBEM({ block, element: 'heading' })}>{heading}</h2>
