@@ -2,20 +2,35 @@
 
 .Hero {
     position: relative;
-    background-image: url(/landing-page.webp);
-    background-size: cover;
-    background-position: center;
     color: #ffffff;
-    height: 80vh;
+    height: 70vh;
     display: flex;
     align-content: stretch;
     flex-wrap: wrap;
     justify-content: flex-start;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 
+    @media (max-width: 1500px) {
+        height: 60vh;
+    }
+    @media (max-width: 1500px) {
+        height: 50vh;
+    }
     @media (max-width: 500px) {
-        background-position: top center;
-        height: 46vh;
+        height: 40vh;
+    }
+    @media (max-width: 375px) {
+        margin-top: 2rem;
+    }
+
+    &__bg-image {
+        position: absolute;
+        width: 2%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 0;
+        top: 0;
+        left: 0;
     }
 
     &__gradient {
@@ -23,10 +38,11 @@
         width: 100%;
         position: absolute;
         height: 100%;
+        z-index: 1;
     }
 
     &__content {
-        z-index: 1;
+        z-index: 2;
         display: flex;
         flex-direction: column;
         align-content: flex-start;
@@ -53,11 +69,14 @@
 
         @media (max-width: 500px) {
             font-size: 1.5rem;
-            line-height: 1.2;
             margin-bottom: 1rem;
         }
-    }
 
+        @media (max-width: 400px) {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+    }
     &__buttons {
         display: flex;
         gap: 35px;

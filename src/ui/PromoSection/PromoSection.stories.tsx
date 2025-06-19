@@ -39,7 +39,7 @@ type Story = StoryObj<typeof PromoSection>;
 
 export const Playground: Story = {
     args: {
-        imageSrc: '/inscripcions-full.png',
+        imageSrc: '/inscripcions-full.webp',
         imageAlt: 'Season 2024-2025 Flyer',
         heading:
             'Ja estan OBERTES les inscripcions de la TEMPORADA 2025-2026 🎉!',

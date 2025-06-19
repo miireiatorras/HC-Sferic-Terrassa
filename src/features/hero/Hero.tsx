@@ -5,6 +5,7 @@ import {
     BaseComponentProps,
     getBaseComponentProps,
 } from '@/utils';
+import landingPage from '/landing-page.webp';
 
 import './Hero.scss';
 import { NavLink } from 'react-router-dom';
@@ -15,6 +16,20 @@ const block = registerBlockName('Hero');
 export const Hero = ({ ...props }: HeroProps) => {
     return (
         <header {...getBaseComponentProps({ ...props, block })}>
+            <img
+                src={landingPage}
+                alt="HC Sferic Terrassa club de hockey sobre patines"
+                className={toBEM({ block, element: 'bg-image' })}
+                decoding="async"
+                fetchPriority="high"
+                style={{
+                    position: 'absolute',
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                    zIndex: 0,
+                }}
+            />
             <div className={toBEM({ block, element: 'gradient' })} />
             <div
                 className={toBEM({

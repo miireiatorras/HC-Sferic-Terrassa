@@ -86,9 +86,20 @@ export const Banner = ({ variant, ...props }: BannerProps) => {
             })}
             aria-label={`Banner: ${title}`}
         >
-            <div
+            <img
+                src={image}
+                alt={`Banner ${title} HC Sferic Terrassa`}
                 className={toBEM({ block, element: 'background' })}
-                style={{ backgroundImage: `url(${image})` }}
+                decoding="async"
+                fetchPriority="high"
+                style={{
+                    position: 'absolute',
+                    inset: 0,
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                    zIndex: 0,
+                }}
             />
             <div className={toBEM({ block, element: 'overlay' })} />
             <div className={toBEM({ block, element: 'content' })}>
