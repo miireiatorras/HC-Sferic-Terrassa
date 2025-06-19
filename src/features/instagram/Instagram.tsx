@@ -41,10 +41,11 @@ export const Instagram = ({ ...props }: InstagramProps) => {
                 </a>
             </div>
 
-            {/* <iframe
+            <iframe
+                className="responsive-iframe"
                 src="https://widget.tagembed.com/2170172"
                 style={{ width: '100%', height: '420px', border: 'none' }}
-            ></iframe> */}
+            ></iframe>
         </div>
     );
 };
