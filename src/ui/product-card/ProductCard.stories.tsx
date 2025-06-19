@@ -25,7 +25,7 @@ type Story = StoryObj<typeof ProductCard>;
 
 export const Playground: Story = {
     args: {
-        imageSrc: '/camiseta-jugador-1a-equipacion-hc-sferic-veteranos.jpg',
+        imageSrc: '/camiseta-jugador-1a-equipacion-hc-sferic-veteranos.webp',
         imageAlt: 'Sample product',
         title: 'Faldilla SFERIC',
         price: '32€',

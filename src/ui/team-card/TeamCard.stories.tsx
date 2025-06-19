@@ -12,7 +12,7 @@ type Story = StoryObj<typeof TeamCard>;
 
 export const Playground: Story = {
     args: {
-        imageSrc: '/images/team-sample.jpg',
+        imageSrc: '/fotos-grups/Prebenjami-min.webp',
         title: 'Prebenjamí',
         members: [
             'Ivet Esteve',
