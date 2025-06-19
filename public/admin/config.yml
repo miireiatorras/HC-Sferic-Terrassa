@@ -408,16 +408,20 @@ collections:
                                   name: 'label',
                                   widget: 'string',
                               }
-                      - label: 'Members'
-                        name: 'members'
-                        widget: 'list'
-                        fields:
-                            - {
-                                  label: 'Inicials',
-                                  name: 'initials',
-                                  widget: 'string',
-                              }
-                            - { label: 'Nom', name: 'name', widget: 'string' }
+                            - label: 'Members'
+                              name: 'members'
+                              widget: 'list'
+                              fields:
+                                  - {
+                                        label: 'Inicials',
+                                        name: 'initials',
+                                        widget: 'string',
+                                    }
+                                  - {
+                                        label: 'Nom',
+                                        name: 'name',
+                                        widget: 'string',
+                                    }
 
     - name: 'botiga'
       label: 'Botiga'
