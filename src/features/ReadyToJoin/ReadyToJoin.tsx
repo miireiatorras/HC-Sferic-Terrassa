@@ -122,7 +122,13 @@ export const ReadyToJoin: React.FC<BaseComponentProps> = ({ ...props }) => {
             <div className={toBEM({ block, element: 'container' })}>
                 <div className={toBEM({ block, element: 'bg' })} />
                 <div className={toBEM({ block, element: 'image' })}>
-                    <img loading="lazy" src={image.src} alt={image.alt} />
+                    <img
+                        loading="lazy"
+                        src={image.src}
+                        alt={image.alt}
+                        role="img"
+                        aria-label={image.alt}
+                    />
                 </div>
 
                 <div className={toBEM({ block, element: 'main' })}>

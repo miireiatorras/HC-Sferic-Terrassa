@@ -77,10 +77,10 @@ export const Variants: Story = {
                 backgroundColor: '#f5f5f5',
             }}
         >
-            <Alert variant="success" icon={'mingcute_group-3-fill'}>
+            <Alert variant="success" icon="check-circle">
                 Alert variant="success": Operació completada amb èxit.
             </Alert>
-            <Alert variant="info">
+            <Alert variant="info" icon="email">
                 Alert variant="info": Aquesta és una informació important.
             </Alert>
             <Alert variant="warning">

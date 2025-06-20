@@ -97,6 +97,9 @@ export const Navbar = (props: NavbarProps) => {
                             role="menuitem"
                             tabIndex={0}
                             aria-label={label}
+                            aria-current={
+                                location.pathname === to ? 'page' : undefined
+                            }
                         >
                             {label}
                         </NavLink>

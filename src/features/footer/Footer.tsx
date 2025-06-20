@@ -54,7 +54,10 @@ export const Footer = (props: BaseComponentProps) => {
                     </div>
                     <div className={toBEM({ block, element: 'email' })}>
                         <Icon icon="email" size="lg" aria-hidden="true" />
-                        <a href={`mailto:${email.user}@${email.domain}`}>
+                        <a
+                            href={`mailto:${email.user}@${email.domain}`}
+                            aria-label={`Enviar correu a ${email.user}@${email.domain}`}
+                        >
                             {email.user}@{email.domain}
                         </a>
                     </div>
@@ -63,7 +66,13 @@ export const Footer = (props: BaseComponentProps) => {
                         {telefon.map((tel, i) => (
                             <React.Fragment key={i}>
                                 {i > 0 && ' / '}
-                                <a href={`tel:${tel}`}>
+                                <a
+                                    href={`tel:${tel}`}
+                                    aria-label={`Trucar al telèfon ${tel.replace(
+                                        '+34',
+                                        '(+34) '
+                                    )}`}
+                                >
                                     {tel.replace('+34', '(+34) ')}
                                 </a>
                             </React.Fragment>
@@ -94,6 +103,7 @@ export const Footer = (props: BaseComponentProps) => {
                             href={instagram.href}
                             target="_blank"
                             rel="noopener noreferrer"
+                            aria-label={`Instagram de ${instagram.username}`}
                         >
                             {instagram.username}
                         </a>

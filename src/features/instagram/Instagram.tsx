@@ -45,6 +45,11 @@ export const Instagram = ({ ...props }: InstagramProps) => {
                 className="responsive-iframe"
                 src="https://widget.tagembed.com/2170172"
                 style={{ width: '100%', height: '420px', border: 'none' }}
+                title="Instagram feed de HC Sferic Terrassa"
+                aria-label="Instagram feed de HC Sferic Terrassa"
+                loading="lazy"
+                tabIndex={0}
+                allowFullScreen
             ></iframe>
         </div>
     );

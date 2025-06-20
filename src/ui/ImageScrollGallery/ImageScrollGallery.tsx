@@ -75,6 +75,7 @@ export const ImageScrollGallery = ({ images, ...props }: Props) => {
                         src={src}
                         alt={`Imatge ${idx + 1}`}
                         className={toBEM({ block, element: 'image' })}
+                        tabIndex={0}
                     />
                 ))}
             </div>

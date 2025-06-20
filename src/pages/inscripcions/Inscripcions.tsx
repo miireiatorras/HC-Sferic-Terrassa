@@ -100,18 +100,24 @@ export const Inscripcions: React.FC<InscripcionsProps> = (props) => {
                     >
                         {alert.text}
                     </Alert>
+                    <div
+                        className={toBEM({
+                            block,
+                            element: 'gradient',
+                        })}
+                    >
+                        <PromoSection
+                            imageSrc={promoSection.imageSrc}
+                            imageAlt={promoSection.imageAlt}
+                            heading={promoSection.heading}
+                            children={promoSection.text}
+                            buttonText={promoSection.buttonText}
+                        />
 
-                    <PromoSection
-                        imageSrc={promoSection.imageSrc}
-                        imageAlt={promoSection.imageAlt}
-                        heading={promoSection.heading}
-                        children={promoSection.text}
-                        buttonText={promoSection.buttonText}
-                    />
-
-                    <p className={toBEM({ block, element: 'p' })}>
-                        {footerParagraph}
-                    </p>
+                        <p className={toBEM({ block, element: 'p' })}>
+                            {footerParagraph}
+                        </p>
+                    </div>
                 </div>
             </div>
         </>

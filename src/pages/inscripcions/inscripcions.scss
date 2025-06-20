@@ -15,8 +15,17 @@
             margin-top: 2rem;
         }
     }
+    &__gradient {
+        background: linear-gradient(
+            to bottom,
+            rgba(97, 152, 114, 0) 25%,
+            #619872 290%
+        );
+    }
     &__p {
         margin-top: 1rem;
+        margin-bottom: 0;
+        padding-bottom: 1rem;
         display: flex;
         justify-content: center;
         font-size: 1.1rem;

@@ -35,6 +35,8 @@ export const Tab = ({ label, active = false, onClick, ...props }: TabProps) => {
                 element: 'item',
                 modifiers: active ? ['active'] : [],
             })}
+            aria-pressed={active}
+            aria-label={label}
         >
             {label}
         </button>

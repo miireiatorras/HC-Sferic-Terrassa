@@ -37,6 +37,7 @@
             margin-bottom: 8px;
         }
     }
+
     &__products-section {
         @include styles.vflex((30px), stretch, stretch);
     }

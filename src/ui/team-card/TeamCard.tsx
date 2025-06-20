@@ -45,6 +45,8 @@ export const TeamCard = ({
                         className={toBEM({ block, element: 'image' })}
                         src={imageSrc}
                         alt={title}
+                        role="img"
+                        aria-label={`Imatge de l'equip ${title}`}
                     />
                     <div className={toBEM({ block, element: 'overlay' })}>
                         <div
@@ -91,13 +93,15 @@ export const TeamCard = ({
                     role="dialog"
                     aria-modal="true"
                     tabIndex={-1}
-                    aria-label={`Imatge ampliada de ${title}`}
+                    aria-label={`Imatge ampliada de l'equip ${title}`}
                 >
                     <img
                         loading="lazy"
                         src={imageSrc}
                         alt={title}
                         className="ImageModal__img"
+                        role="img"
+                        aria-label={`Imatge ampliada de l'equip ${title}`}
                     />
                 </div>
             )}
