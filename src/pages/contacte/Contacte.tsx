@@ -88,13 +88,61 @@ export const Contacte: React.FC<ContacteProps> = (props) => {
                         {parlemSection.title}
                     </Title>
                     <div className={toBEM({ block, element: 'info-grid' })}>
-                        {parlemSection.items.map((item, i) => (
-                            <InfoCard
-                                key={i}
-                                icon={item.icon}
-                                text={<> {item.text} </>}
-                            />
-                        ))}
+                        {parlemSection.items.map((item, i) => {
+                            let href = undefined;
+                            let ariaLabel = undefined;
+                            if (item.icon === 'email') {
+                                href = `mailto:${item.text}`;
+                                ariaLabel = `Enviar correo a ${item.text}`;
+                            } else if (item.icon === 'call') {
+                                const phone = String(item.text).match(
+                                    /\+?\d[\d\s/]+/
+                                );
+                                href = phone
+                                    ? `tel:${phone[0].replace(/\s|\//g, '')}`
+                                    : undefined;
+                                ariaLabel = `Llamar al teléfono ${item.text}`;
+                            } else if (item.icon === 'instagram') {
+                                const username = String(item.text).replace(
+                                    '@',
+                                    ''
+                                );
+                                href = `https://instagram.com/${username}`;
+                                ariaLabel = `Visitar Instagram ${item.text}`;
+                            }
+                            return (
+                                <a
+                                    key={i}
+                                    href={href}
+                                    target={
+                                        item.icon === 'instagram'
+                                            ? '_blank'
+                                            : undefined
+                                    }
+                                    rel={
+                                        item.icon === 'instagram'
+                                            ? 'noopener noreferrer'
+                                            : undefined
+                                    }
+                                    tabIndex={0}
+                                    aria-label={ariaLabel}
+                                    className={toBEM({
+                                        block,
+                                        element: 'parlem-link',
+                                    })}
+                                    style={{
+                                        textDecoration: 'none',
+                                        color: 'inherit',
+                                        display: 'block',
+                                    }}
+                                >
+                                    <InfoCard
+                                        icon={item.icon}
+                                        text={<>{item.text}</>}
+                                    />
+                                </a>
+                            );
+                        })}
                     </div>
                 </section>
 

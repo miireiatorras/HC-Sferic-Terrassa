@@ -39,6 +39,12 @@ export const TeamCard = ({
                 <div
                     className={toBEM({ block, element: 'imageWrapper' })}
                     onClick={() => setIsOpen(true)}
+                    role="button"
+                    tabIndex={0}
+                    aria-label={`Obrir modal de l'equip ${title}`}
+                    onKeyDown={(e) => {
+                        if (e.key === 'Enter' || e.key === ' ') setIsOpen(true);
+                    }}
                 >
                     <img
                         loading="lazy"

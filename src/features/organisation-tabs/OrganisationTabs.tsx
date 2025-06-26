@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef, KeyboardEvent } from 'react';
 import {
     toBEM,
     registerBlockName,
@@ -86,16 +86,43 @@ export const OrganisationTabs = ({
 }: OrganisationTabsProps) => {
     const [activeKey, setActiveKey] = useState<TabKey>('presidencia');
     const activeTab = tabs.find((t) => t.key === activeKey)!;
+    const tabRefs = useRef<(HTMLButtonElement | null)[]>([]);
+
+    const handleKeyDown = (e: React.KeyboardEvent, idx: number) => {
+        if (e.key === 'ArrowRight') {
+            e.preventDefault();
+            const next = (idx + 1) % tabs.length;
+            tabRefs.current[next]?.focus();
+            setActiveKey(tabs[next].key);
+        } else if (e.key === 'ArrowLeft') {
+            e.preventDefault();
+            const prev = (idx - 1 + tabs.length) % tabs.length;
+            tabRefs.current[prev]?.focus();
+            setActiveKey(tabs[prev].key);
+        }
+    };
 
     return (
         <section {...getBaseComponentProps({ ...props, block })}>
-            <nav className={toBEM({ block, element: 'tablist' })}>
-                {tabs.map((tab) => (
+            <nav
+                className={toBEM({ block, element: 'tablist' })}
+                role="tablist"
+            >
+                {tabs.map((tab, idx) => (
                     <Tab
                         key={tab.key}
                         label={tab.label}
                         active={tab.key === activeKey}
                         onClick={() => setActiveKey(tab.key)}
+                        ref={(el: HTMLButtonElement | null) => {
+                            tabRefs.current[idx] = el;
+                        }}
+                        onKeyDown={(e: KeyboardEvent<Element>) =>
+                            handleKeyDown(e, idx)
+                        }
+                        role="tab"
+                        aria-selected={tab.key === activeKey}
+                        tabIndex={tab.key === activeKey ? 0 : -1}
                     />
                 ))}
             </nav>

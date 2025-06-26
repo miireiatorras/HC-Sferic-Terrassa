@@ -29,6 +29,10 @@
         line-height: 1.5;
         max-width: 320px;
 
+        &:hover {
+            text-decoration: underline;
+        }
+
         strong {
             font-weight: 700;
         }

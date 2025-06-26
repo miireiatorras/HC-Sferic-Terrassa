@@ -49,6 +49,14 @@ export const ImageScrollGallery = ({ images, ...props }: Props) => {
                 aria-label="Desplaça la galeria cap a l'esquerra"
                 role="button"
                 tabIndex={0}
+                onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        containerRef.current?.scrollBy({
+                            left: -containerRef.current.clientWidth,
+                            behavior: 'smooth',
+                        });
+                    }
+                }}
             >
                 <Icon
                     icon="chevron-up"
@@ -95,6 +103,14 @@ export const ImageScrollGallery = ({ images, ...props }: Props) => {
                 aria-label="Desplaça la galeria cap a la dreta"
                 role="button"
                 tabIndex={0}
+                onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        containerRef.current?.scrollBy({
+                            left: containerRef.current.clientWidth,
+                            behavior: 'smooth',
+                        });
+                    }
+                }}
             >
                 <Icon
                     icon="chevron-up"

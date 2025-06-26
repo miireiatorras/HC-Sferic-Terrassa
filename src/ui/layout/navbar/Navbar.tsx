@@ -141,6 +141,8 @@ export const Navbar = (props: NavbarProps) => {
                                         modifiers: isActive ? ['active'] : [],
                                     })
                                 }
+                                tabIndex={0}
+                                aria-label={label}
                             >
                                 {label}
                             </NavLink>

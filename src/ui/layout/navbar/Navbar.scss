@@ -140,6 +140,8 @@
             align-items: center;
             gap: 0.5rem;
             z-index: 999;
+            max-height: calc(100vh - 62px);
+            overflow-y: auto;
         }
         &__mobile-menu--open {
             display: flex;

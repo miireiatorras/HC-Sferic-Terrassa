@@ -42,6 +42,7 @@ export const Discover: React.FC<BaseComponentProps> = (props) => {
                 <Link
                     to={leftCard.to}
                     className={toBEM({ block, element: 'left-card' })}
+                    aria-label={`Anar a ${leftCard.title}`}
                 >
                     <img
                         loading="lazy"
@@ -67,6 +68,7 @@ export const Discover: React.FC<BaseComponentProps> = (props) => {
                             key={i}
                             to={card.to}
                             className={toBEM({ block, element: 'card' })}
+                            aria-label={`Anar a ${card.title}`}
                         >
                             <img
                                 loading="lazy"
