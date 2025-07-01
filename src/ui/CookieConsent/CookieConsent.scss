@@ -1,0 +1,58 @@
+.cookie-consent-modal {
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    min-height: 100px;
+    padding: 0 0 24px 0;
+}
+
+.cookie-consent-content {
+    background: #fff;
+    border-radius: 8px 8px 0 0;
+    padding: 32px 48px;
+    box-shadow: 0 2px 24px rgba(0, 0, 0, 0.22);
+    max-width: 700px;
+    width: 90vw;
+    min-width: 320px;
+    text-align: center;
+    animation: slideUpCookie 0.5s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
+.cookie-consent-content h2 {
+    margin-top: 0;
+}
+
+.cookie-consent-content button {
+    margin-top: 16px;
+    padding: 8px 24px;
+    background: #1976d2;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.cookie-consent-content button:focus-visible {
+    outline: 2px solid #1976d2;
+}
+
+@keyframes slideUpCookie {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

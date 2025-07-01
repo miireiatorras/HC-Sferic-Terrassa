@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import {
     registerBlockName,
@@ -16,12 +17,26 @@ import { Horari } from './pages/horari/Horari';
 import Footer from './features/footer/Footer';
 import { ScrollButton } from './ui/scroll-button/ScrollButton';
 import NotFound from './pages/NotFound';
+import CookieConsent from './ui/CookieConsent/CookieConsent';
+import CookiePolicy from './pages/CookiePolicy';
 
 export type AppProps = BaseComponentProps & {};
 
 const block = registerBlockName('App');
 
 export const App = ({ ...props }: AppProps) => {
+    const [showCookie, setShowCookie] = useState(false);
+
+    useEffect(() => {
+        const accepted = localStorage.getItem('cookieConsentAccepted');
+        if (!accepted) setShowCookie(true);
+    }, []);
+
+    const handleAcceptCookies = () => {
+        localStorage.setItem('cookieConsentAccepted', 'true');
+        setShowCookie(false);
+    };
+
     return (
         <Router>
             <div {...getBaseComponentProps({ ...props, block })}>
@@ -35,11 +50,12 @@ export const App = ({ ...props }: AppProps) => {
                     <Route path="/botiga" element={<Botiga />} />
                     <Route path="/contacte" element={<Contacte />} />
                     <Route path="/inscripcions" element={<Inscripcions />} />
+                    <Route path="/cookies" element={<CookiePolicy />} />
                     <Route path="*" element={<NotFound />} />
                 </Routes>
                 <ScrollButton />
-
                 <Footer />
+                {showCookie && <CookieConsent onAccept={handleAcceptCookies} />}
             </div>
         </Router>
     );
